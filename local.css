@@ -1,0 +1,20 @@
+section#sprints ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style:none;
+    margin:0;
+    grid-gap:1rem
+}
+
+section#sprints ul li {
+    background: var(--blueberry);
+    border-radius: var(--pilled);
+    padding:1rem;
+    color:var(--turquoise);
+    display:flex;
+    flex-direction: column;
+}
+
+section#sprints ul li a {
+    color:var(--turquoise)
+}
