@@ -3,19 +3,22 @@ section#sprints ul {
     grid-template-columns: 1fr 1fr;
     list-style:none;
     margin:0 -1rem;
-    grid-gap:1rem
+    grid-gap:1rem;
+    
 }
 
 section#sprints ul li {
-    background: var(--blueberry);
     border-radius: var(--rounded);
     padding:1rem;
-    color:var(--turquoise);
     display:flex;
     flex-direction: column;
     margin-bottom: 0;
+    border:3px solid var(--blueberry)
 }
 
 section#sprints ul li a {
-    color:var(--turquoise)
 }
+section#sprints ul li p {
+    display:none
+}
+
