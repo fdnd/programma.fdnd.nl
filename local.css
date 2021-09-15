@@ -16,6 +16,10 @@ section#sprints ul li {
     border:3px solid var(--blueberry)
 }
 
-section#sprints ul li a {
+
+section#sprints p:first-of-type {
+    font-size: .9em;
+    font-style: italic;
+    margin: 0;
 }
 
