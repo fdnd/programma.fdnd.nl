@@ -1,25 +1,49 @@
-section#sprints ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/* reset */
+body { 
+    display: block;
+}
+main a {
+    color: var(--lavender); 
+}
+main > article, main > section {
+
+    background: none;
+    color: var(--lavender);
+    border-radius: none;
+}
+main h3, h4 {
+    color:#fff
+}
+/* local styles */
+section#semesters section ul {
+    display:flex;
+    overflow-x:scroll;
+    width:100vw;
+}
+section#semesters section ul {
     list-style:none;
     margin:0 -1rem;
     grid-gap:1rem;
-    
+    padding-bottom:2rem;
 }
-
-section#sprints ul li {
+section#semesters ul li {
     border-radius: var(--rounded);
     padding:1rem;
     display:flex;
     flex-direction: column;
     margin-bottom: 0;
-    border:3px solid var(--blueberry)
+    border:3px solid var(--lavender);
+    min-width:85vw;
 }
 
 
-section#sprints p:first-of-type {
-    font-size: .9em;
-    font-style: italic;
-    margin: 0;
-}
+@media (min-width:40em) {
 
+    p {
+        max-width:35em
+    }
+
+    section#semesters ul li {
+        min-width:45vw;
+    }
+}
