@@ -1,8 +1,9 @@
 /* reset */
 body { 
     display: block;
+    max-width:60em;
 }
-main section > h2:first-of-type {
+article > h2:first-of-type, main section > h2:first-of-type {
     font-size: calc(2rem + 1.5vw);
 }
 main a {
@@ -13,11 +14,22 @@ main > section {
     color: var(--lavender);
     border-radius: none;
 }
+main > article {
+    background: var(--blueberry);
+    color: var(--lavender);
+    border-radius: var(--rounded);
+    border:1px solid var(--lavender);
+}
+main > article > h2:first-of-type {
+    margin-top: 1rem;
+}
 main h3 {
     font-size: 1.5em;
     margin: 2rem 0;
     color:#fff;
-
+}
+main article h3 {
+    /color:var(--blueberry)
 }
 time {
     font-size: .8em;
@@ -25,8 +37,13 @@ time {
 svg {
     stroke: var(--lavender);
 }
+footer nav {
+    align-items:flex-start
+}
+footer h2 {
+    align-self: flex-end
+}
 /* local styles */
-
 .scrollable {
     display:flex;
     overflow-x:scroll;
@@ -43,14 +60,21 @@ svg {
     flex-direction: column;
     margin-bottom: 0;
     border:3px solid var(--lavender);
-    min-width:18em
+    min-width:18em;
+    position: relative;
 }
 
 .scrollable a {
     white-space:nowrap
 }
-
-
+.scrollable a:after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
 .scrollable li p:last-of-type{
     display:none;
 }
@@ -59,9 +83,5 @@ svg {
 
     p {
         max-width:35em
-    }
-
-    scrollable li {
-        min-width:45vw;
     }
 }
