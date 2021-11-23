@@ -51,6 +51,18 @@ footer h2 {
     align-self: flex-end
 }
 /* local styles */
+section {
+    position: relative
+}
+section section:after {
+    content:"";
+    width:6rem;
+    height:calc(100%  - 3rem);
+    background: linear-gradient(90deg, rgba(5,5,66,0) 0%, rgba(5,5,66,1) 63%);
+    position:absolute;
+    top: 3rem;
+    right:0;
+}
 .scrollable {
     display:flex;
     overflow-x:scroll;
@@ -60,16 +72,9 @@ footer h2 {
     grid-gap:1rem;
     padding-bottom:2rem;
     padding-right:2rem;
+    position:relative;
 }
-.scrollable:after {
-    content:"";
-    width:6rem;
-    height:100%;
-    background: linear-gradient(90deg, rgba(5,5,66,0) 0%, rgba(5,5,66,1) 63%);
-    position:absolute;
-    top:0;
-    right:0;
-}
+
 .scrollable li { 
     border-radius: var(--rounded);
     padding:1rem;
@@ -80,7 +85,6 @@ footer h2 {
     min-width:18em;
     position: relative;
 }
-
 .scrollable a {
     white-space:nowrap
 }
