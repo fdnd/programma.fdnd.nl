@@ -2,41 +2,56 @@
 body { 
     display: block;
 }
+main section > h2:first-of-type {
+    font-size: calc(2rem + 1.5vw);
+}
 main a {
     color: var(--lavender); 
-}
-main > article, main > section {
-
+} 
+main > section {
     background: none;
     color: var(--lavender);
     border-radius: none;
 }
-main h3, h4 {
-    color:#fff
+main h3 {
+    font-size: 1.5em;
+    margin: 2rem 0;
+    color:#fff;
+
+}
+time {
+    font-size: .8em;
+}
+svg {
+    stroke: var(--lavender);
 }
 /* local styles */
-section#semesters section ul {
+
+.scrollable {
     display:flex;
     overflow-x:scroll;
-    width:100vw;
-}
-section#semesters section ul {
+    width:100%;
     list-style:none;
     margin:0 -1rem;
     grid-gap:1rem;
     padding-bottom:2rem;
 }
-section#semesters ul li {
+.scrollable li { 
     border-radius: var(--rounded);
     padding:1rem;
     display:flex;
     flex-direction: column;
     margin-bottom: 0;
     border:3px solid var(--lavender);
-    min-width:85vw;
+    min-width:18em
 }
 
-section#semesters ul li p:last-of-type{
+.scrollable a {
+    white-space:nowrap
+}
+
+
+.scrollable li p:last-of-type{
     display:none;
 }
 
@@ -46,7 +61,7 @@ section#semesters ul li p:last-of-type{
         max-width:35em
     }
 
-    section#semesters ul li {
+    scrollable li {
         min-width:45vw;
     }
 }
