@@ -1,7 +1,13 @@
 /* reset */
 body { 
     display: block;
+    
+}
+body > * {
     max-width:60em;
+}
+body > .expand {
+    max-width:100%;
 }
 article > h2:first-of-type, main section > h2:first-of-type {
     font-size: calc(2rem + 1.5vw);
@@ -28,9 +34,7 @@ main h3 {
     margin: 2rem 0;
     color:#fff;
 }
-main article h3 {
-    /color:var(--blueberry)
-}
+
 time {
     font-size: .8em;
 }
