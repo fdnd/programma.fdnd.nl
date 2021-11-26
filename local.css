@@ -12,7 +12,8 @@ body > .expand {
 body > header {
     padding-top:35vh;
 }
-article > h2:first-of-type, main section > h2:first-of-type {
+article > h2:first-of-type, 
+main section > h2:first-of-type {
     font-size: calc(2rem + 1.5vw);
 }
 main a {
