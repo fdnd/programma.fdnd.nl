@@ -59,62 +59,52 @@ footer h2 {
 section {
     position: relative
 }
-section section:after {
-    content:"";
-    width:6rem;
-    height:calc(100%  - 3rem);
-    background: linear-gradient(90deg, rgba(5,5,66,0) 0%, rgba(5,5,66,1) 63%);
-    position:absolute;
-    top: 3rem;
-    right:0;
-}
-.scrollable {
-    display:flex;
-    overflow-x:scroll;
-    width:100%;
+
+main ol {
+    display:grid;
+    grid-gap:1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    width:calc(100% + 2rem);
     list-style:none;
     margin:0 -1rem;
-    grid-gap:1rem;
     padding-bottom:2rem;
     padding-right:2rem;
     position:relative;
     
 }
-@supports (scroll-snap-type:x mandatory) {
-    .scrollable {
-        scroll-snap-type:x mandatory;
-        scroll-padding: 1rem;
-    }
-}
 
-.scrollable li { 
+ol li { 
     border-radius: var(--rounded);
     padding:1rem;
     display:flex;
     flex-direction: column;
     margin-bottom: 0;
     border:3px solid var(--lavender);
-    min-width:18em;
-    position: relative;
-    
+    position: relative;  
 }
-@supports (scroll-snap-align: start) {
-    .scrollable li {
-        scroll-snap-align: start;
-    }
+
+li:hover {
+    color:var(--turquoise);
+    border-color:var(--turquoise);
+    transform:scale(1.01)
 }
-.scrollable a {
-    white-space:nowrap
+
+ol a {
+    white-space:nowrap;
 }
-.scrollable a:after {
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+ol a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-.scrollable li p:last-of-type{
+
+ol li:hover a {
+    color:inherit
+}
+ol li p:last-of-type{
     display:none;
 }
 
