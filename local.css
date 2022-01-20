@@ -1,7 +1,6 @@
 /* reset */
 body { 
     display: block;
-    
 }
 body > * {
     max-width:60em;
@@ -79,8 +78,13 @@ section section:after {
     padding-bottom:2rem;
     padding-right:2rem;
     position:relative;
-    scroll-snap-type:x mandatory;
-    scroll-padding: 1rem;
+    
+}
+@supports (scroll-snap-type:x mandatory) {
+    .scrollable {
+        scroll-snap-type:x mandatory;
+        scroll-padding: 1rem;
+    }
 }
 
 .scrollable li { 
@@ -92,7 +96,12 @@ section section:after {
     border:3px solid var(--lavender);
     min-width:18em;
     position: relative;
-    scroll-snap-align: start;
+    
+}
+@supports (scroll-snap-align: start) {
+    .scrollable li {
+        scroll-snap-align: start;
+    }
 }
 .scrollable a {
     white-space:nowrap
@@ -110,7 +119,6 @@ section section:after {
 }
 
 @media (min-width:40em) {
-
     p {
         max-width:35em
     }
