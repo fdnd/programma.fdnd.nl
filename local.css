@@ -61,10 +61,7 @@ section {
 }
 
 main ol {
-    display:grid;
-    grid-gap:1rem;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    width:calc(100% + 2rem);
+    max-width:40em;
     list-style:none;
     margin:0 -1rem;
     padding-bottom:2rem;
@@ -76,10 +73,11 @@ ol li {
     border-radius: var(--rounded);
     padding:1rem;
     display:flex;
-    flex-direction: column;
     margin-bottom: 0;
     border:3px solid var(--lavender);
     position: relative;  
+    justify-content: space-between;
+    align-items: center;
 }
 
 li:hover {
