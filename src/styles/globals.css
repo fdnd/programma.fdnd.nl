@@ -4,7 +4,6 @@ html {
 }
 body { 
     display: block;
-    font-size: 1em !important;
 }
 
 body > .expand {
