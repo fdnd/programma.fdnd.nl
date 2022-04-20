@@ -3,6 +3,17 @@
 
     export let page
     export let semesters
+
+    function prettifyDate(rawDate) {
+        const date = helpers.asDate(rawDate)
+        let day = date.getDate()
+        let month = date.getMonth() + 1
+
+        if (day.toString().length < 2) day = `0${day}`
+        if (month.toString().length < 2) month = `0${month}`
+
+        return `${day}/${month}`
+    }
 </script>
 
 <header>
@@ -30,7 +41,7 @@
                         <a sveltekit:prefetch href="{sprint.uid}">Sprint {sprint.data.sprint}: {sprint.data.title}</a>
                         <time>
                             {#if sprint.data.startdate}
-                                {helpers.asDate(sprint.data.startdate).toLocaleDateString('nl-NL')} 
+                                { prettifyDate(sprint.data.startdate) } 
                             {/if}
                         </time>
                         
@@ -51,12 +62,15 @@
 section {
     position: relative
 }
+
 section > h3 {
     font-size: clamp(1.15rem, -0.875rem + 3.5vw, 3.5rem);
 }
+
 h3 strong {
     display:block
 }
+
 main ol {
     list-style:none;
     margin:0 -1rem;
@@ -97,9 +111,6 @@ ol a:after {
 ol li:hover a {
     color:inherit;
     
-}
-ol li p:last-of-type{
-    display:none;
 }
 
 @media (min-width:40em) {
