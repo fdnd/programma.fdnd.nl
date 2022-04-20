@@ -1,6 +1,4 @@
 <script>
-import { prefetch } from '$app/navigation';
-
     import * as helpers from '@prismicio/helpers'
 
     export let page
@@ -24,12 +22,12 @@ import { prefetch } from '$app/navigation';
 
         {#each semesters as semester, i }
             <section>
-                <h3>Semester {++i}: {semester.data.title}</h3>
+                <h3>Semester {++i} <strong>{semester.data.title}</strong></h3>
 
                 <ol>
-                {#each semester.data.sprints as sprint, i}
+                {#each semester.data.sprints as sprint}
                     <li>
-                        <a sveltekit:prefetch href="{sprint.uid}">Sprint {++i}: {sprint.data.title}</a>
+                        <a sveltekit:prefetch href="{sprint.uid}">Sprint {sprint.data.sprint}: {sprint.data.title}</a>
                         <time>
                             {#if sprint.data.startdate}
                                 {helpers.asDate(sprint.data.startdate).toLocaleDateString('nl-NL')} 
@@ -54,7 +52,10 @@ section {
     position: relative
 }
 section > h3 {
-    font-size: clamp(1.15rem, -0.875rem + 4.333vw, 3.5rem);
+    font-size: clamp(1.15rem, -0.875rem + 3.5vw, 3.5rem);
+}
+h3 strong {
+    display:block
 }
 main ol {
     list-style:none;
@@ -82,6 +83,7 @@ li:hover {
 
 ol a {
     white-space:nowrap;
+    text-decoration: none;
 }
 ol a:after {
     content: "";
@@ -93,7 +95,8 @@ ol a:after {
 }
 
 ol li:hover a {
-    color:inherit
+    color:inherit;
+    
 }
 ol li p:last-of-type{
     display:none;
