@@ -62,6 +62,10 @@
 section {
     position: relative
 }
+section section {
+    display:flex;
+    flex-direction: column;
+}
 
 section > h3 {
     font-size: clamp(1.15rem, -0.875rem + 3.5vw, 3.5rem);
@@ -76,7 +80,9 @@ main ol {
     margin:0 -1rem;
     padding-bottom:2rem;
     position:relative;
-    
+    flex:1;
+    display: flex;
+    flex-direction: column;
 }
 
 ol li { 
@@ -87,13 +93,20 @@ ol li {
     position: relative;  
     justify-content: space-between;
     align-items: center;
+    flex:1
 }
+
+section section:last-child ol li {
+    align-items: flex-start;
+}
+
 
 li:hover {
     color:var(--turquoise);
     border-color:var(--turquoise);
     transform:scale(1.01)
 }
+
 
 ol a {
     white-space:nowrap;
