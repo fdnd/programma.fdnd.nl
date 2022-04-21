@@ -5,7 +5,6 @@ html {
 body { 
     display: block;
 }
-
 body > .expand {
     max-width:100%;
 }
@@ -35,6 +34,17 @@ body main h4 {
     font-size: 1.5em;
     margin: 2rem 0;
     color:#fff;
+}
+
+a.back {
+    color: var(--lavender);
+    display:flex;
+    align-items:center;
+    gap:.5rem
+}
+a.back:hover {
+    color: var(--lavender);
+    text-decoration:none;
 }
 
 svg {

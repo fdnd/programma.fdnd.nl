@@ -101,7 +101,9 @@ ol li {
     flex:1;
     font-size: .8em;
 }
-
+section section:last-child {
+    min-height:40rem;
+}
 section section:last-child ol li {
     align-items: flex-start;
 }
@@ -150,7 +152,6 @@ ol li:hover time {
 @media (min-width:40em) {
     main > section {
         display:grid;
-        /grid-template-columns: 1fr 1fr;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         gap:0 3rem
     }
