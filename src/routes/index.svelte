@@ -4,7 +4,7 @@
     export let page
     export let semesters
 
-    function prettifyDate(rawDate) {
+    function formatDate(rawDate) {
         const date = helpers.asDate(rawDate)
         let day = date.getDate()
         let month = date.getMonth() + 1
@@ -38,10 +38,10 @@
                 <ol>
                 {#each semester.data.sprints as sprint}
                     <li>
-                        <a sveltekit:prefetch href="{sprint.uid}">Sprint {sprint.data.sprint}: {sprint.data.title}</a>
+                        <a sveltekit:prefetch href="{sprint.uid}">Sprint {sprint.data.sprint}: <strong>{sprint.data.title}</strong></a>
                         <time>
                             {#if sprint.data.startdate}
-                                { prettifyDate(sprint.data.startdate) } 
+                                { formatDate(sprint.data.startdate) } 
                             {/if}
                         </time>
                         
@@ -59,6 +59,10 @@
 </main>
 
 <style>
+h2 {
+    font-size: clamp(1.15rem, -1.25rem + 12vw, 3rem);
+    margin-bottom: 1rem;
+}
 section {
     position: relative
 }
@@ -67,8 +71,8 @@ section section {
     flex-direction: column;
 }
 
-section > h3 {
-    font-size: clamp(1.15rem, -0.875rem + 3.5vw, 3.5rem);
+section  h3 {
+    font-size: clamp(1.15rem, -1rem + 2.5vw, 2.5rem);
 }
 
 h3 strong {
@@ -93,7 +97,8 @@ ol li {
     position: relative;  
     justify-content: space-between;
     align-items: center;
-    flex:1
+    flex:1;
+    font-size: .8em;
 }
 
 section section:last-child ol li {
@@ -111,6 +116,7 @@ li:hover {
 ol a {
     white-space:nowrap;
     text-decoration: none;
+    
 }
 ol a:after {
     content: "";
@@ -126,10 +132,25 @@ ol li:hover a {
     
 }
 
+ol a strong {
+    font-size: 1.25em;
+    font-weight: normal;
+}
+ol time {
+    border-radius: var(--rounded);
+    background-color: var(--lavender);
+    color: var(--blueberry);
+    padding: 0 .25rem;
+    font-size: 0.8em;
+}
+ol li:hover time {
+    background-color: var(--turquoise);
+}
 @media (min-width:40em) {
     main > section {
         display:grid;
-        grid-template-columns: 1fr 1fr;
+        /grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         gap:0 3rem
     }
     main > section h2,
@@ -137,4 +158,5 @@ ol li:hover a {
         grid-column: 1 / -1;
     }
 }
+
 </style>

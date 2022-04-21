@@ -37,9 +37,6 @@ body main h4 {
     color:#fff;
 }
 
-time {
-    font-size: .75em;
-}
 svg {
     stroke: var(--lavender);
 }
