@@ -97,7 +97,7 @@
     }
 
     aside ul {
-        margin:0 0 0 1rem;
+        margin:0;
         list-style:none;
         display:flex;
         flex-wrap:wrap
