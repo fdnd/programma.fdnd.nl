@@ -21,12 +21,12 @@
 <main>
     <article>
         <h2>
-            {sprint.data.title}
+            Sprint {sprint.data.sprint} <strong>{sprint.data.title}</strong>
             
         </h2>
         <time>
             {#if sprint.data.startdate}
-                {helpers.asDate(sprint.data.startdate).toLocaleDateString('nl-NL')} 
+                Startdatum: {helpers.asDate(sprint.data.startdate).toLocaleDateString('nl-NL')}
             {/if}
         </time> 
 
@@ -55,13 +55,33 @@
         margin-bottom: 3rem;
     }
 
-    main > article > h2:first-of-type {
-        margin-top: 1rem;
+    article {
+        display:flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 1em;
+        line-height:1.2
+    }
+    h2 strong {
+        font-size: 1.5em;
+        display:block
     }
     time {
         margin-top: -2rem;
-        color:#fff;
-        display: block;
+        border-radius: var(--rounded);
+        background-color: var(--lavender);
+        color: var(--blueberry);
+        padding: 0 .5rem;
+        font-size: 0.8em;
+        align-self: flex-start;
+    }
+
+    article p:last-child {
+        margin-bottom: 0;
     }
 
     aside {
