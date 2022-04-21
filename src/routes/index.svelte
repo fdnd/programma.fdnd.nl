@@ -59,12 +59,13 @@
 </main>
 
 <style>
+
 h2 {
     font-size: clamp(1.15rem, -1.25rem + 12vw, 3rem);
     margin-bottom: 1rem;
 }
-section {
-    position: relative
+main > section {
+    padding:2rem 1rem;
 }
 section section {
     display:flex;
