@@ -40,7 +40,9 @@ a.back {
     color: var(--lavender);
     display:flex;
     align-items:center;
-    gap:.5rem
+    gap:.5rem;
+    margin-left: 1rem;
+    font-size: .9em;
 }
 a.back:hover {
     color: var(--lavender);
