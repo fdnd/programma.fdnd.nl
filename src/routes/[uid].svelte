@@ -58,13 +58,14 @@
     article {
         display:flex;
         flex-direction: column;
-        margin: 1rem;
+        padding:2rem 1rem;
     }
 
     h2 {
         margin-top: 0;
         font-size: 1em;
-        line-height:1.2
+        line-height:1.2;
+        background:none;
     }
     h2 strong {
         font-size: 1.5em;
@@ -96,7 +97,7 @@
     }
 
     aside ul {
-        margin:0;
+        margin:0 0 0 1rem;
         list-style:none;
         display:flex;
         flex-wrap:wrap
