@@ -59,14 +59,15 @@
 </main>
 
 <style>
-
 h2 {
     font-size: clamp(1.15rem, -1.25rem + 12vw, 3rem);
     margin-bottom: 1rem;
 }
+
 main > section {
     padding:2rem 1rem;
 }
+
 section section {
     display:flex;
     flex-direction: column;
@@ -101,13 +102,14 @@ ol li {
     flex:1;
     font-size: .8em;
 }
+
 section section:last-child {
     min-height:40rem;
 }
+
 section section:last-child ol li {
     align-items: flex-start;
 }
-
 
 li:hover {
     color:var(--turquoise);
@@ -115,12 +117,12 @@ li:hover {
     transform:scale(1.01)
 }
 
-
 ol a {
     white-space:nowrap;
     text-decoration: none;
     
 }
+
 ol a:after {
     content: "";
     position: absolute;
@@ -139,6 +141,7 @@ ol a strong {
     font-size: 1.25em;
     font-weight: normal;
 }
+
 ol time {
     border-radius: var(--rounded);
     background-color: var(--lavender);
@@ -146,15 +149,18 @@ ol time {
     padding: 0 .25rem;
     font-size: 0.8em;
 }
+
 ol li:hover time {
     background-color: var(--turquoise);
 }
+
 @media (min-width:40em) {
     main > section {
         display:grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         gap:0 3rem
     }
+    
     main > section h2,
     main > section > div {
         grid-column: 1 / -1;

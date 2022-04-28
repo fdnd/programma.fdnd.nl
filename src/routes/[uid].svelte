@@ -67,10 +67,12 @@
         line-height:1.2;
         background:none;
     }
+
     h2 strong {
         font-size: 1.5em;
         display:block
     }
+
     time {
         margin-top: -2rem;
         border-radius: var(--rounded);
@@ -79,10 +81,6 @@
         padding: 0 .5rem;
         font-size: 0.8em;
         align-self: flex-start;
-    }
-
-    article p:last-child {
-        margin-bottom: 0;
     }
 
     aside {
@@ -102,6 +100,7 @@
         display:flex;
         flex-wrap:wrap
     }
+
     aside li {
         margin-bottom: .5rem;
         margin-right:.5rem;
@@ -111,6 +110,7 @@
         white-space: nowrap;
 
     }
+    
     aside li svg {
         transform: translateY(5px) rotate(90deg)
     }
