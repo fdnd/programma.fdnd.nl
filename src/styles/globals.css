@@ -35,6 +35,14 @@ body main h4 {
     margin: 2rem 0;
     color:#fff;
 }
+article ul li {
+    position: relative;
+}
+article ul li:before {
+    content: '#';
+    position: absolute;
+    left: -1.5rem;
+}
 
 a.back {
     color: var(--lavender);

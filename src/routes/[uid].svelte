@@ -108,8 +108,8 @@
         border: 1px solid var(--lavender);
         padding:0 .5rem;
         white-space: nowrap;
-
     }
+
     
     aside li svg {
         transform: translateY(5px) rotate(90deg)
