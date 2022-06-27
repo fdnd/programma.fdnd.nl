@@ -36,7 +36,6 @@
         {#each semesters as semester, i }
             <section id="{semester.data.uid}">
                 <h3>Semester {++i} <strong>{semester.data.title}</strong></h3>
-                <p>lalala</p>
 
                 <ol>
                 {#each semester.data.sprints as sprint}
