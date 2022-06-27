@@ -14,6 +14,8 @@
 
         return `${day}/${month}`
     }
+
+
 </script>
 
 <header>
@@ -32,8 +34,9 @@
         
 
         {#each semesters as semester, i }
-            <section>
+            <section id="{semester.data.uid}">
                 <h3>Semester {++i} <strong>{semester.data.title}</strong></h3>
+                <p>lalala</p>
 
                 <ol>
                 {#each semester.data.sprints as sprint}
@@ -74,7 +77,7 @@ section section {
 }
 
 section  h3 {
-    font-size: clamp(1.15rem, -1rem + 2.5vw, 2.5rem);
+    font-size: clamp(1.15rem, -1rem + 2vw, 2.5rem);
 }
 
 h3 strong {
