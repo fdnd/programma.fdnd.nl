@@ -16,18 +16,18 @@ main section > h2:first-of-type {
     font-size: calc(2rem + 1.5vw);
 }
 body main a {
-    color: var(--lavender); 
+    color: var(--turquoise); 
 } 
 body main > section {
     background: none;
-    color: var(--lavender);
+    color: var(--turquoise);
     border-radius: none;
 }
 body main > article {
     background: var(--blueberry);
-    color: var(--lavender);
+    color: var(--turquoise);
     border-radius: var(--rounded);
-    border:1px solid var(--lavender);
+    border:1px solid var(--turquoise);
 }
 body main h3 ,
 body main h4 {
@@ -45,7 +45,7 @@ article ul li:before {
 }
 
 a.back {
-    color: var(--lavender);
+    color: var(--turquoise);
     display:flex;
     align-items:center;
     gap:.5rem;
@@ -53,12 +53,12 @@ a.back {
     font-size: .9em;
 }
 a.back:hover {
-    color: var(--lavender);
+    color: var(--turquoise);
     text-decoration:none;
 }
 
 svg {
-    stroke: var(--lavender);
+    stroke: var(--turquoise);
 }
 footer nav {
     align-items:flex-start

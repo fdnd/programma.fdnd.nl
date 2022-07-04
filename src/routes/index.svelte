@@ -97,7 +97,7 @@ ol li {
     border-radius: var(--rounded);
     padding:1rem;
     display:flex;
-    border:3px solid var(--lavender);
+    border:3px solid var(--turquoise);
     position: relative;  
     justify-content: space-between;
     align-items: center;
@@ -113,9 +113,9 @@ section section:last-child ol li {
     align-items: flex-start;
 }
 
-li:hover {
-    color:var(--turquoise);
-    border-color:var(--turquoise);
+ol li:hover {
+    color:var(--lavender);
+    border-color:var(--lavender);
     transform:scale(1.01)
 }
 
@@ -146,14 +146,14 @@ ol a strong {
 
 ol time {
     border-radius: var(--rounded);
-    background-color: var(--lavender);
+    background-color: var(--turquoise);
     color: var(--blueberry);
     padding: 0 .25rem;
     font-size: 0.8em;
 }
 
 ol li:hover time {
-    background-color: var(--turquoise);
+    background-color: var(--lavender);
 }
 
 @media (min-width:40em) {

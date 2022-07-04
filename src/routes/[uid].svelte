@@ -31,6 +31,16 @@
         </time> 
 
         {@html helpers.asHTML(sprint.data.content)}
+
+        {@html helpers.asHTML(sprint.data.workshops)}
+
+        {@html helpers.asHTML(sprint.data.tasks)}
+
+        {@html helpers.asHTML(sprint.data.criteria)}
+
+        {@html helpers.asHTML(sprint.data.we-love-web-session)}
+
+        
     </article>
 
     <aside>
@@ -76,7 +86,7 @@
     time {
         margin-top: -2rem;
         border-radius: var(--rounded);
-        background-color: var(--lavender);
+        background-color: var(--turquoise);
         color: var(--blueberry);
         padding: 0 .5rem;
         font-size: 0.8em;
@@ -86,7 +96,7 @@
     aside {
         margin:2rem 0;
         padding:2rem;
-        color: var(--lavender)
+        color: var(--turquoise)
     }
 
     aside h2 {
@@ -105,7 +115,7 @@
         margin-bottom: .5rem;
         margin-right:.5rem;
         border-radius:var(--pilled);
-        border: 1px solid var(--lavender);
+        border: 1px solid var(--turquoise);
         padding:0 .5rem;
         white-space: nowrap;
     }
