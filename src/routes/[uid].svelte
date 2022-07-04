@@ -32,13 +32,21 @@
 
         {@html helpers.asHTML(sprint.data.content)}
 
-        {@html helpers.asHTML(sprint.data.workshops)}
+        <section>
+            {@html helpers.asHTML(sprint.data.workshops)}
+        </section>
 
-        {@html helpers.asHTML(sprint.data.tasks)}
+        <section>
+            {@html helpers.asHTML(sprint.data.tasks)}
+        </section>
 
-        {@html helpers.asHTML(sprint.data.criteria)}
+        <section>
+            {@html helpers.asHTML(sprint.data.criteria)}
+        </section>
 
-        {@html helpers.asHTML(sprint.data.we-love-web-session)}
+        <section>
+            {@html helpers.asHTML(sprint.data.session)}
+        </section>
 
         
     </article>
