@@ -2,7 +2,7 @@
     import * as helpers from '@prismicio/helpers'
 
     export let sprint
-  </script>
+</script>
 
 <header>
     <h1><abbr title="Frontend Design &amp; Development"><span>FDND</span></abbr> <span>Programma</span></h1>

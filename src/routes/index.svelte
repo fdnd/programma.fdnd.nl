@@ -14,8 +14,6 @@
 
         return `${day}/${month}`
     }
-
-
 </script>
 
 <header>

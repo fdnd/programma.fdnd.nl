@@ -5,17 +5,17 @@ export async function get({ fetch }) {
     const page = await client.getSingle('program')
 
     const semesters = await Promise.all(page.data.semesters.map(async (s) =>{
-      const response = await client.getByUID('semester', s.semester.uid)
+      const semester = await client.getByUID('semester', s.semester.uid)
       
-      const sprints = await Promise.all(response.data.sprints.map(async (s) =>{
-        const response = await client.getByUID('sprint', s.sprint.uid)
+      const sprints = await Promise.all(semester.data.sprints.map(async (s) =>{
+        const sprint = await client.getByUID('sprint', s.sprint.uid)
 
-        return response
+        return sprint
       }))
 
-      response.data.sprints = sprints
+      semester.data.sprints = sprints
 
-      return response
+      return semester
     }))
 
     if (page)
@@ -29,4 +29,4 @@ export async function get({ fetch }) {
     return {
       status: 404,
     }
-  }
+}
