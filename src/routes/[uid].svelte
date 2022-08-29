@@ -50,7 +50,23 @@
 
         <section>            
             {#each sprint.data.planning as item}
-                {@html helpers.asHTML(item.weeknummer)}
+            <h3>Week {item.weeknummer}</h3>
+            <table>
+                <tr>
+                    <th>Maandag</th>
+                    <th>Dinsdag</th>
+                    <th>Woensdag</th>
+                    <th>Donderdag</th>
+                    <th>Vrijdag</th>
+                </tr>
+                <tr>
+                    <td>{@html helpers.asHTML(item.maandag)}</td>
+                    <td>{@html helpers.asHTML(item.dinsdag)}</td>
+                    <td>{@html helpers.asHTML(item.woensdag)}</td>
+                    <td>{@html helpers.asHTML(item.donderdag)}</td>
+                    <td>{@html helpers.asHTML(item.vrijdag)}</td>
+                </tr>
+            </table>
             {/each}
         </section>
         
