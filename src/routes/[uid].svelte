@@ -48,8 +48,10 @@
             {@html helpers.asHTML(sprint.data.session)}
         </section>
 
-        <section>
-            {@html helpers.asHTML(sprint.data.planning)}
+        <section>            
+            {#each sprint.data.planning as item}
+                {@html helpers.asHTML(item.weeknummer)}
+            {/each}
         </section>
         
     </article>
