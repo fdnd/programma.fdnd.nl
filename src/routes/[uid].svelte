@@ -48,6 +48,9 @@
             {@html helpers.asHTML(sprint.data.session)}
         </section>
 
+        <section>
+            {@html helpers.asHTML(sprint.data.planning)}
+        </section>
         
     </article>
 
