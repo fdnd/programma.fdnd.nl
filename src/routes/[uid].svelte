@@ -50,7 +50,7 @@
 
         <section>            
             {#each sprint.data.planning as item}
-            <h3>Week {item.weeknummer}</h3>
+            <h3>Week {item.weeknummer.text}</h3>
             <table>
                 <tr>
                     <th>Maandag</th>
