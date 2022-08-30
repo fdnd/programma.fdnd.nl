@@ -53,7 +53,7 @@
             <h3>Week {item.weeknummer[0].text}</h3>
             <table>
                 <tr>
-                    <th>Maandag {#if item.maandag_datum}<span>{@html helpers.asDate(item.maandag_datum).getDate()}</span>{/if}</th>
+                    <th>Maandag {#if item.maandag_datum}<span>{@html helpers.asDate(item.maandag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()}</span>{/if}</th>
                     <th>Dinsdag </th>
                     <th>Woensdag </th>
                     <th>Donderdag </th>
@@ -168,6 +168,10 @@
         border-top-right-radius: 1em;
         word-break: break-word;
         color: var(--blueberry);
+        font-size: .8em;
+    }
+    th span {
+        font-weight: normal;
         font-size: .8em;
     }
 
