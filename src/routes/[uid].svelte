@@ -53,11 +53,11 @@
             <h3>Week {item.weeknummer[0].text}</h3>
             <table>
                 <tr>
-                    <th>Maandag {#if item.maandag_datum}<span>{@html helpers.asDate(item.maandag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()}</span>{/if}</th>
-                    <th>Dinsdag </th>
-                    <th>Woensdag </th>
-                    <th>Donderdag </th>
-                    <th>Vrijdag </th>
+                    <th>Maandag{#if item.maandag_datum} <span>{@html helpers.asDate(item.maandag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()}</span>{/if}</th>
+                    <th>Dinsdag{#if item.dinsdag_datum} <span>{@html helpers.asDate(item.dinsdag_datum).getDate()}/{@html helpers.asDate(item.dinsdag_datum).getMonth()}</span>{/if}</th>
+                    <th>Woensdag{#if item.woensdag_datum} <span>{@html helpers.asDate(item.woensdag_datum).getDate()}/{@html helpers.asDate(item.woensdag_datum).getMonth()}</span>{/if}</th>
+                    <th>Donderdag{#if item.donderdag_datum} <span>{@html helpers.asDate(item.donderdag_datum).getDate()}/{@html helpers.asDate(item.donderdag_datum).getMonth()}</span>{/if}</th>
+                    <th>Vrijdag{#if item.vrijdag_datum} <span>{@html helpers.asDate(item.vrijdag_datum).getDate()}/{@html helpers.asDate(item.vrijdag_datum).getMonth()}</span>{/if}</th>
                 </tr>
                 <tr>
                     <td>{@html helpers.asHTML(item.maandag)}</td>
