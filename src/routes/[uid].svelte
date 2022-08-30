@@ -53,7 +53,7 @@
             <h3>Week {item.weeknummer[0].text}</h3>
             <table>
                 <tr>
-                    <th>Maandag {#if item.maandag_datum}<span>{item.maandag_datum}</span>{/if}</th>
+                    <th>Maandag {#if item.maandag_datum}<span>{@html helpers.asDate(item.maandag_datum).getDate()}</span>{/if}</th>
                     <th>Dinsdag </th>
                     <th>Woensdag </th>
                     <th>Donderdag </th>
