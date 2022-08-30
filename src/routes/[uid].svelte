@@ -53,11 +53,11 @@
             <h3>Week {item.weeknummer[0].text}</h3>
             <table>
                 <tr>
-                    <th>Maandag</th>
-                    <th>Dinsdag</th>
-                    <th>Woensdag</th>
-                    <th>Donderdag</th>
-                    <th>Vrijdag</th>
+                    <th>Maandag <span>{@html helpers.asDate(item.maandag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()}</span></th>
+                    <th>Dinsdag <span>{@html helpers.asDate(item.dinsdag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()}</span></th>
+                    <th>Woensdag <span>{@html helpers.asDate(item.woensdag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()}</span></th>
+                    <th>Donderdag <span>{@html helpers.asDate(item.donderdag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()}</span></th>
+                    <th>Vrijdag <span>{@html helpers.asDate(item.vrijdag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()}</span></th>
                 </tr>
                 <tr>
                     <td>{@html helpers.asHTML(item.maandag)}</td>
@@ -152,6 +152,39 @@
     
     aside li svg {
         transform: translateY(5px) rotate(90deg)
+    }
+    
+    table {
+        border-collapse: separate;
+        border-spacing: .5em 0;
+        font-size: .8em;
+    }
+
+    th {
+        font-weight: bold;
+        width: 20%;
+        background: var(--turquoise);
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        word-break: break-word;
+        color: var(--blueberry);
+        font-size: .8em;
+    }
+
+    td {
+        vertical-align: top;
+        border-bottom: 1px var(--turquoise) solid;
+        border-left: 1px var(--turquoise) solid;
+        border-right: 1px var(--turquoise) solid;
+        border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+        padding: .5em;
+        color: white;
+    }
+
+    td p {
+        margin: 0; padding: 0;
+        word-break: break-word;
     }
 
     @media (min-width:50em) {
