@@ -36,3 +36,9 @@ npm run preview
 ## Sources
 [Prismic API concepts](https://prismic.io/docs/core-concepts/api)  
 [Query Prismic API with Svelte](https://prismic.io/docs/technologies/svelte-fetch-data)
+
+## Licentie
+
+![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
+
+This work is licensed under [GNU GPLv3](./LICENSE).
