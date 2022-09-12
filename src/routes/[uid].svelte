@@ -156,7 +156,9 @@
         transform: translateY(5px) rotate(90deg)
     }
     div.scrollable {
-        overflow-x:auto
+        overflow-x:auto;
+        padding-bottom:2rem;
+        margin-bottom: -1rem;
     }
     table {
         border-collapse: separate;
@@ -173,6 +175,7 @@
         word-break: break-word;
         color: var(--blueberry);
         font-size: .8em;
+        min-width:11em
     }
     th span {
         font-weight: normal;
