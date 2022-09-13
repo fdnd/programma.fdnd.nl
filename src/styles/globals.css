@@ -9,7 +9,10 @@ body > .expand {
     max-width:100%;
 }
 body > header {
-    padding-top:35vh;
+    padding-top:5rem;
+}
+body > header > h1 > span {
+    display:none
 }
 article > h2:first-of-type, 
 main section > h2:first-of-type {
