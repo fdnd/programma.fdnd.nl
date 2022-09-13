@@ -10,6 +10,7 @@ body > .expand {
 }
 body > header {
     padding-top:5rem;
+    background-image: none;
 }
 body > header > h1 > span {
     display:none
