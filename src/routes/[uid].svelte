@@ -267,7 +267,6 @@
     border-bottom-left-radius: 1rem;
     padding: 0.5rem;
     font-size: 0.9rem;
-    color: white;
   }
 
   td p {

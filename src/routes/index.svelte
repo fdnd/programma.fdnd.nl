@@ -126,7 +126,7 @@
 
   main ol li {
     padding: 1rem;
-    border: 3px solid var(--green);
+    border: 1px solid var(--green);
     border-radius: var(--rounded);
     color: var(--green);
 
