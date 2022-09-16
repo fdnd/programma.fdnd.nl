@@ -1,78 +1,67 @@
-/* reset */
-html {
+footer > .copy-construct {
+  padding-bottom: 2rem;
 
+  display: flex;
+  flex-flow: row-reverse wrap-reverse;
+  justify-content: flex-end;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
 }
-body { 
-    display: block;
-}
-body > .expand {
-    max-width:100%;
-}
-body > header {
-    padding-top:5rem;
-    background-image: none;
-}
-body > header > h1 > span {
-    display:none
-}
-article > h2:first-of-type, 
-main section > h2:first-of-type {
-    font-size: calc(2rem + 1.5vw);
-}
-body main a {
-    color: var(--turquoise); 
-} 
-body main > section {
-    background: none;
-    color: var(--turquoise);
-    border-radius: none;
-}
-body main > article {
-    background: var(--blueberry);
-    color: var(--turquoise);
-    border-radius: var(--rounded);
-    border:1px solid var(--turquoise);
-}
-body main h3 ,
-body main h4 {
-    font-size: 1.5em;
-    margin: 2rem 0;
-    color:#fff;
-}
-article ul li {
-    position: relative;
-}
-article ul li:before {
-    content: '#';
-    position: absolute;
-    left: -1.5rem;
-}
+footer > .copy-construct span {
+  display: block;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 4rem;
+  height: 4rem;
+  white-space: nowrap;
 
-a.back {
-    color: var(--turquoise);
-    display:flex;
-    align-items:center;
-    gap:.5rem;
-    margin-left: 1rem;
-    font-size: .9em;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--pilled);
 }
-a.back:hover {
-    color: var(--turquoise);
-    text-decoration:none;
+footer > .copy-construct > span:nth-of-type(1) {
+  border-radius: var(--rounded);
+  order: 8;
 }
-
-svg {
-    stroke: var(--turquoise);
+footer > .copy-construct > span:nth-of-type(2) {
+  width: 4rem;
+  font-size: 2.5rem;
+  padding-left: 0.7rem;
+  order: 7;
 }
-footer nav {
-    align-items:flex-start
+footer > .copy-construct > span:nth-of-type(3) {
+  display: flex;
+  justify-content: space-between;
+  width: 12rem;
+  order: 6;
 }
-footer h2 {
-    align-self: flex-end
+footer > .copy-construct > span:nth-of-type(3) span {
+  margin-top: 0.25rem;
+  margin-left: -0.75rem;
+  line-height: 3.5rem;
+  height: 3.5rem;
 }
-
-@media (min-width:40em) {
-    p {
-        max-width:35em
-    }
+footer > .copy-construct > span:nth-of-type(4) {
+  width: 4rem;
+  border-radius: 0;
+  order: 5;
+}
+footer > .copy-construct > span:nth-of-type(5) {
+  flex-grow: 3;
+  order: 4;
+}
+footer > .copy-construct > span:nth-of-type(6) {
+  flex-grow: 3;
+  width: 12rem;
+  order: 3;
+}
+footer > .copy-construct > span:nth-of-type(7) {
+  width: 4rem;
+  order: 2;
+}
+footer > .copy-construct > span:nth-of-type(8) {
+  flex-grow: 5;
+  order: 1;
 }

@@ -1,207 +1,322 @@
 <script>
-    import * as helpers from '@prismicio/helpers'
+  import * as helpers from '@prismicio/helpers'
+  export let sprint
 
-    export let sprint
+  function prettyDate(rawDate) {
+    const date = helpers.asDate(rawDate)
+    let day = date.getDate()
+    let month = date.getMonth() + 1
+
+    if (day.toString().length < 2) day = `0${day}`
+    if (month.toString().length < 2) month = `0${month}`
+
+    return `${day}/${month}`
+  }
+  function longDate(rawDate) {
+    const date = helpers.asDate(rawDate)
+    let year = date.getFullYear()
+    return `${prettyDate(rawDate)}/${year}`
+  }
 </script>
 
 <header>
-    <h1><abbr title="Frontend Design &amp; Development"><span>FDND</span></abbr> <span>Programma</span></h1>
+  <h1>
+    <abbr title="Frontend Design &amp; Development"><span>FDND</span></abbr>
+    <span>Programma</span>
+  </h1>
+  <p>Omdat we willen laten zien wat er zoal te doen is.</p>
 </header>
 
-<a sveltekit:prefetch href="/" class="back">
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="20" height="20" viewBox="0 0 20 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <line x1="5" y1="12" x2="11" y2="18"></line>
-        <line x1="5" y1="12" x2="11" y2="6"></line>
-     </svg>
-     <em>semesters & sprint</em>
-</a>
+<nav>
+  <h2>Menu</h2>
+  <ul>
+    <li>
+      <a sveltekit:prefetch href="/">Home</a>
+    </li>
+  </ul>
+</nav>
 
 <main>
-    <article>
-        <h2>
-            Sprint {sprint.data.sprint} <strong>{sprint.data.title}</strong>
-            
-        </h2>
-        <time>
-            {#if sprint.data.startdate}
-                Startdatum: {helpers.asDate(sprint.data.startdate).toLocaleDateString('nl-NL')}
-            {/if}
-        </time> 
-
-        {@html helpers.asHTML(sprint.data.content)}
-
-        <section>
-            {@html helpers.asHTML(sprint.data.workshops)}
-        </section>
-
-        <section>
-            {@html helpers.asHTML(sprint.data.tasks)}
-        </section>
-
-        <section>
-            {@html helpers.asHTML(sprint.data.criteria)}
-        </section>
-
-        <section>
-            {@html helpers.asHTML(sprint.data.session)}
-        </section>
-
-        <section>            
-            {#each sprint.data.planning as item}
-            <h3>Week {item.weeknummer[0].text}</h3>
-            <div class="scrollable">
-                <table>
-                    <tr>
-                        <th>Maandag {#if item.maandag_datum}<span>{@html helpers.asDate(item.maandag_datum).getDate()}/{@html helpers.asDate(item.maandag_datum).getMonth()+1}</span><!-- {@html helpers.asDate(item.maandag_datum)} -->{/if}</th>
-                        <th>Dinsdag {#if item.dinsdag_datum}<span>{@html helpers.asDate(item.dinsdag_datum).getDate()}/{@html helpers.asDate(item.dinsdag_datum).getMonth()+1}</span><!-- {@html helpers.asDate(item.dinsdag_datum)} -->{/if}</th>
-                        <th>Woensdag {#if item.woensdag_datum}<span>{@html helpers.asDate(item.woensdag_datum).getDate()}/{@html helpers.asDate(item.woensdag_datum).getMonth()+1}</span><!-- {@html helpers.asDate(item.woensdag_datum)} -->{/if}</th>
-                        <th>Donderdag {#if item.donderdag_datum}<span>{@html helpers.asDate(item.donderdag_datum).getDate()}/{@html helpers.asDate(item.donderdag_datum).getMonth()+1}</span><!-- {@html helpers.asDate(item.donderdag_datum)} -->{/if}</th>
-                        <th>Vrijdag {#if item.vrijdag_datum}<span>{@html helpers.asDate(item.vrijdag_datum).getDate()}/{@html helpers.asDate(item.vrijdag_datum).getMonth()+1}</span><!-- {@html helpers.asDate(item.vrijdag_datum)} -->{/if}</th>
-                    </tr>
-                    <tr>
-                        <td>{@html helpers.asHTML(item.maandag)}</td>
-                        <td>{@html helpers.asHTML(item.dinsdag)}</td>
-                        <td>{@html helpers.asHTML(item.woensdag)}</td>
-                        <td>{@html helpers.asHTML(item.donderdag)}</td>
-                        <td>{@html helpers.asHTML(item.vrijdag)}</td>
-                    </tr>
-                </table>
-            </div>
-            {/each}
-        </section>
-        
-    </article>
+  <section class="blue-on-green rounded col-span-2">
+    <h2>Sprint: {sprint.data.sprint} <strong>{sprint.data.title}</strong></h2>
 
     <aside>
-        <h2>Topics</h2>
-        <ul>
-            {#each sprint.tags as tag}
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle>
-                        <path d="M4 7v3.859c0 .537 .213 1.052 .593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834 -4.834a2.025 2.025 0 0 0 0 -2.864l-8.117 -8.116a2.025 2.025 0 0 0 -1.431 -.593h-3.859a3 3 0 0 0 -3 3z"></path>
-                     </svg>
-                    {tag}
-                </li>
-            {/each}
-        </ul>
+      <h3>Topics</h3>
+      <ul>
+        <li>
+          <time class="green-on-blue rounded">
+            {#if sprint.data.startdate}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="17"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <rect width="16" height="16" x="4" y="5" rx="2" />
+                <path d="M16 3v4M8 3v4m-4 4h16M8 15h2v2H8z" />
+              </svg>
+              {longDate(sprint.data.startdate)}
+            {/if}
+          </time>
+        </li>
+        {#each sprint.tags as tag}
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="17"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <circle cx="8.5" cy="8.5" r="1" fill="currentColor" />
+              <path
+                d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"
+              />
+            </svg>
+            {tag}
+          </li>
+        {/each}
+      </ul>
     </aside>
+
+    <div>
+      {#if sprint.data.content}
+        {@html helpers.asHTML(sprint.data.content)}
+      {/if}
+    </div>
+  </section>
+
+  <section class="blue-on-green pilled">
+    {@html helpers.asHTML(sprint.data.criteria)}
+  </section>
+
+  {#if sprint.data.tasks}
+    <section class="blue-on-green">
+      {@html helpers.asHTML(sprint.data.tasks)}
+    </section>
+  {/if}
+
+  <section class="green-on-blue pilled col-span-3">
+    <h2>Sprint planning</h2>
+    {#each sprint.data.planning as item}
+      <table>
+        <caption>Week {item.weeknummer[0].text}</caption>
+        <thead>
+          <tr>
+            <th scope="col">
+              Maandag <span>{prettyDate(item.maandag_datum)}</span>
+            </th>
+            <th scope="col">
+              Dinsdag <span>{prettyDate(item.dinsdag_datum)}</span>
+            </th>
+            <th scope="col">
+              Woensdag <span>{prettyDate(item.woensdag_datum)}</span>
+            </th>
+            <th scope="col">
+              Donderdag <span>{prettyDate(item.donderdag_datum)}</span>
+            </th>
+            <th scope="col">
+              Vrijdag <span>{prettyDate(item.vrijdag_datum)}</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Maandag {prettyDate(item.maandag_datum)}"
+              >{@html helpers.asHTML(item.maandag)}</td
+            >
+            <td data-label="Dinsdag {prettyDate(item.dinsdag_datum)}"
+              >{@html helpers.asHTML(item.dinsdag)}</td
+            >
+            <td data-label="Woensdag {prettyDate(item.woensdag_datum)}"
+              >{@html helpers.asHTML(item.woensdag)}</td
+            >
+            <td data-label="Donderdag {prettyDate(item.donderdag_datum)}"
+              >{@html helpers.asHTML(item.donderdag)}</td
+            >
+            <td data-label="Vrijdag {prettyDate(item.vrijdag_datum)}"
+              >{@html helpers.asHTML(item.vrijdag)}</td
+            >
+          </tr>
+        </tbody>
+      </table>
+    {/each}
+  </section>
 </main>
 
+<footer>
+  <nav>
+    <h2>Microsites</h2>
+    <p>
+      FDND maakt gebruik van een heleboel microsites in plaats van één grote
+      website met een ingewikkelde informatiestructuur. Microsites zijn kleine
+      websites met een specifiek doel ter ondersteuning van een campagne,
+      informatie over een product of dienst.
+    </p>
+    <ul>
+      <li><a href="https://fdnd.nl">FDND.nl</a></li>
+      <li>
+        <a href="https://contact.fdnd.nl">Contact en routebeschrijving</a>
+      </li>
+      <li><a href="https://programma.fdnd.nl">Programma</a></li>
+      <li><a href="https://skc.fdnd.nl">Studie Keuze Check</a></li>
+      <li><a href="https://partners.fdnd.nl">Partners</a></li>
+      <li><a href="https://tasks.fdnd.nl">Leertaken</a></li>
+      <li><a href="https://styleguide.fdnd.nl">Styleguide</a></li>
+    </ul>
+  </nav>
+  <section class="copy-construct">
+    <span class="blue-on-purple"
+      >Information&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔍</span
+    >
+    <span class="blue-on-green">♥</span>
+    <span class="blue-on-white"
+      ><span class="white-on-blue">to be</span> free</span
+    >
+    <span class="blue-on-green">@</span>
+    <span class="purple-on-blue">frontend</span>
+    <span class="blue-on-purple">design</span>
+    <span class="white-on-blue">&</span>
+    <span class="blue-on-green">development</span>
+  </section>
+</footer>
+
 <style>
-    main {
-        margin-bottom: 3rem;
-    }
+  aside h3 {
+    display: none;
+  }
 
-    article {
-        display:flex;
-        flex-direction: column;
-        padding:2rem 1rem;
-    }
+  aside ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.1rem;
+  }
+  aside ul li {
+    list-style: none;
+    border-radius: var(--pilled);
+    border: 1px solid var(--blue);
+    padding: 0 0.4rem;
+    white-space: nowrap;
+    color: var(--blue);
+    background: var(--green);
+    font-size: 0.8rem;
+  }
+  aside li:first-of-type {
+    background: var(--blue);
+  }
 
-    h2 {
-        margin-top: 0;
-        font-size: 1em;
-        line-height:1.2;
-        background:none;
-    }
+  aside li svg {
+    transform: translateY(4px) rotate(90deg);
+  }
 
-    h2 strong {
-        font-size: 1.5em;
-        display:block
-    }
+  aside li time svg {
+    transform: translateY(3px);
+  }
 
-    time {
-        margin-top: -2rem;
-        border-radius: var(--rounded);
-        background-color: var(--turquoise);
-        color: var(--blueberry);
-        padding: 0 .5rem;
-        font-size: 0.8em;
-        align-self: flex-start;
-    }
+  table {
+    border-collapse: separate;
+    border-spacing: 0.5em 0;
+    font-size: 0.8em;
+  }
 
-    aside {
-        margin:2rem 0;
-        padding:2rem;
-        color: var(--turquoise)
-    }
+  table + table {
+    margin-top: 2rem;
+  }
 
-    aside h2 {
-        color: #fff;
-        margin-bottom: 1rem;
-    }
+  table caption {
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 0.5rem;
+  }
+  th {
+    font-weight: bold;
+    width: 20%;
+    background: var(--green);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    word-break: break-word;
+    color: var(--blue);
+    font-size: 0.8rem;
+    min-width: 7rem;
+  }
+  th span {
+    font-weight: normal;
+    font-size: 0.8rem;
+  }
 
-    aside ul {
-        margin:0;
-        list-style:none;
-        display:flex;
-        flex-wrap:wrap
-    }
+  td {
+    vertical-align: top;
+    border-bottom: 1px var(--green) solid;
+    border-left: 1px var(--green) solid;
+    border-right: 1px var(--green) solid;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: white;
+  }
 
-    aside li {
-        margin-bottom: .5rem;
-        margin-right:.5rem;
-        border-radius:var(--pilled);
-        border: 1px solid var(--turquoise);
-        padding:0 .5rem;
-        white-space: nowrap;
-    }
+  td p {
+    margin: 0;
+    padding: 0;
+    word-break: break-word;
+  }
 
-    
-    aside li svg {
-        transform: translateY(5px) rotate(90deg)
-    }
-    div.scrollable {
-        overflow-x:auto;
-        padding-bottom:2rem;
-        margin-bottom: -1rem;
-    }
+  @media (max-width: 50rem) {
     table {
-        border-collapse: separate;
-        border-spacing: .5em 0;
-        font-size: .8em;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    table thead {
+      position: absolute;
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      border: none;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
     }
 
-    th {
-        font-weight: bold;
-        width: 20%;
-        background: var(--turquoise);
-        border-top-left-radius: 1em;
-        border-top-right-radius: 1em;
-        word-break: break-word;
-        color: var(--blueberry);
-        font-size: .8em;
-        min-width:11em
+    table tr {
+      display: block;
     }
-    th span {
-        font-weight: normal;
-        font-size: .8em;
+    table td {
+      display: block;
+      border: 1px var(--green) solid;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      padding-top: 0;
+      overflow: hidden;
     }
 
-    td {
-        vertical-align: top;
-        border-bottom: 1px var(--turquoise) solid;
-        border-left: 1px var(--turquoise) solid;
-        border-right: 1px var(--turquoise) solid;
-        border-bottom-right-radius: 1em;
-        border-bottom-left-radius: 1em;
-        padding: .5em;
-        color: white;
+    table td::before {
+      content: attr(data-label);
+      display: block;
+      margin-left: -0.5rem;
+      margin-bottom: 0.5rem;
+      padding: 0 0.5rem;
+      font-weight: bold;
+      background: var(--green);
+      word-break: break-word;
+      color: var(--blue);
+      font-size: 0.8rem;
+      width: 110%;
     }
-
-    td p {
-        margin: 0; padding: 0;
-        word-break: break-word;
-    }
-
-    @media (min-width:50em) {
-        main {
-            display:grid;
-            grid-template-columns: minmax(20rem, 50rem) 1fr;
-        }
-    }
+  }
 </style>
