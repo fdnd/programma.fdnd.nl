@@ -1,6 +1,6 @@
 import createClient from '../lib/prismicClient'
 
-export async function get({ fetch }) {
+export async function GET({ fetch }) {
   const client = createClient({ fetch })
   const page = await client.getSingle('program')
   const semesters = await Promise.all(
