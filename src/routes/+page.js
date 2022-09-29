@@ -1,7 +1,8 @@
-import createClient from '../lib/prismicClient'
+import createClient from '$lib/vendor/prismicio'
+import { error } from '@sveltejs/kit'
 
-export async function get({ fetch }) {
-  const client = createClient({ fetch })
+export async function load({ fetch, request }) {
+  const client = createClient({ fetch, request })
   const page = await client.getSingle('program')
   const semesters = await Promise.all(
     page.data.semesters.map(async (s) => {
@@ -17,15 +18,12 @@ export async function get({ fetch }) {
     })
   )
 
-  if (page)
+  if (page && semesters) {
     return {
-      body: {
         page,
-        semesters,
-      },
-    }
-
-  return {
-    status: 404,
+        semesters
+      } 
   }
+
+  throw error(404, 'Not found')
 }
