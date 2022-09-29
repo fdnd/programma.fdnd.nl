@@ -1,25 +1,12 @@
 <script>
   import * as helpers from '@prismicio/helpers'
+  import IconCal from '$lib/components/icons/Calendar.svelte'
+  import IconTag from '$lib/components/icons/Tag.svelte'
+  import {prettyDate, longDate} from '$lib/utils/date.js'
+  
   export let data
 
   let sprint = data
-
-  function prettyDate(rawDate) {
-    const date = helpers.asDate(rawDate)
-    let day = date.getDate()
-    let month = date.getMonth() + 1
-
-    if (day.toString().length < 2) day = `0${day}`
-    if (month.toString().length < 2) month = `0${month}`
-
-    return `${day}/${month}`
-  }
-  function longDate(rawDate) {
-    const date = helpers.asDate(rawDate)
-    let year = date.getFullYear()
-    return `${prettyDate(rawDate)}/${year}`
-  }  
-
 </script>
 
 <section class="blue-on-green rounded col-span-2">
@@ -31,45 +18,13 @@
       <li>
         <time class="green-on-blue rounded">
           {#if sprint.data.startdate}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="17"
-              height="17"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" />
-              <rect width="16" height="16" x="4" y="5" rx="2" />
-              <path d="M16 3v4M8 3v4m-4 4h16M8 15h2v2H8z" />
-            </svg>
-            {longDate(sprint.data.startdate)}
+            <IconCal date={longDate(sprint.data.startdate)} />
           {/if}
         </time>
       </li>
       {#each sprint.tags as tag}
         <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="17"
-            height="17"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" />
-            <circle cx="8.5" cy="8.5" r="1" fill="currentColor" />
-            <path
-              d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"
-            />
-          </svg>
-          {tag}
+          <IconTag tag={tag}  />
         </li>
       {/each}
     </ul>
@@ -163,14 +118,6 @@
   }
   aside li:first-of-type {
     background: var(--blue);
-  }
-
-  aside li svg {
-    transform: translateY(4px) rotate(90deg);
-  }
-
-  aside li time svg {
-    transform: translateY(3px);
   }
 
   table {

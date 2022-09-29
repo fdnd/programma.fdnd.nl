@@ -1,21 +1,10 @@
 <script>
 import * as helpers from '@prismicio/helpers'
+import {prettyDate} from '$lib/utils/date.js'
 
 export let data;
 
 let {page, semesters} = data
-
-
-function formatDate(rawDate) {
-    const date = helpers.asDate(rawDate)
-    let day = date.getDate()
-    let month = date.getMonth() + 1
-
-    if (day.toString().length < 2) day = `0${day}`
-    if (month.toString().length < 2) month = `0${month}`
-
-    return `${day}/${month}`
-}
 </script>
   
 <section class="blue-on-green rounded col-span-2">
@@ -36,7 +25,7 @@ function formatDate(rawDate) {
           </a>
           <time>
             {#if sprint.data.startdate}
-              {formatDate(sprint.data.startdate)}
+              {prettyDate(sprint.data.startdate)}
             {/if}
           </time>
         </li>
