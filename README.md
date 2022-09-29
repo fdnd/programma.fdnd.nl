@@ -1,16 +1,22 @@
-# FDND Program
+# create-svelte
 
-Build with Sveltekit & Prismic.io
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+
+## Creating a project
+
+If you're seeing this, you've probably already done this step. Congrats!
+
+```bash
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
 ## Developing
 
-Install dependencies 
-
-```bash
-npm install
-```
-
-Start a development server
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
@@ -21,24 +27,12 @@ npm run dev -- --open
 
 ## Building
 
-Create a production version of the app:
+To create a production version of your app:
 
 ```bash
 npm run build
 ```
 
-Preview the production build
+You can preview the production build with `npm run preview`.
 
-```bash
-npm run preview
-```
-
-## Sources
-[Prismic API concepts](https://prismic.io/docs/core-concepts/api)  
-[Query Prismic API with Svelte](https://prismic.io/docs/technologies/svelte-fetch-data)
-
-## Licentie
-
-![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
-
-This work is licensed under [GNU GPLv3](./LICENSE).
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
