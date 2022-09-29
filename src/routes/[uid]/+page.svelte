@@ -21,14 +21,14 @@
   }
 </script>
 
-<section class="blue-on-purple rounded col-span-2">
+<section class="blue-on-green rounded col-span-2">
   <h2>Sprint {sprint.data.sprint}: <strong>{sprint.data.title}</strong></h2>
 
   <aside>
     <h3>Topics</h3>
     <ul>
       <li>
-        <time class="purple-on-blue rounded">
+        <time class="green-on-blue rounded">
           {#if sprint.data.startdate}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -81,12 +81,12 @@
   </div>
 </section>
 
-<section class="blue-on-green pilled">
+<section class="blue-on-purple pilled">
   {@html helpers.asHTML(sprint.data.criteria)}
 </section>
 
 {#if sprint.data.tasks}
-  <section class="purple-on-blue">
+  <section class="blue-on-green">
     {@html helpers.asHTML(sprint.data.tasks)}
   </section>
 {/if}
@@ -157,7 +157,7 @@ aside ul li {
   padding: 0 0.4rem;
   white-space: nowrap;
   color: var(--blue);
-  background: var(--purple);
+  background: var(--green);
   font-size: 0.8rem;
 }
 aside li:first-of-type {
