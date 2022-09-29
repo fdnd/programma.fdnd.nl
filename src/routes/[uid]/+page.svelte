@@ -141,15 +141,15 @@
   th {
     font-weight: bold;
     width: 20%;
-    background: var(--blue);
+    background: var(--green);
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     word-break: break-word;
     color: var(--blue);
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     min-width: 7rem;
     border: 1px solid var(--green);
-    color: var(--green);
+    color: var(--blue);
     text-align: left;
     padding:0.5rem;
   }
@@ -166,9 +166,13 @@
     border-bottom-right-radius: .5rem;
     border-bottom-left-radius: .5rem;
     padding: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     background: var(--green);
     color: var(--blue);
+  }
+
+  td :global(p) {
+    margin-bottom: 2rem;
   }
 
   @media (max-width: 50rem) {
@@ -208,10 +212,10 @@
       margin-bottom: 0.5rem;
       padding: .5rem;
       font-weight: bold;
-      background: var(--blue);
+      background: var(--green);
       word-break: break-word;
-      color: var(--green);
-      font-size: 0.8rem;
+      color: var(--blue);
+      font-size: 1.2rem;
       width: 110%;
     } 
   }
