@@ -2,8 +2,6 @@
   import * as helpers from '@prismicio/helpers'
   export let data
 
-  console.log(data)
-
   let sprint = data
 
   function prettyDate(rawDate) {
