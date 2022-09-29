@@ -159,7 +159,7 @@ aside ul li {
   padding: 0 0.4rem;
   white-space: nowrap;
   color: var(--blue);
-  background: var(--green);
+  background: var(--purple);
   font-size: 0.8rem;
 }
 aside li:first-of-type {
