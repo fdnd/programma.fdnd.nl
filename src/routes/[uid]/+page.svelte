@@ -42,7 +42,7 @@
 </section>
 
 {#if sprint.data.tasks}
-  <section class="blue-on-green">
+  <section class="green-on-blue">
     {@html helpers.asHTML(sprint.data.tasks)}
   </section>
 {/if}
@@ -95,10 +95,12 @@
 </section>
 
 <style>
+  section {
+    padding: 1rem 2rem;
+  }
   aside h3 {
     display: none;
   }
-
   aside ul {
     margin: 0;
     display: flex;
@@ -124,7 +126,7 @@
     border-collapse: separate;
     border-spacing: 0.5em 0;
     font-size: 0.8em;
-    margin:0 -.5rem
+    margin:0 -2rem
   }
 
   table + table {
@@ -136,22 +138,22 @@
     font-size: 1.5rem;
     text-align: left;
     padding-bottom: 1rem;
-    padding-left: .5rem;
+    padding-left: 2rem;
   }
   th {
     font-weight: bold;
-    width: 20%;
     background: var(--green);
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     word-break: break-word;
     color: var(--blue);
     font-size: 1.2rem;
-    min-width: 7rem;
+    width:20%;
+    min-width:10rem;
     border: 1px solid var(--green);
     color: var(--blue);
     text-align: left;
-    padding:0.5rem;
+    padding:0.5rem 1.5rem;
   }
   th span {
     font-weight: normal;
@@ -165,7 +167,7 @@
     border-right: 1px var(--green) solid;
     border-bottom-right-radius: .5rem;
     border-bottom-left-radius: .5rem;
-    padding: 0.5rem;
+    padding: 1rem 1.5rem 0;
     font-size: 1.2rem;
     background: var(--green);
     color: var(--blue);
@@ -175,7 +177,7 @@
     margin-bottom: 2rem;
   }
 
-  @media (max-width: 50rem) {
+  @media (max-width: 62rem) {
     table {
       display: flex;
       flex-direction: column;
@@ -189,7 +191,6 @@
       height: 1px;
       border: none;
       clip: rect(0 0 0 0);
-      overflow: hidden;
     }
 
     table tr {
@@ -200,9 +201,7 @@
       border: 1px var(--green) solid;
       border-radius: .5rem;
       margin-bottom: .5rem;
-      padding-top: 0;
-      overflow: hidden;
-
+      padding: 1rem 2rem 0;
     }
 
     table td::before {
@@ -216,7 +215,7 @@
       word-break: break-word;
       color: var(--blue);
       font-size: 1.2rem;
-      width: 110%;
+      width: 100%;
     } 
   }
 </style>
