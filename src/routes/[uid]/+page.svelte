@@ -191,13 +191,17 @@ table caption {
 th {
   font-weight: bold;
   width: 20%;
-  background: var(--green);
+  background: var(--blue);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   word-break: break-word;
   color: var(--blue);
   font-size: 0.8rem;
   min-width: 7rem;
+  border: 1px solid var(--green);
+  color: var(--green);
+  text-align: left;
+  padding:0.5rem
 }
 th span {
   font-weight: normal;
@@ -213,6 +217,8 @@ td {
   border-bottom-left-radius: 1rem;
   padding: 0.5rem;
   font-size: 0.9rem;
+  background: var(--green);
+  color: var(--blue);
 }
 
 td p {
