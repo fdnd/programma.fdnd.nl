@@ -22,7 +22,7 @@
 </script>
 
 <section class="blue-on-green rounded col-span-2">
-  <h2>Sprint: {sprint.data.sprint} <strong>{sprint.data.title}</strong></h2>
+  <h2>Sprint {sprint.data.sprint}: <strong>{sprint.data.title}</strong></h2>
 
   <aside>
     <h3>Topics</h3>
