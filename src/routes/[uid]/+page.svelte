@@ -176,7 +176,7 @@
     border-collapse: separate;
     border-spacing: 0.5em 0;
     font-size: 0.8em;
-    margin:0 -1rem
+    margin:0 -.5rem
   }
 
   table + table {
@@ -187,15 +187,18 @@
     color: white;
     font-size: 1.5rem;
     text-align: left;
-    padding-left: 1rem;
     padding-bottom: 1rem;
+    padding-left: .5rem;
+  }
+  tr {
+    
   }
   th {
     font-weight: bold;
     width: 20%;
     background: var(--blue);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
     word-break: break-word;
     color: var(--blue);
     font-size: 0.8rem;
@@ -203,7 +206,7 @@
     border: 1px solid var(--green);
     color: var(--green);
     text-align: left;
-    padding:0.5rem
+    padding:0.5rem;
   }
   th span {
     font-weight: normal;
@@ -215,8 +218,8 @@
     border-bottom: 1px var(--green) solid;
     border-left: 1px var(--green) solid;
     border-right: 1px var(--green) solid;
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
     padding: 0.5rem;
     font-size: 0.9rem;
     background: var(--green);
@@ -252,10 +255,11 @@
     table td {
       display: block;
       border: 1px var(--green) solid;
-      border-radius: 1rem;
-      margin-bottom: 1rem;
+      border-radius: .5rem;
+      margin-bottom: .5rem;
       padding-top: 0;
       overflow: hidden;
+
     }
 
     table td::before {
@@ -263,13 +267,13 @@
       display: block;
       margin-left: -0.5rem;
       margin-bottom: 0.5rem;
-      padding: 0 0.5rem;
+      padding: .5rem;
       font-weight: bold;
-      background: var(--green);
+      background: var(--blue);
       word-break: break-word;
-      color: var(--blue);
+      color: var(--green);
       font-size: 0.8rem;
       width: 110%;
-    }
+    } 
   }
 </style>

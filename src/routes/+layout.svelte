@@ -3,9 +3,9 @@
 	import Footer from '$lib/components/Footer.svelte'
 </script>
 
-<sveltekit:head>
+<svelte:head>
 	<title>FDND Programma</title>
-</sveltekit:head>
+</svelte:head>
 
 <header>
 	<h1><span>FDND</span> Programma</h1>
