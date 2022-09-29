@@ -139,135 +139,137 @@
 </section>
 
 <style>
-aside h3 {
-  display: none;
-}
+  aside h3 {
+    display: none;
+  }
 
-aside ul {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 0.5rem;
-  row-gap: 0.1rem;
-}
-aside ul li {
-  list-style: none;
-  border-radius: var(--pilled);
-  border: 1px solid var(--blue);
-  padding: 0 0.4rem;
-  white-space: nowrap;
-  color: var(--blue);
-  background: var(--green);
-  font-size: 0.8rem;
-}
-aside li:first-of-type {
-  background: var(--blue);
-}
-
-aside li svg {
-  transform: translateY(4px) rotate(90deg);
-}
-
-aside li time svg {
-  transform: translateY(3px);
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 0.5em 0;
-  font-size: 0.8em;
-}
-
-table + table {
-  margin-top: 2rem;
-}
-
-table caption {
-  color: white;
-  font-size: 1.5rem;
-  text-align: left;
-  padding-left: 0.5rem;
-}
-th {
-  font-weight: bold;
-  width: 20%;
-  background: var(--blue);
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  word-break: break-word;
-  color: var(--blue);
-  font-size: 0.8rem;
-  min-width: 7rem;
-  border: 1px solid var(--green);
-  color: var(--green);
-  text-align: left;
-  padding:0.5rem
-}
-th span {
-  font-weight: normal;
-  font-size: 0.8rem;
-}
-
-td {
-  vertical-align: top;
-  border-bottom: 1px var(--green) solid;
-  border-left: 1px var(--green) solid;
-  border-right: 1px var(--green) solid;
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  padding: 0.5rem;
-  font-size: 0.9rem;
-  background: var(--green);
-  color: var(--blue);
-}
-
-td p {
-  margin: 0;
-  padding: 0;
-  word-break: break-word;
-}
-
-@media (max-width: 50rem) {
-  table {
+  aside ul {
+    margin: 0;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.1rem;
   }
-  table thead {
-    position: absolute;
-    margin: -1px;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    border: none;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-
-  table tr {
-    display: block;
-  }
-  table td {
-    display: block;
-    border: 1px var(--green) solid;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    padding-top: 0;
-    overflow: hidden;
-  }
-
-  table td::before {
-    content: attr(data-label);
-    display: block;
-    margin-left: -0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0 0.5rem;
-    font-weight: bold;
+  aside ul li {
+    list-style: none;
+    border-radius: var(--pilled);
+    border: 1px solid var(--blue);
+    padding: 0 0.4rem;
+    white-space: nowrap;
+    color: var(--blue);
     background: var(--green);
+    font-size: 0.8rem;
+  }
+  aside li:first-of-type {
+    background: var(--blue);
+  }
+
+  aside li svg {
+    transform: translateY(4px) rotate(90deg);
+  }
+
+  aside li time svg {
+    transform: translateY(3px);
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0.5em 0;
+    font-size: 0.8em;
+    margin:0 -1rem
+  }
+
+  table + table {
+    margin-top: 2rem;
+  }
+
+  table caption {
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+  th {
+    font-weight: bold;
+    width: 20%;
+    background: var(--blue);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     word-break: break-word;
     color: var(--blue);
     font-size: 0.8rem;
-    width: 110%;
+    min-width: 7rem;
+    border: 1px solid var(--green);
+    color: var(--green);
+    text-align: left;
+    padding:0.5rem
   }
-}
+  th span {
+    font-weight: normal;
+    font-size: 0.8rem;
+  }
+
+  td {
+    vertical-align: top;
+    border-bottom: 1px var(--green) solid;
+    border-left: 1px var(--green) solid;
+    border-right: 1px var(--green) solid;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background: var(--green);
+    color: var(--blue);
+  }
+
+  td p {
+    margin: 0;
+    padding: 0;
+    word-break: break-word;
+  }
+
+  @media (max-width: 50rem) {
+    table {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    table thead {
+      position: absolute;
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      border: none;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
+    table tr {
+      display: block;
+    }
+    table td {
+      display: block;
+      border: 1px var(--green) solid;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      padding-top: 0;
+      overflow: hidden;
+    }
+
+    table td::before {
+      content: attr(data-label);
+      display: block;
+      margin-left: -0.5rem;
+      margin-bottom: 0.5rem;
+      padding: 0 0.5rem;
+      font-weight: bold;
+      background: var(--green);
+      word-break: break-word;
+      color: var(--blue);
+      font-size: 0.8rem;
+      width: 110%;
+    }
+  }
 </style>
