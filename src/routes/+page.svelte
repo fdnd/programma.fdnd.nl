@@ -1,8 +1,12 @@
 <script>
   import * as helpers from '@prismicio/helpers'
 
-  export let page
-  export let semesters
+  export let data
+
+  console.log(data);
+
+  let { page, semesters } = data
+  $: ({ page, semesters } = data)
 
   function formatDate(rawDate) {
     const date = helpers.asDate(rawDate)

@@ -1,6 +1,9 @@
 <script>
   import * as helpers from '@prismicio/helpers'
-  export let sprint
+
+  export let data;
+  let sprint = data;
+  $: (sprint = data); 
 
   function prettyDate(rawDate) {
     const date = helpers.asDate(rawDate)

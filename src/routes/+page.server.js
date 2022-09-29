@@ -1,8 +1,9 @@
 import createClient from '../lib/prismicClient'
 
-export async function GET({ fetch }) {
+export async function load({ fetch }) {
   const client = createClient({ fetch })
   const page = await client.getSingle('program')
+  console.log(page)
   const semesters = await Promise.all(
     page.data.semesters.map(async (s) => {
       const semester = await client.getByUID('semester', s.semester.uid)
@@ -17,15 +18,12 @@ export async function GET({ fetch }) {
     })
   )
 
-  if (page)
+  if (page) {
     return {
-      body: {
-        page,
-        semesters,
-      },
+      page,
+      semesters,
     }
-
-  return {
-    status: 404,
   }
+  
+  throw error(400, 'not found!!!');
 }
