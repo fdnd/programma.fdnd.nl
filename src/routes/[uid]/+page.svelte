@@ -18,7 +18,8 @@
     const date = helpers.asDate(rawDate)
     let year = date.getFullYear()
     return `${prettyDate(rawDate)}/${year}`
-  }
+  }  
+
 </script>
 
 <section class="blue-on-green rounded col-span-2">
@@ -190,9 +191,6 @@
     padding-bottom: 1rem;
     padding-left: .5rem;
   }
-  tr {
-    
-  }
   th {
     font-weight: bold;
     width: 20%;
@@ -224,12 +222,6 @@
     font-size: 0.9rem;
     background: var(--green);
     color: var(--blue);
-  }
-
-  td p {
-    margin: 0;
-    padding: 0;
-    word-break: break-word;
   }
 
   @media (max-width: 50rem) {

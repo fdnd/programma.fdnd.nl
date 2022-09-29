@@ -5,6 +5,7 @@ export let data;
 
 let {page, semesters} = data
 
+
 function formatDate(rawDate) {
     const date = helpers.asDate(rawDate)
     let day = date.getDate()
@@ -15,7 +16,6 @@ function formatDate(rawDate) {
 
     return `${day}/${month}`
 }
-
 </script>
   
 <section class="blue-on-green rounded col-span-2">
@@ -30,10 +30,10 @@ function formatDate(rawDate) {
     <ol>
       {#each semester.data.sprints as sprint}
         <li>
-          <a data-sveltekit-prefetch href={sprint.uid}
-            >Sprint {sprint.data.sprint}:
-            <strong>{sprint.data.title}</strong></a
-          >
+          <a data-sveltekit-prefetch href={sprint.uid}>
+            Sprint {sprint.data.sprint}:
+            <strong>{sprint.data.title}</strong>
+          </a>
           <time>
             {#if sprint.data.startdate}
               {formatDate(sprint.data.startdate)}
