@@ -30,7 +30,7 @@ function formatDate(rawDate) {
     <ol>
       {#each semester.data.sprints as sprint}
         <li>
-          <a sveltekit:prefetch href={sprint.uid}
+          <a data-sveltekit-prefetch href={sprint.uid}
             >Sprint {sprint.data.sprint}:
             <strong>{sprint.data.title}</strong></a
           >
