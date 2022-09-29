@@ -91,7 +91,7 @@
   </section>
 {/if}
 
-<section class="green-on-blue pilled col-span-3">
+<section class="col-span-3">
   <h2>Sprint planning</h2>
   {#each sprint.data.planning as item}
     <table>
