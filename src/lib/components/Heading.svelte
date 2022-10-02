@@ -1,0 +1,40 @@
+<script>
+  import IconLink from '$lib/components/icons/Link.svelte';
+  export let title,
+    subtitle = '';
+  let id = title
+    .replace(/[^\w\s]/gi, '')
+    .replace(/\s+/g, '-')
+    .toLowerCase();
+</script>
+
+<h2>
+  <a {id} href="#{id}" class="anchor" aria-hidden="true">
+    <IconLink />
+  </a>
+  {title}
+  {#if subtitle !== ''}
+    <strong>{subtitle}</strong>
+  {/if}
+</h2>
+
+<style>
+  h2 a.anchor {
+    display: none;
+    position: absolute;
+    margin-left: -0.6em;
+  }
+
+  h2:hover a.anchor {
+    display: block;
+  }
+
+  h2 > strong {
+    display: block;
+  }
+
+  :global(section.semester h2) {
+    font-size: clamp(1.15rem, -1rem + 2vw, 2.5rem);
+    margin-bottom: 1em;
+  }
+</style>
