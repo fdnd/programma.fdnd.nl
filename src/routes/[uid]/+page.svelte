@@ -1,16 +1,17 @@
 <script>
-  import * as helpers from '@prismicio/helpers'
-  import IconCal from '$lib/components/icons/Calendar.svelte'
-  import IconTag from '$lib/components/icons/Tag.svelte'
-  import {prettyDate, longDate} from '$lib/utils/date.js'
-  
-  export let data
+  import * as helpers from '@prismicio/helpers';
+  import IconCal from '$lib/components/icons/Calendar.svelte';
+  import IconTag from '$lib/components/icons/Tag.svelte';
+  import Heading from '$lib/components/Heading.svelte';
+  import { prettyDate, longDate } from '$lib/utils/date.js';
 
-  let sprint = data
+  export let data;
+
+  let sprint = data;
 </script>
 
 <section class="blue-on-green rounded col-span-2">
-  <h2>Sprint {sprint.data.sprint}: <strong>{sprint.data.title}</strong></h2>
+  <Heading title="Sprint {sprint.data.sprint}: {sprint.data.title}" />
 
   <aside>
     <h3>Topics</h3>
@@ -24,7 +25,7 @@
       </li>
       {#each sprint.tags as tag}
         <li>
-          <IconTag tag={tag}  />
+          <IconTag {tag} />
         </li>
       {/each}
     </ul>
@@ -48,7 +49,7 @@
 {/if}
 
 <section class="col-span-3">
-  <h2>Sprint planning</h2>
+  <Heading title="Sprint planning" />
   {#each sprint.data.planning as item}
     <table>
       <caption>Week {item.weeknummer[0].text}</caption>
@@ -126,7 +127,7 @@
     border-collapse: separate;
     border-spacing: 0.5em 0;
     font-size: 0.8em;
-    margin:0 -2rem
+    margin: 0 -2rem;
   }
 
   table + table {
@@ -143,17 +144,17 @@
   th {
     font-weight: bold;
     background: var(--green);
-    border-top-left-radius: .5rem;
-    border-top-right-radius: .5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     word-break: break-word;
     color: var(--blue);
     font-size: 1.2rem;
-    width:20%;
-    min-width:10rem;
+    width: 20%;
+    min-width: 10rem;
     border: 1px solid var(--green);
     color: var(--blue);
     text-align: left;
-    padding:0.5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
   }
   th span {
     font-weight: normal;
@@ -165,8 +166,8 @@
     border-bottom: 1px var(--green) solid;
     border-left: 1px var(--green) solid;
     border-right: 1px var(--green) solid;
-    border-bottom-right-radius: .5rem;
-    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
     padding: 1rem 1.5rem 0;
     font-size: 1.2rem;
     background: var(--green);
@@ -199,8 +200,8 @@
     table td {
       display: block;
       border: 1px var(--green) solid;
-      border-radius: .5rem;
-      margin-bottom: .5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
       padding: 1rem 2rem 0;
     }
 
@@ -209,13 +210,13 @@
       display: block;
       margin-left: -0.5rem;
       margin-bottom: 0.5rem;
-      padding: .5rem;
+      padding: 0.5rem;
       font-weight: bold;
       background: var(--green);
       word-break: break-word;
       color: var(--blue);
       font-size: 1.2rem;
       width: 100%;
-    } 
+    }
   }
 </style>
