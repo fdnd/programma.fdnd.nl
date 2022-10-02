@@ -37,4 +37,8 @@
     font-size: clamp(1.15rem, -1rem + 2vw, 2.5rem);
     margin-bottom: 1em;
   }
+  :global(section.semester h2 a.anchor) {
+    margin-left: -1em !important;
+    margin-top: 0.1em !important;
+  }
 </style>
