@@ -14,7 +14,7 @@ let {page, semesters} = data
 
 {#each semesters as semester, i}
   <section id={semester.data.uid} class="semester">
-    <h3>Semester {++i}: <strong>{semester.data.title}</strong></h3>
+    <h3>Semester {++i} <strong>{semester.data.title}</strong></h3>
 
     <ol>
       {#each semester.data.sprints as sprint}
@@ -35,21 +35,29 @@ let {page, semesters} = data
 {/each}
   
 <style>
+:global(main) {
+  max-width:60em;
+}
 h3 {
   font-size: clamp(1.15rem, -1rem + 2vw, 2.5rem);
   margin-bottom: 1em;
+  font-weight: normal;
 }
 
 h3 strong {
   display: block;
+  font-size: 1.1em;
+}
+section:not(.semester) {
+  max-width:40em
 }
 section.semester {
-  padding: 0;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
 }
 ol {
-  margin: 0;
+  margin: 0 -2rem;
   min-height: 25rem;
   flex-grow: 1;
   list-style: none;
@@ -60,7 +68,7 @@ ol {
 }
 
 ol li {
-  padding: 1rem;
+  padding: 1rem 2rem;
   border: 1px solid var(--green);
   border-radius: var(--rounded);
   color: var(--green);
