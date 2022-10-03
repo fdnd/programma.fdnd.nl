@@ -37,7 +37,7 @@
 
 <style>
   :global(main) {
-    max-width:50em;
+    max-width:60em;
   }
   section:not(.semester) {
     max-width:40em
