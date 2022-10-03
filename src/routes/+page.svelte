@@ -61,12 +61,11 @@
     border: 1px solid var(--green);
     border-radius: var(--rounded);
     color: var(--green);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.8em;
     position: relative;
+    font-size: 0.9em; /* quick hack */
   }
 
   section:last-child ol li {

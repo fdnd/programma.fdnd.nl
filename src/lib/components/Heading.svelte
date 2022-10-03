@@ -19,10 +19,14 @@
 </h2>
 
 <style>
+  h2 {
+    font-weight: normal; 
+  }
   h2 a.anchor {
     display: none;
     position: absolute;
     margin-left: -0.6em;
+    
   }
 
   h2:hover a.anchor {
@@ -35,7 +39,7 @@
   }
 
   :global(section.semester h2) {
-    font-size: clamp(1.15rem, -1rem + 2vw, 2.5rem);
+    font-size: clamp(1.15rem, -.5rem + 2vw, 2.5rem);
     margin-bottom: 1em;
   }
   :global(section.semester h2 a.anchor) {
