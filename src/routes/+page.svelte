@@ -40,17 +40,16 @@
     max-width:60em;
   }
   section:not(.semester) {
-    max-width:40em
+    max-width:40em;
   }
   section.semester {
-    padding: 0 2rem;
+    padding: 0;
   }
   ol {
-    margin: 0 -2rem;
+    margin:0;
     min-height: 25rem;
     flex-grow: 1;
     list-style: none;
-
     display: flex;
     flex-direction: column;
     align-items: stretch;
