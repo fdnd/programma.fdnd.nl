@@ -37,10 +37,11 @@
 
 <style>
   :global(main) {
-    /max-width:60rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
   }
   section:not(.semester) {
     max-width:40rem;
+    grid-column: 1 / -1
   }
   section.semester {
     font-size: .85em;
@@ -74,7 +75,10 @@
     z-index:1
   }
 
-  @media (min-width: 50rem) {
+  @media (min-width: 35em) {
+    :global(main) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
+      }
     section.semester {
       font-size: inherit;
     }
