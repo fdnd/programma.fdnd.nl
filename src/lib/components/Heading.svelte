@@ -35,8 +35,6 @@
 
   h2 > strong {
     display: block;
-    
-    
   }
   :global(section.semester h2) {
     font-size: clamp(1.15rem, -.5rem + 2vw, 2.5rem);

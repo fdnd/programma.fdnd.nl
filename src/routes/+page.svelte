@@ -37,16 +37,14 @@
 
 <style>
   :global(main) {
-    max-width:60em;
+    /max-width:60rem;
+  }
+  section:not(.semester) {
+    max-width:40rem;
   }
   section.semester {
     font-size: .85em;
   }
-  section:not(.semester) {
-    max-width:40em;
-  }
-
-
   ol {
     list-style: none;
     margin:0
@@ -73,5 +71,12 @@
     left:0;
     width:100%;
     height:100%;
+    z-index:1
+  }
+
+  @media (min-width: 50rem) {
+    section.semester {
+      font-size: inherit;
+    }
   }
 </style>

@@ -99,6 +99,9 @@
   section {
     padding: 1rem 2rem;
   }
+  section.col-span-2 {
+    max-width:40em
+  }
   aside h3 {
     display: none;
   }
