@@ -35,12 +35,11 @@
 
   h2 > strong {
     display: block;
-    font-size: 1.1em;
+    
+    
   }
-
   :global(section.semester h2) {
     font-size: clamp(1.15rem, -.5rem + 2vw, 2.5rem);
-    margin: 1em 2rem;
   }
   :global(section.semester h2 a.anchor) {
     margin-left: -1em !important;
