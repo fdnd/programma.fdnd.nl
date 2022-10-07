@@ -9,9 +9,7 @@
 
   let sprint = data
 
-  console.log('sprint', sprint)
 </script>
-
 <section class="blue-on-green rounded col-span-2">
   <Heading title="Sprint {sprint.data.sprint}: {sprint.data.title}" />
 
@@ -41,11 +39,13 @@
 </section>
 
 <section class="blue-on-purple pilled">
+  <Heading title="Gedragscriteria" />
   {@html helpers.asHTML(sprint.data.criteria)}
 </section>
 
 {#if sprint.data.tasks}
   <section class="green-on-blue">
+    <Heading title="Leertaken" />
     {@html helpers.asHTML(sprint.data.tasks)}
   </section>
 {/if}
