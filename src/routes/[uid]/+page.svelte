@@ -1,13 +1,15 @@
 <script>
-  import * as helpers from '@prismicio/helpers';
-  import IconCal from '$lib/components/icons/Calendar.svelte';
-  import IconTag from '$lib/components/icons/Tag.svelte';
-  import Heading from '$lib/components/Heading.svelte';
-  import { prettyDate, longDate } from '$lib/utils/date.js';
+  import * as helpers from '@prismicio/helpers'
+  import IconCal from '$lib/components/icons/Calendar.svelte'
+  import IconTag from '$lib/components/icons/Tag.svelte'
+  import Heading from '$lib/components/Heading.svelte'
+  import { prettyDate, longDate } from '$lib/utils/date.js'
 
-  export let data;
+  export let data
 
-  let sprint = data;
+  let sprint = data
+
+  console.log('sprint', sprint)
 </script>
 
 <section class="blue-on-green rounded col-span-2">
@@ -100,7 +102,8 @@
     padding: 1rem 2rem;
   }
   section.col-span-2 {
-    max-width:40em
+    max-width:40em;
+    grid-column:1 / -1;
   }
   aside h3 {
     display: none;

@@ -1,11 +1,11 @@
 <script>
-  import * as helpers from '@prismicio/helpers';
-  import { prettyDate } from '$lib/utils/date.js';
-  import Heading from '$lib/components/Heading.svelte';
+  import * as helpers from '@prismicio/helpers'
+  import { prettyDate } from '$lib/utils/date.js'
+  import Heading from '$lib/components/Heading.svelte'
 
-  export let data;
+  export let data
 
-  let { page, semesters } = data;
+  let { page, semesters } = data
 </script>
 
 <section class="blue-on-green rounded col-span-2">
