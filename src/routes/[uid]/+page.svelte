@@ -10,6 +10,7 @@
   let sprint = data
 
 </script>
+
 <section class="blue-on-green rounded col-span-2">
   <Heading title="Sprint {sprint.data.sprint}: {sprint.data.title}" />
 
@@ -104,6 +105,15 @@
   section.col-span-2 {
     max-width:40em;
     grid-column:1 / -1;
+  }
+  section.col-span-3 {
+    grid-column:1 / -1;
+  }
+
+  section :global(h3){
+    font-size: 1.2em;
+    margin-top: 3rem;
+    font-weight: normal;
   }
   aside h3 {
     display: none;
