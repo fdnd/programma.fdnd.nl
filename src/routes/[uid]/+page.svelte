@@ -17,15 +17,14 @@
   <aside>
     <h3>Topics</h3>
     <ul>
-      <li>
-        <time class="green-on-blue rounded">
+      <li class="green-on-blue rounded">
+        
           {#if sprint.data.startdate}
             <IconCal date={longDate(sprint.data.startdate)} />
           {/if}
-        </time>
       </li>
       {#each sprint.tags as tag}
-        <li>
+        <li class="green-on-blue rounded">
           <IconTag {tag} />
         </li>
       {/each}
@@ -58,19 +57,19 @@
       <caption>Week {item.weeknummer[0].text}</caption>
       <thead>
         <tr>
-          <th scope="col">
+          <th scope="col" class="blue-on-green">
             Maandag <span>{prettyDate(item.maandag_datum)}</span>
           </th>
-          <th scope="col">
+          <th scope="col" class="blue-on-green">
             Dinsdag <span>{prettyDate(item.dinsdag_datum)}</span>
           </th>
-          <th scope="col">
+          <th scope="col" class="blue-on-green">
             Woensdag <span>{prettyDate(item.woensdag_datum)}</span>
           </th>
-          <th scope="col">
+          <th scope="col" class="blue-on-green">
             Donderdag <span>{prettyDate(item.donderdag_datum)}</span>
           </th>
-          <th scope="col">
+          <th scope="col" class="blue-on-green">
             Vrijdag <span>{prettyDate(item.vrijdag_datum)}</span>
           </th>
         </tr>
@@ -78,19 +77,19 @@
       <tbody>
         <tr>
           <td data-label="Maandag {prettyDate(item.maandag_datum)}"
-            >{@html helpers.asHTML(item.maandag)}</td
+           class="blue-on-green">{@html helpers.asHTML(item.maandag)}</td
           >
           <td data-label="Dinsdag {prettyDate(item.dinsdag_datum)}"
-            >{@html helpers.asHTML(item.dinsdag)}</td
+           class="blue-on-green">{@html helpers.asHTML(item.dinsdag)}</td
           >
           <td data-label="Woensdag {prettyDate(item.woensdag_datum)}"
-            >{@html helpers.asHTML(item.woensdag)}</td
+          class="blue-on-green">{@html helpers.asHTML(item.woensdag)}</td
           >
           <td data-label="Donderdag {prettyDate(item.donderdag_datum)}"
-            >{@html helpers.asHTML(item.donderdag)}</td
+          class="blue-on-green">{@html helpers.asHTML(item.donderdag)}</td
           >
           <td data-label="Vrijdag {prettyDate(item.vrijdag_datum)}"
-            >{@html helpers.asHTML(item.vrijdag)}</td
+          class="blue-on-green">{@html helpers.asHTML(item.vrijdag)}</td
           >
         </tr>
       </tbody>
@@ -127,16 +126,12 @@
   }
   aside ul li {
     list-style: none;
-    border-radius: var(--pilled);
-    border: 1px solid var(--blue);
-    padding: 0 0.4rem;
+    padding:0.1rem 0.5rem;
     white-space: nowrap;
-    color: var(--blue);
-    background: var(--green);
     font-size: 0.8rem;
-  }
-  aside li:first-of-type {
-    background: var(--blue);
+    border-radius:.5rem;
+    line-height:1.5;
+    display:flex;
   }
 
   table {
@@ -159,16 +154,13 @@
   }
   th {
     font-weight: bold;
-    background: var(--green);
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     word-break: break-word;
-    color: var(--blue);
     font-size: 1.2rem;
     width: 20%;
     min-width: 10rem;
     border: 1px solid var(--green);
-    color: var(--blue);
     text-align: left;
     padding: 0.5rem 1.5rem;
   }
@@ -186,8 +178,6 @@
     border-bottom-left-radius: 0.5rem;
     padding: 1rem 1.5rem 0;
     font-size: 1.2rem;
-    background: var(--green);
-    color: var(--blue);
   }
 
   td :global(p) {
