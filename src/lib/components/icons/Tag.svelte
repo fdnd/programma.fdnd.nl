@@ -24,6 +24,6 @@
 
 <style>
 svg {
-    transform: translateY(4px) rotate(90deg);
+    transform: translate(-2px, 1px) rotate(90deg);
 }
 </style>

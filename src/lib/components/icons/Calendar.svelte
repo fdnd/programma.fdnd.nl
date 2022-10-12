@@ -21,6 +21,6 @@
 
 <style>
 svg {
-    transform: translateY(3px);
+    transform: translate(-2px, 1px);
 }
 </style>
