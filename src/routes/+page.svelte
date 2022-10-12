@@ -35,15 +35,16 @@
   </section>
 {/each}
 
-<style>
-  :global(main) {
-    max-width:60em;
-  }
+<style> 
+  :global(body main) {
+    max-width:50em
+  } 
   section:not(.semester) {
     max-width:40em
   }
   section.semester {
     padding: 0 2rem;
+    /* max-width: 25em; */
   }
   ol {
     margin: 0 -2rem;

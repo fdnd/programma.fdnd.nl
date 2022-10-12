@@ -96,9 +96,16 @@
 </section>
 
 <style>
+  :global(body main) {
+    max-width:60em;
+  }
   section {
     padding: 1rem 2rem;
   }
+  section.col-span-2 { /* inleiding */
+    max-width: 40em;
+  }
+
   aside h3 {
     display: none;
   }
@@ -128,8 +135,9 @@
     border-spacing: 0.5em 0;
     font-size: 0.8em;
     margin: 0 -2rem;
+    /* width: 50%; */
+    /* background: purple; */
   }
-
   table + table {
     margin-top: 2rem;
   }
@@ -149,8 +157,8 @@
     word-break: break-word;
     color: var(--blue);
     font-size: 1.2rem;
-    width: 20%;
-    min-width: 10rem;
+    /* width: 20%; */
+    /* min-width: 10rem; */
     border: 1px solid var(--green);
     color: var(--blue);
     text-align: left;
@@ -161,6 +169,10 @@
     font-size: 0.8rem;
   }
 
+  tr {
+    background: gold;
+    width: 100%;
+  }
   td {
     vertical-align: top;
     border-bottom: 1px var(--green) solid;
@@ -170,7 +182,9 @@
     border-bottom-left-radius: 0.5rem;
     padding: 1rem 1.5rem 0;
     font-size: 1.2rem;
-    background: var(--green);
+    /* background: var(--green); */
+    /* background: pink; */
+    width: 18rem;
     color: var(--blue);
   }
 
@@ -179,12 +193,12 @@
   }
 
   @media (max-width: 62rem) {
-    table {
+    /* table {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-    }
-    table thead {
+    } */
+    /* table thead {
       position: absolute;
       margin: -1px;
       padding: 0;
@@ -192,20 +206,18 @@
       height: 1px;
       border: none;
       clip: rect(0 0 0 0);
-    }
-
-    table tr {
+    } */
+    /* table tr {
       display: block;
-    }
-    table td {
+    } */
+    /* table td {
       display: block;
       border: 1px var(--green) solid;
       border-radius: 0.5rem;
       margin-bottom: 0.5rem;
       padding: 1rem 2rem 0;
-    }
-
-    table td::before {
+    } */
+    /* table td::before {
       content: attr(data-label);
       display: block;
       margin-left: -0.5rem;
@@ -217,6 +229,6 @@
       color: var(--blue);
       font-size: 1.2rem;
       width: 100%;
-    }
+    } */
   }
 </style>
