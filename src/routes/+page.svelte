@@ -20,10 +20,17 @@
     <ol>
       {#each semester.data.sprints as sprint}
         <li class="rounded green-on-blue">
-          <a data-sveltekit-prefetch href={sprint.uid}>
-            Sprint {sprint.data.sprint}:
-            <strong>{sprint.data.title}</strong>
-          </a>
+
+          {#if sprint.data.sprint}
+            <a data-sveltekit-prefetch href={sprint.uid}>
+              Sprint {sprint.data.sprint}:
+              <strong>{sprint.data.title}</strong>
+            </a>
+          {/if}
+          {#if !sprint.data.sprint}
+            {sprint.data.title}
+          {/if}
+
           <time class="rounded blue-on-green">
             {#if sprint.data.startdate}
               {prettyDate(sprint.data.startdate)}
