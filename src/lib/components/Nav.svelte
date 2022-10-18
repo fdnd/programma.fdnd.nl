@@ -19,6 +19,13 @@
   menu a {
     display: block;
     border-radius: 0.5rem;
-    transform: rotate(-5deg) translateY(-3rem);
+    transform: rotate(-5deg) translateY(-6.8rem);
+  }
+
+  @media (min-width: 30em) {
+    menu a {
+      transform: rotate(-5deg) translateY(-3rem);
+    }
+
   }
 </style>
