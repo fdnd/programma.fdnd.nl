@@ -6,8 +6,7 @@
   <nav>
     <h2>Microsites</h2>
     <p>
-      FDND maakt gebruik van een heleboel microsites in plaats van één grote
-      website met een ingewikkelde informatiestructuur. Microsites zijn kleine
+      FDND maakt gebruik van een heleboel microsites. Microsites zijn kleine
       websites met een specifiek doel ter ondersteuning van een campagne,
       informatie over een product of dienst.
     </p>
