@@ -37,7 +37,8 @@
     {/if}
   </div>
 </section>
-<div>
+
+<div class="container">
   <section class="blue-on-purple pilled col-span-1">
     <Heading title="Gedragscriteria" />
     {@html helpers.asHTML(sprint.data.criteria)}
@@ -78,20 +79,15 @@
       <tbody>
         <tr>
           <td data-label="Maandag {prettyDate(item.maandag_datum)}"
-           class="blue-on-green">{@html helpers.asHTML(item.maandag)}</td
-          >
+           class="blue-on-green">{@html helpers.asHTML(item.maandag)}</td>
           <td data-label="Dinsdag {prettyDate(item.dinsdag_datum)}"
-           class="blue-on-green">{@html helpers.asHTML(item.dinsdag)}</td
-          >
+           class="blue-on-green">{@html helpers.asHTML(item.dinsdag)}</td>
           <td data-label="Woensdag {prettyDate(item.woensdag_datum)}"
-          class="blue-on-green">{@html helpers.asHTML(item.woensdag)}</td
-          >
+          class="blue-on-green">{@html helpers.asHTML(item.woensdag)}</td>
           <td data-label="Donderdag {prettyDate(item.donderdag_datum)}"
-          class="blue-on-green">{@html helpers.asHTML(item.donderdag)}</td
-          >
+          class="blue-on-green">{@html helpers.asHTML(item.donderdag)}</td>
           <td data-label="Vrijdag {prettyDate(item.vrijdag_datum)}"
-          class="blue-on-green">{@html helpers.asHTML(item.vrijdag)}</td
-          >
+          class="blue-on-green">{@html helpers.asHTML(item.vrijdag)}</td>
         </tr>
       </tbody>
     </table>
@@ -111,13 +107,8 @@
     padding: 1rem 2rem;
     margin: 1rem 0;
   }
-  section + div{
-    /* background-color:palegoldenrod; */
-    max-width:60rem;
-    /* display: flex; */
-    columns: 2;
-    column-gap: 2rem;
-    /* column-width: 50%; */
+  div.container{
+    max-width:28rem;
   }
   section.col-span-1:last-of-type {
     border: 2px #66e5bf solid;
@@ -126,7 +117,6 @@
     /* width:50%; */
     display: inline-block;
     vertical-align: top;
-    /* margin-right: 1rem; */
   }
   section.col-span-2 {
     max-width:42rem;
@@ -164,15 +154,14 @@
 
   /* Sprint planning */
   table {
-    /* background: palegoldenrod; */
     border-collapse: separate;
     border-spacing: 0.5em 0;
     font-size: 0.8em;
-    margin: 0 -2rem;
-    /* width: 50%; */
+    margin: 0 -3rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;;
     display: block;
     overflow-x: scroll;
-    padding-bottom: 1rem;;
   }
   table + table {
     margin-top: 2rem;
@@ -193,8 +182,7 @@
     border-top-right-radius: 0.5rem;
     word-break: break-word;
     font-size: 1.2rem;
-    /* width: 200px; */
-    min-width: 20rem;
+    min-width: 16rem;
     border: 1px solid var(--green);
     text-align: left;
     padding: 0.5rem 1.5rem;
@@ -227,11 +215,21 @@
     margin-bottom: 2rem;
   }
 
-  @media (max-width: 44rem) {
-    section+div{
-      /* max-width: 32rem; */
-      /* display: block; */
-      columns: 1;
+  @media (min-width: 22rem) {
+    th{
+      min-width: 18rem;
+    }
+  }
+  @media (min-width: 30rem) {
+    th{
+      min-width: 21rem;
+    }
+  }
+  @media (min-width: 44rem) {
+    div.container{
+      max-width: 60rem;
+      columns: 2;
+      column-gap: 2rem;
     }
   }
   @media (max-width: 62rem) {
