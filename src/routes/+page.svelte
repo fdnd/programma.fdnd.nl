@@ -13,6 +13,8 @@
   {@html helpers.asHTML(page.data.content)}
 </section>
 
+<div> <!-- horizontal scroll voor semester lijsten -->
+  <span class="scroll">scroll >>> </span>
 {#each semesters as semester, i}
   <section class="semester green-on-blue pilled">
     <Heading title="Semester {++i}" subtitle={semester.data.title} />
@@ -41,34 +43,65 @@
     </ol>
   </section>
 {/each}
+</div>
 
 <style>
   :global(main) {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+    /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) */
   }
-  section:not(.semester) {
-    max-width:40rem;
-    grid-column: 1 / -1
+  section {
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+  }
+  section.col-span-2 {
+  /* section:not(.semester) { */
+    max-width:42rem;
+    padding-bottom: 2rem;
+    /* grid-column: 1 / -1 */
+  }
+  div{
+    position: relative;
+    /* background: gold; */
+    padding: 0 0 1rem 2rem;
+    margin: 1rem 0 0 -2rem;
+    width: 100vw;
+    overflow-x: scroll;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  div span.scroll{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    background: gold;
   }
   section.semester {
+    /* background: pink; */
     font-size: .85em;
+    /* width: 25rem; */
+    margin-right: 2rem;
+    padding: 2rem;
+    border: 2px #66e5bf solid;
   }
   ol {
+    /* background: pink; */
     list-style: none;
-    margin:0
+    margin:0;
+    width: 19rem;
+    /* display: flex;
+    flex-wrap: nowrap; */
   }
-  ol li {
-    list-style: none;
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-start;
+   ol li { 
+    /* list-style: none; */
     position: relative;
   }
   time {
-    display:block;
+    /* display:block; */
     border:1px solid;
     padding:0 .25rem;
-    font-size: .8em;
+    font-size: .7em;
     border-radius: var(--rounded);
   }
 
@@ -84,10 +117,19 @@
 
   @media (min-width: 35em) {
     :global(main) {
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
+        /* grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)) */
       }
     section.semester {
       font-size: inherit;
     }
+    ol {
+      width: 23rem;
+    }
+    ol li { 
+      display:flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
+
 </style>
