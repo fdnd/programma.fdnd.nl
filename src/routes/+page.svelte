@@ -13,8 +13,8 @@
   {@html helpers.asHTML(page.data.content)}
 </section>
 
-<div> <!-- horizontal scroll voor semester lijsten -->
-  <span class="scroll">scroll >>> </span>
+<div class="scroll-horo"> <!-- horizontal scroll voor semester lijsten -->
+  <span class="scroll-label">scroll >>> </span>
 {#each semesters as semester, i}
   <section class="semester green-on-blue pilled">
     <Heading title="Semester {++i}" subtitle={semester.data.title} />
@@ -46,9 +46,22 @@
 </div>
 
 <style>
-  :global(main) {
-    /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) */
+  :global(body) {
+    /* max-width:60em; */
+    display: block !important;
   }
+  :global(body main) {
+    /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) */
+    /* max-width:60em; */
+    display: block !important;
+  }
+  :global(body:before) {
+    width: 160px;
+  }
+  :global(body:after) {
+    width: 160px;
+  }
+
   section {
     padding: 1rem 2rem;
     margin: 1rem 0;
@@ -59,18 +72,17 @@
     padding-bottom: 2rem;
     /* grid-column: 1 / -1 */
   }
-  div{
+  div.scroll-horo{
     position: relative;
-    /* background: gold; */
-    padding: 0 0 1rem 2rem;
-    margin: 1rem 0 0 -2rem;
+    padding-left: 1rem;
+    margin: 1rem 0 1rem -1rem;
     width: 100vw;
     overflow-x: scroll;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  div span.scroll{
+  div.scroll-horo span.scroll-label{
     display: none;
     position: absolute;
     top: 0;
@@ -78,27 +90,32 @@
     background: gold;
   }
   section.semester {
-    /* background: pink; */
-    font-size: .85em;
+    font-size: .9em;
     /* width: 25rem; */
-    margin-right: 2rem;
+    margin-right: 1rem;
     padding: 2rem;
     border: 2px #66e5bf solid;
   }
   ol {
-    /* background: pink; */
     list-style: none;
     margin:0;
-    width: 19rem;
-    /* display: flex;
-    flex-wrap: nowrap; */
+    width: 14rem;
   }
    ol li { 
     /* list-style: none; */
     position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  ol li a{
+    display: inline-block;
+    width: 10rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   time {
-    /* display:block; */
     border:1px solid;
     padding:0 .25rem;
     font-size: .7em;
@@ -115,20 +132,32 @@
     z-index:1
   }
 
+  @media (min-width: 25em) {
+    ol {
+      width: 18rem;
+    }
+    ol li a{
+      width: 14rem;
+    }
+
+  }
+  @media (min-width: 30em) {
+    :global(body:before) {
+      width: 350px !important;
+    }
+  }
   @media (min-width: 35em) {
     :global(main) {
         /* grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)) */
-      }
+    }
     section.semester {
-      font-size: inherit;
+      font-size: 1em;
     }
     ol {
       width: 23rem;
     }
-    ol li { 
-      display:flex;
-      justify-content: space-between;
-      align-items: baseline;
+    ol li a{
+      width: 19rem;
     }
   }
 
