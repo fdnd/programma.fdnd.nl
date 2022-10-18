@@ -101,11 +101,11 @@
 <style>
   :global(body) {
     /* max-width:60em; */
-    display: block;
+    display: block !important;
   }
   :global(body main) {
     /* max-width:60em; */
-    display: block;
+    display: block !important;
   }
   section {
     padding: 1rem 2rem;
