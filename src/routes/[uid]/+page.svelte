@@ -37,18 +37,19 @@
     {/if}
   </div>
 </section>
-
-<section class="blue-on-purple pilled">
-  <Heading title="Gedragscriteria" />
-  {@html helpers.asHTML(sprint.data.criteria)}
-</section>
-
-{#if sprint.data.tasks}
-  <section class="green-on-blue">
-    <Heading title="Leertaken" />
-    {@html helpers.asHTML(sprint.data.tasks)}
+<div>
+  <section class="blue-on-purple pilled col-span-1">
+    <Heading title="Gedragscriteria" />
+    {@html helpers.asHTML(sprint.data.criteria)}
   </section>
-{/if}
+
+  {#if sprint.data.tasks}
+    <section class="green-on-blue col-span-1">
+      <Heading title="Leertaken" />
+      {@html helpers.asHTML(sprint.data.tasks)}
+    </section>
+  {/if}
+</div>
 
 <section class="col-span-3">
   <Heading title="Sprint planning" />
@@ -98,18 +99,42 @@
 </section>
 
 <style>
+  :global(body) {
+    /* max-width:60em; */
+    display: block;
+  }
   :global(body main) {
-    max-width:60em;
+    /* max-width:60em; */
+    display: block;
   }
   section {
     padding: 1rem 2rem;
+    margin: 1rem 0;
+  }
+  section + div{
+    /* background-color:palegoldenrod; */
+    max-width:60rem;
+    /* display: flex; */
+    columns: 2;
+    column-gap: 2rem;
+    /* column-width: 50%; */
+  }
+  section.col-span-1:last-of-type {
+    border: 2px #66e5bf solid;
+  }
+  section.col-span-1 {
+    /* width:50%; */
+    display: inline-block;
+    vertical-align: top;
+    /* margin-right: 1rem; */
   }
   section.col-span-2 {
-    max-width:40em;
-    grid-column:1 / -1;
+    max-width:42rem;
+    padding-bottom: 2rem;
+    /* grid-column:1 / -1; */
   }
   section.col-span-3 {
-    grid-column:1 / -1;
+    /* grid-column:1 / -1; */
   }
 
   section :global(h3){
@@ -137,24 +162,30 @@
     display:flex;
   }
 
+  /* Sprint planning */
   table {
+    /* background: palegoldenrod; */
     border-collapse: separate;
     border-spacing: 0.5em 0;
     font-size: 0.8em;
     margin: 0 -2rem;
     /* width: 50%; */
-    /* background: purple; */
+    display: block;
+    overflow-x: scroll;
+    padding-bottom: 1rem;;
   }
   table + table {
     margin-top: 2rem;
   }
-
   table caption {
     color: white;
     font-size: 1.5rem;
     text-align: left;
     padding-bottom: 1rem;
     padding-left: 2rem;
+    display: block;
+    position:sticky;
+    left: 0;
   }
   th {
     font-weight: bold;
@@ -162,8 +193,8 @@
     border-top-right-radius: 0.5rem;
     word-break: break-word;
     font-size: 1.2rem;
-    /* width: 20%; */
-    /* min-width: 10rem; */
+    /* width: 200px; */
+    min-width: 20rem;
     border: 1px solid var(--green);
     text-align: left;
     padding: 0.5rem 1.5rem;
@@ -174,8 +205,10 @@
   }
 
   tr {
-    background: gold;
-    width: 100%;
+    /* background: gold; */
+    /* width: 100%; */
+    /* background: purple; */
+    margin: 1rem;
   }
   td {
     vertical-align: top;
@@ -186,12 +219,21 @@
     border-bottom-left-radius: 0.5rem;
     padding: 1rem 1.5rem 0;
     font-size: 1.2rem;
+    margin-right: 0.2rem;
+    /* width: 23rem; */
   }
 
   td :global(p) {
     margin-bottom: 2rem;
   }
 
+  @media (max-width: 44rem) {
+    section+div{
+      /* max-width: 32rem; */
+      /* display: block; */
+      columns: 1;
+    }
+  }
   @media (max-width: 62rem) {
     /* table {
       display: flex;
