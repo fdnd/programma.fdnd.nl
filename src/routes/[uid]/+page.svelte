@@ -115,8 +115,7 @@
   }
   section.col-span-1 {
     /* width:50%; */
-    display: inline-block;
-    vertical-align: top;
+    max-width:32rem;
   }
   section.col-span-2 {
     max-width:42rem;
@@ -193,9 +192,7 @@
   }
 
   tr {
-    /* background: gold; */
     /* width: 100%; */
-    /* background: purple; */
     margin: 1rem;
   }
   td {
@@ -228,8 +225,16 @@
   @media (min-width: 44rem) {
     div.container{
       max-width: 60rem;
-      columns: 2;
-      column-gap: 2rem;
+      display: flex;
+      flex-wrap: nowrap;
+      /* justify-content: space-between; */
+      gap: 2rem;
+      align-items: flex-start;
+      /* columns: 2 auto; */
+      /* column-gap: 2rem; */
+    }
+    div.container section{
+      break-inside: avoid;
     }
   }
   @media (max-width: 62rem) {
