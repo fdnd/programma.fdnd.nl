@@ -1,45 +1,45 @@
 <script>
-  import * as helpers from '@prismicio/helpers'
-  import { prettyDate } from '$lib/utils/date.js'
-  import Heading from '$lib/components/Heading.svelte'
+    import Heading from '$lib/components/Heading.svelte'
+    import { prettyDate } from '$lib/utils/date'
+    
+    export let data
 
-  export let data
-
-  let { page, semesters } = data
+    const {title, subtitle, content, semesters} = data
 </script>
 
+
+
 <section class="blue-on-green rounded col-span-2">
-  <Heading title={page.data.title} />
-  {@html helpers.asHTML(page.data.content)}
+    <Heading title={title} subtitle={subtitle} />
+    {@html content.html}
 </section>
 
 <div class="scroll-horo"> <!-- horizontal scroll voor semester lijsten -->
   <span class="scroll-label">scroll >>> </span>
 {#each semesters as semester, i}
   <section class="semester green-on-blue pilled">
-    <Heading title="Semester {++i}" subtitle={semester.data.title} />
+      <Heading title="Semester {++i}" subtitle={semester.title} />
 
-    <ol>
-      {#each semester.data.sprints as sprint}
-        <li class="rounded green-on-blue">
-
-          {#if sprint.data.sprint}
-            <a data-sveltekit-prefetch href={sprint.uid}>
-              Sprint {sprint.data.sprint}:
-              <strong>{sprint.data.title}</strong>
+      <ol>
+        {#each semester.sprints as sprint}
+          <li class="rounded green-on-blue">
+            {#if sprint.sprintNumber}
+            <a data-sveltekit-prefetch href={semester.slug}/{sprint.slug}>
+              Sprint {sprint.sprintNumber}:
+              <strong>{sprint.title}</strong>
             </a>
-          {:else}
-            {sprint.data.title}
-          {/if}
-
-          <time class="rounded blue-on-green">
-            {#if sprint.data.startdate}
-              {prettyDate(sprint.data.startdate)}
+            {:else}
+              {sprint.title}
             {/if}
-          </time>
-        </li>
-      {/each}
-    </ol>
+
+            <time class="rounded blue-on-green">
+              {#if sprint.startdate}
+                {prettyDate(sprint.startdate)}
+              {/if}
+            </time>
+          </li>
+        {/each}
+      </ol>
   </section>
 {/each}
 </div>
@@ -161,3 +161,7 @@
   }
 
 </style>
+
+
+
+
