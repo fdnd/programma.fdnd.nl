@@ -8,9 +8,7 @@
 </nav>
 
 <style>
-    @media (min-width: 30rem) {
-		nav {
-			margin-left: .5rem;
-		}
-	}
+    nav {
+        margin-left: .5rem;
+    }
 </style>
