@@ -1,28 +1,10 @@
 import { client } from '$lib/utils/client'
+import getQueryProgram from '$lib/queries/program'
 
 export const load = async () => {
-	const query = `
-    query Programs {
-        program(where: {id: "cl9pm4is9l9xu0atdbqxnd710"}) {
-            title
-            subtitle
-            content {
-                html
-            }
-            semesters {
-                title
-                slug
-                sprints {
-                    title
-                    slug
-                    sprintNumber
-                    startdate
-                }
-            }
-        }
-    }`
+	const queryProgram = getQueryProgram()
 
-    const data = await client({ query, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT });
+    const data = await client({ query: queryProgram, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT });
 
     return {
         ...data.program
