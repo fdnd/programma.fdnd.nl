@@ -19,9 +19,9 @@ function clean(dataTasks){
     const topics = task.repo.repositoryTopics.edges
                           .map(topic => topic.node.topic.name)
                           .filter(topic => topic == 'task' || topic == 'subtask')
-        
+    
     return {
-      name: task.repo.name,
+      name: task.repo.name.replace(/-/g, " "),
       description:task.repo.description,
       url:task.repo.url,
       forks:task.repo.forkCount,

@@ -45,7 +45,7 @@
     {/if}
 
 
-    <section class="green-on-blue col-span-1">
+    <section class="green-on-blue col-span-1 tasks">
       <Heading title="Leertaken" />
 
       {#each tasks as task}
@@ -135,9 +135,6 @@
       padding: 1rem 2rem;
       margin: 1rem 0;
     }
-    section > a {
-      display: inline
-    }
     div.container{
       max-width:28rem;
     }
@@ -161,6 +158,9 @@
       font-size: 1.2em;
       margin-top: 3rem;
       font-weight: normal;
+    }
+    section.tasks a {
+      text-transform:capitalize
     }
     aside h3 {
       display: none;
