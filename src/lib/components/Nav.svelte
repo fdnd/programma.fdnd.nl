@@ -10,5 +10,6 @@
 <style>
     nav {
         margin-left: .5rem;
+        background:none
     }
 </style>

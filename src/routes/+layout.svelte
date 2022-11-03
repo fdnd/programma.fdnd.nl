@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>FDND Programma</title>
+	<title>Frontend Design & Development | Programma</title>
 </svelte:head>
 
 <header>
@@ -22,11 +22,25 @@
 <style>
 	:global(body:before){
 		left:auto;
-		right:2rem
+		top:auto;
+		right:2rem;
+		bottom:1rem;
+
+	}
+	:global(body:after){
+		left:2rem
 	}
 
 	h1 {
 		margin-left: 2rem;
+		color:transparent
 	}
-	
+	h1 span {
+		position: absolute;
+		font-size: 10rem;
+		top: -2rem;
+		color: #171767;
+		z-index: -1;
+		left: 2rem;
+	}
 </style>
