@@ -1,7 +1,8 @@
-export async function client({ query, variables, fetch}){
-	const response = await fetch(import.meta.env.VITE_HYPGRAPH_ENDPOINT, {
+export async function client({ query, variables, fetch, endpoint, headers = {}}){
+	const response = await fetch(endpoint, {
 		method: 'POST',
-		body: JSON.stringify({ query, variables })
+		body: JSON.stringify({ query, variables }), 
+		headers: headers
 	})
 
 	const { data } = await response.json()

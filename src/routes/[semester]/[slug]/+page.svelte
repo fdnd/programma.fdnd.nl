@@ -6,9 +6,7 @@
   
     export let data
 
-    const {title, slug, sprintNumber, startdate, content, criteria, tasks, weekPlans } = data
-
-    console.log(data)
+    const {title, sprintNumber, startdate, content, criteria, weekPlans, tasks } = data
   </script>
   
   <section class="blue-on-green rounded col-span-2">
@@ -46,12 +44,34 @@
     </section>
     {/if}
 
-    {#if tasks}
-      <section class="green-on-blue col-span-1">
-        <Heading title="Leertaken" />
-        {@html tasks.html}
-      </section>
-    {/if}
+
+    <section class="green-on-blue col-span-1">
+      <Heading title="Leertaken" />
+
+      {#each tasks as task}
+        {#if task.topic == 'task'}
+          <p>
+            <a href="{task.url}">{task.name}</a> <small class="blue-on-green pilled">{task.forks} forks</small>
+          </p>
+          <p>
+            {task.description}
+          </p>
+        {/if}
+      {/each}
+
+      <h3>Deeltaken</h3>
+      <ul>
+        {#each tasks as task}
+        {#if task.topic == 'subtask'}
+        <li>
+            <a href="{task.url}">{task.name}</a> <small class="blue-on-green pilled">{task.forks} forks</small>
+        </li>
+        {/if}
+        {/each}
+      </ul>
+      
+    </section>
+
   </div>
   
   {#if weekPlans.length > 0}
@@ -107,9 +127,16 @@
       /* max-width:60em; */
       display: block !important;
     }
+    small {
+      font-size: .5em;
+      padding: 0 .25rem
+    }
     section {
       padding: 1rem 2rem;
       margin: 1rem 0;
+    }
+    section > a {
+      display: inline
     }
     div.container{
       max-width:28rem;

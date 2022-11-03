@@ -22,7 +22,7 @@ export const load = async () => {
         }
     }`
 
-    const data = await client({ query, fetch: fetch });
+    const data = await client({ query, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT });
 
     return {
         ...data.program
