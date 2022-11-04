@@ -175,6 +175,9 @@
     section ul li {
       list-style:none !important;
     }
+    section.tasks {
+      border-radius:1rem
+    }
     section.tasks p:nth-of-type(2n) {
       margin-bottom: 2em;
     }
