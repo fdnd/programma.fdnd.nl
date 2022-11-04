@@ -39,7 +39,7 @@
 		position: absolute;
 		font-size: 10rem;
 		top: -2rem;
-		color: #fff;
+		color: rgb(166, 117, 245);
 		z-index: -1;
 		left: 2rem;
 	}
