@@ -36,7 +36,12 @@
       display: block;
     }
     :global(section.semester h2) {
-      font-size: clamp(1.15rem, -.5rem + 2vw, 2.5rem);
+      font-size: 1em;
+    }
+    @media(min-width:30em) {
+      :global(section.semester h2) {
+        font-size: clamp(1.15rem, -.5rem + 1vw, 2.5rem);
+      }
     }
     :global(section.semester h2 a.anchor) {
       margin-left: -1em !important;

@@ -59,16 +59,16 @@
           </p>
         {/if}
       {/each}
-
+      
       <h3>Deeltaken</h3>
       <ul>
         {#each tasks as task}
-        {#if task.topic == 'subtask'}
-        <li>
-          
-          <a href="{task.url}">{task.name}</a><small class="blue-on-green">{task.forks} forks</small>
-        </li>
-        {/if}
+          {#if task.topic == 'subtask'}
+          <li>
+            
+            <a href="{task.url}">{task.name}</a><small class="blue-on-green">{task.forks} forks</small>
+          </li>
+          {/if}
         {/each}
       </ul>
       
@@ -201,9 +201,6 @@
       transform:translateY(-5px);
       white-space: nowrap;
     }
-  
-
-
     aside h3 {
       display: none;
     }
