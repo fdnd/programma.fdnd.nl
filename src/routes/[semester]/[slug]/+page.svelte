@@ -1,6 +1,7 @@
 <script>
     import IconCal from '$lib/components/icons/Calendar.svelte'
     import IconTag from '$lib/components/icons/Tag.svelte'
+    import IconTask from '$lib/components/icons/Task.svelte'
     import Heading from '$lib/components/Heading.svelte'
     import { prettyDate, longDate } from '$lib/utils/date.js'
   
@@ -9,7 +10,7 @@
     const {title, sprintNumber, startdate, content, criteria, weekPlans, tasks } = data
   </script>
   
-  <section class="blue-on-green rounded col-span-2">
+  <section class="blue-on-green pilled col-span-2">
     <Heading title="Sprint {sprintNumber}: {title}" />
   
     <aside>
@@ -38,7 +39,7 @@
   
   <div class="container">
     {#if criteria}
-    <section class="blue-on-purple pilled col-span-1">
+    <section class="blue-on-purple pilled col-span-1 criteria">
       <Heading title="Gedragscriteria" />
         {@html criteria.html}
     </section>
@@ -51,6 +52,7 @@
       {#each tasks as task}
         {#if task.topic == 'task'}
           <p>
+            <IconTask />
             <a href="{task.url}">{task.name}</a> <small class="blue-on-green pilled">{task.forks} forks</small>
           </p>
           <p>
@@ -64,7 +66,8 @@
         {#each tasks as task}
         {#if task.topic == 'subtask'}
         <li>
-            <a href="{task.url}">{task.name}</a> <small class="blue-on-green pilled">{task.forks} forks</small>
+          <IconTask />
+          <a href="{task.url}">{task.name}</a> <small class="blue-on-green pilled">{task.forks} forks</small>
         </li>
         {/if}
         {/each}
@@ -159,9 +162,27 @@
       margin-top: 3rem;
       font-weight: normal;
     }
+    :global(section.criteria ul){
+      margin-left:0
+    }
+    :global(section.criteria ul li){
+      list-style:none
+    }
+    section ul {
+      margin:0;
+      list-style:none !important;
+    }
+    section ul li {
+      list-style:none !important;
+    }
+    section.tasks p:nth-of-type(2n) {
+      margin-bottom: 2em;
+    }
     section.tasks a {
       text-transform:capitalize
     }
+
+
     aside h3 {
       display: none;
     }
@@ -255,7 +276,7 @@
     }
     @media (min-width: 44rem) {
       div.container{
-        max-width: 60rem;
+        max-width: 65rem;
         display: flex;
         flex-wrap: nowrap;
         /* justify-content: space-between; */
