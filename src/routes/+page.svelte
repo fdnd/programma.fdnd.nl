@@ -65,6 +65,9 @@
     padding: 1rem 2rem;
     margin: 1rem 0;
   }
+  :global(section.semester h2) {
+    color:#fff
+  }
   section.col-span-2 {
   /* section:not(.semester) { */
     max-width:42rem;
