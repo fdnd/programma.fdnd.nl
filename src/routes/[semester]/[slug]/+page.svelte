@@ -52,8 +52,7 @@
       {#each tasks as task}
         {#if task.topic == 'task'}
           <p>
-            <IconTask />
-            <a href="{task.url}">{task.name}</a> <small class="blue-on-green pilled">{task.forks} forks</small>
+            <a href="{task.url}">{task.name}</a><small class="blue-on-green">{task.forks} forks</small>
           </p>
           <p>
             {task.description}
@@ -66,8 +65,8 @@
         {#each tasks as task}
         {#if task.topic == 'subtask'}
         <li>
-          <IconTask />
-          <a href="{task.url}">{task.name}</a> <small class="blue-on-green pilled">{task.forks} forks</small>
+          
+          <a href="{task.url}">{task.name}</a><small class="blue-on-green">{task.forks} forks</small>
         </li>
         {/if}
         {/each}
@@ -130,11 +129,6 @@
       /* max-width:60em; */
       display: block !important;
     }
-    small {
-      font-size: .5em;
-      padding: 0 .25rem;
-      white-space: nowrap;
-    }
     section {
       padding: 1rem 2rem;
       margin: 1rem 0;
@@ -179,12 +173,33 @@
     section.tasks {
       border-radius:1rem
     }
+    section.tasks p, 
+    section.tasks li {
+      display:flex;
+      align-items:flex-end;
+      justify-content: space-between;
+    }
     section.tasks p:nth-of-type(2n) {
       margin-bottom: 2em;
     }
     section.tasks a {
-      text-transform:capitalize
+      text-transform:capitalize;
+      display:flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items:center;
+      white-space: nowrap;
+      text-overflow: ellipsis;  
+      overflow:hidden
     }
+    section.tasks small {
+      font-size: .5em;
+      margin-left: .25rem;
+      padding:0 .1rem;
+      transform:translateY(-5px);
+      white-space: nowrap;
+    }
+  
 
 
     aside h3 {
