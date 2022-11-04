@@ -45,7 +45,7 @@
     </section>
     {/if}
 
-
+    {#if tasks.length > 0}
     <section class="green-on-blue col-span-1 tasks">
       <Heading title="Leertaken" />
 
@@ -73,6 +73,7 @@
       </ul>
       
     </section>
+    {/if}
 
   </div>
   
@@ -136,7 +137,7 @@
     div.container{
       max-width:28rem;
     }
-    section.col-span-1:last-of-type {
+    section.tasks {
       border: 2px #66e5bf solid;
     }
     section.col-span-1 {
