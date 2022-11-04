@@ -136,6 +136,7 @@
     }
     div.container{
       max-width:28rem;
+      align-items:flex-start
     }
     section.tasks {
       border: 2px #66e5bf solid;
