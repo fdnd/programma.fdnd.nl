@@ -21,7 +21,7 @@
     {@html content.html}
     
     <button on:click={toggleSchedule}>
-      <IconExpand /> <span>meer info</span>
+      <span>meer info</span><IconExpand />
     </button>
 </section>
 
@@ -109,8 +109,9 @@
     align-items:center;
     position: absolute;
     bottom:-3rem;
-    left:0rem;
-    color:#66e5bf
+    left:2rem;
+    color:#66e5bf;
+    font-size: inherit;
   }
   button > * {
     pointer-events: none;

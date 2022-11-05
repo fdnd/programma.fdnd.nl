@@ -9,7 +9,7 @@
     svg {
       stroke:rgb(102, 229, 191);
       transform:translateY(0px);
-      margin-right: 0.25rem;
+      margin-left: 0.25rem;
     }
     :global(body.expand svg line:last-child) {
         display:none
