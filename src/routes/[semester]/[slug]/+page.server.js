@@ -2,30 +2,39 @@ import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
 
+let slug;
+
 export const load = async ({ params }) => {
-	const querySprint = getQuerySprint(params.slug)
-  const queryTasks  = getQueryTasks(params.slug)
+  slug = params.slug
+	const querySprint = getQuerySprint(slug)
+  const queryTasks  = getQueryTasks(slug)
 
-	const dataSprint = await client({ query: querySprint, variables: { slug: params.slug }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
-  const dataTasks  = await client({ query: queryTasks, variables: { slug: params.slug }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
+	const dataSprint = await client({ query: querySprint, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
+  const dataTasks  = await client({ query: queryTasks, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
 
-  const tasks = clean(dataTasks)
+  const tasks = formatTasks(dataTasks, slug)
 
   return { ...dataSprint.sprint, tasks:tasks }
 }
 
-function clean(dataTasks){
-  return dataTasks.search.repos.map(task => {
-    const topics = task.repo.repositoryTopics.edges
+function formatTasks({search: {repos}}){
+  return repos.map(({repo}) => {
+    const topics = repo.repositoryTopics.edges
                           .map(topic => topic.node.topic.name)
                           .filter(topic => topic == 'task' || topic == 'subtask')
     
     return {
-      name: task.repo.name.replace(/-/g, " "),
-      description:task.repo.description,
-      url:task.repo.url,
-      forks:task.repo.forkCount,
+      name: formatName(repo.name),
+      description:repo.description,
+      url:repo.url,
+      forks:repo.forkCount,
       topic:topics[0]
     }
   })
+}
+
+function formatName (name) {
+  return name
+            .split(`${slug}-`).pop()
+            .replace(/-/g, " ")
 }
