@@ -28,11 +28,11 @@
 
 	}
 	:global(body:after){
-		left:2rem
+		left:1rem
 	}
 
 	h1 {
-		margin-left: 2rem;
+		margin-left: 1rem;
 		color:transparent
 	}
 
@@ -42,14 +42,20 @@
 		top: 0;
 		color: rgb(166, 117, 245);
 		z-index: -1;
-		left: 2rem;
+		left: 1.5rem;
 		transition:.25s
 	}
 
 	@media (min-width: 30rem) {
 		h1 span {
 			font-size: 10rem;
-		top: -2rem;
+			top: -2rem;
+			left:1.25rem
 		}
     }
+	@media (min-width: 50em) {
+		h1 span {
+			left:2.25rem;
+		}
+	}
 </style>

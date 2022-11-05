@@ -88,7 +88,7 @@
   }
   
   section {
-    padding: 1rem 2rem;
+    padding: 1rem;
     margin: 1rem 0;
     position: relative;
   }
@@ -109,7 +109,7 @@
     align-items:center;
     position: absolute;
     bottom:-3rem;
-    left:2rem;
+    left:1rem;
     color:#66e5bf;
     font-size: inherit;
   }
@@ -140,7 +140,7 @@
     font-size: .9em;
     /* width: 25rem; */
     margin-right: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     border: 2px #66e5bf solid;
   }
   ol {

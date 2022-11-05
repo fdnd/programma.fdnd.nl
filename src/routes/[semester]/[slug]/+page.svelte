@@ -131,7 +131,7 @@
       display: block !important;
     }
     section {
-      padding: 1rem 2rem;
+      padding: 1rem;
       margin: 1rem 0;
     }
     div.container{
@@ -147,7 +147,7 @@
     }
     section.col-span-2 {
       max-width:42rem;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       /* grid-column:1 / -1; */
     }
     section.col-span-3 {
@@ -233,17 +233,17 @@
       overflow-x: scroll;
     }
     table + table {
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
     table caption {
       color: white;
       font-size: 1.5rem;
       text-align: left;
       padding-bottom: 1rem;
-      padding-left: 2rem;
+      padding-left: 1rem;
       display: block;
       position:sticky;
-      left: 0;
+      left: 1rem;
     }
     th {
       font-weight: bold;
