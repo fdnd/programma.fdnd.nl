@@ -1,44 +1,49 @@
 <script>
     import Heading from '$lib/components/Heading.svelte'
+    import IconExpand from '$lib/components/icons/Expand.svelte'
     import { prettyDate } from '$lib/utils/date'
     
     export let data
 
     const {title, subtitle, content, semesters} = data
+
+    function toggleSchedule({target}){
+      if(target.nodeName == 'BUTTON') {
+        document.body.classList.toggle('expand')
+        let label = target.querySelector('span')
+        label.textContent == 'meer info' ? label.textContent = 'minder info ' : label.textContent = 'meer info'
+      }      
+    }
 </script>
-
-
 
 <section class="blue-on-green rounded col-span-2">
     <Heading title={title} subtitle={subtitle} />
     {@html content.html}
+    
+    <button on:click={toggleSchedule}>
+      <IconExpand /> <span>meer info</span>
+    </button>
 </section>
 
+
+
 <div class="scroll-horo"> <!-- horizontal scroll voor semester lijsten -->
+
   <span class="scroll-label">scroll >>> </span>
 {#each semesters as semester, i}
   <section class="semester green-on-blue pilled">
       <Heading title="Semester {++i}" subtitle={semester.title} />
-      <!-- <button>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-            <line x1="9" y1="12" x2="15" y2="12"></line>
-            <line x1="12" y1="9" x2="12" y2="15"></line>
-        </svg>
-      </button> -->
+      
 
       <ol>
         {#each semester.sprints as sprint}
+        {#if sprint.sprintNumber}
           <li class="rounded green-on-blue">
-            {#if sprint.sprintNumber}
+            
             <a data-sveltekit-prefetch href={semester.slug}/{sprint.slug}>
               Sprint {sprint.sprintNumber}:
               <strong>{sprint.title}</strong>
             </a>
-            {:else}
-              {sprint.title}
-            {/if}
 
             <time class="rounded blue-on-green">
               {#if sprint.startdate}
@@ -46,6 +51,19 @@
               {/if}
             </time>
           </li>
+        {:else}
+          <li class="extra">
+              <span>{sprint.title}</span>
+              <time class="rounded blue-on-green">
+                {#if sprint.startdate}
+                  {prettyDate(sprint.startdate)}
+                {/if}
+              </time>
+          </li>
+        {/if}
+
+            
+          
         {/each}
       </ol>
   </section>
@@ -68,10 +86,11 @@
   :global(body:after) {
     width: 160px;
   }
-
+  
   section {
     padding: 1rem 2rem;
     margin: 1rem 0;
+    position: relative;
   }
   :global(section.semester h2) {
     color:#fff
@@ -82,10 +101,27 @@
     padding-bottom: 2rem;
     /* grid-column: 1 / -1 */
   }
+  button {
+    background-color: transparent;
+    color:inherit;
+    border:none;
+    display:flex;
+    align-items:center;
+    position: absolute;
+    bottom:-3rem;
+    left:0rem;
+    color:#66e5bf
+  }
+  button > * {
+    pointer-events: none;
+  }
+  button:hover {
+    text-decoration: underline;
+  }
   div.scroll-horo{
     position: relative;
-    padding-left: 1rem;
-    margin: 1rem 0 1rem -1rem;
+    padding-left: 1rem; 
+    margin: 3rem 0 1rem -1rem;
     width: 100vw;
     overflow-x: scroll;
     display:flex;
@@ -118,12 +154,19 @@
     justify-content: space-between;
     align-items: baseline;
   }
-  ol li a{
+  ol li a,
+  ol li span {
     display: inline-block;
-    width: 10rem;
+    width: 19rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  ol li.extra {
+    display:none;
+  }
+  :global(body.expand) ol li.extra {
+    display:flex;
   }
   time {
     border:1px solid;
