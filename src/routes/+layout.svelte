@@ -39,7 +39,7 @@
 	h1 span {
 		position: absolute;
 		font-size: 7rem;
-		top: 0;
+		top: .5rem;
 		color: rgb(166, 117, 245);
 		z-index: -1;
 		left: 1.5rem;
@@ -49,7 +49,7 @@
 	@media (min-width: 30rem) {
 		h1 span {
 			font-size: 10rem;
-			top: -2rem;
+			top: -2.5rem;
 			left:1.25rem
 		}
     }
