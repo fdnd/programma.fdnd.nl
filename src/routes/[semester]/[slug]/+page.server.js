@@ -2,7 +2,7 @@ import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
 
-let slug;
+let slug
 
 export const load = async ({ params }) => {
   slug = params.slug
