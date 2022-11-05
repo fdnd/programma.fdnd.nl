@@ -8,7 +8,7 @@
 <style>
     svg {
       stroke:rgb(102, 229, 191);
-      transform:translateY(0px);
+      transform:translateY(1px);
       margin-left: 0.25rem;
     }
     :global(body.expand svg line:last-child) {
