@@ -10,7 +10,8 @@ export default function getQueryProgram(){
             semesters {
                 title
                 slug
-                sprints {
+                sprints (first:20) {
+
                     title
                     slug
                     sprintNumber
