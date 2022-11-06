@@ -46,6 +46,13 @@
 		transition:.25s
 	}
 
+	:global(footer nav) {
+		padding:1rem;
+	}
+	:global(footer nav h2) {
+		margin:calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem
+	}
+
 	@media (min-width: 30rem) {
 		h1 span {
 			font-size: 10rem;
