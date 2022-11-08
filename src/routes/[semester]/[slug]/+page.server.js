@@ -2,9 +2,11 @@ import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
 
-let slug
+let prefix
+
 
 export const load = async ({params: {slug}}) => {
+  prefix = slug
 	const querySprint = getQuerySprint(slug)
   const queryTasks  = getQueryTasks(slug)
 
@@ -19,8 +21,8 @@ export const load = async ({params: {slug}}) => {
 function formatTasks({search: {repos}}){
   return repos.map(({repo}) => {
     const topics = repo.repositoryTopics.edges
-                          .map(topic => topic.node.topic.name)
-                          .filter(topic => topic == 'task' || topic == 'subtask')
+                      .map(topic => topic.node.topic.name)
+                      .filter(topic => topic == 'task' || topic == 'subtask')
     
     return {
       name: formatName(repo.name),
@@ -34,6 +36,5 @@ function formatTasks({search: {repos}}){
 
 function formatName (name) {
   return name
-            .split(`${slug}-`).pop()
-            .replace(/-/g, " ")
+            .split(`${prefix}-`).pop().replace(/-/g, " ")
 }
