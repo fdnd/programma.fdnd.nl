@@ -4,8 +4,7 @@ import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
 
 let slug
 
-export const load = async ({ params }) => {
-  slug = params.slug
+export const load = async ({params: {slug}}) => {
 	const querySprint = getQuerySprint(slug)
   const queryTasks  = getQueryTasks(slug)
 

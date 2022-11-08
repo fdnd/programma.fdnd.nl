@@ -105,15 +105,15 @@
         <tbody>
           <tr>
             <td data-label="Maandag {prettyDate(week.mondayDate)}"
-             class="blue-on-green">{@html week.monday.html}</td>
+             class="blue-on-green">{@html week.monday?.html}</td>
             <td data-label="Dinsdag {prettyDate(week.tuesdayDate)}"
-             class="blue-on-green">{@html week.tuesday.html}</td>
+             class="blue-on-green">{@html week.tuesday?.html}</td>
             <td data-label="Woensdag {prettyDate(week.wednesdayDate)}"
-             class="blue-on-green">{@html week.wednesday.html}</td>
+             class="blue-on-green">{@html week.wednesday?.html}</td>
             <td data-label="Donderdag {prettyDate(week.thursdayDate)}"
-             class="blue-on-green">{@html week.thursday.html}</td>
+             class="blue-on-green">{@html week.thursday?.html}</td>
             <td data-label="Vrijdag {prettyDate(week.fridayDate)}"
-             class="blue-on-green">{@html week.friday.html}</td>
+             class="blue-on-green">{@html week.friday?.html}</td>
           </tr>
         </tbody>
       </table>

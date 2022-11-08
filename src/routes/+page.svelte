@@ -25,8 +25,6 @@
     </button>
 </section>
 
-
-
 <div class="scroll-horo"> <!-- horizontal scroll voor semester lijsten -->
 
   <span class="scroll-label">scroll >>> </span>
@@ -38,7 +36,7 @@
       <ol>
         {#each semester.sprints as sprint}
         {#if sprint.sprintNumber}
-          <li class="rounded green-on-blue">
+          <li>
             
             <a data-sveltekit-prefetch href={semester.slug}/{sprint.slug}>
               Sprint {sprint.sprintNumber}:
@@ -214,6 +212,8 @@
       width: 19rem;
     }
   }
+
+  
 
 </style>
 
