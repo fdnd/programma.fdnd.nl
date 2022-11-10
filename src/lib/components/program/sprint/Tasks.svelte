@@ -1,7 +1,18 @@
 <script>
+    import { onMount } from 'svelte'
     import Heading from '$lib/components/Heading.svelte'
 
     export let tasks
+    
+    /* Firefox hack, :has() selector not supported */
+    onMount(() => { 
+        const tasksSection = document.querySelector('.tasks')
+        const subtasks = document.querySelectorAll('.tasks li')
+        const subtasksHeading = document.querySelector('.tasks h3')
+		if( subtasks.length > 0) {
+            subtasksHeading.style.display = 'block'
+        }
+	})   
 </script>
 
 {#if tasks.length > 0}
@@ -41,9 +52,11 @@
     }
     :global(section.tasks h3) {
         display:none;
+
     }
-    :global(section.tasks:has(li) h3) {
-        display:block;
+    :global(section.tasks:has(li) h3),
+    :global(section.show h3) {
+        display:block !important;
     }
     section.tasks p, 
     section.tasks li {
