@@ -4,14 +4,16 @@
 
     export let tasks
     
-    /* Firefox hack, :has() selector not supported */
+    
     onMount(() => { 
-        const tasksSection = document.querySelector('.tasks')
-        const subtasks = document.querySelectorAll('.tasks li')
-        const subtasksHeading = document.querySelector('.tasks h3')
-		if( subtasks.length > 0) {
-            subtasksHeading.style.display = 'block'
-        }
+        /* Firefox hack, :has() selector not supported */
+        if(!CSS.supports('selector(html:has(body))')){ 
+            const subtasks = document.querySelector('.tasks li')
+            const subtasksHeading = document.querySelector('.tasks h3')
+            if( subtasks) {
+                subtasksHeading.style.display = 'block'
+            }
+        } 
 	})   
 </script>
 
