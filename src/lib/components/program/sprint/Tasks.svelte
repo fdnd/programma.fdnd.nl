@@ -4,7 +4,6 @@
 
     export let tasks
     
-    
     onMount(() => { 
         /* Firefox hack, :has() selector not supported */
         if(!CSS.supports('selector(html:has(body))')){ 

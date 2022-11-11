@@ -1,6 +1,6 @@
 <script>
-  import IconLink from '$lib/components/icons/Link.svelte';
-  export let title, subtitle = '';
+  import IconLink from '$lib/components/icons/Link.svelte'
+  export let title, subtitle = ''
   let id = title
     .replace(/[^\w\s]/gi, '')
     .replace(/\s+/g, '-')

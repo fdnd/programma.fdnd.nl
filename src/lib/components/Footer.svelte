@@ -1,8 +1,8 @@
 <script>
     // Aggregate *.fdnd.nl names from github.com/fdnd
-  </script>
+</script>
   
-  <footer>
+<footer>
     <nav>
       <h2>Microsites</h2>
       <p>
@@ -37,9 +37,9 @@
       <span class="white-on-blue">&</span>
       <span class="blue-on-green">development</span>
     </section>
-  </footer>
+</footer>
   
-  <style>
+<style>
     .copy-construct {
     padding-bottom: 2rem;
   
@@ -107,4 +107,4 @@
     flex-grow: 5;
     order: 1;
   }
-  </style>
+</style>
