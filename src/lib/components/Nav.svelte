@@ -5,10 +5,10 @@
       <a class="active" data-sveltekit-prefetch href="/">Home</a>
     </li>
     <li>
-      <a data-sveltekit-reload href="/all-human">Sprint 3</a>
+      <a data-sveltekit-reload href="/look-and-feel">Sprint 4</a>
     </li>
     <li>
-      <a data-sveltekit-reload href="/choices-choices">Sprint 15</a>
+      <a data-sveltekit-reload href="/dont-repeat-yourself">Sprint 16</a>
     </li>
   </ul>
 </nav>
