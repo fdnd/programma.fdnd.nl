@@ -1,3 +1,9 @@
+# FDND Program
+
+The curriculum of Frontend Design & Development
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f528383e-83eb-43c4-8b8e-f88b2e079608/deploy-status)](https://app.netlify.com/sites/hilarious-gumdrop-9fd223/deploys)
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).

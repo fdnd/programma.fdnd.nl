@@ -28,8 +28,7 @@
               Sprint {sprint.data.sprint}:
               <strong>{sprint.data.title}</strong>
             </a>
-          {/if}
-          {#if !sprint.data.sprint}
+          {:else}
             {sprint.data.title}
           {/if}
 
