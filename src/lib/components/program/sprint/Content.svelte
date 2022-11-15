@@ -19,6 +19,6 @@
 <style>
     section.col-span-2 {
         max-width:42rem;
-        padding-bottom: 1rem;
+        padding: 1rem;
     }
 </style>

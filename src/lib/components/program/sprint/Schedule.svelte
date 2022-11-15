@@ -55,9 +55,8 @@ table {
     border-collapse: separate;
     border-spacing: 0.5em 0;
     font-size: 0.8em;
-    margin: 0 -3rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;;
+    padding-bottom: 1rem;
+    margin-left:-1.25rem;
     display: block;
     overflow-x: scroll;
 }
@@ -69,10 +68,9 @@ table caption {
     font-size: 1.5rem;
     text-align: left;
     padding-bottom: 1rem;
-    padding-left: 1rem;
     display: block;
     position:sticky;
-    left: 1rem;
+    left: 1.25rem;
 }
 th {
     font-weight: bold;
@@ -83,16 +81,13 @@ th {
     min-width: 16rem;
     border: 1px solid var(--green);
     text-align: left;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
 }
 th span {
     font-weight: normal;
     font-size: 0.8rem;
 }
 
-tr {
-    margin: 1rem;
-}
 td {
     vertical-align: top;
     border-bottom: 1px var(--green) solid;
@@ -100,9 +95,9 @@ td {
     border-right: 1px var(--green) solid;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
-    padding: 1rem 1.5rem 0;
+    padding: 1rem 1rem 0;
     font-size: 1.2rem;
-    margin-right: 0.2rem;
+    margin:0;
 }
 
 td :global(p) {
