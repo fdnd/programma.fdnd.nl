@@ -6,10 +6,10 @@
   
     export let data
 
-    const {title, sprintNumber, startdate, content, criteria, weekPlans, tasks } = data
+    const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks } = data
 </script>
 
-<Content {title} {sprintNumber} {content} />
+<Content {title} {sprintNumber} {content} {startdate} {topics} />
 
 <div class="container">
     <Criteria {criteria} />

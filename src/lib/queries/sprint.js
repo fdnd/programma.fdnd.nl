@@ -35,7 +35,9 @@ export default function getQuerySprint(slug) {
               html
             }
           }
-          
+          topics {
+            name
+          }
         }
     }`
 }
