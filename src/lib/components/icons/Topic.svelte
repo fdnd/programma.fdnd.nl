@@ -1,5 +1,5 @@
 <script>
-    export let tag
+    export let topic
 </script>
 
 <svg
@@ -20,7 +20,7 @@
     />
 </svg>
 
-{tag}
+{topic.name}
 
 <style>
 svg {

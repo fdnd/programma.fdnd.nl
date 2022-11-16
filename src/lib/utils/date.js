@@ -1,7 +1,5 @@
-import * as helpers from '@prismicio/helpers'
-
 export function prettyDate(rawDate) {
-    const date = helpers.asDate(rawDate)
+    const date = new Date(rawDate)
     let day = date.getDate()
     let month = date.getMonth() + 1
 
@@ -12,7 +10,7 @@ export function prettyDate(rawDate) {
 }
 
 export function longDate(rawDate) {
-    const date = helpers.asDate(rawDate)
+    const date = new Date(rawDate)
     let year = date.getFullYear()
     return `${prettyDate(rawDate)}/${year}`
 } 
