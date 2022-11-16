@@ -7,7 +7,7 @@
     <ul>
         {#if $page.url.pathname !== '/'}
         <li>
-            <a class="active" data-sveltekit-prefetch href="/">Home</a>
+            <a class="active" data-sveltekit-prefetch href="/">Programma</a>
         </li>
         {/if}
         <li>

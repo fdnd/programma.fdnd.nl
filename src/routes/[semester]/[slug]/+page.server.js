@@ -28,7 +28,7 @@ function formatTasks({search: {repos}}){
       name: formatName(repo.name),
       description:repo.description,
       url:repo.url,
-      forks:repo.forkCount,
+      forkCount:repo.forkCount,
       topic:topics[0]
     }
   })

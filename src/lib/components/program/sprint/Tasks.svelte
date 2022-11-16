@@ -23,7 +23,7 @@
       {#each tasks as task}
         {#if task.topic == 'task'}
           <p>
-            <a href="{task.url}" data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green">{task.forks} forks</small>
+            <a href="{task.url}" data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green">{task.forkCount} forks</small>
           </p>
           <p>
             {task.description}
@@ -37,7 +37,7 @@
           {#if task.topic == 'subtask'}
           <li>
             
-            <a href="{task.url}" data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green">{task.forks} forks</small>
+            <a href="{task.url}" data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green">{task.forkCount} forks</small>
           </li>
           {/if}
         {/each}
