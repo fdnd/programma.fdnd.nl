@@ -46,11 +46,11 @@ function formatName (name) {
 function formatForks({forks}) {
     const ghBaseUrl = 'https://github.com'
     const ghPagesBaseURL = 'github.io'
+    
+    return forks.nodes.filter(node => {
+        return node.stargazerCount > 0
+    }).map(fork => {
 
-    const starredForks =  forks.nodes.filter(node => {
-        return node.stargazerCount > 1
-    })
-    .map(fork => {
         return {
             title: formatName(fork.name),
             name: fork.name,
@@ -58,10 +58,9 @@ function formatForks({forks}) {
             owner:fork.owner.login,
             ownerUrl:fork.owner.url,
             url:`${ghBaseUrl}/${fork.owner.login}/${fork.name}`,
-            pagesUrl:`https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`
+            pagesUrl:`https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`,
+            homepageUrl:fork.homepageUrl
         }        
-    })
-
-    
-    return starredForks
+    }) 
 }
+

@@ -24,6 +24,7 @@ export function getQueryTasks(slug) {
                     login
                     url
                   }
+                  homepageUrl
                 }
               }
               repositoryTopics(first: 100) {

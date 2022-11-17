@@ -5,6 +5,8 @@ import IconStar from '$lib/components/icons/Star.svelte'
 
 export let tasks
 
+console.log(tasks);
+
 onMount(() => { 
     /* Firefox hack, :has() selector not supported */
     if(!CSS.supports('selector(html:has(body))')){ 
@@ -61,7 +63,7 @@ onMount(() => {
                         <img src="" alt="{fork.title}">
                         <a href="{fork.ownerUrl}" target="_blank" rel="noreferrer">@{fork.owner}</a>
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
-                        <a href="{fork.pagesUrl}" target="_blank" rel="noreferrer">Website</a>  
+                        <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>  
                     </li>
                     {/each}
                 </ul>
