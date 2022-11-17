@@ -18,9 +18,6 @@
 </section>
 
 <style>
-    :global(section.semester h2) {
-        color:#fff
-    }
     section.semester {
         font-size: .9em;
         margin-right: 1rem;

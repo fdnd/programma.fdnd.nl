@@ -13,7 +13,7 @@
                 subtasksHeading.style.display = 'block'
             }
         } 
-	})   
+	  })   
 </script>
 
 {#if tasks.length > 0}
@@ -36,7 +36,6 @@
         {#each tasks as task}
           {#if task.topic == 'subtask'}
           <li>
-            
             <a href="{task.url}" data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green">{task.forkCount} forks</small>
           </li>
           {/if}
