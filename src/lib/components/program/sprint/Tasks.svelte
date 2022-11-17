@@ -54,7 +54,6 @@ onMount(() => {
             {#if task.forks.length}
                 <ul>
                     {#each task.forks as fork}
-                    
                     <li>
                         <strong>
                             {fork.title}
@@ -116,7 +115,13 @@ onMount(() => {
     }
     section.showcase {
         border-radius:1rem;
-        border:2px solid #a675f5
+        border:2px solid #a675f5;
+        overflow:hidden;
+    }
+    section.showcase ul {
+        overflow-x:scroll;
+        min-width: 100%;
+        display:flex
     }
     section.showcase img {
         width:100%;
@@ -131,6 +136,7 @@ onMount(() => {
         display:flex;
         flex-wrap:wrap;
         margin-top: 1.5rem;
+        margin-right: .5rem;
     }
     section.showcase li * {
         white-space: nowrap;
