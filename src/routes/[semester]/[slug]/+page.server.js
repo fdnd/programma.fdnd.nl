@@ -57,6 +57,7 @@ function formatForks({forks}) {
             stargazerCount:fork.stargazerCount,
             owner:fork.owner.login,
             ownerUrl:fork.owner.url,
+            avatarUrl:fork.owner.avatarUrl,
             url:`${ghBaseUrl}/${fork.owner.login}/${fork.name}`,
             pagesUrl:`https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`,
             homepageUrl:fork.homepageUrl

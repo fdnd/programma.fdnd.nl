@@ -22,10 +22,11 @@
     :global(section) {
         padding: 1rem;
         margin: 1rem 0;
+        min-width:20rem
     }
     div.container{
-        max-width:28rem;
-        align-items:flex-start
+        display:flex;
+        flex-direction:column;
     }
 
     :global(section h3){
@@ -42,13 +43,22 @@
         list-style:none !important;
     }
 
+    @media (min-width: 30rem) {
+        div.container{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:2rem;
+            align-items: start;
+            overflow-x:scroll
+        }
+        div.container :global(section){
+        break-inside: avoid;
+        }
+    }
+
     @media (min-width: 44rem) {
         div.container{
-        max-width: 65rem;
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 2rem;
-        align-items: flex-start;
+            grid-template-columns:1fr 1fr 1fr;
         }
         div.container :global(section){
         break-inside: avoid;

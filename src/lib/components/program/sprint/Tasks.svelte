@@ -5,8 +5,6 @@ import IconStar from '$lib/components/icons/Star.svelte'
 
 export let tasks
 
-console.log(tasks);
-
 onMount(() => { 
     /* Firefox hack, :has() selector not supported */
     if(!CSS.supports('selector(html:has(body))')){ 
@@ -47,19 +45,20 @@ onMount(() => {
       
     </section>
 
-    <section class="purple-on-blue showcase">
+    <section class="showcase">
         <Heading title="Studentenwerk" />
 
         {#each tasks as task}
             {#if task.forks.length}
                 <ul>
                     {#each task.forks as fork}
-                    <li>
+                    <li class="blue-on-green">
                         <strong>
+                            <img src="{fork.avatarUrl}" alt="" class="avatar">
                             {fork.title}
                             <IconStar stargazerCount={fork.stargazerCount} />
                         </strong>
-                        <img src="" alt="{fork.title}">
+                        <!-- <img src="" alt="{fork.title}"> -->
                         <a href="{fork.ownerUrl}" target="_blank" rel="noreferrer">@{fork.owner}</a>
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
                         <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>  
@@ -114,43 +113,56 @@ onMount(() => {
       white-space: nowrap;
     }
     section.showcase {
-        border-radius:1rem;
-        border:2px solid #a675f5;
-        overflow:hidden;
+        padding:1rem 0;
     }
     section.showcase ul {
-        overflow-x:scroll;
-        min-width: 100%;
-        display:flex
-    }
-    section.showcase img {
-        width:100%;
-        aspect-ratio:2 / 1;
-        display:block;
-        font-size: 0.5rem;
-        background-color: rgba(255,255,255,.2);
-        color:transparent
-
+        display:grid;
+        grid-template-columns: 1fr;
     }
     section.showcase li {
         display:flex;
         flex-wrap:wrap;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         margin-right: .5rem;
+        padding:.5rem;
+        border-radius:1rem;
+        min-width: 15rem;
     }
     section.showcase li * {
-        white-space: nowrap;
         margin-right: .25rem;    
     }
+    section.showcase img.avatar {
+        width:2rem;
+        height:2rem;
+        border-radius:50%;
+        margin-bottom: 0;
+    }
+    section.showcase img {
+        width:clamp(15rem, 10vw, 100%);
+        aspect-ratio:2 / 1;
+        display:block;
+        font-size: 0.5rem;
+        background-color: rgba(255,255,255,.2);
+        color:transparent;
+        margin-bottom: .5rem;
+    }
+    
     section.showcase li strong {
         width:100%;
         display:flex;
+        margin-bottom: 1rem;
     }
     section.showcase li a {
        font-size: 0.75em;
     }
     section.showcase li strong::first-letter {
         text-transform:capitalize;
+    }
+
+    @media (min-width: 80em) {
+        section.showcase ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
     
 </style>

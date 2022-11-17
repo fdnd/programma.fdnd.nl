@@ -23,6 +23,7 @@ export function getQueryTasks(slug) {
                     id
                     login
                     url
+                    avatarUrl
                   }
                   homepageUrl
                 }
