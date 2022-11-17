@@ -113,11 +113,12 @@ onMount(() => {
       white-space: nowrap;
     }
     section.showcase {
-        padding:1rem 0;
+        /padding:1rem 0;
     }
     section.showcase ul {
         display:grid;
         grid-template-columns: 1fr;
+        margin:0 -1rem
     }
     section.showcase li {
         display:flex;
@@ -161,8 +162,7 @@ onMount(() => {
 
     @media (min-width: 80em) {
         section.showcase ul {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
         }
     }
-    
 </style>
