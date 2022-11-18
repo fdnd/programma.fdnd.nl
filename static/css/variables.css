@@ -1,0 +1,12 @@
+:root {
+    --white: #fff;
+    --blueberry: #050542;
+    --turquoise: #66e5bf;
+    --lavender: #a675f5;
+    --attention: #050542;
+    --attention-background: #05054233;
+    --call-to-action: #fffc86;
+    --rounded: .5rem;
+    --pilled: 2rem;
+    --shadow: .3rem;
+}

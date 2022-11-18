@@ -47,7 +47,7 @@
 
 <style>
     section.tasks {
-        border: 2px #66e5bf solid;
+        border: 2px var(--turquoise) solid;
         border-radius:1rem
     }
     :global(section.tasks h3) {

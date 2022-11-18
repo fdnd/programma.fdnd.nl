@@ -8,7 +8,12 @@
 </svelte:head>
 
 <header>
-	<h1><span>FDND</span> Programma</h1>
+	<h1>
+		<abbr title="Frontend Design &amp; Development">
+			<span>FDND</span>
+		</abbr> 
+		<span>Frontend<br>Design &amp; Development</span>
+	</h1>
 </header>
 
 <Nav />
@@ -28,7 +33,6 @@
 		top:auto;
 		right:2rem;
 		bottom:1rem;
-
 	}
 	:global(body:after){
 		left:1rem
@@ -37,17 +41,27 @@
       display: block !important;
     }
 	h1 {
-		margin-left: 1rem;
-		color:transparent
+		display:flex;
+		margin-bottom: 2rem;
 	}
-	h1 span {
-		position: absolute;
-		font-size: 6rem;
-		top: 1.65rem;
-		color: rgb(166, 117, 245);
-		z-index: -1;
-		left: 1.5rem;
-		transition:.25s
+	h1 > span {
+		color: var(--lavender);
+		padding: .5rem 1rem 0 .5rem;
+		font-size: clamp(1rem, 4vw, 2rem);
+		font-size: 1rem;
+		line-height: 1;
+		text-decoration: none;
+		padding-bottom:.5rem;
+		vertical-align:baseline
+	}
+	h1 > abbr > span {
+		border: 1px solid var(--turquoise);
+		border-radius: var(--rounded);
+		box-shadow: calc(-1*var(--shadow))var(--shadow)0 0 var(--turquoise);
+		color: var(--turquoise);
+		text-transform: lowercase;
+		padding: .5rem 1rem;
+		font-size: 2rem;
 	}
 	:global(footer nav) {
 		padding:1rem;
@@ -56,16 +70,4 @@
 		margin:calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem
 	}
 
-	@media (min-width: 30rem) {
-		h1 span {
-			font-size: 10rem;
-			top: -1.75rem;
-			left:1.25rem
-		}
-    }
-	@media (min-width: 50em) {
-		h1 span {
-			left:2.25rem;
-		}
-	}
 </style>

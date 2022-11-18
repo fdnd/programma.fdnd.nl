@@ -19,22 +19,15 @@
 
 <style>
     section.semester {
-        font-size: .9em;
         margin-right: 1rem;
         padding: 1rem;
-        border: 2px #66e5bf solid;
+        border: 2px var(--turquoise) solid;
+        font-size: .9em;
     }
     ol {
         list-style: none;
         margin:0;
         width: 14rem;
-    }
-    
-
-    @media (min-width: 35em) {
-        section.semester {
-            font-size: 1em;
-        }
     }
 
     @media (min-width: 25em) {
