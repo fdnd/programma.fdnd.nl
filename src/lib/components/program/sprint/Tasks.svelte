@@ -10,7 +10,7 @@ onMount(() => {
     if(!CSS.supports('selector(html:has(body))')){ 
         const subtasks = document.querySelector('.tasks li')
         const subtasksHeading = document.querySelector('.tasks h3.subtasks')
-        if( subtasks) {
+        if(subtasks) {
             subtasksHeading.style.display = 'block'
         }
     } 
@@ -45,11 +45,12 @@ onMount(() => {
       
     </section>
 
+    
     <section class="showcase">
         <Heading title="Studentenwerk" />
 
         {#each tasks as task}
-            {#if task.forks.length}
+            {#if task.forks.length > 0}
                 <ul>
                     {#each task.forks as fork}
                     <li class="blue-on-green">
