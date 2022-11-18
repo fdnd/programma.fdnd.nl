@@ -16,10 +16,6 @@
 	</h1>
 </header>
 
-<!-- <header>
-	<h1><span>FDND</span> Programma</h1>
-</header> -->
-
 <Nav />
 
 <main>
