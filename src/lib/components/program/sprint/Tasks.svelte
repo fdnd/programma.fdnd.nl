@@ -63,11 +63,12 @@ onMount(() => {
                     <li class="blue-on-green">
                         <strong>
                             <img src="{fork.avatarUrl}" alt="" class="avatar">
-                            {fork.title}
+                            <a href="{fork.ownerUrl}" target="_blank" rel="noreferrer">@{fork.owner}</a>
+                            <span>{fork.title}</span>
                             <IconStar stargazerCount={fork.stargazerCount} />
                         </strong>
                         <img src="/img/github-placeholder.png" alt="{fork.title}">
-                        <a href="{fork.ownerUrl}" target="_blank" rel="noreferrer">@{fork.owner}</a>
+                        
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
                         <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>  
                     </li>
@@ -80,9 +81,6 @@ onMount(() => {
 {/if}
 
 <style>
-    section {
-      /margin-bottom: 2rem;
-    }
     section.tasks {
         border: 2px #66e5bf solid;
         border-radius:1rem;
@@ -134,7 +132,7 @@ onMount(() => {
         display:grid;
         grid-template-columns: 1fr;
         margin:0 -1rem;
-        gap:1rem
+        gap:0 1rem 
     }
     section.showcase li {
         display:flex;
@@ -142,39 +140,54 @@ onMount(() => {
         margin-top: 1rem;
         padding:.5rem;
         border-radius:1rem;
+        margin-bottom: 0;
+        position: relative;
+        min-width:0;
     }
     section.showcase li * {
         margin-right: .25rem;    
     }
+    section.showcase li strong {
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        align-items:flex-end;
+        margin-bottom: .5rem;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-left:3.5rem;
+    }
+    section.showcase li span {
+      width:100%;
+    }
     section.showcase img.avatar {
-        width:2rem;
-        height:2rem;
+        width:3rem;
+        height:3rem;
         border-radius:50%;
         margin-bottom: 0;
+        position:absolute;
+        left:.5rem;
+        top:.5rem;
     }
-    section.showcase img {
-        width:100%;
-        max-width:100%;
+    section.showcase li > img {
+        width:calc(100% + 2rem);
+        max-width:calc(100% + 1rem);
         aspect-ratio:2 / 1;
         display:block;
         font-size: 0.5rem;
         background-color: rgba(255,255,255,.2);
         color:transparent;
         margin-bottom: .5rem;
-    }
-    
-    section.showcase li strong {
-        width:100%;
-        display:flex;
-        margin-bottom: 1rem;
-    }
+        filter:grayscale(1);
+        opacity:.5;
+        margin:0 -.5rem
+    } 
     section.showcase li a {
        font-size: 0.75em;
     }
     section.showcase li strong::first-letter {
         text-transform:capitalize;
     }
-
     @media (min-width: 40em) {
         section.tasks {
             grid-column: 2 / 3;
@@ -183,7 +196,7 @@ onMount(() => {
             grid-column: 1 / -1;
         }
         section.showcase ul {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
         }
     }
     @media (min-width:60em) {
