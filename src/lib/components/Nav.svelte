@@ -5,11 +5,9 @@
 <nav>
     <h2>Menu</h2>
     <ul>
-        {#if $page.url.pathname !== '/'}
         <li>
             <a class="active" data-sveltekit-prefetch href="/">Programma</a>
         </li>
-        {/if}
         <li>
             <a data-sveltekit-reload href="/static-web/look-and-feel">Sprint 4</a>
         </li>

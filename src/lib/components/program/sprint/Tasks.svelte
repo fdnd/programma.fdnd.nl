@@ -4,6 +4,13 @@ import Heading from '$lib/components/Heading.svelte'
 import IconStar from '$lib/components/icons/Star.svelte'
 
 export let tasks
+export let stargazer = false
+
+tasks.forEach(task => {
+  if (!stargazer && task.forks.length > 0) {
+    stargazer = true
+  }
+})
 
 onMount(() => { 
     /* Firefox hack, :has() selector not supported */
@@ -18,7 +25,7 @@ onMount(() => {
 </script>
 
 {#if tasks.length > 0}
-    <section class="green-on-blue col-span-1 tasks">
+    <section class="green-on-blue tasks">
         <Heading title="Leertaken" />
 
         {#each tasks as task}
@@ -46,12 +53,12 @@ onMount(() => {
     </section>
 
     
-    <section class="showcase">
+    <section class="showcase {stargazer ? 'stargazer' : ''}">
         <Heading title="Studentenwerk" />
 
+        <ul>
         {#each tasks as task}
             {#if task.forks.length > 0}
-                <ul>
                     {#each task.forks as fork}
                     <li class="blue-on-green">
                         <strong>
@@ -59,23 +66,27 @@ onMount(() => {
                             {fork.title}
                             <IconStar stargazerCount={fork.stargazerCount} />
                         </strong>
-                        <!-- <img src="" alt="{fork.title}"> -->
+                        <img src="/img/github-placeholder.png" alt="{fork.title}">
                         <a href="{fork.ownerUrl}" target="_blank" rel="noreferrer">@{fork.owner}</a>
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
                         <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>  
                     </li>
                     {/each}
-                </ul>
+                
             {/if}
         {/each}
-
+      </ul>
     </section>
 {/if}
 
 <style>
+    section {
+      /margin-bottom: 2rem;
+    }
     section.tasks {
         border: 2px #66e5bf solid;
-        border-radius:1rem
+        border-radius:1rem;
+        
     }
     :global(section.tasks h3.subtasks) {
         display:none;
@@ -114,21 +125,23 @@ onMount(() => {
       white-space: nowrap;
     }
     section.showcase {
-        /padding:1rem 0;
+        display:none
+    }
+    section.stargazer {
+      display:block
     }
     section.showcase ul {
         display:grid;
         grid-template-columns: 1fr;
-        margin:0 -1rem
+        margin:0 -1rem;
+        gap:1rem
     }
     section.showcase li {
         display:flex;
         flex-wrap:wrap;
         margin-top: 1rem;
-        margin-right: .5rem;
         padding:.5rem;
         border-radius:1rem;
-        min-width: 15rem;
     }
     section.showcase li * {
         margin-right: .25rem;    
@@ -140,7 +153,8 @@ onMount(() => {
         margin-bottom: 0;
     }
     section.showcase img {
-        width:clamp(15rem, 10vw, 100%);
+        width:100%;
+        max-width:100%;
         aspect-ratio:2 / 1;
         display:block;
         font-size: 0.5rem;
@@ -161,9 +175,21 @@ onMount(() => {
         text-transform:capitalize;
     }
 
-    @media (min-width: 80em) {
-        section.showcase ul {
-            grid-template-columns: 1fr;
+    @media (min-width: 40em) {
+        section.tasks {
+            grid-column: 2 / 3;
         }
+        section.showcase {
+            grid-column: 1 / -1;
+        }
+        section.showcase ul {
+          grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (min-width:60em) {
+      section.tasks {
+        min-width:26rem;
+      }
+     
     }
 </style>

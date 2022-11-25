@@ -6,7 +6,21 @@
     --attention: #050542;
     --attention-background: #05054233;
     --call-to-action: #fffc86;
+    
     --rounded: .5rem;
     --pilled: 2rem;
     --shadow: .3rem;
+
+    --breakpoint-medium: 30em;
+}
+
+
+footer {
+    margin-top: 2rem;
+}
+footer nav {
+    padding:1rem;
+}
+footer nav h2 {
+    margin:calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem
 }

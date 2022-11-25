@@ -14,18 +14,16 @@
     :global(body){
         display: block !important;
     }
-    :global(body main) {
-        display: block !important;
-    }
     :global(body:before) {
         width: 160px;
     }
     :global(body:after) {
         width: 160px;
     }
-    @media (min-width: 30em) {
+    @media (min-width:40em) {
         :global(body:before) {
             width: 350px !important;
+            
         }
     }
 </style>
