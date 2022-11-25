@@ -49,9 +49,7 @@ onMount(() => {
                 {/if}
             {/each}
         </ul>
-      
     </section>
-
     
     <section class="showcase {stargazer ? 'stargazer' : ''}">
         <Heading title="Studentenwerk" />
@@ -72,8 +70,7 @@ onMount(() => {
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
                         <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>  
                     </li>
-                    {/each}
-                
+                    {/each} 
             {/if}
         {/each}
       </ul>
@@ -84,11 +81,9 @@ onMount(() => {
     section.tasks {
         border: 2px #66e5bf solid;
         border-radius:1rem;
-        
     }
     :global(section.tasks h3.subtasks) {
         display:none;
-
     }
     :global(section.tasks:has(li) h3),
     :global(section.show h3) {
