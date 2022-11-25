@@ -7,7 +7,7 @@
 </script>
 
 {#if weekPlans.length > 0}
-  <section class="col-span-3">
+  <section>
     <Heading title="Sprint planning" />
     {#each weekPlans as week, i}
       <table>
@@ -51,14 +51,17 @@
 {/if}
 
 <style>
+
 table {
     border-collapse: separate;
     border-spacing: 0.5em 0;
     font-size: 0.8em;
     padding-bottom: 1rem;
     margin-left:-1.25rem;
+    margin-right:-1.25rem;
     display: block;
     overflow-x: scroll;
+    /width: 100%;
 }
 table + table {
     margin-top: 1rem;
@@ -71,6 +74,7 @@ table caption {
     display: block;
     position:sticky;
     left: 1.25rem;
+    
 }
 th {
     font-weight: bold;
@@ -108,10 +112,16 @@ td :global(p) {
       th{
         min-width: 18rem;
       }
-    }
-    @media (min-width: 30rem) {
+}
+@media (min-width: 40em) {
+      section {
+        grid-column: 1 / -1;
+      }
+      table {
+        /width: calc(100vw - 4rem);
+      }
       th{
         min-width: 21rem;
       }
-    }
+}
 </style>

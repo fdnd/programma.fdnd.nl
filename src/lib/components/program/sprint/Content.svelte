@@ -6,7 +6,7 @@
 </script>
 
 
-<section class="blue-on-green pilled col-span-2">
+<section class="blue-on-green pilled">
     <Heading title="Sprint {sprintNumber}: {title}" />
 
     <Topics {startdate} {topics} />
@@ -20,8 +20,14 @@
 
 
 <style>
-    section.col-span-2 {
-        max-width:42rem;
-        padding: 1rem;
+    section {
+        margin: 2rem 0;
+        max-width:48rem;
+        border-radius:1rem
+    }
+    @media (min-width: 40em) {
+        section {
+            grid-column: 1 / -1;
+        }
     }
 </style>

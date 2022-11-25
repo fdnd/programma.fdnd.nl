@@ -4,28 +4,29 @@
     import Tasks from '$lib/components/program/sprint/Tasks.svelte'
     import Schedule from '$lib/components/program/sprint/Schedule.svelte';
   
-    export let data
+    export let data 
 
     const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks } = data
 </script>
 
-<Content {title} {sprintNumber} {content} {startdate} {topics} />
+<div>
+    <Content {title} {sprintNumber} {content} {startdate} {topics} />
 
-<div class="container">
     <Criteria {criteria} />
+
     <Tasks {tasks}/>
+
+    <Schedule {weekPlans}/> 
 </div>
 
-<Schedule {weekPlans}/> 
-
 <style> 
+	div {
+		display:flex;
+		flex-direction: column;
+	}
     :global(section) {
         padding: 1rem;
         margin: 1rem 0;
-    }
-    div.container{
-        max-width:28rem;
-        align-items:flex-start
     }
 
     :global(section h3){
@@ -42,17 +43,23 @@
         list-style:none !important;
     }
 
-    @media (min-width: 44rem) {
-        div.container{
-        max-width: 65rem;
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 2rem;
-        align-items: flex-start;
-        }
-        div.container :global(section){
-        break-inside: avoid;
+    @media (min-width:30em) {
+        :global(section) {
+            margin:0;
         }
     }
+    @media (min-width: 40em) {
+		div {
+            display:grid;
+			grid-template-columns: 1fr 1fr;
+			gap:1rem;
+        }
+	}
+    @media (min-width: 60em) {
+		div {
+			grid-template-columns: 1fr 1fr 1fr;
+        }
+	}
+    
 </style>
   

@@ -25,7 +25,7 @@
 <style>
 section {
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     position: relative;
     max-width:42rem;
 }

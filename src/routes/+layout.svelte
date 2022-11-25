@@ -25,8 +25,9 @@
 <Footer />
 
 <style>
-	:global(body) {
-      display: block !important;
+	:global(body),
+	:global(body main) {
+      display: block;
     }
 	:global(body:before){
 		left:auto;
@@ -37,9 +38,6 @@
 	:global(body:after){
 		left:1rem
 	}
-	main {
-      display: block !important;
-    }
 	h1 {
 		display:flex;
 		margin-bottom: 2rem;
@@ -63,11 +61,14 @@
 		padding: .5rem 1rem;
 		font-size: 2rem;
 	}
+	:global(footer) {
+		margin-top: 2rem;
+
+	}
 	:global(footer nav) {
 		padding:1rem;
 	}
 	:global(footer nav h2) {
 		margin:calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem
 	}
-
 </style>
