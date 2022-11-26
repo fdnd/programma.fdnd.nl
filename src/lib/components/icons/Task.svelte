@@ -8,7 +8,7 @@
 
 <style>
     svg {
-      stroke:rgb(102, 229, 191);
+      stroke:var(--turquoise);
       transform:translateY(0px)
     }
 </style>

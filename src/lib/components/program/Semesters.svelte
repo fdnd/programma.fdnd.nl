@@ -28,6 +28,6 @@
         position: absolute;
         top: 0;
         right: 1rem;
-        background: gold;
+        background: var(--call-to-action);
     }
 </style>

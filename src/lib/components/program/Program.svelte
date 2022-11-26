@@ -38,7 +38,7 @@ button {
     align-items:center;
     position: absolute;
     bottom:-3rem;
-    color:#66e5bf;
+    color:var(--turquoise);
     font-size: inherit;
 }
 button > * {

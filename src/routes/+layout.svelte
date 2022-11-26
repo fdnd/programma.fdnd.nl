@@ -38,7 +38,6 @@
 	:global(body:after){
 		left:1rem
 	}
-
 	h1 {
 		display:flex;
 		margin-bottom: 2rem;
@@ -64,6 +63,7 @@
 	}
 	:global(footer) {
 		margin-top: 2rem;
+
 	}
 	:global(footer nav) {
 		padding:1rem;
@@ -71,5 +71,4 @@
 	:global(footer nav h2) {
 		margin:calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem
 	}
-	
 </style>
