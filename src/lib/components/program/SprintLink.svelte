@@ -69,7 +69,7 @@
     }
     @media (min-width: 25em) {
         li a{
-            width: 14rem;
+            /width: 14rem;
         }
     }
 </style>

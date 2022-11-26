@@ -30,7 +30,7 @@
     ol {
         list-style: none;
         margin:0;
-        width: 14rem;
+        width: 15rem;
     }
     
 
@@ -42,7 +42,7 @@
 
     @media (min-width: 25em) {
         ol {
-            width: 18rem;
+            width: 23rem;
         }
     }
 </style>
