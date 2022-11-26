@@ -124,10 +124,11 @@ onMount(() => {
       display:block
     }
     section.showcase ul {
-        display:grid;
-        grid-template-columns: 1fr;
+        display:flex;
+        gap: 1rem;
         margin:0 -1rem;
-        gap:0 1rem 
+        width:calc(100vw - 2rem);
+        overflow-x:scroll;
     }
     section.showcase li {
         display:flex;
@@ -137,7 +138,7 @@ onMount(() => {
         border-radius:1rem;
         margin-bottom: 0;
         position: relative;
-        min-width:0;
+        min-width:18rem;
     }
     section.showcase li * {
         margin-right: .25rem;    
