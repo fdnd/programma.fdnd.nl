@@ -53,6 +53,7 @@
             display:grid;
 			grid-template-columns: 1fr 1fr;
 			gap:1rem;
+            align-items: start;
         }
 	}
     @media (min-width: 60em) {
