@@ -61,7 +61,7 @@ table {
     margin-right:-1.25rem;
     display: block;
     overflow-x: scroll;
-    /width: 100%;
+    width: calc(100vw - 2rem);
 }
 table + table {
     margin-top: 1rem;
