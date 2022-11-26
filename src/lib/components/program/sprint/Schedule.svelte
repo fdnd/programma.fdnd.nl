@@ -62,6 +62,7 @@ table {
     display: block;
     overflow-x: scroll;
     width: calc(100vw - 2rem);
+    scroll-snap-type: x mandatory;
 }
 table + table {
     margin-top: 1rem;
@@ -102,6 +103,7 @@ td {
     padding: 1rem 1rem 0;
     font-size: 1.2rem;
     margin:0;
+    scroll-snap-align: center;
 }
 
 td :global(p) {
