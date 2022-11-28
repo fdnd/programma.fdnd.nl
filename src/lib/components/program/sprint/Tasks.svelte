@@ -7,7 +7,6 @@ export let tasks
 export let stargazer = false
 
 tasks.forEach(task => {
-    
   if (!stargazer && task && task.forks.length > 0) {
     stargazer = true
   }
@@ -69,7 +68,9 @@ onMount(() => {
                         <img src="/img/github-placeholder.png" alt="{fork.title}">
                         
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
-                        <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>
+                        {#if fork.homepageUrl}
+                            <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website!</a>
+                        {/if}
                     </li>
                     {/each} 
             {/if}
