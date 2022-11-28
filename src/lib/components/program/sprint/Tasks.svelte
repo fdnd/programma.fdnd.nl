@@ -130,6 +130,7 @@ onMount(() => {
         margin:0 -1rem;
         width:calc(100vw - 2rem);
         overflow-x:scroll;
+        scroll-snap-type: x mandatory;
     }
     section.showcase li {
         display:flex;
@@ -140,6 +141,7 @@ onMount(() => {
         margin-bottom: 0;
         position: relative;
         min-width:18rem;
+        scroll-snap-align: center;
     }
     section.showcase li * {
         margin-right: .25rem;    

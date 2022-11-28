@@ -22,6 +22,7 @@
         display:flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
     }
     div.scroll-horo span.scroll-label{
         display: none;

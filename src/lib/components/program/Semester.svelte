@@ -23,6 +23,7 @@
         padding: 1rem;
         border: 2px var(--turquoise) solid;
         font-size: .9em;
+        scroll-snap-align: center;
     }
     ol {
         list-style: none;
