@@ -69,7 +69,7 @@ onMount(() => {
                         <img src="/img/github-placeholder.png" alt="{fork.title}">
                         
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
-                        <!-- <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>   -->
+                        <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>
                     </li>
                     {/each} 
             {/if}

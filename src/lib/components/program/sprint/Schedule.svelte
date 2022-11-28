@@ -115,9 +115,6 @@ td :global(p) {
       section {
         grid-column: 1 / -1;
       }
-      table {
-        /width: calc(100vw - 4rem);
-      }
       th{
         min-width: 21rem;
       }

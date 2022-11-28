@@ -51,6 +51,8 @@ function formatForks({forks}) {
         return node.stargazerCount > 0
     }).map(fork => {
 
+
+
         return {
             title: formatName(fork.name),
             name: fork.name,
@@ -60,7 +62,8 @@ function formatForks({forks}) {
             avatarUrl:fork.owner.avatarUrl,
             url:`${ghBaseUrl}/${fork.owner.login}/${fork.name}`,
             pagesUrl:`https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`,
-            homepageUrl:fork.homepageUrl
+            homepageUrl:fork.homepageUrl.includes('https://') ? fork.homepageUrl : `https://${fork.homepageUrl}`
+
         }        
     }) 
 }
