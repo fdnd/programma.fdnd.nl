@@ -7,7 +7,8 @@ export let tasks
 export let stargazer = false
 
 tasks.forEach(task => {
-  if (!stargazer && task.forks.length > 0) {
+    
+  if (!stargazer && task && task.forks.length > 0) {
     stargazer = true
   }
 })
@@ -24,7 +25,7 @@ onMount(() => {
 })   
 </script>
 
-{#if tasks.length > 0}
+{#if tasks && tasks.length > 0}
     <section class="green-on-blue tasks">
         <Heading title="Leertaken" />
 
@@ -56,7 +57,7 @@ onMount(() => {
 
         <ul>
         {#each tasks as task}
-            {#if task.forks.length > 0}
+            {#if task && task.forks.length > 0}
                     {#each task.forks as fork}
                     <li class="blue-on-green">
                         <strong>
@@ -68,7 +69,7 @@ onMount(() => {
                         <img src="/img/github-placeholder.png" alt="{fork.title}">
                         
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
-                        <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>  
+                        <a href="{fork.homepageUrl}" target="_blank" rel="noreferrer">Website</a>
                     </li>
                     {/each} 
             {/if}

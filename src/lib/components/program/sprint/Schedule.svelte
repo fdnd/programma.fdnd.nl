@@ -3,10 +3,9 @@
     import { prettyDate, longDate } from '$lib/utils/date.js'
 
     export let weekPlans
-
 </script>
 
-{#if weekPlans.length > 0}
+{#if weekPlans && weekPlans.length > 0}
   <section>
     <Heading title="Sprint planning" />
     {#each weekPlans as week, i}
@@ -51,7 +50,6 @@
 {/if}
 
 <style>
-
 table {
     border-collapse: separate;
     border-spacing: 0.5em 0;
@@ -118,9 +116,6 @@ td :global(p) {
 @media (min-width: 40em) {
       section {
         grid-column: 1 / -1;
-      }
-      table {
-        /width: calc(100vw - 4rem);
       }
       th{
         min-width: 21rem;

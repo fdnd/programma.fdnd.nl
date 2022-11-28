@@ -16,7 +16,7 @@
 
     <Tasks {tasks}/>
 
-    <Schedule {weekPlans}/> 
+    <Schedule {weekPlans}/>
 </div>
 
 <style> 

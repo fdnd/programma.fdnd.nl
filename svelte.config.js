@@ -1,9 +1,11 @@
-import adapter from '@sveltejs/adapter-auto';
-
 /** @type {import('@sveltejs/kit').Config} */
+
+import staticAdapter from '@sveltejs/adapter-static'
+
 const config = {
 	kit: {
-		adapter: adapter()
+		// hydrate the <div id="svelte"> element in src/app.html
+		adapter: staticAdapter()
 	}
 };
 
