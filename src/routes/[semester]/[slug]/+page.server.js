@@ -68,9 +68,7 @@ function formatForks({forks}) {
     }) 
 
     function formatHomepageUrl(url) {
-        if(url.length === 0){
-            return undefined
-        }
+        if(url.length === 0) return undefined
 
         return url.includes('https://') ? url : `https://${url}`
     }
