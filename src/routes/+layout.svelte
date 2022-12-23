@@ -51,7 +51,8 @@
 		line-height: 1;
 		text-decoration: none;
 		padding-bottom:.5rem;
-		vertical-align:baseline
+		vertical-align:baseline;
+		display: none;
 	}
 	h1 > abbr > span {
 		border: 1px solid var(--turquoise);
