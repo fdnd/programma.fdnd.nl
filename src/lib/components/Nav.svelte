@@ -9,10 +9,10 @@
             <a class="active" data-sveltekit-prefetch href="/">Programma</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/static-web/fix-the-flow">Sprint 5</a>
+            <a data-sveltekit-reload href="/static-web/the-startup">Sprint 6</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/workflow-tooling-frameworks/back-to-static">Sprint 17</a>
+            <a data-sveltekit-reload href="/workflow-tooling-frameworks/let-us-jam">Sprint 18</a>
         </li>
     </ul>
 </nav>
