@@ -12,7 +12,7 @@
             <a data-sveltekit-reload href="/static-web/the-startup">Sprint 6</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/workflow-tooling-frameworks/let-us-jam">Sprint 18</a>
+            <a data-sveltekit-reload href="/workflow-tooling-frameworks/lets-jam">Sprint 18</a>
         </li>
     </ul>
 </nav>
