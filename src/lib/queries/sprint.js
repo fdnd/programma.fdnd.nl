@@ -12,7 +12,7 @@ export default function getQuerySprint(slug) {
           criteria {
             html
           }
-          weekPlans {
+          weekPlans(first:100) {
             weekNumber
             mondayDate
             monday {
