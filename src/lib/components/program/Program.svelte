@@ -2,7 +2,7 @@
     import Heading from '$lib/components/Heading.svelte'
     import IconExpand from '$lib/components/icons/Expand.svelte'
 
-    export let title, subtitle, content;
+    export let title, subtitle, content
 
     function toggleSchedule({target}){
       if(target.nodeName == 'BUTTON') {
@@ -15,6 +15,7 @@
 
 <section class="blue-on-green rounded col-span-2">
     <Heading {title} {subtitle} />
+
     {@html content.html}
     
     <button on:click={toggleSchedule}>

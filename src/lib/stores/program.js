@@ -1,7 +1,5 @@
-import { writable } from 'svelte/store';
+import { writable } from 'svelte/store'
 
-export const loadingState = writable(false)
-export const error = writable(false)
-export const dataProgram = writable({})
+export const dataProgram = writable([])
 
 
