@@ -62,13 +62,12 @@ function formatForks({forks}) {
             avatarUrl:fork.owner.avatarUrl,
             url:`${ghBaseUrl}/${fork.owner.login}/${fork.name}`,
             pagesUrl:`https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`,
-            homepageUrl: formatHomepageUrl(fork.homepageUrl)
-
+            homepageUrl: fork.homepageUrl
         }        
     }) 
 
     function formatHomepageUrl(url) {
-        if(url.length === 0) return undefined
+        if(url && url.length === 0) return undefined
 
         return url.includes('https://') ? url : `https://${url}`
     }

@@ -7,6 +7,7 @@
     const {title, subtitle, content, semesters} = data
 </script>
 
+
 <Program {title} {subtitle} {content}/>
 <Semesters {semesters} />
 
