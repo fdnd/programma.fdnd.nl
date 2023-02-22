@@ -69,7 +69,7 @@ function formatForks({forks}) {
     function formatHomepageUrl(url) {
         if(!url || url.length === 0) return undefined
 
-        return url.includes('https://') || url.includes('https://') ? url : `https://${url}`
+        return url.includes('https://') || url.includes('http://') ? url : `https://${url}`
     }
 }
 
