@@ -1,7 +1,6 @@
 <script>
     import Heading from '$lib/components/Heading.svelte'
     import SprintLink from '$lib/components/program/SprintLink.svelte'
-    import { prettyDate } from '$lib/utils/date'
 
     export let semester, i
 </script>
