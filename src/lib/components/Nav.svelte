@@ -22,7 +22,7 @@
             <a class="active" data-sveltekit-prefetch href="/">Programma</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/data-driven-web/connect-your-tribe">Sprint 7</a>
+            <a data-sveltekit-reload href="/data-driven-web/server-side-rendering">Sprint 8</a>
         </li>
         <li>
             <a data-sveltekit-reload href="/meesterproef/free-space">Sprint 19</a>
