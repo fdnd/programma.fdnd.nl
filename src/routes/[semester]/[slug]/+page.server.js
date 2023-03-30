@@ -6,8 +6,10 @@ let prefix
 
 export const load = async ({params: {slug}}) => {
     prefix = slug
+
     const querySprint = getQuerySprint(slug)
     const queryTasks  = getQueryTasks(slug)
+
 
     const dataSprint = await client({ query: querySprint, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
     const dataTasks  = await client({ query: queryTasks, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
