@@ -142,6 +142,7 @@ onMount(() => {
         margin-bottom: 0;
         position: relative;
         min-width:18rem;
+        max-width:30rem;
         scroll-snap-align: center;
     }
     section.showcase li * {
