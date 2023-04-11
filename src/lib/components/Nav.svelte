@@ -22,10 +22,10 @@
             <a class="active" data-sveltekit-prefetch href="/">Programma</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/data-driven-web/the-web-is-for-everyone">Sprint 9</a>
+            <a data-sveltekit-reload href="/data-driven-web/performance-matters">Sprint 10</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/meesterproef/free-space">Sprint 19</a>
+            <a data-sveltekit-reload href="/meesterproef/final-sprint">Sprint 20</a>
         </li>
     </ul>
 
