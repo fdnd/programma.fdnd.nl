@@ -1,6 +1,7 @@
 import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
+import captureWebsite from 'capture-website';
 
 let prefix
 
@@ -45,15 +46,17 @@ function formatName (name) {
     }
 }
 
-function formatForks({forks}) {
+async function formatForks({forks}) {
     const ghBaseUrl = 'https://github.com'
     const ghPagesBaseURL = 'github.io'
     
-    return forks.nodes.filter(node => {
+    return await forks.nodes.filter(node => {
         return node.stargazerCount > 0
-    }).map(fork => {
+    }).map(async fork => {
+        const pagesUrl = `https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`
+        const screenshotPath = `screenshots/screenshot-${fork.owner.login}-${fork.name}.png`
 
-
+       // await captureWebsite.file(pagesUrl, screenshotPath, {overwrite:true})
 
         return {
             title: formatName(fork.name),
@@ -63,8 +66,9 @@ function formatForks({forks}) {
             ownerUrl:fork.owner.url,
             avatarUrl:fork.owner.avatarUrl,
             url:`${ghBaseUrl}/${fork.owner.login}/${fork.name}`,
-            pagesUrl:`https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`,
-            homepageUrl: formatHomepageUrl(fork.homepageUrl)
+            pagesUrl: pagesUrl,
+            homepageUrl: formatHomepageUrl(fork.homepageUrl),
+            screenshotPath: screenshotPath
         }        
     }) 
 
@@ -74,4 +78,5 @@ function formatForks({forks}) {
         return url.includes('https://') || url.includes('http://') ? url : `https://${url}`
     }
 }
+
 
