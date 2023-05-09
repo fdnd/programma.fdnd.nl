@@ -37,9 +37,9 @@ div.semesters-sprints{
     position: relative;
     margin: 0;
     padding: 2em 0;
-    /* background-color: lightpink; */
     display: flex;
     flex-direction: column;
+    max-width: 70em;
 }
 /* div.semesters-sprints button {
     color:inherit;
@@ -108,7 +108,7 @@ input[type="checkbox"].toggle + label::before {
     content: "";
     width: 10.75em; /* 5.5 + 2.75 - 2*0.15*/
     height: 1.325em;
-    border: solid 0.15em var(--turquoise);
+    border: solid 2px var(--turquoise);
     border-radius: var(--pilled);
     transition: background-color 200ms ease-in-out;
 }
@@ -124,7 +124,7 @@ input[type="checkbox"].toggle + label::after {
     height: 1.5em;
     background-color: var(--blueberry);
     color: var(--turquoise);
-    border: solid 0.15em var(--turquoise);
+    border: solid 2px var(--turquoise);
     border-radius: var(--pilled);
     transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
 }
@@ -135,8 +135,10 @@ input[type="checkbox"].toggle:checked + label::after {
     color: var(--blueberry);
 }
 input[type="checkbox"].toggle:focus + label::before {
-    border-color: #fffc86;
-    background: #fffc86;
+    /* border-color: #fffc86; */
+    border-color: var(--call-to-action);
+    /* background: #fffc86; */
+    background: var(--call-to-action);
 }
 
 </style>
