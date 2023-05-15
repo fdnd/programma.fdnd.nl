@@ -1,26 +1,24 @@
 <script>
     import Semester from '$lib/components/program/Semester.svelte'
-    import IconExpand from '$lib/components/icons/Expand.svelte'
-    
+    // import IconExpand from '$lib/components/icons/Expand.svelte'
     export let semesters
 
-    function toggleSchedule({target}){
-        // console.log("target.nodeName",target.nodeName)
+    function toggleDates({target}){
         if(target.nodeName == 'INPUT') {
             document.body.classList.toggle('expand')
         }
-        if(target.nodeName == 'BUTTON') {
-            document.body.classList.toggle('expand')
-            let label = target.querySelector('span')
-            label.textContent == 'meer info' ? label.textContent = 'minder info ' : label.textContent = 'meer info'
-        }      
+        // if(target.nodeName == 'BUTTON') {
+        //     document.body.classList.toggle('expand')
+        //     let label = target.querySelector('span')
+        //     label.textContent == 'meer info' ? label.textContent = 'minder info ' : label.textContent = 'meer info'
+        // }      
     }
 </script>
 
 
 <div class="semesters-sprints">
     <!-- <button on:click={toggleSchedule}><span>meer info</span><IconExpand /></button> -->
-    <input type="checkbox" id="show-hide-info" class="toggle" on:change={toggleSchedule}><label for="show-hide-info"><span>Show/hide info</span></label>
+    <input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates}><label for="show-hide-dates"><span>Show/hide dates</span></label>
     
     <div class="scroll-horo"> <!-- horizontal scroll voor semester lijsten -->
 
@@ -113,32 +111,36 @@ input[type="checkbox"].toggle + label::before {
     transition: background-color 200ms ease-in-out;
 }
 input[type="checkbox"].toggle + label::after {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    content: "show all dates"; /* \2715 x */
     position: absolute;
-    font-weight: normal;
-    content: "hide all dates"; /* \2715 x */
-    font-size: .9em;
     width: 8em;
     height: 1.5em;
     background-color: var(--blueberry);
     color: var(--turquoise);
     border: solid 2px var(--turquoise);
     border-radius: var(--pilled);
+    font-weight: normal;
+    font-size: .9em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
 }
 input[type="checkbox"].toggle:checked + label::after {
-    content: "show all dates"; /* \2713 v */
+    content: "hide all dates"; /* \2713 v */
     transform: translateX(50%);
     background-color: var(--turquoise);
     color: var(--blueberry);
 }
-input[type="checkbox"].toggle:focus + label::before {
-    /* border-color: #fffc86; */
+input[type="checkbox"].toggle:hover + label::after, input[type="checkbox"].toggle:checked:hover + label::after {
+    background-color: var(--call-to-action);
     border-color: var(--call-to-action);
-    /* background: #fffc86; */
-    background: var(--call-to-action);
+    color: var(--blueberry);
+}
+input[type="checkbox"].toggle:focus + label::before {
+    background-color: var(--call-to-action);
+    border-color: var(--call-to-action);
 }
 
 </style>
