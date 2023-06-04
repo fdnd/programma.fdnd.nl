@@ -96,7 +96,6 @@ input[type="checkbox"].toggle + label {
     cursor: pointer;
     color: white;
     font-family: helvetica;
-    /* font-weight: normal; */
     font-size: 1em;
 }
 input[type="checkbox"].toggle + label span {
@@ -104,7 +103,7 @@ input[type="checkbox"].toggle + label span {
 }
 input[type="checkbox"].toggle + label::before {
     content: "";
-    width: 10.75em; /* 5.5 + 2.75 - 2*0.15*/
+    width: 10.75em;
     height: 1.325em;
     border: solid 2px var(--turquoise);
     border-radius: var(--pilled);
