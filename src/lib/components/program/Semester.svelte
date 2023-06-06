@@ -22,8 +22,10 @@
         padding: 1rem;
         border: 2px var(--turquoise) solid;
         font-size: .9em;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
+        /* scroll-margin-left: 1rem; */
         border-radius:1rem;
+        width: 90vw;
     }
     ol {
         list-style: none;
@@ -33,7 +35,7 @@
 
     @media (min-width: 25em) {
         ol {
-            width: 18rem;
+            width: 21rem;
         }
     }
 </style>
