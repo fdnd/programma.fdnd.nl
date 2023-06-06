@@ -37,7 +37,7 @@ div.semesters-sprints{
     padding: 2em 0;
     display: flex;
     flex-direction: column;
-    max-width: 70em;
+    max-width: 80em;
 }
 /* div.semesters-sprints button {
     color:inherit;
