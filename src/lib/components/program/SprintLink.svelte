@@ -40,7 +40,7 @@
     li a,
     li span {
         display: inline-block;
-        width: 19rem;
+        /* width: 19rem; */
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -68,8 +68,9 @@
         z-index:1
     }
     @media (min-width: 25em) {
-        li a{
-            width: 14rem;
+        li a,
+        li span{
+            width: 82%;
         }
     }
 </style>

@@ -64,8 +64,8 @@
 		font-size: 2rem;
 	}
 	:global(footer) {
-		margin-top: 2rem;
-
+		margin-top: 6rem;
+		/* display: none; */
 	}
 	:global(footer nav) {
 		padding:1rem;

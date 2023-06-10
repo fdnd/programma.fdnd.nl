@@ -11,7 +11,7 @@
             <a class="active" data-sveltekit-prefetch href="/">Programma</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/data-driven-web/performance-matters">Sprint 10</a>
+            <a data-sveltekit-reload href="/data-driven-web/proof-of-concept">Sprint 12</a>
         </li>
         <li>
             <a data-sveltekit-reload href="/meesterproef/final-sprint">Sprint 20</a>
