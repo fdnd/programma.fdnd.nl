@@ -51,14 +51,14 @@ onMount(() => {
         </ul>
     </section>
     
-    <section class="blue-on-purple showcase {stargazer ? 'stargazer' : ''}">
+    <section class="showcase {stargazer ? 'stargazer' : ''}">
         <Heading title="Studentenwerk" />
 
         <ul>
         {#each tasks as task}
             {#if task && task.forks.length > 0}
                     {#each task.forks as fork}
-                    <li class="blue-on-green">
+                    <li class="blue-on-purple">
                         <strong>
                             <img src="{fork.avatarUrl}" alt="" class="avatar">
                             <a href="{fork.ownerUrl}" target="_blank" rel="noreferrer">@{fork.owner}</a>
