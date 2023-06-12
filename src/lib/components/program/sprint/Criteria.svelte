@@ -20,6 +20,9 @@
     details summary{
       cursor:pointer;
     }
+    details summary h2{
+      display: inline-block;
+    }
     :global(section.criteria ul){
       margin-left:0
     }
