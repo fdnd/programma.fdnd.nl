@@ -51,7 +51,7 @@ onMount(() => {
         </ul>
     </section>
     
-    <section class="showcase {stargazer ? 'stargazer' : ''}">
+    <section class="blue-on-purple showcase {stargazer ? 'stargazer' : ''}">
         <Heading title="Studentenwerk" />
 
         <ul>
