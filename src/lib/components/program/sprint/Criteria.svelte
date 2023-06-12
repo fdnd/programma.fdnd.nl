@@ -6,14 +6,19 @@
 
 {#if criteria}
 <section class="blue-on-purple rounded col-span-1 criteria">
-    <Heading title="Gedragscriteria" />
+  <details>
+    <summary><Heading title="Gedragscriteria" /></summary>
     {@html criteria.html}
+  </details>
 </section>
 {/if}
 
 <style>
     section {
       margin-bottom: 2rem;
+    }
+    details summary{
+      cursor:pointer;
     }
     :global(section.criteria ul){
       margin-left:0
