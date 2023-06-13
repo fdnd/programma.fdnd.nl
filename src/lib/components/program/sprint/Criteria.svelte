@@ -20,7 +20,7 @@
     details summary{
       cursor:pointer;
     }
-    details summary h2{
+    :global(details summary h2){
       display: inline-block;
     }
     :global(section.criteria ul){
