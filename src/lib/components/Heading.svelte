@@ -20,6 +20,9 @@
 <style>
   h2 {
     font-weight: normal; 
+    /* background: pink; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
   }
   h2 a.anchor {
     display: none;
