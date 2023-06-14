@@ -1,7 +1,6 @@
 import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
-//import captureWebsite from 'capture-website';
 
 let prefix
 
@@ -11,10 +10,9 @@ export const load = async ({params: {slug}}) => {
     const querySprint = getQuerySprint(slug)
     const queryTasks  = getQueryTasks(slug)
 
-
     const dataSprint = await client({ query: querySprint, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
     const dataTasks  = await client({ query: queryTasks, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
-    console.log("dataTasks",dataTasks)
+
     const tasks = formatTasks(dataTasks, slug)
 
     return { ...dataSprint.sprint, tasks:tasks }
@@ -46,17 +44,14 @@ function formatName (name) {
     }
 }
 
-async function formatForks({forks}) {
+function formatForks({forks}) {
     const ghBaseUrl = 'https://github.com'
     const ghPagesBaseURL = 'github.io'
     
-    return await forks.nodes.filter(node => {
+    return forks.nodes.filter(node => {
         return node.stargazerCount > 0
     }).map(async fork => {
         const pagesUrl = `https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`
-        const screenshotPath = `screenshots/screenshot-${fork.owner.login}-${fork.name}.png`
-
-       // await captureWebsite.file(pagesUrl, screenshotPath, {overwrite:true})
 
         return {
             title: formatName(fork.name),
