@@ -29,7 +29,7 @@ function formatTasks({search: {repos}}){
         description:repo.description,
         url:repo.url,
         forkCount:repo.forkCount,
-        forks:formatForks(repo),
+        forks: formatForks(repo),
         topic:topics[0]
       }
     })
@@ -50,7 +50,7 @@ function formatForks({forks}) {
     
     return forks.nodes.filter(node => {
         return node.stargazerCount > 0
-    }).map(async fork => {
+    }).map(fork => {
         const pagesUrl = `https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`
 
         return {
