@@ -1,7 +1,7 @@
 import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
-import captureWebsite from 'capture-website';
+//import captureWebsite from 'capture-website';
 
 let prefix
 
@@ -68,7 +68,6 @@ async function formatForks({forks}) {
             url:`${ghBaseUrl}/${fork.owner.login}/${fork.name}`,
             pagesUrl: pagesUrl,
             homepageUrl: formatHomepageUrl(fork.homepageUrl),
-            screenshotPath: screenshotPath
         }        
     }) 
 
