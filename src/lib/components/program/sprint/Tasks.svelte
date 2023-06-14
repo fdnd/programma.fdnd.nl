@@ -65,7 +65,7 @@ onMount(() => {
                             <span>{fork.title}</span>
                             <IconStar stargazerCount={fork.stargazerCount} />
                         </strong>
-                        <img src="screeshot" alt="{fork.title}">
+                        <img src="/img/github-placeholder.png" alt="{fork.title}">
                         
                         <a href="{fork.url}" target="_blank" rel="noreferrer">Code</a>
                         {#if fork.homepageUrl}
