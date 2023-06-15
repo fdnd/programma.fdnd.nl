@@ -1,23 +1,17 @@
 <script>
     import Semester from '$lib/components/program/Semester.svelte'
-    // import IconExpand from '$lib/components/icons/Expand.svelte'
+
     export let semesters
 
     function toggleDates({target}){
         if(target.nodeName == 'INPUT') {
             document.body.classList.toggle('expand')
-        }
-        // if(target.nodeName == 'BUTTON') {
-        //     document.body.classList.toggle('expand')
-        //     let label = target.querySelector('span')
-        //     label.textContent == 'meer info' ? label.textContent = 'minder info ' : label.textContent = 'meer info'
-        // }      
+        }    
     }
 </script>
 
 
 <div class="semesters-sprints">
-    <!-- <button on:click={toggleSchedule}><span>meer info</span><IconExpand /></button> -->
     <input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates}><label for="show-hide-dates"><span>Show/hide dates</span></label>
     
     <div class="scroll-horo"> <!-- horizontal scroll voor semester lijsten -->
@@ -34,30 +28,12 @@
 div.semesters-sprints{
     position: relative;
     margin: 0;
-    padding: 2em 0;
+    padding: 2em 0 0;
     display: flex;
     flex-direction: column;
     max-width: 80em;
 }
-/* div.semesters-sprints button {
-    color:inherit;
-    border:none;
-    display:flex;
-    align-items:center;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: transparent;
-    color:var(--turquoise);
-    font-size: inherit;
-    cursor: pointer;
-}
-div.semesters-sprints button > * {
-    pointer-events: none;
-}
-div.semesters-sprints button:hover {
-    text-decoration: underline;
-} */
+
 div.scroll-horo{
     position: relative;
     overflow-x: scroll;
@@ -65,8 +41,9 @@ div.scroll-horo{
     flex-direction: row;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
-    margin: 1rem 0;
+    margin: 1rem 0 0;
     width: 100%;
+    padding-bottom:2rem;
 }
 div.scroll-horo span.scroll-label{
     display: none;
