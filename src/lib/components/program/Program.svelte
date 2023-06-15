@@ -14,7 +14,7 @@
 
 <style>
 section {
-    padding: 1rem;
+    padding: 1rem !important;
     margin: 2rem 0;
     position: relative;
     max-width:42rem;

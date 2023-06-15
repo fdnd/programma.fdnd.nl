@@ -55,7 +55,6 @@
         border:1px solid;
         padding:0 .25rem;
         font-size: .7em;
-        border-radius: var(--rounded);
     }
 
     a::before {

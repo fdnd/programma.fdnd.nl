@@ -25,7 +25,7 @@ onMount(() => {
 </script>
 
 {#if tasks && tasks.length > 0}
-    <section class="green-on-blue tasks">
+    <section class="green-on-blue rounded tasks">
         <Heading title="Leertaken" />
 
         {#each tasks as task}
@@ -81,8 +81,8 @@ onMount(() => {
 
 <style>
     section.tasks {
-        border: 2px #66e5bf solid;
-        border-radius:1rem;
+        border-width:1px;
+        border-style:solid;
     }
     :global(section.tasks h3.subtasks) {
         display:none;

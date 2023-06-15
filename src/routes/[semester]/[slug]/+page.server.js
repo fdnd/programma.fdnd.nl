@@ -26,11 +26,11 @@ function formatTasks({search: {repos}}){
       
       return {
         name: formatName(repo.name),
-        description:repo.description,
-        url:repo.url,
-        forkCount:repo.forkCount,
+        description: repo.description,
+        url: repo.url,
+        forkCount: repo.forkCount,
         forks: formatForks(repo),
-        topic:topics[0]
+        topic: topics[0]
       }
     })
 }
