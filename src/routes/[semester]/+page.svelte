@@ -46,15 +46,16 @@
     }
     section > div section {
         margin:0;
+
     }
 
     @media (min-width:45em) {
         section > div {
-            display:grid;
-            grid-template-columns: repeat(2, 1fr);
+            display:flex;
+            flex-wrap:wrap;
             gap:2rem;
-            max-width: 70rem;
             align-items: start;
+            max-width:70rem
         }
     }
 </style>
