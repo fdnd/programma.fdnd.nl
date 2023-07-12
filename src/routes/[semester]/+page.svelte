@@ -23,6 +23,17 @@
                 {/each}
                 </ol>
             </section>
+
+            <section class="purple-on-blue pilled">
+                <h3>Topics</h3>
+                <ol>
+                {#each semester.sprints as sprint}
+                    {#each sprint.topics as topic}
+                        <li>{topic.name}</li>
+                    {/each}
+                {/each}
+                </ol>
+            </section>
         </div>
     </section>
 </div>

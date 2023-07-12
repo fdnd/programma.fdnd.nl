@@ -15,6 +15,9 @@ export default function getQuerySprint(slug) {
               slug
               sprintNumber
               startdate
+              topics {
+                name
+              }
           }
         }
     }`

@@ -24,6 +24,7 @@
         margin: 2rem 0;
         max-width:48rem;
     }
+
     @media (min-width: 40em) {
         section {
             grid-column: 1 / -1;
