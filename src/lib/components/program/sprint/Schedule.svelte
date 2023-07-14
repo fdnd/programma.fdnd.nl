@@ -93,15 +93,13 @@ th span {
 
 td {
     vertical-align: top;
-    border-bottom: 1px var(--green) solid;
-    border-left: 1px var(--green) solid;
-    border-right: 1px var(--green) solid;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     padding: 1rem 1rem 0;
     font-size: 1.2rem;
     margin:0;
     scroll-snap-align: center;
+    border-width:0;
 }
 
 td :global(p) {

@@ -64,7 +64,6 @@
 	}
 	:global(footer) {
 		margin-top: 6rem;
-		/* display: none; */
 	}
 	:global(footer nav) {
 		padding:1rem;

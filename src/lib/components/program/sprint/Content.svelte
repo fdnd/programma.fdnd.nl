@@ -6,7 +6,7 @@
 </script>
 
 
-<section class="blue-on-green pilled">
+<section class="blue-on-green rounded">
     <Heading title="Sprint {sprintNumber}: {title}" />
 
     <Topics {startdate} {topics} />
@@ -23,7 +23,6 @@
     section {
         margin: 2rem 0;
         max-width:48rem;
-        border-radius:1rem
     }
     @media (min-width: 40em) {
         section {

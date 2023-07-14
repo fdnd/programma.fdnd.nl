@@ -7,7 +7,9 @@
 
 
 <section class="semester green-on-blue pilled">
-    <Heading title="Semester {++i}" subtitle={semester.title} />
+    <a href="/{semester.slug}">
+        <Heading title="Semester {++i}" subtitle={semester.title} />
+    </a>
     
     <ol>
     {#each semester.sprints as sprint}
@@ -23,10 +25,14 @@
         border: 2px var(--turquoise) solid;
         font-size: .9em;
         scroll-snap-align: start;
-        /* scroll-margin-left: 1rem; */
-        border-radius:1rem;
         width: 90vw;
     }
+
+    section.semester > a {
+        display:inline-block;
+        margin:0 0 .5rem;
+    }
+
     ol {
         list-style: none;
         margin:0;
