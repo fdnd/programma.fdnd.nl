@@ -8,7 +8,7 @@
     <h2>Menu</h2>
     <ul>
         <li>
-            <a class="active" data-sveltekit-prefetch href="/">Programma</a>
+            <a class="active" data-sveltekit-prefetch href="/">Programma 2324</a>
         </li>
         <li>
             <a data-sveltekit-reload href="/static-web/your-tribe">Sprint 1</a>
