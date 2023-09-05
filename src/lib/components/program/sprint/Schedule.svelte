@@ -1,122 +1,202 @@
 <script>
-    import Heading from '$lib/components/Heading.svelte'
-    import { prettyDate, longDate } from '$lib/utils/date.js'
+	import Heading from '$lib/components/Heading.svelte';
+	import { prettyDate, longDate } from '$lib/utils/date.js';
 
-    export let weekPlans
+	export let weekPlans;
+
+	const checkKeywords = (content) => {
+		const strings = [
+			'sprintplanning',
+			'kickoff',
+			'workshop',
+			'opdrachtgever',
+			'code review',
+			'retrospect ',
+			'wrap-up',
+			'review'
+		];
+		let newString = '';
+		if (content) {
+			const splitted = content.split('<p>');
+			splitted.forEach((paragraph) => {
+				let toReplace = strings.filter((s) => {
+					if (paragraph.toLowerCase().includes(s)) {
+						return s.replace('we ♥ web', 'we love web', s).replaceAll(' ', '-', s);
+					}
+				});
+				let classes = toReplace.join(' ');
+				paragraph = '<p>' + paragraph;
+				newString += paragraph.replace('<p>', `<p class="${classes}">`, paragraph);
+			});
+		}
+
+		return newString;
+	};
+
+	const plans = [];
+	weekPlans.forEach((plan) => {
+		const week = [
+			{
+				date: plan['mondayDate'],
+				weekDay: 'Maandag',
+				content: checkKeywords(plan['monday'].html)
+			},
+			{
+				date: plan['tuesdayDate'],
+				weekDay: 'Dinsdag',
+				content: checkKeywords(plan['tuesday'].html)
+			},
+			{
+				date: plan['wednesdayDate'],
+				weekDay: 'Woensdag',
+				content: checkKeywords(plan['wednesday'].html)
+			},
+			{
+				date: plan['thursdayDate'],
+				weekDay: 'Donderdag',
+				content: checkKeywords(plan['thursday'].html)
+			},
+			{
+				date: plan['fridayDate'],
+				weekDay: 'Vrijdag',
+				content: checkKeywords(plan['friday'].html)
+			}
+		];
+		plans.push(week);
+	});
 </script>
 
 {#if weekPlans && weekPlans.length > 0}
-  <section>
-    <Heading title="Sprint planning" />
-    {#each weekPlans as week, i}
-      <table>
-        <caption>Week {week.weekNumber}</caption>
-        <thead>
-          <tr>
-            <th scope="col" class="blue-on-green">
-              Maandag <span>{prettyDate(week.mondayDate)}</span>
-            </th>
-            <th scope="col" class="blue-on-green">
-              Dinsdag <span>{prettyDate(week.tuesdayDate)}</span>
-            </th>
-            <th scope="col" class="blue-on-green">
-              Woensdag <span>{prettyDate(week.wednesdayDate)}</span>
-            </th>
-            <th scope="col" class="blue-on-green">
-              Donderdag <span>{prettyDate(week.thursdayDate)}</span>
-            </th>
-            <th scope="col" class="blue-on-green">
-              Vrijdag <span>{prettyDate(week.fridayDate)}</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Maandag {prettyDate(week.mondayDate)}"
-             class="blue-on-green">{@html week.monday?.html}</td>
-            <td data-label="Dinsdag {prettyDate(week.tuesdayDate)}"
-             class="blue-on-green">{@html week.tuesday?.html}</td>
-            <td data-label="Woensdag {prettyDate(week.wednesdayDate)}"
-             class="blue-on-green">{@html week.wednesday?.html}</td>
-            <td data-label="Donderdag {prettyDate(week.thursdayDate)}"
-             class="blue-on-green">{@html week.thursday?.html}</td>
-            <td data-label="Vrijdag {prettyDate(week.fridayDate)}"
-             class="blue-on-green">{@html week.friday?.html}</td>
-          </tr>
-        </tbody>
-      </table>
-    {/each}
-  </section>
+	<section>
+		<Heading title="Sprint planning" />
+		{#each plans as week, i}
+			<div class="week-container">
+				<h2>Week {i + 1}</h2>
+				<div class="week">
+					{#each week as day, i}
+						<div class="day day--{day.weekDay}">
+							<h4 class="weekday">
+								{day.weekDay} <span>{prettyDate(day.date)}</span>
+							</h4>
+							<div data-label="{day.weekDay} {prettyDate(day.date)}">{@html day.content}</div>
+						</div>
+					{/each}
+				</div>
+			</div>
+		{/each}
+	</section>
 {/if}
 
 <style>
-table {
-    border-collapse: separate;
-    border-spacing: 0.5em 0;
-    font-size: 0.8em;
-    padding-bottom: 1rem;
-    margin-left:-1.25rem;
-    margin-right:-1.25rem;
-    display: block;
-    overflow-x: scroll;
-    width: calc(100vw - 2rem);
-    scroll-snap-type: x mandatory;
-}
-table + table {
-    margin-top: 1rem;
-}
-table caption {
-    color: white;
-    font-size: 1.5rem;
-    text-align: left;
-    padding-bottom: 1rem;
-    display: block;
-    position:sticky;
-    left: 1.25rem;
-    
-}
-th {
-    font-weight: bold;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    word-break: break-word;
-    font-size: 1.2rem;
-    min-width: 16rem;
-    border: 1px solid var(--green);
-    text-align: left;
-    padding: 0.5rem 1rem;
-}
-th span {
-    font-weight: normal;
-    font-size: 0.8rem;
-}
+	section {
+		padding: 0;
+		margin: 0 -1rem;
+	}
+	@media (min-width: 50rem) {
+		section {
+			margin: 0 -2rem;
+		}
+	}
+	@media (min-width: 100rem) {
+		section {
+			width: max-content;
+			margin: 0 auto;
+		}
+	}
+	section > :global(h2) {
+		padding-left: 2rem;
+	}
+	.week-container {
+		padding: 0 2rem 2rem;
+	}
 
-td {
-    vertical-align: top;
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    padding: 1rem 1rem 0;
-    font-size: 1.2rem;
-    margin:0;
-    scroll-snap-align: center;
-    border-width:0;
-}
+	.week + .week {
+		margin-top: 2rem;
+	}
 
-td :global(p) {
-    margin-bottom: 2rem;
-}
+	h2 {
+		position: sticky;
+		left: 0rem;
+	}
 
-@media (min-width: 22rem) {
-      th{
-        min-width: 18rem;
-      }
-}
-@media (min-width: 40em) {
-      section {
-        grid-column: 1 / -1;
-      }
-      th{
-        min-width: 21rem;
-      }
-}
+	.weekday {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		font-size: 1.125rem;
+		width: 100%;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+		background: var(--blueberry);
+	}
+
+	.day + .day {
+		margin-top: 1rem;
+	}
+	.day :global(p) {
+		--border: var(--white);
+		position: relative;
+		font-size: 1rem;
+		padding-left: 1rem;
+	}
+	.day :global(p::before) {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 1rem;
+		width: 4px;
+		height: 100%;
+		background-color: var(--border);
+		opacity: 1;
+	}
+
+	.day :global(.sprintplanning) {
+		--border: var(--lavender);
+	}
+	.day :global(.workshop) {
+		--border: var(--turquoise);
+	}
+	.day :global(.opdrachtgever),
+	.day :global(.code-review),
+	.day :global(.review),
+	.day :global(.retrospect),
+	.day :global(.kickoff),
+	.day :global(.wrap-up) {
+		--border: var(--call-to-action);
+	}
+
+	@media (min-width: 47rem) {
+		.week-container {
+			overflow-x: auto;
+		}
+		.week {
+			display: flex;
+			width: max-content;
+			gap: 1rem;
+		}
+		.day {
+			aspect-ratio: 1;
+			border-radius: 0.5rem;
+			border: 1px solid var(--turquoise);
+			width: max(300px, calc(100vw / 24 * 4));
+			padding: 1rem;
+			box-shadow: -4px 4px var(--turquoise);
+		}
+		.day + .day {
+			margin-top: 0;
+		}
+		.weekday {
+			text-align: right;
+			margin: 0 0 1rem;
+			border: none;
+		}
+	}
+	@media (min-width: 40em) {
+		section {
+			grid-column: 1 / -1;
+		}
+	}
 </style>

@@ -5,12 +5,13 @@ import IconStar from '$lib/components/icons/Star.svelte'
 
 export let tasks
 export let stargazer = false
-
-tasks.forEach(task => {
-  if (!stargazer && task && task.forks.length > 0) {
-    stargazer = true
-  }
-})
+if (tasks) {
+    tasks.forEach(task => {
+      if (!stargazer && task && task.forks.length > 0) {
+        stargazer = true
+      }
+    })
+}
 
 onMount(() => { 
     /* Firefox hack, :has() selector not supported */
