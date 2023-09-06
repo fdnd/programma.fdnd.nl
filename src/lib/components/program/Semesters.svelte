@@ -36,7 +36,7 @@ div.semesters-sprints{
 
 div.scroll-horo{
     position: relative;
-    overflow-x: scroll;
+    overflow-x: auto;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -110,13 +110,14 @@ input[type="checkbox"].toggle:checked + label::after {
     color: var(--blueberry);
 }
 input[type="checkbox"].toggle:hover + label::after, input[type="checkbox"].toggle:checked:hover + label::after {
-    background-color: var(--call-to-action);
-    border-color: var(--call-to-action);
+    background-color: var(--turquoise);
+    /* border-color: var(--call-to-action); */
     color: var(--blueberry);
 }
-input[type="checkbox"].toggle:focus + label::before {
-    background-color: var(--call-to-action);
-    border-color: var(--call-to-action);
+input[type="checkbox"].toggle:checked + label::before {
+    background-color: var(--turquoise);
+    opacity: 0.5;
+    border-color: var(--turquoise);
 }
 
 </style>
