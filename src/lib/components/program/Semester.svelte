@@ -5,21 +5,30 @@
 
 	export let semester, i;
 	const sprints = semester.sprints.map((sprint, i) => {
+		let newDate;
+		let eD;
 		if (semester.sprints[i + 1]) {
-            let newDate
-            let eD
-			if (semester.sprints[i + 1].sprintNumber) {
-                eD = new Date(semester.sprints[i + 1].startdate)
-			} else if (semester.sprints[i + 2]) {
-                eD = new Date(semester.sprints[i + 2].startdate)
-			} else {
-                eD = new Date(semester.endDate)
-			}
-            newDate = new Date(eD.setDate(eD.getDate() - 2));
-            sprint.endDate = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()}` 
+            if (sprint.sprintNumber) {
+                if (semester.sprints[i + 1].sprintNumber) {
+                    eD = new Date(semester.sprints[i + 1].startdate);
+                } else if (semester.sprints[i + 2]) {
+                    eD = new Date(semester.sprints[i + 2].startdate);
+                } else {
+                    eD = new Date(semester.endDate);
+                }
+            } else {
+                if (semester.sprints[i + 1]) {
+                    eD = new Date(semester.sprints[i + 1].startdate);
+                } else {
+                    eD = new Date(semester.endDate);
+                }
+
+            }
 		} else {
-			sprint.endDate = semester.endDate;
+			eD = new Date(semester.endDate);
 		}
+		newDate = new Date(eD.setDate(eD.getDate() - 2));
+		sprint.endDate = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()}`;
 		sprint.lengthInDays = daysBetween(sprint.startdate, sprint.endDate);
 		if (!sprint.sprintNumber) {
 			sprint.daysBefore = daysBetween(semester.startDate, sprint.startdate);
@@ -30,8 +39,6 @@
 	const todayPretty = prettyDate(today);
 	const sprintDates = datesBetween(semester.startDate, semester.endDate);
 	const sprintMonths = formatMonths(semester.startDate, semester.endDate);
-
-	
 </script>
 
 <div class="sticky-heading">
@@ -114,13 +121,13 @@
 	.dates {
 		display: flex;
 		width: max-content;
-		margin-top: 2em;
+		padding-top: 1rem;
 	}
 
 	.dates::before {
 		content: '';
 		position: absolute;
-		inset: 2rem 0 0;
+		inset: 4em 0 0;
 		pointer-events: none;
 		border: 1px solid currentColor;
 		border-radius: 0.5rem;

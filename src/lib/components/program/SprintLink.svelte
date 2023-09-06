@@ -46,7 +46,9 @@
 		width: calc(var(--days) * var(--grid));
         min-width: var(--grid);
         margin-top: 1rem;
+        font-size: 14px;
 	}
+    
     .calendar-item :global(strong) {
         font-weight: 700;
         text-decoration: underline;
@@ -62,7 +64,9 @@
         color: var(--accent);
         border: 1px solid var(--accent);
         clip-path: none;
-        font-size: 0.75rem;
+        font-size: 10px;
+        white-space: wrap;
+        max-width: calc(var(--days) * var(--grid));
     }
     .extra .calendar-item__sticky {
         padding: 0.5rem 1rem;
@@ -72,13 +76,22 @@
         left: 0;
         padding: 0.75rem 1.25rem;
         width: max-content;
+        max-width: 100%;
     }
 	time {
-		/* border: 1px solid; */
+        /* border: 1px solid; */
 		padding: 0 0.25rem;
 		font-size: 0.7em;
         background: none;
         vertical-align: super;
         color: inherit;
 	}
+    @media (min-width: 47rem) {
+        .calendar-item {
+            font-size: 1rem;
+        }
+        .extra {
+            font-size: 0.75rem;
+        }
+    }
 </style>
