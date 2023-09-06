@@ -12,7 +12,6 @@ export const load = async ({params: {slug}}) => {
 
     const dataSprint = await client({ query: querySprint, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
     const dataTasks  = await client({ query: queryTasks, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
-    console.log(dataTasks);
     if (dataTasks) {
         const tasks = formatTasks(dataTasks, slug)
         return { ...dataSprint.sprint, tasks:tasks }

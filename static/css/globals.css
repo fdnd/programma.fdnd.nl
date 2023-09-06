@@ -17,6 +17,10 @@ body {
     overflow-x:hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 footer {
     margin-top: 2rem;
 }
@@ -29,4 +33,9 @@ footer nav h2 {
 
 ::marker {
     color: var(--blueberry)
+}
+
+.sr-only {
+	position: absolute;
+	text-indent: -9999px;
 }
