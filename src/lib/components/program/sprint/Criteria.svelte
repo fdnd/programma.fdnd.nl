@@ -6,7 +6,7 @@
 
 {#if criteria}
 <section class="blue-on-purple rounded col-span-1 criteria">
-  <details>
+  <details open="true">
     <summary><Heading title="Gedragscriteria" /></summary>
     {@html criteria.html}
   </details>
