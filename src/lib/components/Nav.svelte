@@ -11,10 +11,10 @@
             <a class="active" data-sveltekit-prefetch href="/">Programma 2324</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/static-web/your-tribe">Sprint 1</a>
+            <a data-sveltekit-reload href="/static-web/the-client">Sprint 2</a>
         </li>
         <li>
-            <a data-sveltekit-reload href="/workflow-tooling-frameworks/your-tribe-for-life">Sprint 13</a>
+            <a data-sveltekit-reload href="/workflow-tooling-frameworks/lose-your-head">Sprint 14</a>
         </li>
     </ul>
 </nav>
