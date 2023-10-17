@@ -18,19 +18,15 @@ export default function getQuerySprint(slug) {
             monday {
               html
             }
-            tuesdayDate
             tuesday {
               html
             }
-            wednesdayDate
             wednesday {
               html
             }
-            thursdayDate
             thursday {
               html
             }
-            fridayDate
             friday {
               html
             }
