@@ -35,35 +35,44 @@
 
 	const plans = [];
 	weekPlans.forEach((plan) => {
+		let startDate = new Date(plan['mondayDate'])
+		console.log(startDate)
 		const week = [
 			{
-				date: plan['mondayDate'],
+				date: startDate,
 				weekDay: 'Maandag',
 				content: checkKeywords(plan['monday'].html)
 			},
 			{
-				date: plan['tuesdayDate'],
+				date: addDays(startDate, 1),
 				weekDay: 'Dinsdag',
 				content: checkKeywords(plan['tuesday'].html)
 			},
 			{
-				date: plan['wednesdayDate'],
+				date: addDays(startDate, 2),
 				weekDay: 'Woensdag',
 				content: checkKeywords(plan['wednesday'].html)
 			},
 			{
-				date: plan['thursdayDate'],
+				date: addDays(startDate, 3),
 				weekDay: 'Donderdag',
 				content: checkKeywords(plan['thursday'].html)
 			},
 			{
-				date: plan['fridayDate'],
+				date: addDays(startDate, 4),
 				weekDay: 'Vrijdag',
 				content: checkKeywords(plan['friday'].html)
 			}
 		];
 		plans.push(week);
 	});
+
+	function addDays(date, days) {
+		var result = new Date(date);
+		result.setDate(result.getDate() + days);
+		
+		return result;
+	}
 </script>
 
 {#if weekPlans && weekPlans.length > 0}
