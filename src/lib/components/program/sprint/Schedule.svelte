@@ -80,7 +80,7 @@
 		<Heading title="Sprint planning" />
 		{#each plans as week, i}
 			<div class="week-container">
-				<h2>Week {i + 1}</h2>
+				<h3>Week {i + 1}</h3>
 				<div class="week">
 					{#each week as day, i}
 						<div class="day day--{day.weekDay}">
@@ -103,13 +103,12 @@
 	}
 	@media (min-width: 50rem) {
 		section {
-			margin: 0 -2rem;
+			margin: 0 -1rem;
 		}
 	}
 	@media (min-width: 100rem) {
 		section {
 			width: max-content;
-			margin: 0 auto;
 		}
 	}
 	section > :global(h2) {
@@ -123,9 +122,11 @@
 		margin-top: 2rem;
 	}
 
-	h2 {
+	h3 {
 		position: sticky;
-		left: 0rem;
+		left: 1rem;
+		font-weight: normal;
+		margin-top:0;
 	}
 
 	.weekday {
@@ -180,11 +181,15 @@
 	@media (min-width: 47rem) {
 		.week-container {
 			overflow-x: auto;
+			padding: 0 1rem 2rem;
 		}
 		.week {
 			display: flex;
 			width: max-content;
 			gap: 1rem;
+		}
+		h3 {
+			margin-left: 1rem;	
 		}
 		.day {
 			aspect-ratio: 1;

@@ -138,7 +138,7 @@ onMount(() => {
         display:flex;
         flex-wrap:wrap;
         margin-top: 1rem;
-        padding:.5rem;
+        padding:.5rem 1rem;
         border-radius:1rem;
         margin-bottom: 0;
         position: relative;
@@ -173,7 +173,7 @@ onMount(() => {
     }
     section.showcase li > img {
         width:calc(100% + 2rem);
-        max-width:calc(100% + 1rem);
+        max-width:calc(100% + 2rem);
         aspect-ratio:2 / 1;
         display:block;
         font-size: 0.5rem;
@@ -182,7 +182,7 @@ onMount(() => {
         margin-bottom: .5rem;
         filter:grayscale(1);
         opacity:.5;
-        margin:0 -.5rem
+        margin:0 -1rem
     } 
     section.showcase li a {
        font-size: 0.75em;
