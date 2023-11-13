@@ -1,61 +1,75 @@
 <script>
     import Semester from '$lib/components/program/Semester.svelte'
+    import { onMount } from 'svelte';
 
     export let semesters
+    export let subtitle
+    
+    let jsEnabled = false
 
     function toggleDates({target}){
         if(target.nodeName == 'INPUT') {
             document.body.classList.toggle('expand')
         }    
     }
+
+    onMount(() => {
+        console.log('[2] client side dom manipulation');
+        jsEnabled = true
+        document.body.classList.remove('expand')
+    })
+
+    console.log('[1] hydration: client side rendering & server side rendering')
+
 </script>
 
+<section class="semesters-sprints">
 
-<div class="semesters-sprints">
-    <input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates}><label for="show-hide-dates"><span>Show/hide dates</span></label>
+    <h2>{subtitle}</h2>
+
+    {#if jsEnabled}
+        <input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates}>
+        <label for="show-hide-dates"><span class="visually-hidden">Show/hide dates</span></label>
+    {/if}
+
     
-    <div class="scroll-horo"> <!-- horizontal scroll voor semester lijsten -->
+    <div class="scroll-horo">
 
-        <span class="scroll-label">scroll >>> </span>
+        <span class="scroll-label visually-hidden">scroll >>> </span>
         
         {#each semesters as semester, i}
             <Semester {semester} {i}/>
         {/each}
     </div>
-</div>
+</section>
 
 <style>
-div.semesters-sprints{
+section {
     position: relative;
-    margin: 0;
-    padding: 2em 0 0;
-    display: flex;
-    flex-direction: column;
-    max-width: 80em;
+
+    margin: 1rem 0 0;
+    width: 100%;
+    
+}
+h2 {
+    font-weight: normal;
 }
 
-div.scroll-horo{
-    position: relative;
+.scroll-horo {
     overflow-x: auto;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
-    margin: 1rem 0 0;
-    width: 100%;
-    padding-bottom:2rem;
+    padding:1rem 1rem 2rem;
+    margin-left: -1rem; 
 }
-div.scroll-horo span.scroll-label{
-    display: none;
+
+.scroll-label{
     position: absolute;
     top: 0;
     right: 1rem;
     background: var(--call-to-action);
-}
-@media (min-width: 40em) {
-    div.scroll-horo {
-        width: calc(100% + 1rem);
-    }
 }
 
 input[type="checkbox"].toggle {
@@ -65,8 +79,9 @@ input[type="checkbox"].toggle {
     top: -9000px;
 }
 input[type="checkbox"].toggle + label {
-    position: relative;
-    align-self: end;
+    position: absolute;
+    top:2rem;
+    right:0;
     width: 10.75em;
     display: flex;
     align-items: center;
@@ -74,9 +89,6 @@ input[type="checkbox"].toggle + label {
     color: white;
     font-family: helvetica;
     font-size: 1em;
-}
-input[type="checkbox"].toggle + label span {
-    display:none;
 }
 input[type="checkbox"].toggle + label::before {
     content: "";
@@ -109,7 +121,9 @@ input[type="checkbox"].toggle:checked + label::after {
     background-color: var(--turquoise);
     color: var(--blueberry);
 }
-input[type="checkbox"].toggle:hover + label::after, input[type="checkbox"].toggle:checked:hover + label::after {
+input[type="checkbox"].toggle:hover + label::after,
+input[type="checkbox"].toggle:focus + label::after, 
+input[type="checkbox"].toggle:checked:hover + label::after {
     background-color: var(--turquoise);
     /* border-color: var(--call-to-action); */
     color: var(--blueberry);

@@ -11,6 +11,7 @@
         <Heading title="Semester {++i}" subtitle={semester.title} />
     </a>
     
+    
     <ol>
     {#each semester.sprints as sprint}
         <SprintLink {semester} {sprint} />
@@ -21,11 +22,11 @@
 <style>
     section.semester {
         margin-right: 1rem;
+        margin-bottom: 1rem;
         padding: 1rem;
         border: 2px var(--turquoise) solid;
         font-size: .9em;
         scroll-snap-align: start;
-        width: 90vw;
     }
 
     section.semester > a {

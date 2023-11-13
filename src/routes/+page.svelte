@@ -7,13 +7,10 @@
     const {title, subtitle, content, semesters} = data
 </script>
 
-<Program {title} {subtitle} {content}/>
-<Semesters {semesters} />
+<Program {title} {content}/>
+<Semesters {semesters} {subtitle} />
 
 <style>
-    :global(body){
-        display: block !important;
-    }
     :global(body:before) {
         width: 160px;
     }

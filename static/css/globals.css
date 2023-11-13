@@ -30,3 +30,11 @@ footer nav h2 {
 ::marker {
     color: var(--blueberry)
 }
+
+section a {
+    padding:0 .25rem
+}
+a:focus {
+    outline:none;
+    background: var(--turquoise);  
+}

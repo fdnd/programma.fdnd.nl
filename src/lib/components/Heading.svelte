@@ -32,7 +32,7 @@
   }
 
   h2:hover a.anchor {
-    display: block;
+    display: none;
   }
 
   h2 > strong {

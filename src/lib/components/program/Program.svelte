@@ -1,11 +1,11 @@
 <script>
     import Heading from '$lib/components/Heading.svelte'
 
-    export let title, subtitle, content
+    export let title, content
 </script>
 
 <section class="blue-on-green rounded col-span-2">
-    <Heading {title} {subtitle} />
+    <Heading {title} />
 
     {@html content.html}
     
