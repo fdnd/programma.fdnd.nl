@@ -34,7 +34,8 @@ footer nav h2 {
 section a {
     padding:0 .25rem
 }
-a:focus {
+a:focus-visible {
     outline:none;
     background: var(--turquoise);  
+    color: var(--blueberry);
 }
