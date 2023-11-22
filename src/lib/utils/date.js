@@ -14,3 +14,9 @@ export function longDate(rawDate) {
     let year = date.getFullYear()
     return `${prettyDate(rawDate)}/${year}`
 } 
+
+export function toggleDates({target}){
+    if(target.nodeName == 'INPUT') {
+        document.body.classList.toggle('expand')
+    }    
+}

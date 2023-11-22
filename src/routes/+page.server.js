@@ -8,6 +8,7 @@ export const load = async () => {
 
     const data = await client({ query: queryProgram, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
 
+    console.log('[1] server side data fetching')
     return {
         ...data.program
     }
