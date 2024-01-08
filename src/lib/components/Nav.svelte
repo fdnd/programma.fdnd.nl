@@ -1,20 +1,32 @@
 <script>
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	export let href;
+	let navItems = [
+		{
+			href: '/',
+			title: 'Programma 2324'
+		},
+		{
+			href: '/static-web/the-startup',
+			title: 'Sprint 6'
+		},
+		{
+			href: '/workflow-tooling-frameworks/lets-jam',
+			title: 'Sprint 18'
+		},
+	]
+
 </script>
 
 <nav>
 	<h2>Menu</h2>
 	<ul>
-		<li>
-			<a class="active" data-sveltekit-prefetch href="/">Programma 2324</a>
-		</li>
-		<li>
-			<a data-sveltekit-reload href="/static-web/the-startup">Sprint 6</a>
-		</li>
-		<li>
-			<a data-sveltekit-reload href="/workflow-tooling-frameworks/lets-jam">Sprint 18</a>
-		</li>
+		{#each navItems as item }
+			<li>
+				<a class:active={$page.url.pathname === item.href} data-sveltekit-prefetch href={item.href}>{item.title}</a>
+			</li>
+		{/each}
 	</ul>
 </nav>
 
