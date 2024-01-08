@@ -28,7 +28,7 @@ footer nav h2 {
 }
 
 ::marker {
-    color: var(--blueberry)
+    color: currentColor;
 }
 
 section a {

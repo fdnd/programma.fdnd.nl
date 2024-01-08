@@ -1,48 +1,75 @@
 <script>
-    import Heading from '$lib/components/Heading.svelte'
-    import SprintLink from '$lib/components/program/SprintLink.svelte'
+	import Heading from '$lib/components/Heading.svelte';
+	import SprintLink from '$lib/components/program/SprintLink.svelte';
 
-    export let semester, i
+	export let semester, i;
 </script>
 
+<section class="semester green-on-blue">
+	<a href="/{semester.slug}">
+		<Heading title="Semester {++i}:" subtitle={semester.title} />
+	</a>
 
-<section class="semester green-on-blue pilled">
-    <a href="/{semester.slug}">
-        <Heading title="Semester {++i}" subtitle={semester.title} />
-    </a>
-    
-    
-    <ol>
-    {#each semester.sprints as sprint}
-        <SprintLink {semester} {sprint} />
-    {/each}
-    </ol>
+	<ol>
+		{#each semester.sprints as sprint}
+			<SprintLink {semester} {sprint} />
+		{/each}
+	</ol>
 </section>
 
 <style>
-    section.semester {
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        border: 2px var(--turquoise) solid;
-        font-size: .9em;
-        scroll-snap-align: start;
-    }
+	section.semester {
+		margin: 0 1.5rem 0 0;
+		scroll-snap-align: start;
+		padding: 0;
+		border: none;
+		scroll-margin: 1rem;
+	}
 
-    section.semester > a {
-        display:inline-block;
-        margin:0 0 .5rem;
+	@media (max-width: 750px) {
+		section.semester {
+			width: 100%;
+			min-width: calc(100vw - 4rem);
+			max-width: calc(100vw - 4rem);
+		}
+	}
+	:global(section.semester h2) {
+		font-size: 1.35rem;
+		line-height: 1.1;
+	}
+    @media (max-width: 750px) {
+        :global(section.semester h2) {
+		font-size: 1.25rem;
+	}
     }
+	:global(section.semester h2 > span) {
+		font-size: 0.6em;
+		letter-spacing: 0;
+		text-transform: uppercase;
+	}
 
-    ol {
-        list-style: none;
-        margin:0;
-        width: 14rem;
-    }
+	section.semester > a {
+		text-decoration: none;
+		display: inline-block;
+		margin: 0 0 0.5rem;
+	}
 
-    @media (min-width: 25em) {
-        ol {
-            width: 21rem;
-        }
-    }
+	ol {
+		border: 1px var(--turquoise) solid;
+		border-radius: var(--rounded);
+		list-style: none;
+		margin: 1rem 0 0;
+		padding: 1rem;
+		width: 100%;
+	}
+	@media (min-width: 50rem) {
+		section.semester {
+			scroll-margin: 2rem;
+		}
+	}
+	@media (min-width: 25em) {
+		ol {
+			width: 21rem;
+		}
+	}
 </style>

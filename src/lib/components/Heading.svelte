@@ -11,7 +11,9 @@
   <a {id} href="#{id}" class="anchor" aria-hidden="true">
     <IconLink />
   </a>
-  {title}
+  <span>
+    {title}
+  </span>
   {#if subtitle !== ''}
     <strong>{subtitle}</strong>
   {/if}
@@ -20,9 +22,8 @@
 <style>
   h2 {
     font-weight: normal; 
-    /* background: pink; */
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
+    letter-spacing: -0.04em;
+    margin: 0;
   }
   h2 a.anchor {
     display: none;
@@ -37,7 +38,6 @@
 
   h2 > strong {
     display: block;
-    white-space: nowrap;
   }
   :global(section.semester h2) {
     font-size: 1em;

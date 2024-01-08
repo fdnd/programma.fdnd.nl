@@ -10,9 +10,11 @@
 </script>
 
 <div>
-    <Content {title} {sprintNumber} {content} {startdate} {topics} />
-
-    <Criteria {criteria} />
+    <div class="flex">
+        <Content {title} {sprintNumber} {content} {startdate} {topics} />
+    
+        <Criteria {criteria} />
+    </div>
 
     <Tasks {tasks}/>
 
@@ -43,24 +45,19 @@
         list-style:none !important;
     }
 
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        margin: 2rem 0;
+        flex-direction: row;
+    }
+
     @media (min-width:30em) {
         :global(section) {
             margin:0;
         }
     }
-    @media (min-width: 40em) {
-		div {
-            display:grid;
-			grid-template-columns: 1fr 1fr;
-			gap:1rem;
-            align-items: start;
-        }
-	}
-    @media (min-width: 60em) {
-		div {
-			grid-template-columns: 1fr 1fr 1fr;
-        }
-	}
     
 </style>
   

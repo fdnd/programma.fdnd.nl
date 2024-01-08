@@ -1,44 +1,68 @@
 <script>
-    import Heading from '$lib/components/Heading.svelte'
+	import Heading from '$lib/components/Heading.svelte';
 
-    export let criteria
+	export let criteria;
 </script>
 
 {#if criteria}
-<section class="blue-on-purple rounded col-span-1 criteria">
-  <details open="true">
-    <summary><Heading title="Gedragscriteria" /></summary>
-    {@html criteria.html}
-  </details>
-</section>
+	<section class="purple-on-blue rounded col-span-1 criteria">
+		<details>
+			<summary><Heading title="Gedragscriteria" /></summary>
+			{@html criteria.html}
+		</details>
+	</section>
 {/if}
 
 <style>
-    section {
-      margin-bottom: 2rem;
-    }
-    details summary{
-      cursor:pointer;
-    }
-    :global(details summary h2){
-      display: inline-block;
-    }
-    :global(section.criteria ul){
-      margin-left:0
-    }
-    :global(section.criteria ul li){
-      list-style:none
-    }
-    @media (min-width: 40em) {
-        section {
-            grid-column: 1 / 2;
-            margin-bottom: 0;
-        }
-    }
-    @media (min-width:60em) {
-      section {
-        min-width:26rem;
-      }
-      
-    }
+	section {
+		position: relative;
+		margin-bottom: 2rem;
+		background-color: var(--blueberry);
+		border: 1px solid var(--lavender);
+		color: var(--lavender);
+		margin-left: var(--shadow);
+		max-width: 48rem;
+		width: 40%;
+		flex-grow: 1;
+		height: max-content;
+	}
+
+	@media (max-width: 750px) {
+		section {
+			width: 70%;
+		}
+	}
+
+	:global(section summary h2::selection, section div::selection) {
+		background-color: var(--lavender);
+		color: var(--blueberry);
+	}
+	section::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: var(--shadow);
+		left: calc(var(--shadow) * -1);
+		right: var(--shadow);
+		bottom: calc(var(--shadow) * -1);
+		border: 1px solid currentColor;
+		border-radius: var(--rounded);
+	}
+	details summary {
+		cursor: pointer;
+	}
+
+	:global(details li) {
+		margin: 0.5em 0 0;
+		font-size: 1rem;
+	}
+	:global(details summary h2) {
+		display: inline-block;
+	}
+	:global(section.criteria ul) {
+		margin-left: 0;
+	}
+	:global(section.criteria ul li) {
+		list-style: none;
+	}
 </style>
