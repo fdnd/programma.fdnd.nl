@@ -37,7 +37,7 @@
         padding: 0.2em 0.1em;
         transition: 0.1s ease-out background, 0.1s ease-out color;
     }
-    li a:hover {
+    li a:hover, li a:focus {
         background-color: var(--turquoise);
         color: var(--blueberry);
         border-radius: 0.1em;
