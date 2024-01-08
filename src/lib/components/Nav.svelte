@@ -1,43 +1,103 @@
 <script>
-    import { page } from '$app/stores'
-    import { onMount } from 'svelte'
+	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	$: navItems = [
+		{
+			href: '/',
+			title: 'Programma 2324'
+		},
+		{
+			href: '/static-web/the-startup',
+			title: 'Sprint 6'
+		},
+		{
+			href: '/workflow-tooling-frameworks/lets-jam',
+			title: 'Sprint 18'
+		},
+	]
 
 </script>
 
 <nav>
-    <h2>Menu</h2>
-    <ul>
-        <li>
-            <a class="active" data-sveltekit-prefetch href="/">Programma 2324</a>
-        </li>
-        <li>
-            <a data-sveltekit-reload href="/static-web/the-startup">Sprint 6</a>
-        </li>
-        <li>
-            <a data-sveltekit-reload href="/workflow-tooling-frameworks/lets-jam">Sprint 18</a>
-        </li>
-    </ul>
+	<h2>Menu</h2>
+	<ul>
+		{#each navItems as item }
+			<li>
+				<a class:active={$page.url.pathname === item.href} href={item.href} target="_self">{item.title}</a>
+			</li>
+		{/each}
+	</ul>
 </nav>
 
 <style>
-nav {
-    max-width: 42rem;
-    display: flex;
-    font-size: 0.8rem;
-    background-color: transparent;
-}
+	nav {
+		font-size: 0.8rem;
+	}
 
-@media (min-width: 22em) {
-    nav{
-        font-size: 1rem;
-    }
-}
-@media (min-width: 42em) {
-    nav{
-        margin-bottom: 0;
-    }
-    nav ul a {
-        transform: rotate(-5deg);
-    }
-}
+	h2 {
+		position: absolute;
+		text-indent: -9999px;
+	}
+	ul {
+		display: flex;
+		gap: 1em;
+		font-weight: 600;
+	}
+
+	nav ul li a {
+		position: relative;
+		transform: none;
+		display: inline-block;
+		padding: 0.3em 0.8em;
+		border-radius: 1em;
+		text-decoration: none;
+		transition: background 0.3s ease-out, color 0.3s ease-out;
+		border: 1px solid var(--turquoise);
+	}
+
+	@media (max-width: 750px) {
+		nav ul {
+			font-size: 0.75em;
+			color: var(--turquoise);
+		}
+	}
+
+	nav ul li a:hover {
+		border-color: var(--blueberry);
+	}
+	@media (max-width: 750px) {
+		nav ul li a:hover {
+			border-color: var(--turquoise);
+		}
+	}
+
+	nav ul li a:hover::before {
+		opacity: 1;
+	}
+
+	:global(nav a.active) {
+		font-weight: 800;
+		background-color: var(--blueberry);
+		color: var(--turquoise);
+	}
+	@media (max-width: 750px) {
+		:global(nav a.active) {
+			background-color: var(--turquoise);
+			color: var(--blueberry) !important;;
+		}
+	}
+
+	@media (min-width: 22em) {
+		nav {
+			font-size: 1rem;
+		}
+	}
+	@media (min-width: 42em) {
+		nav {
+			margin-bottom: 0;
+		}
+		nav ul a {
+			transform: rotate(-5deg);
+		}
+	}
 </style>
