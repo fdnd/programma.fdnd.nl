@@ -11,8 +11,8 @@
 	</a>
 
 	<ol>
-		{#each semester.sprints as sprint}
-			<SprintLink {semester} {sprint} />
+		{#each semester.sprints as sprint, index}
+			<SprintLink {semester} {sprint} nextSprint={index !== semester.sprints.length ? semester.sprints[index + 1] : false} />
 		{/each}
 	</ol>
 </section>
