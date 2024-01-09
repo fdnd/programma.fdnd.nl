@@ -43,6 +43,10 @@
 	:global(body:after) {
 		left: 1rem;
 	}
+	:global(main) {
+		max-width: var(--max-width);
+		margin: auto;
+	}
 	a {
 		text-decoration: none;
 		margin-left: var(--shadow);
@@ -56,6 +60,8 @@
 		background-color: var(--turquoise);
 		color: var(--blueberry);
 		border-radius: var(--rounded);
+		max-width: var(--max-width);
+		margin: auto;
 	}
 	@media (max-width: 750px) {
 		header {
@@ -114,7 +120,9 @@
 		border-radius: var(--rounded);
 	}
 	:global(footer) {
+		margin: auto;
 		margin-top: 6rem;
+		max-width: var(--max-width);
 	}
 	:global(footer nav) {
 		padding: 1rem;
