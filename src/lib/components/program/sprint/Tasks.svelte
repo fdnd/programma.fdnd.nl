@@ -93,6 +93,12 @@
 		width: calc(50% - 0.5em);
 		max-width: 48rem;
 	}
+	@media (max-width: 750px) {
+		section.tasks {
+			width: 100%;
+		}
+
+	}
 	section.tasks,
 	.shadow {
 		border-width: 1px;
@@ -223,6 +229,7 @@
 		white-space: nowrap;
 		gap: 0.5rem;
 		padding: 0.5rem 0;
+		margin: 0;
 	}
 	.profile::before {
 		content: '';
