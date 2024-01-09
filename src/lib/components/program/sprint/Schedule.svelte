@@ -35,8 +35,7 @@
 
 	const plans = [];
 	weekPlans.forEach((plan) => {
-		let startDate = new Date(plan['mondayDate'])
-		console.log(startDate)
+		let startDate = new Date(plan['mondayDate']);
 		const week = [
 			{
 				date: startDate,
@@ -70,7 +69,7 @@
 	function addDays(date, days) {
 		var result = new Date(date);
 		result.setDate(result.getDate() + days);
-		
+
 		return result;
 	}
 </script>
@@ -99,23 +98,15 @@
 <style>
 	section {
 		padding: 0;
-		margin: 0 -1rem;
+		margin: 2rem -1rem 0;
+		max-width: var(--max-width);
 	}
-	@media (min-width: 50rem) {
-		section {
-			margin: 0 -1rem;
-		}
-	}
-	@media (min-width: 100rem) {
-		section {
-			width: max-content;
-		}
-	}
+
 	section > :global(h2) {
-		padding-left: 2rem;
+		padding-left: 1rem;
 	}
 	.week-container {
-		padding: 0 2rem 2rem;
+		padding: 0 1rem 2rem;
 	}
 
 	.week + .week {
@@ -126,7 +117,7 @@
 		position: sticky;
 		left: 1rem;
 		font-weight: normal;
-		margin-top:0;
+		margin-top: 0;
 	}
 
 	.weekday {
@@ -178,10 +169,23 @@
 		--border: var(--call-to-action);
 	}
 
+	@media (min-width: 40rem) {
+		section > :global(h2) {
+			padding-left: 1rem;
+		}
+	}
+	@media (min-width: 50rem) {
+		section > :global(h2) {
+			padding-left: 2rem;
+		}
+		section {
+			margin: 2rem -1rem;
+		}
+	}
 	@media (min-width: 47rem) {
 		.week-container {
 			overflow-x: auto;
-			padding: 0 1rem 2rem;
+			padding: 2rem 1rem 2rem;
 		}
 		.week {
 			display: flex;
@@ -189,13 +193,13 @@
 			gap: 1rem;
 		}
 		h3 {
-			margin-left: 1rem;	
+			margin-left: 1rem;
 		}
 		.day {
 			aspect-ratio: 1;
 			border-radius: 0.5rem;
 			border: 1px solid var(--turquoise);
-			width: max(300px, calc(100vw / 24 * 4));
+			width: max(270px, calc(100vw / 24 * 4));
 			padding: 1rem;
 			box-shadow: -4px 4px var(--turquoise);
 		}
@@ -208,9 +212,23 @@
 			border: none;
 		}
 	}
-	@media (min-width: 40em) {
+	@media (min-width: 90rem) {
+		/* 1440px */
+		section > :global(h2) {
+			padding-left: 1rem;
+		}
 		section {
-			grid-column: 1 / -1;
+			margin: 2rem 0 0;
+		}
+		.week-container {
+			overflow: visible;
+			padding: 1rem 0 0;
+		}
+		.week-container + .week-container {
+			padding: 2rem 0 0;
+		}
+		.day {
+			width: calc((var(--max-width) - 4rem) / 5);
 		}
 	}
 </style>

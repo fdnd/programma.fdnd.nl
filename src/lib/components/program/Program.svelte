@@ -19,14 +19,14 @@
 		color: var(--turquoise);
 		border: 1px solid var(--turquoise);
 		margin-left: var(--shadow);
-        margin-top: 2rem;
-        padding: 1rem;
+		margin-top: 2rem;
+		padding: 1rem;
 	}
-    @media (max-width: 750px) {
-	    section {
-            width: 100%;
-        }
-    }
+	@media (max-width: 750px) {
+		section {
+			width: 100%;
+		}
+	}
 	:global(section h2::selection, section p::selection) {
 		background-color: var(--turquoise);
 		color: var(--blueberry);
@@ -44,7 +44,7 @@
 	}
 	:global(section p) {
 		font-size: 1rem;
-        margin-top: 0.6em;
+		margin-top: 0.6em;
 	}
 	@media (min-width: 40em) {
 		section {

@@ -10,6 +10,7 @@
     --rounded: .5rem;
     --pilled: 2rem;
     --shadow: .3rem;
+    --max-width: 90rem;
 
     --breakpoint-medium: 30em;
 }
