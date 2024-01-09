@@ -219,11 +219,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		margin-bottom: 0.5rem;
 		overflow: hidden;
 		white-space: nowrap;
 		gap: 0.5rem;
-		padding-top: 0.2em;
+		padding: 0.5rem 0;
 	}
 	.profile::before {
 		content: '';
