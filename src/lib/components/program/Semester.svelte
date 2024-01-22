@@ -29,7 +29,6 @@
 	@media (max-width: 750px) {
 		section.semester {
 			width: 100%;
-			min-width: calc(100vw - 4rem);
 			max-width: calc(100vw - 4rem);
 		}
 	}
