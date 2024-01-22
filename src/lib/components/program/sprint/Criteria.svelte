@@ -6,10 +6,12 @@
 
 {#if criteria}
 	<section class="purple-on-blue rounded col-span-1 criteria">
-		<details>
-			<summary><Heading title="Gedragscriteria" /></summary>
+		<Heading title="Gedragscriteria" />
+
+		<div>
 			{@html criteria.html}
-		</details>
+		</div>
+		
 	</section>
 {/if}
 
@@ -22,15 +24,12 @@
 		color: var(--lavender);
 		margin-left: var(--shadow);
 		max-width: 48rem;
-		width: 40%;
-		flex-grow: 1;
-		height: max-content;
 	}
 
-	@media (max-width: 750px) {
-		section {
-			width: 70%;
-		}
+	section div {
+		max-height:12rem;
+		overflow-y:auto;
+		font-size: 1rem;
 	}
 
 	:global(section summary h2::selection, section div::selection) {

@@ -12,15 +12,14 @@
 <style>
 	section {
 		position: relative;
-		width: 40%;
-		flex-grow: 1;
 		max-width: 48rem;
 		background-color: var(--blueberry);
 		color: var(--turquoise);
 		border: 1px solid var(--turquoise);
 		margin-left: var(--shadow);
-		margin-top: 2rem;
+		margin-top: 1.5rem;
 		padding: 1rem;
+		grid-column: 1 / 2
 	}
 	@media (max-width: 750px) {
 		section {
@@ -47,8 +46,6 @@
 		margin-top: 0.6em;
 	}
 	@media (min-width: 40em) {
-		section {
-			grid-column: 1 / -1;
-		}
+
 	}
 </style>

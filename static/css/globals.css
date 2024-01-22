@@ -18,6 +18,10 @@ body {
     overflow-x:hidden;
 }
 
+h2 {
+    margin-left:1.5rem
+}
+
 footer {
     margin-top: 2rem;
 }

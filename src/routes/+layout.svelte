@@ -93,7 +93,7 @@
 	h1 > abbr > span {
 		position: relative;
 		display: block;
-		padding: 0.3em 0.4em;
+		padding: 0.3em 0.2em;
 		border: 1px solid var(--blueberry);
 		border-radius: var(--rounded);
 		background-color: var(--turquoise);
@@ -121,7 +121,7 @@
 	}
 	:global(footer) {
 		margin: auto;
-		margin-top: 6rem;
+		margin-top: 1rem;
 		max-width: var(--max-width);
 	}
 	:global(footer nav) {
@@ -129,5 +129,9 @@
 	}
 	:global(footer nav h2) {
 		margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem;
+	}
+	:global(footer nav p),
+	:global(footer nav ul) {
+		margin-left: .5rem;
 	}
 </style>

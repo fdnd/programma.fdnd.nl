@@ -19,14 +19,16 @@
 <style>
 	section {
 		position: relative;
-		width: 40%;
-		flex-grow: 1;
-		max-width: 48rem;
 		height: max-content;
 		background-color: var(--blueberry);
 		color: var(--turquoise);
 		border: 1px solid var(--turquoise);
 		margin-left: var(--shadow);
+		min-height:18rem;
+		max-width:35em;
+	}
+	section div {
+		margin-top: 1.5rem;
 	}
 	:global(section h2::selection, section p::selection) {
 		background-color: var(--turquoise);
@@ -47,8 +49,6 @@
 		font-size: 1rem;
 	}
 	@media (min-width: 40em) {
-		section {
-			grid-column: 1 / -1;
-		}
+
 	}
 </style>

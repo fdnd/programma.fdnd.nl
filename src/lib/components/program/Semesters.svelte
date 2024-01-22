@@ -14,12 +14,10 @@
 	}
 
 	onMount(() => {
-		console.log('[2] client side dom manipulation');
 		jsEnabled = true;
 		document.body.classList.remove('expand');
 	});
 
-	console.log('[1] hydration: client side rendering & server side rendering');
 </script>
 
 <section class="semesters-sprints">
@@ -92,6 +90,7 @@
 		color: white;
 		font-family: helvetica;
 		font-size: 1em;
+		margin-left: 1.5rem;
 	}
 	input[type='checkbox'].toggle + label::before {
 		content: '';

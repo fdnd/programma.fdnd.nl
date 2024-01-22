@@ -34,8 +34,9 @@
 		}
 	}
 	:global(section.semester h2) {
-		font-size: 1.35rem;
+		font-size: 1.25rem;
 		line-height: 1.1;
+		margin-left: 1.25rem !important;
 	}
     @media (max-width: 750px) {
         :global(section.semester h2) {
@@ -61,7 +62,7 @@
 		border: 1px var(--turquoise) solid;
 		border-radius: var(--rounded);
 		list-style: none;
-		margin: 1rem 0 0;
+		margin: 1rem .25rem 0;
 		padding: 1rem;
 		width: 100%;
 	}

@@ -38,6 +38,7 @@
 
   h2 > strong {
     display: block;
+    white-space: nowrap;
   }
   :global(section.semester h2) {
     font-size: 1em;

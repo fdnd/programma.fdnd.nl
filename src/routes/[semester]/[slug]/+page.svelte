@@ -9,25 +9,26 @@
 </script>
 
 <div>
-    <div class="flex">
-        <Content {title} {sprintNumber} {content} {startdate} {topics} />
+    <Content {title} {sprintNumber} {content} {startdate} {topics} />
     
-        <Criteria {criteria} />
-    </div>
-
-    <Tasks {tasks}/>
-
-    <Schedule {weekPlans}/>
+    <Criteria {criteria} />
 </div>
 
+<Tasks {tasks}/>
+
+    
+
+
+<Schedule {weekPlans}/>
 <style> 
 	div {
 		display:flex;
 		flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
 	}
     :global(section) {
         padding: 1rem;
-        margin: 1rem 0;
     }
 
     :global(section h3){
@@ -47,7 +48,7 @@
     .flex {
         display: flex;
         flex-wrap: wrap;
-        gap: 1em;
+        gap: 1.5rem;
         margin: 2rem 0 0;
         flex-direction: row;
     }
@@ -56,7 +57,18 @@
         :global(section) {
             margin:0;
         }
+        
     }
+
+    @media (min-width:40em) {
+        div {
+            margin: 2rem 0 1.5rem;
+            flex-direction: row;
+            align-items:stretch;
+        } 
+    }
+
+    
     
 </style>
   

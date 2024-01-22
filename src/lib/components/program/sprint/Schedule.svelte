@@ -98,8 +98,7 @@
 <style>
 	section {
 		padding: 0;
-		margin: 2rem -1rem 0;
-		max-width: var(--max-width);
+		margin: 1rem 0 0;
 	}
 
 	section > :global(h2) {
@@ -131,6 +130,9 @@
 		padding: 0.5rem 0;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 		background: var(--blueberry);
+	}
+	.day div {
+		margin-left: -1rem;
 	}
 
 	.day + .day {
@@ -173,13 +175,16 @@
 		section > :global(h2) {
 			padding-left: 1rem;
 		}
+		.day div {
+			margin-left: 0;
+		}
 	}
 	@media (min-width: 50rem) {
 		section > :global(h2) {
 			padding-left: 2rem;
 		}
 		section {
-			margin: 2rem -1rem;
+			margin: 1rem -1rem;
 		}
 	}
 	@media (min-width: 47rem) {
@@ -218,7 +223,7 @@
 			padding-left: 1rem;
 		}
 		section {
-			margin: 2rem 0 0;
+			margin: 2rem 0;
 		}
 		.week-container {
 			overflow: visible;

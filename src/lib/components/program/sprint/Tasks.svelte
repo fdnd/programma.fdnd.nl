@@ -87,7 +87,7 @@
 <style>
 	section {
 		position: relative;
-		margin-top: 2rem;
+		margin-top: .5rem;
 	}
 	section.tasks {
 		width: calc(50% - 0.5em);
