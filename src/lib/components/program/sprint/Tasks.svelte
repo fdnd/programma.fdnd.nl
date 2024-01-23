@@ -26,6 +26,7 @@
 </script>
 
 {#if tasks && tasks.length > 0}
+<div>
 	<section class="green-on-blue rounded tasks">
 		<Heading title="Leertaken" />
 
@@ -82,6 +83,7 @@
 			{/each}
 		</ul>
 	</section>
+</div>
 {/if}
 
 <style>
@@ -90,8 +92,8 @@
 		margin-top: .5rem;
 	}
 	section.tasks {
-		width: calc(50% - 0.5em);
-		max-width: 48rem;
+		max-width: 42rem;
+		padding:1rem;
 	}
 	@media (max-width: 750px) {
 		section.tasks {
@@ -170,8 +172,8 @@
 		display: flex;
 		gap: 1rem;
 		margin: 0 -1rem;
-		width: calc(100vw - 2rem);
-		overflow-x: scroll;
+		width: calc(100% + 2rem);
+		overflow: auto;
 		scroll-snap-type: x mandatory;
 		padding-bottom: 1rem;
 	}
@@ -252,9 +254,27 @@
 		border-radius: 50%;
 		margin-bottom: 0;
 	}
+	@media (min-width: 40em) {
+		/* div {
+			display:grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+			align-items:start
+		} */
+
+		/* section.showcase ul {
+			flex-direction: column;
+			height:20em
+		}
+		section.tasks {
+			min-width: 32rem;
+		} */
+	}
 	@media (min-width: 60em) {
+
 		section.tasks {
 			min-width: 26rem;
 		}
+
 	}
 </style>

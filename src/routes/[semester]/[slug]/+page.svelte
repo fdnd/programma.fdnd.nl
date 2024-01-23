@@ -45,14 +45,6 @@
         list-style:none !important;
     }
 
-    .flex {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        margin: 2rem 0 0;
-        flex-direction: row;
-    }
-
     @media (min-width:30em) {
         :global(section) {
             margin:0;
