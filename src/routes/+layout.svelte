@@ -8,15 +8,18 @@
 </svelte:head>
 
 <header>
-	<a href="/">
-		<h1>
-			<abbr title="Frontend Design &amp; Development">
-				<span>FDND</span>
-			</abbr>
-			<span>Frontend<br />Design &amp; Development</span>
-		</h1>
-	</a>
-	<Nav />
+	<div>
+		<a href="/">
+			<h1>
+				<abbr title="Frontend Design &amp; Development">
+					<span>FDND</span>
+				</abbr>
+				<span>Frontend<br />Design &amp; Development</span>
+			</h1>
+		</a>
+		<Nav />
+	</div>
+	
 </header>
 
 <main>
@@ -52,19 +55,23 @@
 		margin-left: var(--shadow);
 	}
 	header {
+		display:flex;
+		max-width: var(--max-width);
+		margin: auto;
+	}
+
+	header div {
 		display: flex;
-		flex-wrap: wrap;
 		gap: 2em;
 		align-items: baseline;
+		justify-content: flex-start;
 		padding: 0.5em 0.7em calc(0.5em + var(--shadow));
 		background-color: var(--turquoise);
 		color: var(--blueberry);
 		border-radius: var(--rounded);
-		max-width: var(--max-width);
-		margin: auto;
 	}
 	@media (max-width: 750px) {
-		header {
+		header div {
 			background-color: transparent;
 			padding: 0;
 			gap: 1em;
