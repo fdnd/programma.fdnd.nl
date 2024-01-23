@@ -118,6 +118,7 @@
 		bottom: calc(var(--shadow) * -1);
 		border: 1px solid currentColor;
 		border-radius: var(--rounded);
+		display:none;
 	}
 	:global(footer) {
 		margin: auto;
