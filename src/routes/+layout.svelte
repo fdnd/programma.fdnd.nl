@@ -1,6 +1,6 @@
 <script>
-	import Nav from '$lib/components/Nav.svelte'
-	import Footer from '$lib/components/Footer.svelte'
+	import Nav from '$lib/components/Nav.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -8,15 +8,19 @@
 </svelte:head>
 
 <header>
-	<h1>
-		<abbr title="Frontend Design &amp; Development">
-			<span>FDND</span>
-		</abbr> 
-		<span>Frontend<br>Design &amp; Development</span>
-	</h1>
+	<div>
+		<a href="/">
+			<h1>
+				<abbr title="Frontend Design &amp; Development">
+					<span>FDND</span>
+				</abbr>
+				<span>Frontend<br />Design &amp; Development</span>
+			</h1>
+		</a>
+		<Nav />
+	</div>
+	
 </header>
-
-<Nav />
 
 <main>
 	<slot />
@@ -25,50 +29,117 @@
 <Footer />
 
 <style>
+	:global(body) {
+		padding-top: 2.5rem;
+	}
 	:global(body),
 	:global(body main) {
-      display: block;
-    }
-	:global(body:before){
-		left:auto;
-		top:auto;
-		right:2rem;
-		bottom:1rem;
+		display: block;
+		background-color: unset;
 	}
-	:global(body:after){
-		left:1rem
+	:global(body:before) {
+		left: auto;
+		top: auto;
+		right: 2rem;
+		bottom: 1rem;
 	}
-	h1 {
+	:global(body:after) {
+		left: 1rem;
+	}
+	:global(main) {
+		max-width: var(--max-width);
+		margin: auto;
+	}
+	a {
+		text-decoration: none;
+		margin-left: var(--shadow);
+	}
+	header {
 		display:flex;
-		margin-bottom: 2rem;
+		max-width: var(--max-width);
+		margin: auto;
+	}
+
+	header div {
+		display: flex;
+		gap: 2em;
+		align-items: baseline;
+		justify-content: flex-start;
+		padding: 0.5em 0.7em calc(0.5em + var(--shadow));
+		background-color: var(--turquoise);
+		color: var(--blueberry);
+		border-radius: var(--rounded);
+	}
+	@media (max-width: 750px) {
+		header div {
+			background-color: transparent;
+			padding: 0;
+			gap: 1em;
+		}
 	}
 	h1 > span {
 		color: var(--lavender);
-		padding: .5rem 1rem 0 .5rem;
 		font-size: clamp(1rem, 4vw, 2rem);
-		font-size: 1rem;
+		padding: 0.25rem 0.5rem;
 		line-height: 1;
 		text-decoration: none;
-		padding-bottom:.5rem;
-		vertical-align:baseline;
+		padding-bottom: 0.5rem;
+		vertical-align: baseline;
 		display: none;
 	}
+	h1 {
+		margin: 0;
+	}
+	h1 > abbr {
+		position: relative;
+		color: var(--blueberry);
+		font-size: 1.2rem;
+		font-weight: 600;
+		letter-spacing: -0.06em;
+	}
 	h1 > abbr > span {
-		border: 1px solid var(--turquoise);
+		position: relative;
+		display: block;
+		padding: 0.3em 0.2em;
+		border: 1px solid var(--blueberry);
 		border-radius: var(--rounded);
-		box-shadow: calc(-1*var(--shadow))var(--shadow)0 0 var(--turquoise);
-		color: var(--turquoise);
-		text-transform: lowercase;
-		padding: .5rem 1rem;
-		font-size: 2rem;
+		background-color: var(--turquoise);
+		z-index: 1;
+	}
+	@media (max-width: 750px) {
+		h1 > abbr {
+			color: var(--turquoise);
+		}
+		h1 > abbr > span {
+			border: 1px solid var(--turquoise);
+			border-radius: var(--rounded);
+			background-color: var(--blueberry);
+		}
+	}
+	h1 > abbr::before {
+		content: '';
+		position: absolute;
+		top: var(--shadow);
+		left: calc(var(--shadow) * -1);
+		right: var(--shadow);
+		bottom: calc(var(--shadow) * -1);
+		border: 1px solid currentColor;
+		border-radius: var(--rounded);
+		display:none;
 	}
 	:global(footer) {
-		margin-top: 6rem;
+		margin: auto;
+		margin-top: 1rem;
+		max-width: var(--max-width);
 	}
 	:global(footer nav) {
-		padding:1rem;
+		padding: 1rem;
 	}
 	:global(footer nav h2) {
-		margin:calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem
+		margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem;
+	}
+	:global(footer nav p),
+	:global(footer nav ul) {
+		margin-left: .5rem;
 	}
 </style>

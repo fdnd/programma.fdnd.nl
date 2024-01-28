@@ -9,13 +9,13 @@
 <aside>
     <h3>Topics</h3>
     <ul>
-        <li class="green-on-blue rounded">
+        <li class="blue-on-green rounded">
         {#if startdate}
             <IconCal date={longDate(startdate)} />
         {/if}
         </li>
         {#each topics as topic}
-        <li class="green-on-blue rounded">
+        <li class="blue-on-green rounded">
             <IconTopic {topic} />
         </li>
         {/each}
@@ -23,6 +23,9 @@
 </aside>
 
 <style>
+    aside {
+        margin-top: 0.2em;
+    }
     aside h3 {
         display: none;
     }

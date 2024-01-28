@@ -10,11 +10,16 @@
     --rounded: .5rem;
     --pilled: 2rem;
     --shadow: .3rem;
+    --max-width: 90rem;
 
     --breakpoint-medium: 30em;
 }
 body {
     overflow-x:hidden;
+}
+
+h2 {
+    margin-left:1.5rem
 }
 
 footer {
@@ -28,7 +33,7 @@ footer nav h2 {
 }
 
 ::marker {
-    color: var(--blueberry)
+    color: currentColor;
 }
 
 section a {
