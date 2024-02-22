@@ -57,18 +57,20 @@
 	header {
 		display:flex;
 		max-width: var(--max-width);
+		
 		margin: auto;
 	}
 
 	header div {
 		display: flex;
-		gap: 2em;
+		gap: 1em;
 		align-items: baseline;
 		justify-content: flex-start;
 		padding: 0.5em 0.7em calc(0.5em + var(--shadow));
 		background-color: var(--turquoise);
 		color: var(--blueberry);
 		border-radius: var(--rounded);
+		flex-wrap:wrap;
 	}
 	@media (max-width: 750px) {
 		header div {

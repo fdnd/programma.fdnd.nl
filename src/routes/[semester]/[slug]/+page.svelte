@@ -45,13 +45,6 @@
         list-style:none !important;
     }
 
-    @media (min-width:30em) {
-        :global(section) {
-            margin:0;
-        }
-        
-    }
-
     @media (min-width:40em) {
         div {
             margin: 2rem 0 1.5rem;

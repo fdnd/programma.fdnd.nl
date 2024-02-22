@@ -54,6 +54,7 @@
 		text-decoration: none;
 		transition: background 0.3s ease-out, color 0.3s ease-out;
 		border: 1px solid var(--turquoise);
+		white-space: nowrap;
 	}
 
 	@media (max-width: 750px) {

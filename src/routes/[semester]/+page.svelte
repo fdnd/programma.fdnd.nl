@@ -45,5 +45,9 @@
     section > div section {
         margin:0;
     }
+
+    div {
+        max-width: 40em;
+    }
 </style>
   
