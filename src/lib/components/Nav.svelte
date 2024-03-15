@@ -6,8 +6,8 @@
 			title: 'Programma 2324'
 		},
 		{
-			href: '/data-driven-web/server-side-rendering',
-			title: 'Sprint 8'
+			href: '/data-driven-web/the-web-is-for-everyone',
+			title: 'Sprint 9'
 		},
 		{
 			href: '/meesterproef/free-space',
