@@ -17,6 +17,8 @@
 	}
 </script>
 
+
+
 {#if sprint.sprintNumber}
 	<li class:active class:past>
 		<a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
@@ -40,6 +42,11 @@
 		</time>
 	</li>
 {/if}
+
+<script>
+	console.log("debug")
+	console.log(navItems)
+</script>
 
 <style>
 	li a {
