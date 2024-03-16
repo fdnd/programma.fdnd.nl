@@ -15,12 +15,6 @@
 		active = today < nextSprintDate;
 		past = today > nextSprintDate;
 	}
-
-	console.log("debug")
-	console.log(navItems)
-	console.log(today)
-	console.log(active)
-
 </script>
 
 
