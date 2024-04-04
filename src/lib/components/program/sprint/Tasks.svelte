@@ -114,7 +114,7 @@
 	:global(section.tasks h3.subtasks) {
 		display: none;
 	}
-	:global(section.tasks:has(li) h3),
+	:global(section.tasks:has(p) h3),
 	:global(section.show h3) {
 		display: block !important;
 	}
