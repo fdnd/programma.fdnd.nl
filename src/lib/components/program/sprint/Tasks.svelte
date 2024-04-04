@@ -44,17 +44,18 @@
 		{/each}
 
 		<h3 class="subtasks">Deeltaken</h3>
-		<ul>
-			{#each tasks as task}
-				{#if task.topic == 'subtask'}
-					<li>
-						<a href={task.url} data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green"
-							>{task.forkCount} forks</small
-						>
-					</li>
-				{/if}
-			{/each}
-		</ul>
+		{#each tasks as task}
+			{#if task.topic == 'subtask'}
+				<p>
+					<a href={task.url} data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green"
+						>{task.forkCount} forks</small
+					>
+				</p>
+				<p>
+					{task.description}
+				</p>
+			{/if}
+		{/each}
 	</section>
 	<section class="showcase {stargazer ? 'stargazer' : ''}">
 		<Heading title="Studentenwerk" />
@@ -124,7 +125,7 @@
 		justify-content: space-between;
 	}
 	section.tasks p:nth-of-type(2n) {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 	:global(section.tasks *::selection) {
 		background-color: var(--turquoise);
