@@ -48,6 +48,9 @@
 	:global(section p) {
 		font-size: 1rem;
 	}
+	:global(blockquote) {
+		font-size: 1rem;
+	}
 	@media (min-width: 40em) {
 
 	}
