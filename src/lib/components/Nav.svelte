@@ -6,12 +6,12 @@
 			title: 'Programma 2324'
 		},
 		{
-			href: '/data-driven-web/the-web-is-for-everyone',
-			title: 'Sprint 9'
+			href: '/data-driven-web/user-experience',
+			title: 'Sprint 10'
 		},
 		{
-			href: '/meesterproef/free-space',
-			title: 'Sprint 19'
+			href: '/meesterproef/final-sprint',
+			title: 'Sprint 20'
 		},
 	]
 
