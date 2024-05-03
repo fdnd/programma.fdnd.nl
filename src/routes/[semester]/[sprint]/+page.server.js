@@ -4,17 +4,17 @@ import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
 
 let prefix
 
-export const load = async ({params: {slug}}) => {
-    prefix = slug
+export const load = async ({params: {sprint}}) => {
+    prefix = sprint
 
-    const querySprint = getQuerySprint(slug)
-    const queryTasks  = getQueryTasks(slug)
+    const querySprint = getQuerySprint(sprint)
+    const queryTasks  = getQueryTasks(sprint)
 
-    const dataSprint = await client({ query: querySprint, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
-    const dataTasks  = await client({ query: queryTasks, variables: { slug: slug }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
+    const dataSprint = await client({ query: querySprint, variables: { slug: sprint }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
+    const dataTasks  = await client({ query: queryTasks, variables: { slug: sprint }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
     
     if (dataTasks) {
-        const tasks = formatTasks(dataTasks, slug)
+        const tasks = formatTasks(dataTasks, sprint)
         return { ...dataSprint.sprint, tasks:tasks }
     }
     
