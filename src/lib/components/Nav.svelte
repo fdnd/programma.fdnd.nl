@@ -6,8 +6,8 @@
 			title: 'Programma 2324'
 		},
 		{
-			href: '/data-driven-web/pleasurable-ui',
-			title: 'Sprint 11'
+			href: '/data-driven-web/proof-of-concept',
+			title: 'Sprint 12'
 		},
 		{
 			href: '/meesterproef/final-sprint',
