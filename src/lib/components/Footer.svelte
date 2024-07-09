@@ -3,8 +3,21 @@
 </script>
 
 <footer>
+
 	<nav>
-		<h2>Microsites</h2>
+		<h2>Archief</h2>
+		<p>
+			Programma archief van voorgaande studiejaren. 
+		</p>
+		<ul>
+			<li><a href="#">Programma 2122</a></li>
+			<li><a href="https://2223.programma.fdnd.nl">Programma 2223</a></li>
+		</ul>
+	</nav>
+
+
+	<nav>
+		<h2>FDND Microsites</h2>
 		<p>
 			FDND maakt gebruik van een heleboel microsites in plaats van één grote website met een
 			ingewikkelde informatiestructuur. Microsites zijn kleine websites met een specifiek doel ter
@@ -12,16 +25,15 @@
 		</p>
 		<ul>
 			<li><a href="https://fdnd.nl">FDND.nl</a></li>
-			<li>
-				<a href="https://contact.fdnd.nl">Contact en routebeschrijving</a>
-			</li>
+			<li><a href="https://contact.fdnd.nl">Contact en routebeschrijving</a></li>
 			<li><a href="https://programma.fdnd.nl">Programma</a></li>
-			<li><a href="https://skc.fdnd.nl">Studie Keuze Check</a></li>
 			<li><a href="https://partners.fdnd.nl">Partners</a></li>
-			<li><a href="https://tasks.fdnd.nl">Leertaken</a></li>
-			<li><a href="https://styleguide.fdnd.nl">Styleguide</a></li>
+			<li><a href="https://niveaumatrix.fdnd.nl">Niveaumatrix</a></li>
+			<li><a href="https://docs.fdnd.nl">Documenten</a></li>
 		</ul>
 	</nav>
+
+	<!--
 	<section class="copy-construct">
 		<span class="blue-on-purple">Information&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔍</span>
 		<span class="blue-on-green">♥</span>
@@ -32,11 +44,13 @@
 		<span class="white-on-blue">&</span>
 		<span class="blue-on-green">development</span>
 	</section>
+	-->
 </footer>
 
 <style>
 	footer {
 		font-size: 1rem;
+		padding: 2rem 0;
 	}
 	.copy-construct {
     font-size: 1rem;
