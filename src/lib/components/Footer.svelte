@@ -10,7 +10,7 @@
 			Programma archief van voorgaande studiejaren. 
 		</p>
 		<ul>
-			<li><a href="#">Programma 2122</a></li>
+			<!-- <li><a href="https://2122.programma.fdnd.nl">Programma 2122</a></li> -->
 			<li><a href="https://2223.programma.fdnd.nl">Programma 2223</a></li>
 		</ul>
 	</nav>
