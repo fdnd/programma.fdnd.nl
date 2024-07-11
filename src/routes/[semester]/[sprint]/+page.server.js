@@ -22,19 +22,21 @@ export const load = async ({params: {sprint}}) => {
 }
 
 function formatTasks({search: {repos}}){
-    return repos.map(({repo}) => {
-      const topics = repo.repositoryTopics.edges
-                        .map(topic => topic.node.topic.name)
-                        .filter(topic => topic == 'task' || topic == 'subtask')
-      
-      return {
-        name: formatName(repo.name),
-        description: repo.description,
-        url: repo.url,
-        forkCount: repo.forkCount,
-        forks: formatForks(repo),
-        topic: topics[0]
-      }
+
+    return repos.filter(repo => repo != null).map(({repo}) => {
+        
+        const topics = repo.repositoryTopics.edges
+                            .map(topic => topic.node.topic.name)
+                            .filter(topic => topic == 'task' || topic == 'subtask')
+        
+        return {
+            name: formatName(repo.name),
+            description: repo.description,
+            url: repo.url,
+            forkCount: repo.forkCount,
+            forks: formatForks(repo),
+            topic: topics[0]
+        }
     })
 }
 
