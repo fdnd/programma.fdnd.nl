@@ -1,3 +1,11 @@
+// destructuring
+// spread operator
+// short circuit && ||
+// single responsibility principle:functions
+// if / else (nested) , ofwel gebruik een guard clause?!
+// custom props
+
+
 import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
@@ -39,12 +47,9 @@ function formatTasks({search: {repos}}){
 }
 
 function formatName (name) {
-    if(prefix) {
-        return name.split(`${prefix}-`).pop().replace(/-/g, " ")
-    }
-    else {
-        return name.replace(/-/g, " ")
-    }
+    if(!prefix) return name.split(`${prefix}-`).pop().replace(/-/g, " ")
+    
+    return name.replace(/-/g, " ")
 }
 
 function formatForks({forks}) {
@@ -71,7 +76,6 @@ function formatForks({forks}) {
 
     function formatHomepageUrl(url) {
         if(!url || url.length === 0) return undefined
-
         return url.includes('https://') || url.includes('http://') ? url.trim() : `https://${url}`.trim()
     }
 }

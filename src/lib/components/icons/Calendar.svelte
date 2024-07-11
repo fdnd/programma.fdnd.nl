@@ -17,10 +17,5 @@
     <rect width="16" height="16" x="4" y="5" rx="2" />
     <path d="M16 3v4M8 3v4m-4 4h16M8 15h2v2H8z" />
 </svg>
-{date}
 
-<style>
-svg {
-    transform: translate(-2px, 1px);
-}
-</style>
+{date}

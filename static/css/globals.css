@@ -1,45 +1,167 @@
 :root {
-    --white: #fff;
-    --blueberry: #050542;
-    --turquoise: #66e5bf;
-    --lavender: #a675f5;
-    --attention: #050542;
-    --attention-background: #05054233;
-    --call-to-action: #fffc86;
-    
-    --rounded: .5rem;
-    --pilled: 2rem;
-    --shadow: .3rem;
-    --max-width: 90rem;
+    --grey: #e7e7e7;
+    --purple: #A675F5;
+    --blue: #050542;
+    --blue-50: rgba(5, 5, 66, 0.5);
+    --green: #66E5BF;
+    --yellow: #FFFC86;
+    --angle: 42deg;
 
-    --breakpoint-medium: 30em;
+    --background: var(--grey);
+    --color: var(--blue);
+    --button-color: var(--grey);
+
+    --accent-color-1: var(--purple);
+    --accent-color-2: var(--green);
+    --accent-color-3: var(--yellow);
+
+    --grid-1: 100vw / 24;
+    --grid-1-calc: calc(var(--grid-1));
+    --padding-side: clamp(1rem, var(--grid-1-calc), 5rem);
+
+    --small-radius: 0.5rem;
+    --section-width: calc(100vw - 3rem);
+    --max-width: 117rem;
+    /* Animated to 1.5 in js: */
+    --radius: 0.5rem;
+
+    --calc-side: calc((100vw - var(--max-width)) / 2);
+
 }
+
+@media (max-width: 750px) {
+    :root {
+        /* Animated to 1 in js: */
+        --radius: 0.5rem;
+        --section-width: calc(100vw - 2rem);
+    }
+}
+
+@media (prefers-reduced-motion) {
+
+    body,
+    :root {
+        --radius: 1.5rem !important;
+    }
+}
+
+@media (prefers-reduced-motion) and (max-width: 750px) {
+
+    body,
+    :root {
+        --radius: 1rem !important;
+    }
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    font-family: inherit;
+    color: inherit;
+}
+
+/* Basics */
+
+html,
 body {
-    overflow-x:hidden;
+    scroll-behavior: smooth;
 }
 
-h2 {
-    margin-left:1.5rem
+html {
+    background-color: var(--green);
 }
 
-footer {
-    margin-top: 2rem;
-}
-footer nav {
-    padding:1rem;
-}
-footer nav h2 {
-    margin:calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem
+body {
+    background-color: var(--green);
+    color: var(--color);
+    font-family: 'Open Sans', sans-serif;
 }
 
-::marker {
-    color: currentColor;
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: calc(var(--radius)) solid var(--green);
+    border-top: none;
+    z-index: 12;
+    pointer-events: none;
 }
 
-section a {
-    padding:0 .25rem
+body::after {
+    content: '';
+    position: fixed;
+    z-index: 11;
+    bottom: calc(var(--radius));
+    left: calc(var(--radius));
+    width: calc(var(--radius));
+    height: calc(var(--radius));
+    border-radius: var(--radius);
+    box-shadow: calc(var(--radius) / -2) calc(var(--radius) /2) 0 0 var(--blue);
 }
-a:focus {
-    outline:none;
-    background: var(--turquoise);  
+
+@media (max-width: 750px) {
+    body::before {
+        border-bottom: none;
+    }
+
+    body::after {
+        content: unset;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 11;
+    background: var(--background);
+    border-radius: var(--radius);
+    margin: 0 calc(var(--radius));
+    padding-bottom: var(--padding-side);
+}
+
+main::after {
+    content: '';
+    position: fixed;
+    bottom: calc(var(--radius));
+    right: calc(var(--radius));
+    width: calc(var(--radius));
+    height: calc(var(--radius));
+    border-radius: var(--radius);
+    box-shadow: calc(var(--radius) /2) calc(var(--radius) /2) 0 0 var(--blue);
+}
+
+@media (max-width: 750px) {
+    main {
+        z-index: 1;
+    }
+
+    main::after {
+        content: unset;
+    }
+
+    header {
+        z-index: 12;
+    }
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+section ul {
+    padding:0;
+    margin:1rem 0
+}
+
+img {
+    max-width: 100%;
 }

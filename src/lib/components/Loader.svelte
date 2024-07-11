@@ -11,11 +11,3 @@
 {#if loading}
     <p class="loader"><LoaderIcon /></p>
 {/if}
-
-<style>
-    p.loader {
-        position: absolute;
-        right:2rem;
-        top:2rem;
-    }
-</style>

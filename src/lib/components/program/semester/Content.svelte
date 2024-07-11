@@ -12,13 +12,3 @@
     {@html semester.content.html}
 </section>
 
-<style>
-    section {
-        margin-bottom: 2rem;
-        padding:1rem;
-    }
-    h3 {
-        margin:0 0 .5rem
-    }
-</style>
-

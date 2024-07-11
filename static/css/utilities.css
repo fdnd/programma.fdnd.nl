@@ -1,0 +1,715 @@
+.sr-only {
+    position: absolute;
+    text-indent: -9999px;
+}
+
+/* Typo */
+.font-bold {
+    font-weight: 600;
+}
+
+.font-semibold {
+    font-weight: 550;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.xlarge-heading {
+    font-size: clamp(2.5rem, calc(64 / 60 * var(--grid-1)), 5rem);
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.large-heading {
+    font-size: clamp(2rem, calc(52 / 60 * var(--grid-1)), 4.375rem);
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.medium-heading {
+    font-size: clamp(1.5rem, calc(40 / 60 * var(--grid-1)), 3.25rem);
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+}
+
+.small-heading {
+    font-size: clamp(1rem, calc(18 / 60 * var(--grid-1)), 1.5rem);
+    letter-spacing: -0.03em;
+}
+
+.xlarge-body {
+    font-size: clamp(1.25rem, calc(24 / 60 * var(--grid-1)), 2rem);
+    letter-spacing: -0.04em;
+    line-height: 1.3;
+}
+
+
+.large-body {
+    font-size: clamp(1rem, calc(18 / 60 * var(--grid-1)), 1.5rem);
+    letter-spacing: -0.04em;
+    line-height: 1.5;
+}
+
+.medium-body {
+    font-size: clamp(0.875rem, calc(16 / 60 * var(--grid-1)), 1.25rem);
+    letter-spacing: -0.04em;
+    line-height: 1.5;
+}
+
+.small-body {
+    font-size: clamp(0.75rem, calc(14 / 60 * var(--grid-1)), 1.125rem);
+    letter-spacing: -0.04em;
+    line-height: 1.5;
+}
+
+.caps {
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+/* Spacing */
+p {
+    font-size: clamp(1rem, calc(18 / 60 * var(--grid-1)), 1.5rem);
+    letter-spacing: -0.03em;
+}
+
+.large-heading + p {
+    margin-top: 1em;
+
+}
+
+.medium-heading + p,
+.medium-heading + details,
+.small-heading + p {
+    margin-top: 1.1em;
+}
+
+p + .medium-heading,
+details + .medium-heading,
+p + .small-heading {
+    margin-top: 1.5em;
+}
+
+p + p {
+    margin: 1.1em 0 0;
+}
+
+p + .large-body {
+    margin-top: 1.1em;
+}
+
+p + p.small-body {
+    margin-top: 0.3em;
+}
+
+p + .button-row {
+    margin-top: 1rem;
+}
+
+.button + p,
+.button + h1,
+.button + h2,
+.button + h3,
+.button + h4,
+.button + h5,
+.button + h6 {
+    margin-top: 2em;
+}
+
+@media (max-width: 750px) {
+
+    p + .button-row,
+    p + .button {
+        margin-top: 1.5rem;
+
+    }
+}
+
+.button-row + p,
+.button + p {
+    margin-top: 2rem;
+
+}
+
+@media (max-width: 750px) {
+
+    .button-row + p,
+    .button + p {
+        margin-top: 1rem;
+    }
+}
+
+/* Image caption */
+.image-container {
+    position: relative;
+
+}
+
+.image-container figcaption {
+    position: absolute;
+    bottom: -8px;
+    left: -8px;
+    width: max-content;
+    border: 2px solid currentColor;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--small-radius);
+    background-color: var(--background);
+    max-width: calc(var(--width) - 2rem);
+}
+
+figcaption span {
+    display: block;
+}
+
+/* Buttons */
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.button {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: -0.04em;
+    font-weight: 550;
+    font-size: clamp(1rem, calc(16 / 60 * var(--grid-1)), 1.25rem);
+    align-self:start;
+    margin-top: 1rem;
+}
+
+.button-row .button {
+    margin-top: 0;
+}
+
+.button:hover,
+.button:focus {
+    outline: none;
+}
+
+.button:hover span,
+.button:focus span {
+    transform: translate(-1px, 1px);
+}
+
+.button span {
+    position: relative;
+    display: block;
+    padding: 0.75rem;
+    border-radius: var(--small-radius);
+    border: 1px solid currentcolor;
+    background: var(--background);
+    transition: translate 0.3s ease-out;
+}
+
+.button.is-full-color.is-accent-1 span,
+.button.is-full-color.is-accent-1::before {
+    background: var(--accent-color-1);
+}
+
+.button.is-full-color.is-accent-2 span,
+.button.is-full-color.is-accent-2::before {
+    background: var(--accent-color-2);
+}
+
+.button.is-full-color.is-accent-3 span,
+.button.is-full-color.is-accent-3::before {
+    background: var(--accent-color-3);
+}
+
+.button.is-dark span {
+    background: var(--color);
+    color: var(--button-color);
+    border-color: var(--color);
+}
+
+.button.is-dark::before {
+    background: none;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -4px;
+    right: 4px;
+    bottom: -2px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--small-radius);
+    border: 1px solid currentcolor;
+    background: var(--background);
+    transition: background 0.2s ease-out;
+}
+
+.button:focus::before {
+    /* HAHAH 🤡 geef mij maar bem */
+    background-color: var(--color) !important;
+}
+
+/*
+======================
+ROUNDED BITS 'n PIECES
+======================
+*/
+.rounded--left-bottom {
+    --b-top: 0;
+    --b-left: calc(var(--radius) * -2);
+    --b-x: var(--radius);
+    --b-y: calc(var(--radius) * -1);
+    --a-top: 100%;
+    --a-left: calc(100% - calc(var(--radius) * 2));
+    --a-x: var(--radius);
+    --a-y: calc(var(--radius) * -1);
+    border-radius: 0 0 0 var(--radius);
+}
+
+.rounded--right-top {
+    --b-top: calc(var(--radius) * -2);
+    --b-left: 0;
+    --b-x: calc(var(--radius) * -1);
+    --b-y: var(--radius);
+    --a-top: calc(100% - calc(var(--radius) * 2));
+    --a-left: 100%;
+    --a-x: calc(var(--radius) * -1);
+    --a-y: var(--radius);
+    z-index: 1;
+    border-radius: 0 var(--radius) 0 0;
+}
+
+[class*='rounded--']::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: var(--b-top);
+    left: var(--b-left);
+    width: calc(var(--radius) * 2);
+    height: calc(var(--radius) * 2);
+    border-radius: 50%;
+    box-shadow: var(--b-x) var(--b-y) 0 0 var(--background);
+}
+
+[class*='rounded--']::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: var(--a-top);
+    left: var(--a-left);
+    width: calc(var(--radius) * 2);
+    height: calc(var(--radius) * 2);
+    border-radius: 50%;
+    box-shadow: var(--a-x) var(--a-y) 0 0 var(--background);
+}
+
+
+/*
+======================
+IMAGE WITH TEXT
+======================
+*/
+
+.image-with-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--section-width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--padding-side) var(--padding-side) 0 calc(var(--padding-side) * 2);
+}
+
+@media (max-width: 1024px) {
+    .image-with-text {
+        padding: 4rem var(--padding-side) 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .image-with-text {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+.image-with-text.is-reversed {
+    flex-direction: row-reverse;
+}
+
+.image-with-text.is-reversed .text-container {
+    padding-left: calc(var(--padding-side) * 2);
+}
+
+@media (max-width: 750px) {
+    .image-with-text.is-reversed .text-container {
+        padding-left: 0;
+    }
+}
+
+.image-with-text.is-reversed .image-container {
+    --width: calc(var(--grid-1) * 10);
+    --max-width: 800px;
+    height: calc(var(--width) * var(--ratio));
+
+}
+
+.image-with-text.is-small-image .image-container {
+    --width: calc(var(--grid-1) * 8);
+    --max-width: 480px;
+    height: calc(var(--width) * var(--ratio));
+    max-height: calc(var(--max-width) * var(--ratio));
+}
+
+@media (max-width: 750px) {
+    .image-with-text.is-reversed .image-container {
+        --width: calc(100vw - var(--padding-side));
+    }
+
+    .image-with-text.is-small-image .image-container {
+        --width: calc(100vw - var(--padding-side));
+    }
+}
+
+
+.image-container {
+    --width: calc(var(--grid-1) * 8.5);
+    --max-width: 680px;
+    width: var(--width);
+    max-width: var(--max-width);
+    height: calc(var(--width) * var(--ratio));
+    max-height: calc(var(--max-width) * var(--ratio));
+}
+
+@media (max-width: 750px) {
+    .image-container {
+        --width: calc(100vw - var(--padding-side));
+        margin-top: 2rem;
+    }
+}
+
+.image-container img,
+.image-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.text-container {
+    display:flex;
+    flex-direction: column;
+    width: 40%;
+    flex-grow: 1;
+    padding: var(--padding-side) var(--padding-side) 0;
+}
+
+@media (max-width: 1024px) {
+    .text-container {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .text-container {
+        width: 100%;
+        padding: 0;
+        padding-right: calc(var(--padding-side) / 2);
+    }
+}
+
+@media (max-width: 750px) {
+
+}
+
+/*
+======================
+CTA ROW
+======================
+*/
+
+.cta-row {
+    --button-color: var(--accent-color-2);
+    margin: auto;
+    margin-top: var(--padding-side);
+    width: var(--section-width);
+}
+
+@media (max-width: 1024px) {
+    .cta-row {
+        margin-top: 4rem;
+    }
+}
+
+.cta-row .inner {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: var(--max-width);
+    margin: auto;
+    gap: var(--padding-side);
+    padding: var(--padding-side);
+}
+
+.cta-row header {
+    width:100%
+}
+
+.cta-row header p {
+    max-width: 60ch;
+}
+
+.cta {
+    --background:var(--accent-color-2);
+    background-color: var(--background);
+    width: 20%;
+    flex-grow: 1;
+    padding: calc(var(--padding-side) / 2);
+    max-width: calc((100% - var(--padding-side)) / 2);
+    min-width: 350px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.cta ul {
+    padding-left: 1.5rem;
+}
+
+.gallery .cta {
+    --background:transparent;
+    padding:0;
+}
+
+.gallery img {
+    max-width:100%;
+    border-radius:var(--radius);
+}
+
+/* Not DRY */
+.gallery figcaption {
+    --background:#fff;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: max-content;
+    border: 2px solid currentColor;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--small-radius);
+    background-color: var(--background);
+    max-width: calc(var(--width) - 2rem);
+}
+
+@media (max-width: 750px) {
+    .cta {
+        width: 100%;
+        max-width: unset;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cta-row .inner {
+        gap: 1rem;
+    }
+}
+
+.cta p {
+    max-width: 500px;
+}
+
+.cta .button {
+    max-width: max-content;
+    margin-top: 1em;
+    font-size:var(--)
+}
+
+/*
+======================
+SIMPLE TEXT
+======================
+*/
+
+.simple-text {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--padding-side) var(--padding-side) 0 calc(var(--padding-side) * 2);
+}
+
+.simple-text .inner {
+    max-width: 800px;
+    margin: auto;
+    display:flex;
+    flex-direction:column;
+}
+
+.simple-text p {
+    max-width: 60ch;
+}
+
+@media (max-width: 1024px) {
+    .simple-text {
+        padding: 4rem var(--padding-side) 0;
+    }
+}
+
+details {
+    border: 1px solid currentColor;
+    border-radius: var(--small-radius);
+    overflow: hidden;
+}
+
+details:nth-of-type(odd) {
+    --active-color: var(--accent-color-1);
+    --active-text-color: var(--color);
+}
+
+details:nth-of-type(even) {
+    --active-color: var(--accent-color-2);
+    --active-text-color: var(--color);
+}
+
+details + details {
+    margin-top: 1.5rem;
+}
+
+details summary {
+    padding: 1.25rem;
+    transition: background 0.3s ease-out, color 0.3s ease-out;
+    cursor: pointer;
+}
+
+details[open] summary {
+    background: var(--active-color);
+    color: var(--active-text-color);
+}
+
+details p {
+    padding:0 1.25rem 1em;
+}
+
+details .button {
+    display: block;
+    width: max-content;
+    margin: 1em;
+}
+
+/*
+======================
+Program
+======================
+*/
+.program-list + .button-row {
+    margin-top: 2em;
+}
+
+.program-list {
+    max-width: max-content;
+    padding: 0;
+    margin-top: 2rem;
+    border: 1px solid var(--accent-color-1);
+    padding: 0.5rem 1rem;
+    border-radius: var(--small-radius);
+}
+
+.program-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.2rem 2rem;
+    padding: 1em 0;
+}
+
+@media (max-width: 750px) {
+    .program-item p {
+        width: 100%;
+    }
+
+}
+
+.program-item:nth-child(3),
+.program-item:nth-child(5) {
+    border-top: 1px solid var(--accent-color-1);
+    border-bottom: 1px solid var(--accent-color-1);
+    padding: 1em 0;
+    margin-top: 0;
+}
+
+.program-list p + p {
+    margin-top: 0;
+    width: 50%;
+    flex-grow: 1;
+}
+
+.program .button {
+    width: max-content;
+    margin-top: 1rem;
+}
+
+.insta {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.insta svg {
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+}
+
+@keyframes up {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.scrollable {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 2rem 2rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    gap: 1rem;
+}
+
+.scrollable ol {
+    padding:1rem;
+    list-style:none;
+    padding:0;
+}
+
+.scrollable li {
+    display: flex;
+    justify-content: space-between;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: .75rem;
+}
+
+.scrollable li.extra {
+    display:none
+}
+.expand .extra {
+    display:block
+}	
+
+.scrollable li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+.scrollable li a:hover {
+    background:var(--blue);
+    color:var(--green);
+}

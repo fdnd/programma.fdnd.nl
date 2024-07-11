@@ -10,20 +10,6 @@
 <Program {title} {content}/>
 <Semesters {semesters} {subtitle} />
 
-<style>
-    :global(body:before) {
-        width: 160px;
-    }
-    :global(body:after) {
-        width: 160px;
-    }
-    @media (min-width:40em) {
-        :global(body:before) {
-            width: 350px !important;
-            
-        }
-    }
-</style>
 
 
 
