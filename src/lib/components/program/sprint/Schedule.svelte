@@ -99,15 +99,16 @@
 	section {
 		padding: 0;
 		margin: 1rem 0 0;
+		/* background: gold; */
 	}
 
 	section > :global(h2) {
 		padding-left: 1rem;
 	}
 	.week-container {
-		padding: 0 1rem 2rem;
+		/* padding: 0 1rem 2rem; */
+		padding: 2rem 1rem 2rem;
 	}
-
 	.week + .week {
 		margin-top: 2rem;
 	}
@@ -134,7 +135,6 @@
 	.day div {
 		margin-left: -1rem;
 	}
-
 	.day + .day {
 		margin-top: 1rem;
 	}
@@ -155,7 +155,6 @@
 		background-color: var(--border);
 		opacity: 1;
 	}
-
 	.day :global(.sprintplanning) {
 		--border: var(--lavender);
 	}
@@ -171,26 +170,11 @@
 		--border: var(--call-to-action);
 	}
 
-	@media (min-width: 40rem) {
-		section > :global(h2) {
-			padding-left: 1rem;
-		}
-		.day div {
-			margin-left: 0;
-		}
-	}
-	@media (min-width: 50rem) {
-		section > :global(h2) {
-			padding-left: 2rem;
-		}
-		section {
-			margin: 1rem -1rem;
-		}
-	}
-	@media (min-width: 47rem) {
+	@media (min-width: 38rem) {
+	/* <640px */
 		.week-container {
 			overflow-x: auto;
-			padding: 2rem 1rem 2rem;
+			/* padding: 2rem 1rem 2rem; */
 		}
 		.week {
 			display: flex;
@@ -216,9 +200,27 @@
 			margin: 0 0 1rem;
 			border: none;
 		}
+	/* }
+	@media (min-width: 40rem) { */
+		section > :global(h2) {
+			padding-left: 1rem;
+		}
+		.day div {
+			margin-left: 0;
+		}
 	}
+	@media (min-width: 50rem) {
+	/* 800px */
+		section > :global(h2) {
+			padding-left: 2rem;
+		}
+		section {
+			margin: 1rem -1rem;
+		}
+	}
+	
 	@media (min-width: 90rem) {
-		/* 1440px */
+	/* 1440px */
 		section > :global(h2) {
 			padding-left: 1rem;
 		}

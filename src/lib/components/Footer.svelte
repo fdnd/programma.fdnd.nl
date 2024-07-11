@@ -37,6 +37,7 @@
 <style>
 	footer {
 		font-size: 1rem;
+		margin-top: 4rem;
 	}
 	.copy-construct {
     font-size: 1rem;

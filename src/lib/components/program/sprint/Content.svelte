@@ -25,8 +25,15 @@
 		border: 1px solid var(--turquoise);
 		margin-left: var(--shadow);
 		min-height:18rem;
-		max-width:35em;
+		/* width: 50%; */
+		/* max-width:32em; */
 	}
+    /* @media (min-width:40em) {
+        section {
+            width: 100%;
+        } 
+    } */
+
 	section div {
 		margin-top: 1.5rem;
 	}

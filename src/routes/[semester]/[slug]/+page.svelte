@@ -10,33 +10,42 @@
 
 <div>
     <Content {title} {sprintNumber} {content} {startdate} {topics} />
-    
+</div>
+<div>
     <Criteria {criteria} />
 </div>
+<div>
+    <Tasks {tasks}/>
+</div>
+<div>
+    <Schedule {weekPlans}/>
+</div>
 
-<Tasks {tasks}/>
-
-    
-
-
-<Schedule {weekPlans}/>
 <style> 
 	div {
-		display:flex;
-		flex-direction: column;
-        gap: 1.5rem;
-        margin-top: 1.5rem;
+		/* display:flex; */
+		/* flex-direction: column; */
+        /* gap: 1.5rem; */
+        margin: 2rem 0 1.5rem;
+        /* background: pink; */
 	}
+    @media (min-width:40em) {
+        div {
+            /* margin: 2rem 0 1.5rem; */
+            /* flex-direction: row; */
+            /* align-items: stretch; */
+        } 
+    }
+
+
     :global(section) {
         padding: 1rem;
     }
-
     :global(section h3){
         font-size: 1.2em;
         margin-top: 3rem;
         font-weight: normal;
     }
-
     :global(section ul) {
         margin:0;
         list-style:none !important;
@@ -45,13 +54,7 @@
         list-style:none !important;
     }
 
-    @media (min-width:40em) {
-        div {
-            margin: 2rem 0 1.5rem;
-            flex-direction: row;
-            align-items:stretch;
-        } 
-    }
+
 
     
     

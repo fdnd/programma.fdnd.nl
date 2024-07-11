@@ -44,19 +44,22 @@
 		{/each}
 
 		<h3 class="subtasks">Deeltaken</h3>
-		{#each tasks as task}
-			{#if task.topic == 'subtask'}
-				<p>
-					<a href={task.url} data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green"
-						>{task.forkCount} forks</small
-					>
-				</p>
-				<p>
-					{task.description}
-				</p>
-			{/if}
-		{/each}
+		<ul>
+			{#each tasks as task}
+				{#if task.topic == 'subtask'}
+					<li>
+						<a href={task.url} data-sveltekit-prefetch>{task.name}</a><small class="blue-on-green"
+							>{task.forkCount} forks</small
+						>
+						<p>
+							{task.description}
+						</p>
+					</li>
+				{/if}
+			{/each}
+		</ul>
 	</section>
+
 	<section class="showcase {stargazer ? 'stargazer' : ''}">
 		<Heading title="Studentenwerk" />
 		<ul>
@@ -93,15 +96,16 @@
 		margin-top: .5rem;
 	}
 	section.tasks {
-		max-width: 42rem;
+		/* background-color: var(--turquoise); */
+		max-width: 32em;
 		padding:1rem;
 	}
-	@media (max-width: 750px) {
+	/* @media (max-width: 40em) {
 		section.tasks {
 			width: 100%;
 		}
+	} */
 
-	}
 	section.tasks,
 	.shadow {
 		border-width: 1px;
@@ -111,21 +115,34 @@
 	.tasks p {
 		margin-top: 0.4em;
 	}
+	:global(section.tasks ul) {
+		font-size: 1rem;
+	}
 	:global(section.tasks h3.subtasks) {
 		display: none;
 	}
-	:global(section.tasks:has(p) h3),
+	:global(section.tasks:has(li) h3),
 	:global(section.show h3) {
 		display: block !important;
 	}
-	section.tasks p,
 	section.tasks li {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 1em;
+	}
+	section.tasks li p {
+		/* flex-grow: 1; */
+		flex-basis: 100%;
+	}
+	section.tasks p {
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
 	}
 	section.tasks p:nth-of-type(2n) {
-		margin-bottom: 1em;
+		margin-bottom: 2em;
 	}
 	:global(section.tasks *::selection) {
 		background-color: var(--turquoise);
@@ -152,6 +169,7 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
+		padding: 0;
 	}
 	small {
 		font-size: 0.7em;
@@ -163,11 +181,12 @@
 		white-space: nowrap;
 	}
 	section.showcase {
+		/* display: block; */
 		display: none;
-		display: block;
 	}
 	section.stargazer {
-		display: block;
+		/* display: block; */
+		display:none;
 	}
 	section.showcase ul {
 		display: flex;

@@ -6,11 +6,14 @@
 
 {#if criteria}
 	<section class="purple-on-blue rounded col-span-1 criteria">
-		<Heading title="Gedragscriteria" />
-
-		<div>
-			{@html criteria.html}
-		</div>
+		<details>
+			<summary>
+				<Heading title="Gedragscriteria" />
+			</summary>
+			<div>
+				{@html criteria.html}
+			</div>	
+		</details>
 		
 	</section>
 {/if}
@@ -19,16 +22,22 @@
 	section {
 		position: relative;
 		margin-bottom: 2rem;
-		background-color: var(--blueberry);
-		border: 1px solid var(--lavender);
-		color: var(--lavender);
+		background-color: var(--lavender);
+		border: 1px solid var(--blueberry);
+		color: var(--blueberry);
 		margin-left: var(--shadow);
-		max-width: 48rem;
+		/* width: 50%; */
+		/* max-width: 48rem; */
 	}
+    /* @media (min-width:40em) {
+        section {
+            width: 100%;
+        } 
+    } */
 
 	section div {
-		max-height:12rem;
-		overflow-y:auto;
+		/* max-height:12rem; */
+		/* overflow-y:auto; */
 		font-size: 1rem;
 	}
 
@@ -44,7 +53,7 @@
 		left: calc(var(--shadow) * -1);
 		right: var(--shadow);
 		bottom: calc(var(--shadow) * -1);
-		border: 1px solid currentColor;
+		border: 1px solid var(--lavender);
 		border-radius: var(--rounded);
 	}
 	details summary {
