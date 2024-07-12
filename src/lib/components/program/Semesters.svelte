@@ -24,7 +24,6 @@
 	<div class="inner">
 		<header>
 				<h2 class="large-heading">{subtitle}</h2>
-				<p>Samenwerken met instellingen, bedrijven en het werkveld; onze partners in education, is één van de peilers van de onderwijs visie van FDND. Studenten werken in de fDND studio doorlopend aan echte projecten voor echte opdrachtgevers. Daarbij krijgen ze les van experts uit het vakgebied en lopen stage bij bedrijven uit de creatieve industrie. Regelmatig delen experts uit het vakgebied hun kennis bij FDND.</p>
 
 				{#if jsEnabled}
 					<input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates} />
