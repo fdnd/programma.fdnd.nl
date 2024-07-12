@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" type="image/png" href="https://styleguide.fdnd.nl/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" />
+		<link rel="stylesheet" href="https://styleguide.fdnd.nl/fdnd.latest.css" />
+		<link rel="stylesheet" href="../css/globals.css">
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout-d6515158.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page-b54e1b50.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/date-37979961.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-135590f5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-3165bde4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-7938ad3d.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-212bd68d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores-709d6b7e.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_semester_/_sprint_/_page.svelte-0d5613b5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/date-8a986029.js"><title>Frontend Design &amp; Development | Programma</title><!-- HEAD_svelte-xx373l_START --><!-- HEAD_svelte-xx373l_END -->
+	</head>
+	<body class="white-on-blue expand">
+		
+
+
+
+
+<header class="svelte-1fpm3b3"><div class="svelte-1fpm3b3"><a href="/" class="svelte-1fpm3b3"><h1 class="svelte-1fpm3b3"><abbr title="Frontend Design & Development" class="svelte-1fpm3b3"><span class="svelte-1fpm3b3">FDND</span></abbr>
+				<span class="svelte-1fpm3b3">Frontend<br>Design &amp; Development</span></h1></a>
+		<nav class="svelte-kfbg2b"><h2 class="svelte-kfbg2b">Menu</h2>
+	<ul class="svelte-kfbg2b"><li><a href="/" target="_self" class="svelte-kfbg2b">Programma 2324</a>
+			</li><li><a href="/data-driven-web/proof-of-concept" target="_self" class="svelte-kfbg2b">Sprint 12</a>
+			</li><li><a href="/meesterproef/final-sprint" target="_self" class="svelte-kfbg2b">Sprint 20</a>
+			</li></ul>
+
+</nav></div></header>
+
+<main><div class="svelte-1ch4dhh"><section class="rounded svelte-10izgyd"><h2 class="svelte-1ihnwhl"><a id="sprint-8-serverside-rendering" href="#sprint-8-serverside-rendering" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Sprint 8: Server-Side Rendering</span>
+  
+</h2>
+	<aside class="svelte-1x1nim4"><h3 class="svelte-1x1nim4">Topics</h3>
+    <ul class="svelte-1x1nim4"><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-u2zf0l"><path stroke="none" d="M0 0h24v24H0z"></path><rect width="16" height="16" x="4" y="5" rx="2"></rect><path d="M16 3v4M8 3v4m-4 4h16M8 15h2v2H8z"></path></svg>
+04/03/2024</li>
+        <li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+html
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+api endpoint
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+server-side
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+node
+        </li></ul>
+</aside>
+
+	<div class="svelte-10izgyd"><!-- HTML_TAG_START --><p>Bij het maken van een data-driven toepassing gebruik je data uit een database om dynamisch pagina&#39;s mee te maken. In de sprint Server-Side Rendering leer je hoe je op de server webpagina&#39;s kunt maken met content uit een database.</p><p>De focus van deze sprint ligt op het maken van een opdracht voor een opdrachtgever en leren hoe je op de server data kunt laden en renderen naar HTML.</p><!-- HTML_TAG_END --></div>
+</section>
+    
+    <section class="purple-on-blue rounded col-span-1 criteria svelte-1gzv5ey"><h2 class="svelte-1ihnwhl"><a id="gedragscriteria" href="#gedragscriteria" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Gedragscriteria</span>
+  
+</h2>
+
+		<div class="svelte-1gzv5ey"><!-- HTML_TAG_START --><ul><li><div>M: Je kiest binnen projecten passende fases van de development-lifecycle (2.1.1)</div></li><li><div>C: Je luistert en vraagt door, neemt wat een ander zegt serieus (2.3.1)</div></li><li><div>C: Je documenteert op professionele wijze en houdt voortgang bij (2.3.3)</div></li><li><div>P: Analyseert een vraag, signaleert knelpunten en volgt de aangeboden oplossingsrichting (2.4.1)</div></li><li><div>P: Schetst om gedachten en processen te verkennen en abstracte begrippen over te brengen (2.4.2)</div></li></ul><p></p><!-- HTML_TAG_END --></div></section></div>
+
+<div><section class="green-on-blue rounded tasks svelte-1ioarg9"><h2 class="svelte-1ihnwhl"><a id="leertaken" href="#leertaken" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Leertaken</span>
+  
+</h2>
+
+		<p class="svelte-1ioarg9"><a href="https://github.com/fdnd-task/server-side-rendering-server-side-website" data-sveltekit-prefetch class="svelte-1ioarg9">server side website</a><small class="blue-on-green svelte-1ioarg9">125 forks</small></p>
+				<p class="svelte-1ioarg9">Ontwerp en ontwikkel een server-side website voor een opdrachtgever
+				</p>
+
+		<h3 class="subtasks">Deeltaken</h3>
+		<p class="svelte-1ioarg9"><a href="https://github.com/fdnd-task/uml-diagram" data-sveltekit-prefetch class="svelte-1ioarg9">uml diagram</a><small class="blue-on-green svelte-1ioarg9">51 forks</small></p>
+				<p class="svelte-1ioarg9">Schets een UML diagram van een server-side gerenderde website
+				</p><p class="svelte-1ioarg9"><a href="https://github.com/fdnd-task/we-love-web-blog" data-sveltekit-prefetch class="svelte-1ioarg9">we love web blog</a><small class="blue-on-green svelte-1ioarg9">19 forks</small></p>
+				<p class="svelte-1ioarg9">Een blog voor het bijhouden van de We ♥ Web presentaties, workshops en challenges
+				</p><p class="svelte-1ioarg9"><a href="https://github.com/fdnd-task/team-canvas" data-sveltekit-prefetch class="svelte-1ioarg9">team canvas</a><small class="blue-on-green svelte-1ioarg9">10 forks</small></p>
+				<p class="svelte-1ioarg9">Vul met jouw team een canvas in om een goed vertrekpunt voor jouw teamproject te hebben
+				</p><p class="svelte-1ioarg9"><a href="https://github.com/fdnd-task/briefing-debriefing" data-sveltekit-prefetch class="svelte-1ioarg9">briefing debriefing</a><small class="blue-on-green svelte-1ioarg9">34 forks</small></p>
+				<p class="svelte-1ioarg9">Schrijf een debriefing op basis van een briefing van een opdrachtgever
+				</p></section>
+	<section class="showcase stargazer svelte-1ioarg9"><h2 class="svelte-1ihnwhl"><a id="studentenwerk" href="#studentenwerk" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Studentenwerk</span>
+  
+</h2>
+		<ul class="svelte-1ioarg9"><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">server side website</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/lemuelmgsn/server-side-rendering-server-side-website" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://calm-elk-gloves.cyclic.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/144004180?u=9057c4dbdf74534b0307990b8bc39e8d7cb61385&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/lemuelmgsn" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@lemuelmgsn</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">server side rendering</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/RalphKocken/server-side-rendering" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/106448490?v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/RalphKocken" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@RalphKocken</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">vervoerregio server side rendering</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/WesleySchorel/vervoerregio-server-side-rendering" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://github.com/WesleySchorel/the-web-is-for-everyone-interactive-functionality" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112857487?u=5afeea714b19a8095ad3373d0b28dc43ef22c745&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/WesleySchorel" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@WesleySchorel</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">server side rendering</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/zenitba/server-side-rendering" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://puce-tired-bonobo.cyclic.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112856019?u=2b700cd5bf57a04a223843bc3cf41ab68c5ac810&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/zenitba" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@zenitba</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">server side rendering</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Knetters/server-side-rendering" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://ultitv.onrender.com" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/60781257?u=d9917cd847676a07c4e22d61dd769d9e2fa8e23e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Knetters" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Knetters</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">vini mini</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Maaike0904/server-side-rendering-vini-mini" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://rich-plum-camel-gear.cyclic.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112861144?u=a1f96bd727b06c6c1c378af1c656e5b7a74349ff&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Maaike0904" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Maaike0904</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">ultiTv</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Tristandemuijnck/server-side-rendering-ultiTv" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://indigo-camel-belt.cyclic.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/43402897?u=785c5cf255b547de3c70c183023335d36b7a10cb&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Tristandemuijnck" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Tristandemuijnck</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">server side rendering</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/tom-2810/server-side-rendering" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://puce-sleepy-gecko.cyclic.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112861614?v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/tom-2810" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@tom-2810</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">sprint 8 oba</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Stefan-Espant/sprint-8-oba" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://vast-plum-meerkat-sari.cyclic.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/89298385?u=04ddfcafd757e89fae28cf9177d286aef389614e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Stefan-Espant" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Stefan-Espant</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">server side website</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/luukbrauckmann/server-side-rendering-server-side-website" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://aggressive-worm-loafers.cyclic.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/47314813?u=46372fb71571584bd19cececcdd9197cda0a4694&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/luukbrauckmann" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@luukbrauckmann</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">server side rendering</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Sascha-davidson/server-side-rendering" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://github.com/Sascha-davidson/the-web-is-for-everyone-interactive-functionality" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112861160?u=97fec6bdb0ca0734f78fd5e955a13cd82670a130&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Sascha-davidson" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Sascha-davidson</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">the web is for everyone control flow</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/luukbrauckmann/the-web-is-for-everyone-control-flow" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/47314813?u=46372fb71571584bd19cececcdd9197cda0a4694&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/luukbrauckmann" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@luukbrauckmann</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">the web is for everyone control flow</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Knetters/the-web-is-for-everyone-control-flow" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/60781257?u=d9917cd847676a07c4e22d61dd769d9e2fa8e23e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Knetters" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Knetters</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">we love web blog</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">2</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/J3SS3HVA/we-love-web-blog" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://j3ss3hva.github.io/we-love-web-blog/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/144009667?u=8ff378c111926f6c89eef16bef5e5fef15ddcc4f&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/J3SS3HVA" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@J3SS3HVA</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">we love web blog</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/lemuelmgsn/we-love-web-blog" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/144004180?u=9057c4dbdf74534b0307990b8bc39e8d7cb61385&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/lemuelmgsn" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@lemuelmgsn</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">we love web blog</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/yujing-student/we-love-web-blog" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/100352887?v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/yujing-student" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@yujing-student</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">we love web blog</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/SamaraFellaDina/we-love-web-blog" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://we-love-web-blog-29rf.onrender.com/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/144009778?u=e7bdb4861cc23b01d99d7354048342f074c53387&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/SamaraFellaDina" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@SamaraFellaDina</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">the client briefing debriefing</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/yujing-student/the-client-briefing-debriefing" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/100352887?v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/yujing-student" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@yujing-student</a></strong>
+						</li></ul></section></div>
+
+    
+
+
+<section class="svelte-1olg4fu"><h2 class="svelte-1ihnwhl"><a id="sprint-planning" href="#sprint-planning" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Sprint planning</span>
+  
+</h2>
+		<div class="week-container svelte-1olg4fu"><h3 class="svelte-1olg4fu">Week 1</h3>
+				<div class="week svelte-1olg4fu"><div class="day day--Maandag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Maandag <span>04/03</span></h4>
+							<div data-label="Maandag 04/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="sprintplanning"><strong>Sprintplanning </strong><em><strong>Server-Side Rendering</strong></em> met uitleg over de leertaak en de werkwijze. (Koop)</p><p class="sprintplanning opdrachtgever"><strong>Sprintplanning met de opdrachtgever. </strong>(Joost)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Dinsdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Dinsdag <span>05/03</span></h4>
+							<div data-label="Dinsdag 05/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class=""><strong>Doorwerken aan de leertaak</strong></p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Woensdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Woensdag <span>06/03</span></h4>
+							<div data-label="Woensdag 06/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop"><strong>Workshop over Serverside en Templating</strong>. met uitleg over het gebruiken van data in EJS om HTML te renderen. (Krijn)</p><p class=""><strong>Talk JS essentials 3</strong> over JavaScript functions. (Justus)</p><p class=""><strong>Minor Web lezing<br></strong>Nils Binder geeft een gastcollege bij CMD en wij zijn uitgenodigd. Nils werkt als UX ontwerper/Front-end developer bij <a title="https://9elements.com/" href="https://9elements.com/">9elements</a> en organiseert elke maand <a title="https://www.css.cafe/" href="https://www.css.cafe/">CSS cafe</a>.<br>16:00 uur in het <a title="https://www.hva.nl/locaties/hva-locaties/wibauthuis.html" href="https://www.hva.nl/locaties/hva-locaties/wibauthuis.html">WIbauthuis</a>, collegezaal WBH01B17. (Sanne)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Donderdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Donderdag <span>07/03</span></h4>
+							<div data-label="Donderdag 07/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class=""><strong>Doorwerken aan de leertaak en hulp met NodeJS </strong>(Suus, Krijn, student-assistenten)</p><p class=""><strong>Practicum project opzetten met NodeJS, Express en EJS </strong>over het opzetten van een project met server-side technieken (Krijn)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Vrijdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Vrijdag <span>08/03</span></h4>
+							<div data-label="Vrijdag 08/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="review"><strong>Code/Design-review </strong>test de Server side rendering van je opdracht.</p><!-- HTML_TAG_END --></div>
+						</div></div>
+			</div><div class="week-container svelte-1olg4fu"><h3 class="svelte-1olg4fu">Week 2</h3>
+				<div class="week svelte-1olg4fu"><div class="day day--Maandag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Maandag <span>11/03</span></h4>
+							<div data-label="Maandag 11/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop"><strong>Workshop refactoren </strong>over structuur aanbrengen in Node bestanden. (Dorien)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Dinsdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Dinsdag <span>12/03</span></h4>
+							<div data-label="Dinsdag 12/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class=""><strong>Doorwerken aan de leertaak en hulp met NodeJS </strong>(Justus, student-assistenten)</p><p class="opdrachtgever"><strong>Practicum structuur aanbrengen in Node bestanden </strong>over het refactoren Node-code voor de opdracht vand de opdrachtgever (Justus)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Woensdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Woensdag <span>13/03</span></h4>
+							<div data-label="Woensdag 13/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop wrap-up"><strong>Workshop WRAP-UP </strong>Hoe ver ben je gekomen? Laatste dingen afmaken, elkaar helpen, documentatie op orde brengen, presentatie voorbereiden.</p><p class=""><strong>Talk JS essentials 4</strong> over JavaScript objects en arrays. (Justus)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Donderdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Donderdag <span>14/03</span></h4>
+							<div data-label="Donderdag 14/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="opdrachtgever review"><strong>Sprint review met de opdrachtgever.</strong></p><p class=""><strong>Minor Web lezing<br></strong>Jeremy Keith geeft een gastcollege bij CMD en wij zijn uitgenodigd. Jeremy is een van de cofounders van <a title="https://clearleft.com/" href="https://clearleft.com/">ClearLeft</a>. Hij is <a title="https://adactio.com/" href="https://adactio.com/">schrijver</a>, spreekt op conferenties en is eigenlijk wel een van de grondleggers van het web. Komt dat zien!<br>16:00 uur in het <a title="https://www.hva.nl/locaties/hva-locaties/kohnstammhuis.html" href="https://www.hva.nl/locaties/hva-locaties/kohnstammhuis.html">Kohnstamhuis</a>, collegezaal KSH09A10. (Sanne)</p><p class=""><strong></strong></p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Vrijdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Vrijdag <span>15/03</span></h4>
+							<div data-label="Vrijdag 15/03" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="retrospect "><strong>Retrospect leertaak sprint 8 </strong>Presentatie van het gemaakte werk en reflecteren op de leertaken. </p><p class="">12:00–13:00: <strong>We </strong>♥ <strong>Web  </strong>over digital gardening en het indieweb. </p><p class=""><strong>WHPH</strong>, ping-pong, playstation en ...</p><!-- HTML_TAG_END --></div>
+						</div></div>
+			</div></section></main>
+
+<footer class="svelte-13kdqjg"><nav><h2>Archief</h2>
+		<p>Programma archief van voorgaande studiejaren. 
+		</p>
+		<ul>
+			<li><a href="https://2223.programma.fdnd.nl">Programma 2223</a></li></ul></nav>
+
+
+	<nav><h2>FDND Microsites</h2>
+		<p>FDND maakt gebruik van microsites. 
+			Microsites zijn kleine websites ter ondersteuning van een campagne, informatie over een product, dienst of voor een ander specifiek doel.
+		</p>
+		<ul><li><a href="https://fdnd.nl">FDND.nl</a></li>
+			<li><a href="https://contact.fdnd.nl">Contact en routebeschrijving</a></li>
+			<li><a href="https://programma.fdnd.nl">Programma</a></li>
+			<li><a href="https://partners.fdnd.nl">Partners</a></li>
+			<li><a href="https://niveaumatrix.fdnd.nl">Niveaumatrix</a></li>
+			<li><a href="https://docs.fdnd.nl">Documenten</a></li></ul></nav>
+
+	
+</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="1bg59ak">
+			import { start } from "../_app/immutable/start-135590f5.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 4],
+					params: {semester:"data-driven-web",sprint:"server-side-rendering"},
+					routeId: "/[semester]/[sprint]",
+					data: (function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y){return [null,{type:"data",data:{slug:c,sprintNumber:8,title:"Server-Side Rendering",startdate:i,content:{html:"\u003Cp\u003EBij het maken van een data-driven toepassing gebruik je data uit een database om dynamisch pagina&#39;s mee te maken. In de sprint Server-Side Rendering leer je hoe je op de server webpagina&#39;s kunt maken met content uit een database.\u003C\u002Fp\u003E\u003Cp\u003EDe focus van deze sprint ligt op het maken van een opdracht voor een opdrachtgever en leren hoe je op de server data kunt laden en renderen naar HTML.\u003C\u002Fp\u003E"},criteria:{html:"\u003Cul\u003E\u003Cli\u003E\u003Cdiv\u003EM: Je kiest binnen projecten passende fases van de development-lifecycle (2.1.1)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EC: Je luistert en vraagt door, neemt wat een ander zegt serieus (2.3.1)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EC: Je documenteert op professionele wijze en houdt voortgang bij (2.3.3)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EP: Analyseert een vraag, signaleert knelpunten en volgt de aangeboden oplossingsrichting (2.4.1)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EP: Schetst om gedachten en processen te verkennen en abstracte begrippen over te brengen (2.4.2)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\u003Cp\u003E\u003C\u002Fp\u003E"},weekPlans:[{weekNumber:a,mondayDate:i,monday:{html:"\u003Cp\u003E\u003Cstrong\u003ESprintplanning \u003C\u002Fstrong\u003E\u003Cem\u003E\u003Cstrong\u003EServer-Side Rendering\u003C\u002Fstrong\u003E\u003C\u002Fem\u003E met uitleg over de leertaak en de werkwijze. (Koop)\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003ESprintplanning met de opdrachtgever. \u003C\u002Fstrong\u003E(Joost)\u003C\u002Fp\u003E"},tuesday:{html:"\u003Cp\u003E\u003Cstrong\u003EDoorwerken aan de leertaak\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E"},wednesday:{html:"\u003Cp\u003E\u003Cstrong\u003EWorkshop over Serverside en Templating\u003C\u002Fstrong\u003E. met uitleg over het gebruiken van data in EJS om HTML te renderen. (Krijn)\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003ETalk JS essentials 3\u003C\u002Fstrong\u003E over JavaScript functions. (Justus)\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EMinor Web lezing\u003Cbr\u003E\u003C\u002Fstrong\u003ENils Binder geeft een gastcollege bij CMD en wij zijn uitgenodigd. Nils werkt als UX ontwerper\u002FFront-end developer bij \u003Ca title=\"https:\u002F\u002F9elements.com\u002F\" href=\"https:\u002F\u002F9elements.com\u002F\"\u003E9elements\u003C\u002Fa\u003E en organiseert elke maand \u003Ca title=\"https:\u002F\u002Fwww.css.cafe\u002F\" href=\"https:\u002F\u002Fwww.css.cafe\u002F\"\u003ECSS cafe\u003C\u002Fa\u003E.\u003Cbr\u003E16:00 uur in het \u003Ca title=\"https:\u002F\u002Fwww.hva.nl\u002Flocaties\u002Fhva-locaties\u002Fwibauthuis.html\" href=\"https:\u002F\u002Fwww.hva.nl\u002Flocaties\u002Fhva-locaties\u002Fwibauthuis.html\"\u003EWIbauthuis\u003C\u002Fa\u003E, collegezaal WBH01B17. (Sanne)\u003C\u002Fp\u003E"},thursday:{html:"\u003Cp\u003E\u003Cstrong\u003EDoorwerken aan de leertaak en hulp met NodeJS \u003C\u002Fstrong\u003E(Suus, Krijn, student-assistenten)\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EPracticum project opzetten met NodeJS, Express en EJS \u003C\u002Fstrong\u003Eover het opzetten van een project met server-side technieken (Krijn)\u003C\u002Fp\u003E"},friday:{html:"\u003Cp\u003E\u003Cstrong\u003ECode\u002FDesign-review \u003C\u002Fstrong\u003Etest de Server side rendering van je opdracht.\u003C\u002Fp\u003E"}},{weekNumber:j,mondayDate:"2024-03-11",monday:{html:"\u003Cp\u003E\u003Cstrong\u003EWorkshop refactoren \u003C\u002Fstrong\u003Eover structuur aanbrengen in Node bestanden. (Dorien)\u003C\u002Fp\u003E"},tuesday:{html:"\u003Cp\u003E\u003Cstrong\u003EDoorwerken aan de leertaak en hulp met NodeJS \u003C\u002Fstrong\u003E(Justus, student-assistenten)\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EPracticum structuur aanbrengen in Node bestanden \u003C\u002Fstrong\u003Eover het refactoren Node-code voor de opdracht vand de opdrachtgever (Justus)\u003C\u002Fp\u003E"},wednesday:{html:"\u003Cp\u003E\u003Cstrong\u003EWorkshop WRAP-UP \u003C\u002Fstrong\u003EHoe ver ben je gekomen? Laatste dingen afmaken, elkaar helpen, documentatie op orde brengen, presentatie voorbereiden.\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003ETalk JS essentials 4\u003C\u002Fstrong\u003E over JavaScript objects en arrays. (Justus)\u003C\u002Fp\u003E"},thursday:{html:"\u003Cp\u003E\u003Cstrong\u003ESprint review met de opdrachtgever.\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EMinor Web lezing\u003Cbr\u003E\u003C\u002Fstrong\u003EJeremy Keith geeft een gastcollege bij CMD en wij zijn uitgenodigd. Jeremy is een van de cofounders van \u003Ca title=\"https:\u002F\u002Fclearleft.com\u002F\" href=\"https:\u002F\u002Fclearleft.com\u002F\"\u003EClearLeft\u003C\u002Fa\u003E. Hij is \u003Ca title=\"https:\u002F\u002Fadactio.com\u002F\" href=\"https:\u002F\u002Fadactio.com\u002F\"\u003Eschrijver\u003C\u002Fa\u003E, spreekt op conferenties en is eigenlijk wel een van de grondleggers van het web. Komt dat zien!\u003Cbr\u003E16:00 uur in het \u003Ca title=\"https:\u002F\u002Fwww.hva.nl\u002Flocaties\u002Fhva-locaties\u002Fkohnstammhuis.html\" href=\"https:\u002F\u002Fwww.hva.nl\u002Flocaties\u002Fhva-locaties\u002Fkohnstammhuis.html\"\u003EKohnstamhuis\u003C\u002Fa\u003E, collegezaal KSH09A10. (Sanne)\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003E\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E"},friday:{html:"\u003Cp\u003E\u003Cstrong\u003ERetrospect leertaak sprint 8 \u003C\u002Fstrong\u003EPresentatie van het gemaakte werk en reflecteren op de leertaken. \u003C\u002Fp\u003E\u003Cp\u003E12:00–13:00: \u003Cstrong\u003EWe \u003C\u002Fstrong\u003E♥ \u003Cstrong\u003EWeb  \u003C\u002Fstrong\u003Eover digital gardening en het indieweb. \u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EWHPH\u003C\u002Fstrong\u003E, ping-pong, playstation en ...\u003C\u002Fp\u003E"}}],topics:[{name:"html"},{name:"api endpoint"},{name:"server-side"},{name:"node"}],tasks:[{name:h,description:"Ontwerp en ontwikkel een server-side website voor een opdrachtgever",url:"https:\u002F\u002Fgithub.com\u002Ffdnd-task\u002Fserver-side-rendering-server-side-website",forkCount:125,forks:[{title:h,name:k,stargazerCount:a,owner:l,ownerUrl:m,avatarUrl:n,url:"https:\u002F\u002Fgithub.com\u002Flemuelmgsn\u002Fserver-side-rendering-server-side-website",pagesUrl:"https:\u002F\u002Flemuelmgsn.github.io\u002Fserver-side-rendering-server-side-website",homepageUrl:"https:\u002F\u002Fcalm-elk-gloves.cyclic.app"},{title:d,name:c,stargazerCount:a,owner:"RalphKocken",ownerUrl:"https:\u002F\u002Fgithub.com\u002FRalphKocken",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F106448490?v=4",url:"https:\u002F\u002Fgithub.com\u002FRalphKocken\u002Fserver-side-rendering",pagesUrl:"https:\u002F\u002FRalphKocken.github.io\u002Fserver-side-rendering",homepageUrl:b},{title:"vervoerregio server side rendering",name:"vervoerregio-server-side-rendering",stargazerCount:a,owner:"WesleySchorel",ownerUrl:"https:\u002F\u002Fgithub.com\u002FWesleySchorel",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112857487?u=5afeea714b19a8095ad3373d0b28dc43ef22c745&v=4",url:"https:\u002F\u002Fgithub.com\u002FWesleySchorel\u002Fvervoerregio-server-side-rendering",pagesUrl:"https:\u002F\u002FWesleySchorel.github.io\u002Fvervoerregio-server-side-rendering",homepageUrl:"https:\u002F\u002Fgithub.com\u002FWesleySchorel\u002Fthe-web-is-for-everyone-interactive-functionality"},{title:d,name:c,stargazerCount:a,owner:"zenitba",ownerUrl:"https:\u002F\u002Fgithub.com\u002Fzenitba",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112856019?u=2b700cd5bf57a04a223843bc3cf41ab68c5ac810&v=4",url:"https:\u002F\u002Fgithub.com\u002Fzenitba\u002Fserver-side-rendering",pagesUrl:"https:\u002F\u002Fzenitba.github.io\u002Fserver-side-rendering",homepageUrl:"https:\u002F\u002Fpuce-tired-bonobo.cyclic.app"},{title:d,name:c,stargazerCount:a,owner:o,ownerUrl:p,avatarUrl:q,url:"https:\u002F\u002Fgithub.com\u002FKnetters\u002Fserver-side-rendering",pagesUrl:"https:\u002F\u002FKnetters.github.io\u002Fserver-side-rendering",homepageUrl:"https:\u002F\u002Fultitv.onrender.com"},{title:"vini mini",name:"server-side-rendering-vini-mini",stargazerCount:a,owner:"Maaike0904",ownerUrl:"https:\u002F\u002Fgithub.com\u002FMaaike0904",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112861144?u=a1f96bd727b06c6c1c378af1c656e5b7a74349ff&v=4",url:"https:\u002F\u002Fgithub.com\u002FMaaike0904\u002Fserver-side-rendering-vini-mini",pagesUrl:"https:\u002F\u002FMaaike0904.github.io\u002Fserver-side-rendering-vini-mini",homepageUrl:"https:\u002F\u002Frich-plum-camel-gear.cyclic.app"},{title:"ultiTv",name:"server-side-rendering-ultiTv",stargazerCount:a,owner:"Tristandemuijnck",ownerUrl:"https:\u002F\u002Fgithub.com\u002FTristandemuijnck",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F43402897?u=785c5cf255b547de3c70c183023335d36b7a10cb&v=4",url:"https:\u002F\u002Fgithub.com\u002FTristandemuijnck\u002Fserver-side-rendering-ultiTv",pagesUrl:"https:\u002F\u002FTristandemuijnck.github.io\u002Fserver-side-rendering-ultiTv",homepageUrl:"https:\u002F\u002Findigo-camel-belt.cyclic.app\u002F"},{title:d,name:c,stargazerCount:a,owner:"tom-2810",ownerUrl:"https:\u002F\u002Fgithub.com\u002Ftom-2810",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112861614?v=4",url:"https:\u002F\u002Fgithub.com\u002Ftom-2810\u002Fserver-side-rendering",pagesUrl:"https:\u002F\u002Ftom-2810.github.io\u002Fserver-side-rendering",homepageUrl:"https:\u002F\u002Fpuce-sleepy-gecko.cyclic.app\u002F"},{title:"sprint 8 oba",name:"sprint-8-oba",stargazerCount:a,owner:"Stefan-Espant",ownerUrl:"https:\u002F\u002Fgithub.com\u002FStefan-Espant",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F89298385?u=04ddfcafd757e89fae28cf9177d286aef389614e&v=4",url:"https:\u002F\u002Fgithub.com\u002FStefan-Espant\u002Fsprint-8-oba",pagesUrl:"https:\u002F\u002FStefan-Espant.github.io\u002Fsprint-8-oba",homepageUrl:"https:\u002F\u002Fvast-plum-meerkat-sari.cyclic.app\u002F"},{title:h,name:k,stargazerCount:a,owner:r,ownerUrl:s,avatarUrl:t,url:"https:\u002F\u002Fgithub.com\u002Fluukbrauckmann\u002Fserver-side-rendering-server-side-website",pagesUrl:"https:\u002F\u002Fluukbrauckmann.github.io\u002Fserver-side-rendering-server-side-website",homepageUrl:"https:\u002F\u002Faggressive-worm-loafers.cyclic.app\u002F"},{title:d,name:c,stargazerCount:a,owner:"Sascha-davidson",ownerUrl:"https:\u002F\u002Fgithub.com\u002FSascha-davidson",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112861160?u=97fec6bdb0ca0734f78fd5e955a13cd82670a130&v=4",url:"https:\u002F\u002Fgithub.com\u002FSascha-davidson\u002Fserver-side-rendering",pagesUrl:"https:\u002F\u002FSascha-davidson.github.io\u002Fserver-side-rendering",homepageUrl:"https:\u002F\u002Fgithub.com\u002FSascha-davidson\u002Fthe-web-is-for-everyone-interactive-functionality"}],topic:"task"},{name:"uml diagram",description:"Schets een UML diagram van een server-side gerenderde website",url:"https:\u002F\u002Fgithub.com\u002Ffdnd-task\u002Fuml-diagram",forkCount:51,forks:[{title:u,name:v,stargazerCount:a,owner:r,ownerUrl:s,avatarUrl:t,url:"https:\u002F\u002Fgithub.com\u002Fluukbrauckmann\u002Fthe-web-is-for-everyone-control-flow",pagesUrl:"https:\u002F\u002Fluukbrauckmann.github.io\u002Fthe-web-is-for-everyone-control-flow",homepageUrl:b},{title:u,name:v,stargazerCount:a,owner:o,ownerUrl:p,avatarUrl:q,url:"https:\u002F\u002Fgithub.com\u002FKnetters\u002Fthe-web-is-for-everyone-control-flow",pagesUrl:"https:\u002F\u002FKnetters.github.io\u002Fthe-web-is-for-everyone-control-flow",homepageUrl:b}],topic:f},{name:e,description:"Een blog voor het bijhouden van de We ♥ Web presentaties, workshops en challenges",url:"https:\u002F\u002Fgithub.com\u002Ffdnd-task\u002Fwe-love-web-blog",forkCount:19,forks:[{title:e,name:g,stargazerCount:j,owner:"J3SS3HVA",ownerUrl:"https:\u002F\u002Fgithub.com\u002FJ3SS3HVA",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F144009667?u=8ff378c111926f6c89eef16bef5e5fef15ddcc4f&v=4",url:"https:\u002F\u002Fgithub.com\u002FJ3SS3HVA\u002Fwe-love-web-blog",pagesUrl:"https:\u002F\u002FJ3SS3HVA.github.io\u002Fwe-love-web-blog",homepageUrl:"https:\u002F\u002Fj3ss3hva.github.io\u002Fwe-love-web-blog\u002F"},{title:e,name:g,stargazerCount:a,owner:l,ownerUrl:m,avatarUrl:n,url:"https:\u002F\u002Fgithub.com\u002Flemuelmgsn\u002Fwe-love-web-blog",pagesUrl:"https:\u002F\u002Flemuelmgsn.github.io\u002Fwe-love-web-blog",homepageUrl:b},{title:e,name:g,stargazerCount:a,owner:w,ownerUrl:x,avatarUrl:y,url:"https:\u002F\u002Fgithub.com\u002Fyujing-student\u002Fwe-love-web-blog",pagesUrl:"https:\u002F\u002Fyujing-student.github.io\u002Fwe-love-web-blog",homepageUrl:b},{title:e,name:g,stargazerCount:a,owner:"SamaraFellaDina",ownerUrl:"https:\u002F\u002Fgithub.com\u002FSamaraFellaDina",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F144009778?u=e7bdb4861cc23b01d99d7354048342f074c53387&v=4",url:"https:\u002F\u002Fgithub.com\u002FSamaraFellaDina\u002Fwe-love-web-blog",pagesUrl:"https:\u002F\u002FSamaraFellaDina.github.io\u002Fwe-love-web-blog",homepageUrl:"https:\u002F\u002Fwe-love-web-blog-29rf.onrender.com\u002F"}],topic:f},{name:"team canvas",description:"Vul met jouw team een canvas in om een goed vertrekpunt voor jouw teamproject te hebben",url:"https:\u002F\u002Fgithub.com\u002Ffdnd-task\u002Fteam-canvas",forkCount:10,forks:[],topic:f},{name:"briefing debriefing",description:"Schrijf een debriefing op basis van een briefing van een opdrachtgever",url:"https:\u002F\u002Fgithub.com\u002Ffdnd-task\u002Fbriefing-debriefing",forkCount:34,forks:[{title:"the client briefing debriefing",name:"the-client-briefing-debriefing",stargazerCount:a,owner:w,ownerUrl:x,avatarUrl:y,url:"https:\u002F\u002Fgithub.com\u002Fyujing-student\u002Fthe-client-briefing-debriefing",pagesUrl:"https:\u002F\u002Fyujing-student.github.io\u002Fthe-client-briefing-debriefing",homepageUrl:b}],topic:f}]},uses:{dependencies:b,params:["sprint"],parent:b,url:b}}]}(1,void 0,"server-side-rendering","server side rendering","we love web blog","subtask","we-love-web-blog","server side website","2024-03-04",2,"server-side-rendering-server-side-website","lemuelmgsn","https:\u002F\u002Fgithub.com\u002Flemuelmgsn","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F144004180?u=9057c4dbdf74534b0307990b8bc39e8d7cb61385&v=4","Knetters","https:\u002F\u002Fgithub.com\u002FKnetters","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F60781257?u=d9917cd847676a07c4e22d61dd769d9e2fa8e23e&v=4","luukbrauckmann","https:\u002F\u002Fgithub.com\u002Fluukbrauckmann","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F47314813?u=46372fb71571584bd19cececcdd9197cda0a4694&v=4","the web is for everyone control flow","the-web-is-for-everyone-control-flow","yujing-student","https:\u002F\u002Fgithub.com\u002Fyujing-student","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F100352887?v=4")),
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1bg59ak"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	
+	</body>
+</html>

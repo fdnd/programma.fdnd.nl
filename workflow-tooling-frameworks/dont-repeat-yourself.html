@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" type="image/png" href="https://styleguide.fdnd.nl/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" />
+		<link rel="stylesheet" href="https://styleguide.fdnd.nl/fdnd.latest.css" />
+		<link rel="stylesheet" href="../css/globals.css">
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout-d6515158.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page-b54e1b50.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/date-37979961.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-135590f5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-3165bde4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-7938ad3d.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-212bd68d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores-709d6b7e.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_semester_/_sprint_/_page.svelte-0d5613b5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/date-8a986029.js"><title>Frontend Design &amp; Development | Programma</title><!-- HEAD_svelte-xx373l_START --><!-- HEAD_svelte-xx373l_END -->
+	</head>
+	<body class="white-on-blue expand">
+		
+
+
+
+
+<header class="svelte-1fpm3b3"><div class="svelte-1fpm3b3"><a href="/" class="svelte-1fpm3b3"><h1 class="svelte-1fpm3b3"><abbr title="Frontend Design & Development" class="svelte-1fpm3b3"><span class="svelte-1fpm3b3">FDND</span></abbr>
+				<span class="svelte-1fpm3b3">Frontend<br>Design &amp; Development</span></h1></a>
+		<nav class="svelte-kfbg2b"><h2 class="svelte-kfbg2b">Menu</h2>
+	<ul class="svelte-kfbg2b"><li><a href="/" target="_self" class="svelte-kfbg2b">Programma 2324</a>
+			</li><li><a href="/data-driven-web/proof-of-concept" target="_self" class="svelte-kfbg2b">Sprint 12</a>
+			</li><li><a href="/meesterproef/final-sprint" target="_self" class="svelte-kfbg2b">Sprint 20</a>
+			</li></ul>
+
+</nav></div></header>
+
+<main><div class="svelte-1ch4dhh"><section class="rounded svelte-10izgyd"><h2 class="svelte-1ihnwhl"><a id="sprint-16-dont-repeat-yourself" href="#sprint-16-dont-repeat-yourself" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Sprint 16: Don't Repeat Yourself</span>
+  
+</h2>
+	<aside class="svelte-1x1nim4"><h3 class="svelte-1x1nim4">Topics</h3>
+    <ul class="svelte-1x1nim4"><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-u2zf0l"><path stroke="none" d="M0 0h24v24H0z"></path><rect width="16" height="16" x="4" y="5" rx="2"></rect><path d="M16 3v4M8 3v4m-4 4h16M8 15h2v2H8z"></path></svg>
+13/11/2023</li>
+        <li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+dry
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+component library
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+npm package
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+progressive enhancement
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+accessibility
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+responsive design
+        </li><li class="blue-on-green rounded svelte-1x1nim4"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="svelte-posd4m"><path stroke="none" d="M0 0h24v24H0z"></path><circle cx="8.5" cy="8.5" r="1" fill="currentColor"></circle><path d="M4 7v3.859c0 .537.213 1.052.593 1.432l8.116 8.116a2.025 2.025 0 0 0 2.864 0l4.834-4.834a2.025 2.025 0 0 0 0-2.864L12.29 4.593A2.025 2.025 0 0 0 10.859 4H7a3 3 0 0 0-3 3z"></path></svg>
+
+performance
+        </li></ul>
+</aside>
+
+	<div class="svelte-10izgyd"><!-- HTML_TAG_START --><p>In de sprint Don&#39;t Repeat Yourself ligt de focus op het hergebruik van code en ontwerpelementen door middel van een <em>component library</em>. Je leert hoe je herbruikbare stukken code op een systematische manier ontsluit zodat jij en jouw mede frontenders ze kunnen gebruiken in andere projecten.</p><!-- HTML_TAG_END --></div>
+</section>
+    
+    <section class="purple-on-blue rounded col-span-1 criteria svelte-1gzv5ey"><h2 class="svelte-1ihnwhl"><a id="gedragscriteria" href="#gedragscriteria" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Gedragscriteria</span>
+  
+</h2>
+
+		<div class="svelte-1gzv5ey"><!-- HTML_TAG_START --><ul><li><div>M: Richt in overleg projecten in volgens de development-lifecycle. (3.1.1)</div></li><li><div>S: Werkt in teams en signaleert verbeterpunten op gebied van efficiëntie en effectiviteit. (3.2.1)</div></li><li><div>S: Draagt verantwoording voor eigen resultaten, benoemt teamresultaten en informeert belanghebbenden over de voortgang. (3.2.2)</div></li><li><div>C: Documenteert op professionele wijze en bespreekt voortgang binnen het team. (3.3.3)</div></li><li><div>P: Schetst om gedachten en processen te verkennen, abstracte begrippen over te brengen en de oplossingsrichting inzichtelijk te maken. (3.4.2)</div></li><li><div>P: Bedenkt en implementeert complexe frontend code en gebruikt daarbij tools en frameworks. (3.4.3)</div></li><li><div>L: Volgt aangeboden internationale ontwikkelingen in het vakgebied en maakt onder begeleiding keuzes over eigen ontwikkeling. (3.5.1)</div></li><li><div>L: Kent eigen capaciteiten en beperkingen, waardeert het vermogen van anderen en maakt dit bespreekbaar. (3.5.3)</div></li></ul><p></p><!-- HTML_TAG_END --></div></section></div>
+
+<div><section class="green-on-blue rounded tasks svelte-1ioarg9"><h2 class="svelte-1ihnwhl"><a id="leertaken" href="#leertaken" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Leertaken</span>
+  
+</h2>
+
+		<p class="svelte-1ioarg9"><a href="https://github.com/fdnd-task/dont-repeat-yourself-component-library" data-sveltekit-prefetch class="svelte-1ioarg9">component library</a><small class="blue-on-green svelte-1ioarg9">45 forks</small></p>
+				<p class="svelte-1ioarg9">Ontwikkel een website voor een opdrachtgever op basis van een component library.
+				</p>
+
+		<h3 class="subtasks">Deeltaken</h3>
+		<p class="svelte-1ioarg9"><a href="https://github.com/fdnd-task/component-building-block" data-sveltekit-prefetch class="svelte-1ioarg9">component building block</a><small class="blue-on-green svelte-1ioarg9">55 forks</small></p>
+				<p class="svelte-1ioarg9">Ontwerp en bouw een robuust, goed werkend component, waarin de belangen van de eindgebruiker centraal staan.
+				</p><p class="svelte-1ioarg9"><a href="https://github.com/fdnd-task/i-love-web-app" data-sveltekit-prefetch class="svelte-1ioarg9">i love web app</a><small class="blue-on-green svelte-1ioarg9">42 forks</small></p>
+				<p class="svelte-1ioarg9">Een webapp voor het bijhouden van de We ♥ Web presentaties, congressen, meet-ups en nieuwe dingen die je geleerd hebt
+				</p></section>
+	<section class="showcase stargazer svelte-1ioarg9"><h2 class="svelte-1ihnwhl"><a id="studentenwerk" href="#studentenwerk" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Studentenwerk</span>
+  
+</h2>
+		<ul class="svelte-1ioarg9"><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">Toolgankelijk Sprint 16</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">4</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/WesleySchorel/Toolgankelijk-Sprint-16" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112857487?u=5afeea714b19a8095ad3373d0b28dc43ef22c745&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/WesleySchorel" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@WesleySchorel</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component library</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">3</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Stefan-Espant/dont-repeat-yourself-component-library" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://hallostrandeiland-s16.netlify.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/89298385?u=04ddfcafd757e89fae28cf9177d286aef389614e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Stefan-Espant" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Stefan-Espant</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component library</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">2</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/kosterm14/dont-repeat-yourself-component-library" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://dont-repeat-yourself-component-library-tawny.vercel.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/61830362?u=afed3b32595711bf324c90952f3f2275d140913d&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/kosterm14" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@kosterm14</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">buurtcampus_oost_components</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">2</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/TimOosterveer/buurtcampus_oost_components" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://buurtcampus-oost-components.vercel.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/62908209?u=abaf84c477eb8162e6947697a67bab6650b7d6ee&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/TimOosterveer" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@TimOosterveer</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component library</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">2</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/r20222/dont-repeat-yourself-component-library" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://dont-repeat-yourself-component-library-psi.vercel.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/101579892?u=30d9d8153e074bc1ce304f906beeea8fa62c9fe5&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/r20222" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@r20222</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">INK component library</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/JalalToufik/INK-component-library" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://ink-component-library.vercel.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112856590?u=0a30f36c8580129fe50b36a8e38fb6263e8c35e5&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/JalalToufik" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@JalalToufik</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component library</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Tristandemuijnck/dont-repeat-yourself-component-library" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/43402897?u=785c5cf255b547de3c70c183023335d36b7a10cb&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Tristandemuijnck" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Tristandemuijnck</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component library</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Trisjan/dont-repeat-yourself-component-library" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://dont-repeat-yourself-component-library-kappa.vercel.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/74552944?u=27da798306e8b55e650ede8dc31b750f938c69c2&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Trisjan" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Trisjan</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component building block</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Davidvboxt/dont-repeat-yourself-component-building-block" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://preeminent-gelato-ef5e7a.netlify.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112856021?u=99f6f7637372fb212b594e2fa4be60a5bb91d8f9&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Davidvboxt" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Davidvboxt</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component building block</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Knetters/dont-repeat-yourself-component-building-block" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://gleaming-puffpuff-afb194.netlify.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/60781257?u=d9917cd847676a07c4e22d61dd769d9e2fa8e23e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Knetters" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Knetters</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component building block</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/luukbrauckmann/dont-repeat-yourself-component-building-block" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://sprint-16-d1.vercel.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/47314813?u=46372fb71571584bd19cececcdd9197cda0a4694&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/luukbrauckmann" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@luukbrauckmann</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component building block</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Stefan-Espant/dont-repeat-yourself-component-building-block" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://hallo-strandeiland-card-layout.vercel.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/89298385?u=04ddfcafd757e89fae28cf9177d286aef389614e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Stefan-Espant" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Stefan-Espant</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">component building block</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Tristandemuijnck/dont-repeat-yourself-component-building-block" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://pgt-login-component.vercel.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/43402897?u=785c5cf255b547de3c70c183023335d36b7a10cb&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Tristandemuijnck" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Tristandemuijnck</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">i love web app</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/kosterm14/i-love-web-app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://kosterm14.github.io/i-love-web-app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/61830362?u=afed3b32595711bf324c90952f3f2275d140913d&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/kosterm14" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@kosterm14</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">i love web app</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Davidvboxt/i-love-web-app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://endearing-blancmange-836d64.netlify.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112856021?u=99f6f7637372fb212b594e2fa4be60a5bb91d8f9&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Davidvboxt" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Davidvboxt</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">i love web app</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/iBadr49/i-love-web-app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://i-love-web-app-brown.vercel.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112857932?u=b842526f5f90e90c774337b6bd66a65edac3b34e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/iBadr49" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@iBadr49</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">i love web app</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Knetters/i-love-web-app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://iloveweb.netlify.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/60781257?u=d9917cd847676a07c4e22d61dd769d9e2fa8e23e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Knetters" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Knetters</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">i love web app</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Stefan-Espant/i-love-web-app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://i-love-web-app-steefan.vercel.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/89298385?u=04ddfcafd757e89fae28cf9177d286aef389614e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Stefan-Espant" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Stefan-Espant</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">TheCodingGalaxy</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/Tristandemuijnck/TheCodingGalaxy" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://thecodinggalaxy.vercel.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/43402897?u=785c5cf255b547de3c70c183023335d36b7a10cb&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/Tristandemuijnck" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@Tristandemuijnck</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">I Love Web App Blog</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/moonlightlizaa/I-Love-Web-App-Blog" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://lizaalovesweb.vercel.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/106411511?u=8de2c449f60281c72d6c8abe27f37f56cc7338ed&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/moonlightlizaa" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@moonlightlizaa</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">i love web app</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/luukbrauckmann/i-love-web-app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://i-love-web.netlify.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/47314813?u=46372fb71571584bd19cececcdd9197cda0a4694&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/luukbrauckmann" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@luukbrauckmann</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">we love web app</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/r20222/we-love-web-app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://we-love-web-app.vercel.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/101579892?u=30d9d8153e074bc1ce304f906beeea8fa62c9fe5&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/r20222" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@r20222</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">we love web youssra</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/YoussraElmortai/we-love-web-youssra" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://we-love-web-pi.vercel.app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/112857270?u=5ef1a5c6eb6530a65ba7251a4bfc23f93cadd61e&amp;v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/YoussraElmortai" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@YoussraElmortai</a></strong>
+						</li><li class="purple-on-blue shadow svelte-1ioarg9"><div class="repo svelte-1ioarg9"><span class="repo-title svelte-1ioarg9">we love web app</span>
+								<i class="svelte-1vh2cq4"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="none" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" stroke="var(--lavender)" fill="var(--blueberry)"></path></svg>
+    <em class="svelte-1vh2cq4">1</em>
+</i>
+								<div class="links svelte-1ioarg9"><a href="https://github.com/mcphendriks/we-love-web-app" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Code</a>
+									<a href="https://we-love-web-app-tan.vercel.app/" target="_blank" rel="noreferrer" class="svelte-1ioarg9">Website</a>
+								</div></div>
+							<strong class="profile svelte-1ioarg9"><img src="https://avatars.githubusercontent.com/u/106346778?v=4" alt="" class="avatar svelte-1ioarg9">
+								<a href="https://github.com/mcphendriks" target="_blank" rel="noreferrer" class="svelte-1ioarg9">@mcphendriks</a></strong>
+						</li></ul></section></div>
+
+    
+
+
+<section class="svelte-1olg4fu"><h2 class="svelte-1ihnwhl"><a id="sprint-planning" href="#sprint-planning" class="anchor svelte-1ihnwhl" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="svelte-chh1sf"><path stroke="none" d="M0 0h24v24H0z"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-.5.5"></path><path d="M14 10a3.5 3.5 0 0 0-5 0l-4 4a3.5 3.5 0 0 0 5 5l.5-.5"></path></svg></a>
+  <span>Sprint planning</span>
+  
+</h2>
+		<div class="week-container svelte-1olg4fu"><h3 class="svelte-1olg4fu">Week 1</h3>
+				<div class="week svelte-1olg4fu"><div class="day day--Maandag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Maandag <span>13/11</span></h4>
+							<div data-label="Maandag 13/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="sprintplanning"><strong>Sprintplanning</strong> over <em>Don&#39;t Repeat Yourself </em>met uitleg over de leertaak en deeltaken van deze sprint. (Justus)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Dinsdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Dinsdag <span>14/11</span></h4>
+							<div data-label="Dinsdag 14/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class=""><strong>CSS challenge - lettertypes en andere typografie. </strong>(Sanne)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Woensdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Woensdag <span>15/11</span></h4>
+							<div data-label="Woensdag 15/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop"><strong>Workshop Component as a Building Block</strong>, waarin je leert een component tot in detail te ontwerpen. Voor divergeren in de ontwerpfase leer je een nieuwe tool, de morphologische kaart, deze helpt bij het genereren van veel variaties. (Joost)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Donderdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Donderdag <span>16/11</span></h4>
+							<div data-label="Donderdag 16/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop"><strong>Figma workshop. </strong>(Sascha)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Vrijdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Vrijdag <span>17/11</span></h4>
+							<div data-label="Vrijdag 17/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="review"><strong>Code/Design-review </strong>over de deeltaak Component Building Block + checkpoints (Joost), begint om 9:30.</p><!-- HTML_TAG_END --></div>
+						</div></div>
+			</div><div class="week-container svelte-1olg4fu"><h3 class="svelte-1olg4fu">Week 2</h3>
+				<div class="week svelte-1olg4fu"><div class="day day--Maandag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Maandag <span>20/11</span></h4>
+							<div data-label="Maandag 20/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop"><strong>Workshop typografie in Web design</strong>, waarin je leert over letterrtypes, hierarchie, schaal, font-pairing en toegankelijkheid (Koop)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Dinsdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Dinsdag <span>21/11</span></h4>
+							<div data-label="Dinsdag 21/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class=""><strong>JS challenge.</strong> (Joost)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Woensdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Woensdag <span>22/11</span></h4>
+							<div data-label="Woensdag 22/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop"><strong>Workshop Advanced Component Concepts</strong>, waarin we dieper ingaan op component concepten in Svelte. We maken from scratch een component library en ontwikkelen een zoekformulier volgens de atomic design strategie. (Justus)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Donderdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Donderdag <span>23/11</span></h4>
+							<div data-label="Donderdag 23/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class=""><strong>Donderdag vragen stellen. </strong>(Suus)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Vrijdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Vrijdag <span>24/11</span></h4>
+							<div data-label="Vrijdag 24/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class=""><strong>We ♥ Web</strong> met Yolijn van der Kolk, van 12:00 - 13:00.</p><p class=""><strong>Stage Event </strong> met afsluitende borrel, van  13:30 - 16:00.</p><!-- HTML_TAG_END --></div>
+						</div></div>
+			</div><div class="week-container svelte-1olg4fu"><h3 class="svelte-1olg4fu">Week 3</h3>
+				<div class="week svelte-1olg4fu"><div class="day day--Maandag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Maandag <span>27/11</span></h4>
+							<div data-label="Maandag 27/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop"><strong>Workshop</strong> <strong>Atomic Design</strong>, waarin je leert hoe je jouw component volgens de atomic design strategie, hierarchisch kunt opbouwen in jouw component library. (Justus)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Dinsdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Dinsdag <span>28/11</span></h4>
+							<div data-label="Dinsdag 28/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class=""><strong>CSS challenge - states van links, buttons en dat soort dingen. </strong>(Sanne)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Woensdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Woensdag <span>29/11</span></h4>
+							<div data-label="Woensdag 29/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="workshop"><strong>Workshop</strong> <strong>State Management, </strong>over hoe je de state van een component kunt managen met een svelte store. (Joost)</p><p class="wrap-up review"><strong>WRAP-UP sprint 16 . </strong>Hoe ver ben je gekomen? Sprint review voorbereiden. Checkpoints voorbereiden, documentatie op orde brengen. (Joost)</p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Donderdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Donderdag <span>30/11</span></h4>
+							<div data-label="Donderdag 30/11" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="opdrachtgever review"><strong>Sprint review met de opdrachtgever.</strong></p><!-- HTML_TAG_END --></div>
+						</div><div class="day day--Vrijdag svelte-1olg4fu"><h4 class="weekday svelte-1olg4fu">Vrijdag <span>01/12</span></h4>
+							<div data-label="Vrijdag 01/12" class="svelte-1olg4fu"><!-- HTML_TAG_START --><p class=""><p class="retrospect "><strong>Retrospect sprint 16 </strong>terugkijken op de afgelopen 3 weken, wat heb je allemaal geleerd en wat knu je de volgende keer beter doen? + checkpoints (Suus), begint om 9:30.</p><p class=""><strong>WHPH</strong>, pizza, ping-pong en ...</p><!-- HTML_TAG_END --></div>
+						</div></div>
+			</div></section></main>
+
+<footer class="svelte-13kdqjg"><nav><h2>Archief</h2>
+		<p>Programma archief van voorgaande studiejaren. 
+		</p>
+		<ul>
+			<li><a href="https://2223.programma.fdnd.nl">Programma 2223</a></li></ul></nav>
+
+
+	<nav><h2>FDND Microsites</h2>
+		<p>FDND maakt gebruik van microsites. 
+			Microsites zijn kleine websites ter ondersteuning van een campagne, informatie over een product, dienst of voor een ander specifiek doel.
+		</p>
+		<ul><li><a href="https://fdnd.nl">FDND.nl</a></li>
+			<li><a href="https://contact.fdnd.nl">Contact en routebeschrijving</a></li>
+			<li><a href="https://programma.fdnd.nl">Programma</a></li>
+			<li><a href="https://partners.fdnd.nl">Partners</a></li>
+			<li><a href="https://niveaumatrix.fdnd.nl">Niveaumatrix</a></li>
+			<li><a href="https://docs.fdnd.nl">Documenten</a></li></ul></nav>
+
+	
+</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="1eq7njp">
+			import { start } from "../_app/immutable/start-135590f5.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 4],
+					params: {semester:"workflow-tooling-frameworks",sprint:"dont-repeat-yourself"},
+					routeId: "/[semester]/[sprint]",
+					data: (function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K){return [null,{type:"data",data:{slug:"dont-repeat-yourself",sprintNumber:16,title:"Don't Repeat Yourself",startdate:p,content:{html:"\u003Cp\u003EIn de sprint Don&#39;t Repeat Yourself ligt de focus op het hergebruik van code en ontwerpelementen door middel van een \u003Cem\u003Ecomponent library\u003C\u002Fem\u003E. Je leert hoe je herbruikbare stukken code op een systematische manier ontsluit zodat jij en jouw mede frontenders ze kunnen gebruiken in andere projecten.\u003C\u002Fp\u003E"},criteria:{html:"\u003Cul\u003E\u003Cli\u003E\u003Cdiv\u003EM: Richt in overleg projecten in volgens de development-lifecycle. (3.1.1)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003ES: Werkt in teams en signaleert verbeterpunten op gebied van efficiëntie en effectiviteit. (3.2.1)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003ES: Draagt verantwoording voor eigen resultaten, benoemt teamresultaten en informeert belanghebbenden over de voortgang. (3.2.2)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EC: Documenteert op professionele wijze en bespreekt voortgang binnen het team. (3.3.3)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EP: Schetst om gedachten en processen te verkennen, abstracte begrippen over te brengen en de oplossingsrichting inzichtelijk te maken. (3.4.2)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EP: Bedenkt en implementeert complexe frontend code en gebruikt daarbij tools en frameworks. (3.4.3)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EL: Volgt aangeboden internationale ontwikkelingen in het vakgebied en maakt onder begeleiding keuzes over eigen ontwikkeling. (3.5.1)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cdiv\u003EL: Kent eigen capaciteiten en beperkingen, waardeert het vermogen van anderen en maakt dit bespreekbaar. (3.5.3)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\u003Cp\u003E\u003C\u002Fp\u003E"},weekPlans:[{weekNumber:a,mondayDate:p,monday:{html:"\u003Cp\u003E\u003Cstrong\u003ESprintplanning\u003C\u002Fstrong\u003E over \u003Cem\u003EDon&#39;t Repeat Yourself \u003C\u002Fem\u003Emet uitleg over de leertaak en deeltaken van deze sprint. (Justus)\u003C\u002Fp\u003E"},tuesday:{html:"\u003Cp\u003E\u003Cstrong\u003ECSS challenge - lettertypes en andere typografie. \u003C\u002Fstrong\u003E(Sanne)\u003C\u002Fp\u003E"},wednesday:{html:"\u003Cp\u003E\u003Cstrong\u003EWorkshop Component as a Building Block\u003C\u002Fstrong\u003E, waarin je leert een component tot in detail te ontwerpen. Voor divergeren in de ontwerpfase leer je een nieuwe tool, de morphologische kaart, deze helpt bij het genereren van veel variaties. (Joost)\u003C\u002Fp\u003E"},thursday:{html:"\u003Cp\u003E\u003Cstrong\u003EFigma workshop. \u003C\u002Fstrong\u003E(Sascha)\u003C\u002Fp\u003E"},friday:{html:"\u003Cp\u003E\u003Cstrong\u003ECode\u002FDesign-review \u003C\u002Fstrong\u003Eover de deeltaak Component Building Block + checkpoints (Joost), begint om 9:30.\u003C\u002Fp\u003E"}},{weekNumber:i,mondayDate:"2023-11-20",monday:{html:"\u003Cp\u003E\u003Cstrong\u003EWorkshop typografie in Web design\u003C\u002Fstrong\u003E, waarin je leert over letterrtypes, hierarchie, schaal, font-pairing en toegankelijkheid (Koop)\u003C\u002Fp\u003E"},tuesday:{html:"\u003Cp\u003E\u003Cstrong\u003EJS challenge.\u003C\u002Fstrong\u003E (Joost)\u003C\u002Fp\u003E"},wednesday:{html:"\u003Cp\u003E\u003Cstrong\u003EWorkshop Advanced Component Concepts\u003C\u002Fstrong\u003E, waarin we dieper ingaan op component concepten in Svelte. We maken from scratch een component library en ontwikkelen een zoekformulier volgens de atomic design strategie. (Justus)\u003C\u002Fp\u003E"},thursday:{html:"\u003Cp\u003E\u003Cstrong\u003EDonderdag vragen stellen. \u003C\u002Fstrong\u003E(Suus)\u003C\u002Fp\u003E"},friday:{html:"\u003Cp\u003E\u003Cstrong\u003EWe ♥ Web\u003C\u002Fstrong\u003E met Yolijn van der Kolk, van 12:00 - 13:00.\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EStage Event \u003C\u002Fstrong\u003E met afsluitende borrel, van  13:30 - 16:00.\u003C\u002Fp\u003E"}},{weekNumber:q,mondayDate:"2023-11-27",monday:{html:"\u003Cp\u003E\u003Cstrong\u003EWorkshop\u003C\u002Fstrong\u003E \u003Cstrong\u003EAtomic Design\u003C\u002Fstrong\u003E, waarin je leert hoe je jouw component volgens de atomic design strategie, hierarchisch kunt opbouwen in jouw component library. (Justus)\u003C\u002Fp\u003E"},tuesday:{html:"\u003Cp\u003E\u003Cstrong\u003ECSS challenge - states van links, buttons en dat soort dingen. \u003C\u002Fstrong\u003E(Sanne)\u003C\u002Fp\u003E"},wednesday:{html:"\u003Cp\u003E\u003Cstrong\u003EWorkshop\u003C\u002Fstrong\u003E \u003Cstrong\u003EState Management, \u003C\u002Fstrong\u003Eover hoe je de state van een component kunt managen met een svelte store. (Joost)\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EWRAP-UP sprint 16 . \u003C\u002Fstrong\u003EHoe ver ben je gekomen? Sprint review voorbereiden. Checkpoints voorbereiden, documentatie op orde brengen. (Joost)\u003C\u002Fp\u003E"},thursday:{html:"\u003Cp\u003E\u003Cstrong\u003ESprint review met de opdrachtgever.\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E"},friday:{html:"\u003Cp\u003E\u003Cstrong\u003ERetrospect sprint 16 \u003C\u002Fstrong\u003Eterugkijken op de afgelopen 3 weken, wat heb je allemaal geleerd en wat knu je de volgende keer beter doen? + checkpoints (Suus), begint om 9:30.\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EWHPH\u003C\u002Fstrong\u003E, pizza, ping-pong en ...\u003C\u002Fp\u003E"}}],topics:[{name:"dry"},{name:b},{name:"npm package"},{name:"progressive enhancement"},{name:"accessibility"},{name:"responsive design"},{name:"performance"}],tasks:[{name:b,description:"Ontwikkel een website voor een opdrachtgever op basis van een component library.",url:"https:\u002F\u002Fgithub.com\u002Ffdnd-task\u002Fdont-repeat-yourself-component-library",forkCount:45,forks:[{title:"Toolgankelijk Sprint 16",name:"Toolgankelijk-Sprint-16",stargazerCount:4,owner:"WesleySchorel",ownerUrl:"https:\u002F\u002Fgithub.com\u002FWesleySchorel",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112857487?u=5afeea714b19a8095ad3373d0b28dc43ef22c745&v=4",url:"https:\u002F\u002Fgithub.com\u002FWesleySchorel\u002FToolgankelijk-Sprint-16",pagesUrl:"https:\u002F\u002FWesleySchorel.github.io\u002FToolgankelijk-Sprint-16",homepageUrl:f},{title:b,name:g,stargazerCount:q,owner:j,ownerUrl:k,avatarUrl:l,url:"https:\u002F\u002Fgithub.com\u002FStefan-Espant\u002Fdont-repeat-yourself-component-library",pagesUrl:"https:\u002F\u002FStefan-Espant.github.io\u002Fdont-repeat-yourself-component-library",homepageUrl:"https:\u002F\u002Fhallostrandeiland-s16.netlify.app"},{title:b,name:g,stargazerCount:i,owner:r,ownerUrl:s,avatarUrl:t,url:"https:\u002F\u002Fgithub.com\u002Fkosterm14\u002Fdont-repeat-yourself-component-library",pagesUrl:"https:\u002F\u002Fkosterm14.github.io\u002Fdont-repeat-yourself-component-library",homepageUrl:"https:\u002F\u002Fdont-repeat-yourself-component-library-tawny.vercel.app"},{title:u,name:u,stargazerCount:i,owner:"TimOosterveer",ownerUrl:"https:\u002F\u002Fgithub.com\u002FTimOosterveer",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F62908209?u=abaf84c477eb8162e6947697a67bab6650b7d6ee&v=4",url:"https:\u002F\u002Fgithub.com\u002FTimOosterveer\u002Fbuurtcampus_oost_components",pagesUrl:"https:\u002F\u002FTimOosterveer.github.io\u002Fbuurtcampus_oost_components",homepageUrl:"https:\u002F\u002Fbuurtcampus-oost-components.vercel.app"},{title:b,name:g,stargazerCount:i,owner:v,ownerUrl:w,avatarUrl:x,url:"https:\u002F\u002Fgithub.com\u002Fr20222\u002Fdont-repeat-yourself-component-library",pagesUrl:"https:\u002F\u002Fr20222.github.io\u002Fdont-repeat-yourself-component-library",homepageUrl:"https:\u002F\u002Fdont-repeat-yourself-component-library-psi.vercel.app"},{title:"INK component library",name:"INK-component-library",stargazerCount:a,owner:"JalalToufik",ownerUrl:"https:\u002F\u002Fgithub.com\u002FJalalToufik",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112856590?u=0a30f36c8580129fe50b36a8e38fb6263e8c35e5&v=4",url:"https:\u002F\u002Fgithub.com\u002FJalalToufik\u002FINK-component-library",pagesUrl:"https:\u002F\u002FJalalToufik.github.io\u002FINK-component-library",homepageUrl:"https:\u002F\u002Fink-component-library.vercel.app\u002F"},{title:b,name:g,stargazerCount:a,owner:m,ownerUrl:n,avatarUrl:o,url:"https:\u002F\u002Fgithub.com\u002FTristandemuijnck\u002Fdont-repeat-yourself-component-library",pagesUrl:"https:\u002F\u002FTristandemuijnck.github.io\u002Fdont-repeat-yourself-component-library",homepageUrl:f},{title:b,name:g,stargazerCount:a,owner:"Trisjan",ownerUrl:"https:\u002F\u002Fgithub.com\u002FTrisjan",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F74552944?u=27da798306e8b55e650ede8dc31b750f938c69c2&v=4",url:"https:\u002F\u002Fgithub.com\u002FTrisjan\u002Fdont-repeat-yourself-component-library",pagesUrl:"https:\u002F\u002FTrisjan.github.io\u002Fdont-repeat-yourself-component-library",homepageUrl:"https:\u002F\u002Fdont-repeat-yourself-component-library-kappa.vercel.app"}],topic:"task"},{name:d,description:"Ontwerp en bouw een robuust, goed werkend component, waarin de belangen van de eindgebruiker centraal staan.",url:"https:\u002F\u002Fgithub.com\u002Ffdnd-task\u002Fcomponent-building-block",forkCount:55,forks:[{title:d,name:h,stargazerCount:a,owner:y,ownerUrl:z,avatarUrl:A,url:"https:\u002F\u002Fgithub.com\u002FDavidvboxt\u002Fdont-repeat-yourself-component-building-block",pagesUrl:"https:\u002F\u002FDavidvboxt.github.io\u002Fdont-repeat-yourself-component-building-block",homepageUrl:"https:\u002F\u002Fpreeminent-gelato-ef5e7a.netlify.app\u002F"},{title:d,name:h,stargazerCount:a,owner:B,ownerUrl:C,avatarUrl:D,url:"https:\u002F\u002Fgithub.com\u002FKnetters\u002Fdont-repeat-yourself-component-building-block",pagesUrl:"https:\u002F\u002FKnetters.github.io\u002Fdont-repeat-yourself-component-building-block",homepageUrl:"https:\u002F\u002Fgleaming-puffpuff-afb194.netlify.app\u002F"},{title:d,name:h,stargazerCount:a,owner:E,ownerUrl:F,avatarUrl:G,url:"https:\u002F\u002Fgithub.com\u002Fluukbrauckmann\u002Fdont-repeat-yourself-component-building-block",pagesUrl:"https:\u002F\u002Fluukbrauckmann.github.io\u002Fdont-repeat-yourself-component-building-block",homepageUrl:"https:\u002F\u002Fsprint-16-d1.vercel.app"},{title:d,name:h,stargazerCount:a,owner:j,ownerUrl:k,avatarUrl:l,url:"https:\u002F\u002Fgithub.com\u002FStefan-Espant\u002Fdont-repeat-yourself-component-building-block",pagesUrl:"https:\u002F\u002FStefan-Espant.github.io\u002Fdont-repeat-yourself-component-building-block",homepageUrl:"https:\u002F\u002Fhallo-strandeiland-card-layout.vercel.app\u002F"},{title:d,name:h,stargazerCount:a,owner:m,ownerUrl:n,avatarUrl:o,url:"https:\u002F\u002Fgithub.com\u002FTristandemuijnck\u002Fdont-repeat-yourself-component-building-block",pagesUrl:"https:\u002F\u002FTristandemuijnck.github.io\u002Fdont-repeat-yourself-component-building-block",homepageUrl:"https:\u002F\u002Fpgt-login-component.vercel.app\u002F"}],topic:H},{name:c,description:"Een webapp voor het bijhouden van de We ♥ Web presentaties, congressen, meet-ups en nieuwe dingen die je geleerd hebt",url:"https:\u002F\u002Fgithub.com\u002Ffdnd-task\u002Fi-love-web-app",forkCount:42,forks:[{title:c,name:e,stargazerCount:a,owner:r,ownerUrl:s,avatarUrl:t,url:"https:\u002F\u002Fgithub.com\u002Fkosterm14\u002Fi-love-web-app",pagesUrl:"https:\u002F\u002Fkosterm14.github.io\u002Fi-love-web-app",homepageUrl:"https:\u002F\u002Fkosterm14.github.io\u002Fi-love-web-app\u002F"},{title:c,name:e,stargazerCount:a,owner:y,ownerUrl:z,avatarUrl:A,url:"https:\u002F\u002Fgithub.com\u002FDavidvboxt\u002Fi-love-web-app",pagesUrl:"https:\u002F\u002FDavidvboxt.github.io\u002Fi-love-web-app",homepageUrl:"https:\u002F\u002Fendearing-blancmange-836d64.netlify.app\u002F"},{title:c,name:e,stargazerCount:a,owner:"iBadr49",ownerUrl:"https:\u002F\u002Fgithub.com\u002FiBadr49",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112857932?u=b842526f5f90e90c774337b6bd66a65edac3b34e&v=4",url:"https:\u002F\u002Fgithub.com\u002FiBadr49\u002Fi-love-web-app",pagesUrl:"https:\u002F\u002FiBadr49.github.io\u002Fi-love-web-app",homepageUrl:"https:\u002F\u002Fi-love-web-app-brown.vercel.app"},{title:c,name:e,stargazerCount:a,owner:B,ownerUrl:C,avatarUrl:D,url:"https:\u002F\u002Fgithub.com\u002FKnetters\u002Fi-love-web-app",pagesUrl:"https:\u002F\u002FKnetters.github.io\u002Fi-love-web-app",homepageUrl:"https:\u002F\u002Filoveweb.netlify.app"},{title:c,name:e,stargazerCount:a,owner:j,ownerUrl:k,avatarUrl:l,url:"https:\u002F\u002Fgithub.com\u002FStefan-Espant\u002Fi-love-web-app",pagesUrl:"https:\u002F\u002FStefan-Espant.github.io\u002Fi-love-web-app",homepageUrl:"https:\u002F\u002Fi-love-web-app-steefan.vercel.app\u002F"},{title:I,name:I,stargazerCount:a,owner:m,ownerUrl:n,avatarUrl:o,url:"https:\u002F\u002Fgithub.com\u002FTristandemuijnck\u002FTheCodingGalaxy",pagesUrl:"https:\u002F\u002FTristandemuijnck.github.io\u002FTheCodingGalaxy",homepageUrl:"https:\u002F\u002Fthecodinggalaxy.vercel.app\u002F"},{title:"I Love Web App Blog",name:"I-Love-Web-App-Blog",stargazerCount:a,owner:"moonlightlizaa",ownerUrl:"https:\u002F\u002Fgithub.com\u002Fmoonlightlizaa",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F106411511?u=8de2c449f60281c72d6c8abe27f37f56cc7338ed&v=4",url:"https:\u002F\u002Fgithub.com\u002Fmoonlightlizaa\u002FI-Love-Web-App-Blog",pagesUrl:"https:\u002F\u002Fmoonlightlizaa.github.io\u002FI-Love-Web-App-Blog",homepageUrl:"https:\u002F\u002Flizaalovesweb.vercel.app\u002F"},{title:c,name:e,stargazerCount:a,owner:E,ownerUrl:F,avatarUrl:G,url:"https:\u002F\u002Fgithub.com\u002Fluukbrauckmann\u002Fi-love-web-app",pagesUrl:"https:\u002F\u002Fluukbrauckmann.github.io\u002Fi-love-web-app",homepageUrl:"https:\u002F\u002Fi-love-web.netlify.app\u002F"},{title:J,name:K,stargazerCount:a,owner:v,ownerUrl:w,avatarUrl:x,url:"https:\u002F\u002Fgithub.com\u002Fr20222\u002Fwe-love-web-app",pagesUrl:"https:\u002F\u002Fr20222.github.io\u002Fwe-love-web-app",homepageUrl:"https:\u002F\u002Fwe-love-web-app.vercel.app"},{title:"we love web youssra",name:"we-love-web-youssra",stargazerCount:a,owner:"YoussraElmortai",ownerUrl:"https:\u002F\u002Fgithub.com\u002FYoussraElmortai",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112857270?u=5ef1a5c6eb6530a65ba7251a4bfc23f93cadd61e&v=4",url:"https:\u002F\u002Fgithub.com\u002FYoussraElmortai\u002Fwe-love-web-youssra",pagesUrl:"https:\u002F\u002FYoussraElmortai.github.io\u002Fwe-love-web-youssra",homepageUrl:"https:\u002F\u002Fwe-love-web-pi.vercel.app"},{title:J,name:K,stargazerCount:a,owner:"mcphendriks",ownerUrl:"https:\u002F\u002Fgithub.com\u002Fmcphendriks",avatarUrl:"https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F106346778?v=4",url:"https:\u002F\u002Fgithub.com\u002Fmcphendriks\u002Fwe-love-web-app",pagesUrl:"https:\u002F\u002Fmcphendriks.github.io\u002Fwe-love-web-app",homepageUrl:"https:\u002F\u002Fwe-love-web-app-tan.vercel.app\u002F"}],topic:H}]},uses:{dependencies:f,params:["sprint"],parent:f,url:f}}]}(1,"component library","i love web app","component building block","i-love-web-app",void 0,"dont-repeat-yourself-component-library","dont-repeat-yourself-component-building-block",2,"Stefan-Espant","https:\u002F\u002Fgithub.com\u002FStefan-Espant","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F89298385?u=04ddfcafd757e89fae28cf9177d286aef389614e&v=4","Tristandemuijnck","https:\u002F\u002Fgithub.com\u002FTristandemuijnck","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F43402897?u=785c5cf255b547de3c70c183023335d36b7a10cb&v=4","2023-11-13",3,"kosterm14","https:\u002F\u002Fgithub.com\u002Fkosterm14","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F61830362?u=afed3b32595711bf324c90952f3f2275d140913d&v=4","buurtcampus_oost_components","r20222","https:\u002F\u002Fgithub.com\u002Fr20222","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F101579892?u=30d9d8153e074bc1ce304f906beeea8fa62c9fe5&v=4","Davidvboxt","https:\u002F\u002Fgithub.com\u002FDavidvboxt","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F112856021?u=99f6f7637372fb212b594e2fa4be60a5bb91d8f9&v=4","Knetters","https:\u002F\u002Fgithub.com\u002FKnetters","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F60781257?u=d9917cd847676a07c4e22d61dd769d9e2fa8e23e&v=4","luukbrauckmann","https:\u002F\u002Fgithub.com\u002Fluukbrauckmann","https:\u002F\u002Favatars.githubusercontent.com\u002Fu\u002F47314813?u=46372fb71571584bd19cececcdd9197cda0a4694&v=4","subtask","TheCodingGalaxy","we love web app","we-love-web-app")),
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1eq7njp"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	
+	</body>
+</html>
