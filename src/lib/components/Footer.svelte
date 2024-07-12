@@ -11,8 +11,8 @@
 		</p>
 		<ul>
 			<!-- <li><a href="https://2122.programma.fdnd.nl">Programma 2122</a></li> -->
-			<li><a href="https://2223.programma.fdnd.nl">Programma 2223</a></li>
-			<li><a href="https://2324.programma.fdnd.nl">Programma 2324</a></li>
+			<li><a href="https://2223.programma.fdnd.nl">Programma 2022-2023</a></li>
+			<li><a href="https://2324.programma.fdnd.nl">Programma 2023-2024</a></li>
 		</ul>
 	</nav>
 
