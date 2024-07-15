@@ -3,15 +3,15 @@
 	$: navItems = [
 		{
 			href: '/',
-			title: 'Programma 2324'
+			title: 'Programma 2425'
 		},
 		{
-			href: '/data-driven-web/proof-of-concept',
-			title: 'Sprint 12'
+			href: '/static-web/your-tribe',
+			title: 'Sprint 1'
 		},
 		{
-			href: '/meesterproef/final-sprint',
-			title: 'Sprint 20'
+			href: '/workflow-tooling-frameworks/your-tribe-for-life',
+			title: 'Sprint 13'
 		},
 	]
 
