@@ -10,16 +10,15 @@
 
 <div>
     <Content {title} {sprintNumber} {content} {startdate} {topics} />
-    
-    <Criteria {criteria} />
+
+    <!--<Criteria {criteria} />-->
 </div>
 
 <Tasks {tasks}/>
 
-    
-
 
 <Schedule {weekPlans}/>
+
 <style> 
 	div {
 		display:flex;
