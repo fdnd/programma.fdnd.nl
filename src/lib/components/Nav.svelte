@@ -6,12 +6,12 @@
 			title: 'Programma 2425'
 		},
 		{
-			href: '/static-web/your-tribe',
-			title: 'Sprint 1'
+			href: '/static-web/the-client',
+			title: 'Sprint 2'
 		},
 		{
-			href: '/workflow-tooling-frameworks/your-tribe-for-life',
-			title: 'Sprint 13'
+			href: '/workflow-tooling-frameworks/lose-your-head',
+			title: 'Sprint 14'
 		},
 	]
 
