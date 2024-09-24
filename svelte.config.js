@@ -16,7 +16,7 @@ export default config;
 
 // const config = {
 // 	kit: {
-// 		adapter: staticAdapter()
+// 		adapter: staticAdapter({strict: false})
 // 	}
 // };
 

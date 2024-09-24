@@ -7,11 +7,12 @@
 	<nav>
 		<h2>Archief</h2>
 		<p>
-			Programma archief van voorgaande studiejaren. 
+			Hier kun je het programma van voorgaande studiejaren bekijken. 
 		</p>
 		<ul>
 			<!-- <li><a href="https://2122.programma.fdnd.nl">Programma 2122</a></li> -->
-			<li><a href="https://2223.programma.fdnd.nl">Programma 2223</a></li>
+			<li><a href="https://2223.programma.fdnd.nl">Programma 2022-2023</a></li>
+			<li><a href="https://2324.programma.fdnd.nl">Programma 2023-2024</a></li>
 		</ul>
 	</nav>
 

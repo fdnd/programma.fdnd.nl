@@ -9,9 +9,8 @@
 </script>
 
 <div>
-    <Content {title} {sprintNumber} {content} {startdate} {topics} />
-
-    <!--<Criteria {criteria} />-->
+    <Content {title} {sprintNumber} {content} {startdate} {topics} />    
+    <!-- <Criteria {criteria} /> -->
 </div>
 
 <Tasks {tasks}/>
