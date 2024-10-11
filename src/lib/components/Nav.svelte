@@ -6,12 +6,12 @@
 			title: 'Programma 2425'
 		},
 		{
-			href: '/static-web/the-client',
-			title: 'Sprint 2'
+			href: '/static-web/all-human',
+			title: 'Sprint 3'
 		},
 		{
-			href: '/workflow-tooling-frameworks/lose-your-head',
-			title: 'Sprint 14'
+			href: '/workflow-tooling-frameworks/choices-choices',
+			title: 'Sprint 15'
 		},
 	]
 
