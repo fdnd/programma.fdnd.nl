@@ -15,13 +15,14 @@
     --breakpoint-medium: 30em;
 }
 
+/* ARCHIVE THEME */
 html.archive {
     --white:#000;
     --blueberry:#ccc;
     --lavender:#ddd;
     --turquoise:#ddd;
     --background: #333;
-    --text:#eee
+    --text:#eee;
 }
 
 html.archive .white-on-blue,
@@ -33,7 +34,9 @@ html.archive .blue-on-green {
 }
 
 html.archive .blue-on-green,
-html.archive .purple-on-blue {
+html.archive .purple-on-blue,
+html.archive .blue-on-purple,
+html.archive body.white-on-blue > nav li a.active {
     color: var(--white);
     background-color: var(--text);
     border-color: var(--white);
@@ -60,6 +63,15 @@ html.archive body h2:after, body figcaption:after {
 html.archive .weekday {
     background-color: transparent !important;
 }
+
+html.archive main a:after, footer a:after {
+    background:none !important
+}
+
+html.archive .day * {
+    --border:var(--text) !important;
+}
+/* /ARCHIVE THEME */
 
 body {
     overflow-x:hidden;
