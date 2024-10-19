@@ -14,6 +14,65 @@
 
     --breakpoint-medium: 30em;
 }
+
+/* ARCHIVE THEME */
+html.archive {
+    --white:#000;
+    --blueberry:#ccc;
+    --lavender:#ddd;
+    --turquoise:#ddd;
+    --background: #333;
+    --text:#eee;
+}
+
+html.archive .white-on-blue,
+html.archive .green-on-blue,
+html.archive .blue-on-green {
+    color: var(--text);
+    background-color: var(--background);
+    border-color: #fff;
+}
+
+html.archive .blue-on-green,
+html.archive .purple-on-blue,
+html.archive .blue-on-purple,
+html.archive body.white-on-blue > nav li a.active {
+    color: var(--white);
+    background-color: var(--text);
+    border-color: var(--white);
+}
+
+html.archive header div,
+html.archive section,
+html.archive header nav *,
+html.archive h1 * {
+    background-color: transparent !important;
+    color:var(--turquoise) !important;
+    border-color: var(--turquoise) !important;
+}
+html.archive .active,
+html.archive main li:hover {
+    background-color: rgb(255,255,255,.2) !important;
+}
+
+html.archive body h2:before, body figcaption:before,
+html.archive body h2:after, body figcaption:after {
+    color: var(--background)
+}
+
+html.archive .weekday {
+    background-color: transparent !important;
+}
+
+html.archive main a:after, footer a:after {
+    background:none !important
+}
+
+html.archive .day * {
+    --border:var(--text) !important;
+}
+/* /ARCHIVE THEME */
+
 body {
     overflow-x:hidden;
 }
