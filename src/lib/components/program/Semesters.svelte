@@ -5,30 +5,10 @@
 	export let semesters;
 	export let subtitle;
 
-	let jsEnabled = false;
-
-	function toggleDates({ target }) {
-		if (target.nodeName == 'INPUT') {
-			document.body.classList.toggle('expand');
-		}
-	}
-
-	onMount(() => {
-		jsEnabled = true;
-		document.body.classList.remove('expand');
-	});
-
 </script>
 
 <section class="semesters-sprints">
 	<h2>{subtitle}</h2>
-
-	{#if jsEnabled}
-		<input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates} />
-		<label for="show-hide-dates">
-			<span> Show/hide dates </span>
-		</label>
-	{/if}
 
 	<div class="scroll-horo">
 		<span class="scroll-label visually-hidden">scroll >>> </span>
