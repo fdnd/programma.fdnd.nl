@@ -6,12 +6,12 @@
 			title: 'Programma 2425'
 		},
 		{
-			href: '/static-web/all-human',
-			title: 'Sprint 3'
+			href: '/static-web/look-and-feel',
+			title: 'Sprint 4'
 		},
 		{
-			href: '/workflow-tooling-frameworks/choices-choices',
-			title: 'Sprint 15'
+			href: '/workflow-tooling-frameworks/dont-repeat-yourself',
+			title: 'Sprint 16'
 		},
 	]
 
