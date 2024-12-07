@@ -133,6 +133,15 @@
 	}
 	.day div {
 		margin-left: -1rem;
+		/* word-wrap: break-word; */
+  		/* overflow-wrap: break-word; */
+		hyphens: auto;
+		hyphenate-limit-chars: 6 3 3;
+		hyphenate-limit-lines: 2;   
+		hyphenate-limit-last: always;
+		hyphenate-limit-zone: 6%;
+		text-wrap: balance;
+		text-wrap: pretty;
 	}
 
 	.day + .day {
