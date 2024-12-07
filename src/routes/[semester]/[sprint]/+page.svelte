@@ -15,8 +15,22 @@
 
 <Tasks {tasks}/>
 
-
 <Schedule {weekPlans}/>
+
+<!-- Subnavigatie: Navigeer naar de vorige of volgende sprint  -->
+<nav>
+    {#if sprintNumber > 1}
+        <a href="/{sprintNumber-1}">
+            Vorige sprint
+        </a>
+    {/if}
+    
+    {#if sprintNumber < 20}
+        <a href="/{sprintNumber+1}">
+            Volgende sprint
+        </a>
+    {/if}
+</nav>
 
 <style> 
 	div {
@@ -51,7 +65,35 @@
         } 
     }
 
-    
-    
+    /* Subnavigatie */
+    nav {
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+    nav a {
+        padding: 0.3em 0.8em;
+        border-radius: 1em;
+        border: 1px solid var(--turquoise);
+        background-color: var(--blueberry);
+        color: var(--turquoise);
+        text-decoration: none;
+    }
+    nav a:hover,nav a:focus {
+        background-color: var(--turquoise);
+        color: var(--blueberry);
+    }
 </style>
+
+<!--Subnavigatie-->
+{#if sprintNumber < 20}
+<style>
+    nav a:last-of-type {
+        margin-left:auto;
+    }
+</style>
+{/if}
+
   
