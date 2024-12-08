@@ -5,7 +5,7 @@
     import Schedule from '$lib/components/program/sprint/Schedule.svelte';
   
     export let data 
-    const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks } = data
+    const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks, prevSprint, nextSprint } = data
 </script>
 
 <div>
@@ -19,15 +19,15 @@
 
 <!-- Subnavigatie: Navigeer naar de vorige of volgende sprint  -->
 <nav>
-    {#if sprintNumber > 1}
-        <a href="/{sprintNumber-1}">
-            Vorige sprint
+    {#if prevSprint}
+        <a data-sveltekit-reload href="/{prevSprint.semester.slug}/{prevSprint.slug}">
+            Vorige sprint: {prevSprint.title}
         </a>
     {/if}
     
-    {#if sprintNumber < 20}
-        <a href="/{sprintNumber+1}">
-            Volgende sprint
+    {#if nextSprint}
+        <a data-sveltekit-reload href="/{nextSprint.semester.slug}/{nextSprint.slug}">
+            Volgende sprint: {nextSprint.title}
         </a>
     {/if}
 </nav>
