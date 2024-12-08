@@ -5,7 +5,7 @@
     import Schedule from '$lib/components/program/sprint/Schedule.svelte';
   
     export let data 
-    const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks } = data
+    const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks, prevSprint, nextSprint } = data
 </script>
 
 <div>
@@ -15,8 +15,22 @@
 
 <Tasks {tasks}/>
 
-
 <Schedule {weekPlans}/>
+
+<!-- Subnavigatie: Navigeer naar de vorige of volgende sprint  -->
+<nav>
+    {#if prevSprint}
+        <a data-sveltekit-reload href="/{prevSprint.semester.slug}/{prevSprint.slug}">
+            Vorige sprint<span>: {prevSprint.title}</span>
+        </a>
+    {/if}
+    
+    {#if nextSprint}
+        <a data-sveltekit-reload href="/{nextSprint.semester.slug}/{nextSprint.slug}">
+            Volgende sprint<span>: {nextSprint.title}</span>
+        </a>
+    {/if}
+</nav>
 
 <style> 
 	div {
@@ -51,7 +65,43 @@
         } 
     }
 
-    
-    
+    /* Subnavigatie */
+    nav {
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+    }
+    nav a {
+        padding: 0.3em 0.8em;
+        border-radius: 1em;
+        border: 1px solid var(--turquoise);
+        background-color: var(--blueberry);
+        color: var(--turquoise);
+        text-decoration: none;
+    }
+    nav a > span{
+        display:none;
+    }
+    nav a:hover,nav a:focus {
+        background-color: var(--turquoise);
+        color: var(--blueberry);
+    }
+    @media (min-width:47rem) {
+        nav a > span {
+            display: inline;
+        } 
+    }
 </style>
+
+<!--Subnavigatie-->
+{#if sprintNumber < 20}
+<style>
+    nav a:last-of-type {
+        margin-left:auto;
+    }
+</style>
+{/if}
+
   
