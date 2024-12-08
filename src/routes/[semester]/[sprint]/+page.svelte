@@ -21,13 +21,13 @@
 <nav>
     {#if prevSprint}
         <a data-sveltekit-reload href="/{prevSprint.semester.slug}/{prevSprint.slug}">
-            Vorige sprint: {prevSprint.title}
+            Vorige sprint<span>: {prevSprint.title}</span>
         </a>
     {/if}
     
     {#if nextSprint}
         <a data-sveltekit-reload href="/{nextSprint.semester.slug}/{nextSprint.slug}">
-            Volgende sprint: {nextSprint.title}
+            Volgende sprint<span>: {nextSprint.title}</span>
         </a>
     {/if}
 </nav>
@@ -81,9 +81,17 @@
         color: var(--turquoise);
         text-decoration: none;
     }
+    nav a > span{
+        display:none;
+    }
     nav a:hover,nav a:focus {
         background-color: var(--turquoise);
         color: var(--blueberry);
+    }
+    @media (min-width:47rem) {
+        nav a > span {
+            display: inline;
+        } 
     }
 </style>
 
