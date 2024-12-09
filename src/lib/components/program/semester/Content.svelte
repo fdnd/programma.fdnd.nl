@@ -20,11 +20,5 @@
     h3 {
         margin:0 0 .5rem
     }
-
-    @media (min-width:45em) {
-        section {
-            margin-bottom: 0;
-        }
-    }
 </style>
 

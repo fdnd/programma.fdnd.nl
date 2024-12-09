@@ -3,30 +3,32 @@
     import Criteria from '$lib/components/program/sprint/Criteria.svelte'
     import Tasks from '$lib/components/program/sprint/Tasks.svelte'
     import Schedule from '$lib/components/program/sprint/Schedule.svelte';
+    import SubNav from '$lib/components/program/sprint/SubNav.svelte';
   
     export let data 
-
-    const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks } = data
+    const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks, prevSprint, nextSprint } = data
 </script>
 
 <div>
-    <Content {title} {sprintNumber} {content} {startdate} {topics} />
-
-    <Criteria {criteria} />
-
-    <Tasks {tasks}/>
-
-    <Schedule {weekPlans}/>
+    <Content {title} {sprintNumber} {content} {startdate} {topics} />    
+    <!-- <Criteria {criteria} /> -->
 </div>
+
+<Tasks {tasks}/>
+
+<Schedule {weekPlans}/>
+
+<SubNav {prevSprint} {nextSprint}/>
 
 <style> 
 	div {
 		display:flex;
 		flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
 	}
     :global(section) {
         padding: 1rem;
-        margin: 1rem 0;
     }
 
     :global(section h3){
@@ -43,24 +45,13 @@
         list-style:none !important;
     }
 
-    @media (min-width:30em) {
-        :global(section) {
-            margin:0;
-        }
+    @media (min-width:40em) {
+        div {
+            margin: 2rem 0 1.5rem;
+            flex-direction: row;
+            align-items:stretch;
+        } 
     }
-    @media (min-width: 40em) {
-		div {
-            display:grid;
-			grid-template-columns: 1fr 1fr;
-			gap:1rem;
-            align-items: start;
-        }
-	}
-    @media (min-width: 60em) {
-		div {
-			grid-template-columns: 1fr 1fr 1fr;
-        }
-	}
-    
 </style>
+
   

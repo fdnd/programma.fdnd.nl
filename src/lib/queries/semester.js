@@ -1,4 +1,4 @@
-export default function getQuerySprint(slug) {
+export default function getQuerySemester(slug) {
     return `
     query Semester {
         semester(where: {slug: "${slug}"}) {

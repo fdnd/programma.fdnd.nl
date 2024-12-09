@@ -1,122 +1,124 @@
 <script>
-    import Semester from '$lib/components/program/Semester.svelte'
+	import Semester from '$lib/components/program/Semester.svelte';
+	import { onMount } from 'svelte';
 
-    export let semesters
+	export let semesters;
+	export let subtitle;
 
-    function toggleDates({target}){
-        if(target.nodeName == 'INPUT') {
-            document.body.classList.toggle('expand')
-        }    
-    }
 </script>
 
+<section class="semesters-sprints">
+	<h2>{subtitle}</h2>
 
-<div class="semesters-sprints">
-    <input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates}><label for="show-hide-dates"><span>Show/hide dates</span></label>
-    
-    <div class="scroll-horo"> <!-- horizontal scroll voor semester lijsten -->
+	<div class="scroll-horo">
+		<span class="scroll-label visually-hidden">scroll >>> </span>
 
-        <span class="scroll-label">scroll >>> </span>
-        
-        {#each semesters as semester, i}
-            <Semester {semester} {i}/>
-        {/each}
-    </div>
-</div>
+		{#each semesters as semester, i}
+			<Semester {semester} {i} />
+		{/each}
+	</div>
+</section>
 
 <style>
-div.semesters-sprints{
-    position: relative;
-    margin: 0;
-    padding: 2em 0 0;
-    display: flex;
-    flex-direction: column;
-    max-width: 80em;
-}
+	section {
+		position: relative;
 
-div.scroll-horo{
-    position: relative;
-    overflow-x: scroll;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    scroll-snap-type: x mandatory;
-    margin: 1rem 0 0;
-    width: 100%;
-    padding-bottom:2rem;
-}
-div.scroll-horo span.scroll-label{
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    background: var(--call-to-action);
-}
-@media (min-width: 40em) {
-    div.scroll-horo {
-        width: calc(100% + 1rem);
-    }
-}
+		margin: 2rem 0 0;
+		width: 100%;
+		padding: 0;
+	}
+	h2 {
+		font-weight: normal;
+	}
 
-input[type="checkbox"].toggle {
-    opacity: 0;
-    position: absolute;
-    left: -9000px;
-    top: -9000px;
-}
-input[type="checkbox"].toggle + label {
-    position: relative;
-    align-self: end;
-    width: 10.75em;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: white;
-    font-family: helvetica;
-    font-size: 1em;
-}
-input[type="checkbox"].toggle + label span {
-    display:none;
-}
-input[type="checkbox"].toggle + label::before {
-    content: "";
-    width: 10.75em;
-    height: 1.325em;
-    border: solid 2px var(--turquoise);
-    border-radius: var(--pilled);
-    transition: background-color 200ms ease-in-out;
-}
-input[type="checkbox"].toggle + label::after {
-    content: "show all dates"; /* \2715 x */
-    position: absolute;
-    width: 8em;
-    height: 1.5em;
-    background-color: var(--blueberry);
-    color: var(--turquoise);
-    border: solid 2px var(--turquoise);
-    border-radius: var(--pilled);
-    font-weight: normal;
-    font-size: .9em;
+	.scroll-horo {
+		overflow-x: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		scroll-snap-type: x mandatory;
+		padding: 1rem 2rem 2rem;
+		margin-left: -1rem;
+		margin-right: -1rem;
+	}
+	@media (min-width: 50rem) {
+		.scroll-horo {
+			margin-left: -2rem;
+			margin-right: -2rem;
+		}
+	}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
-}
-input[type="checkbox"].toggle:checked + label::after {
-    content: "hide all dates"; /* \2713 v */
-    transform: translateX(50%);
-    background-color: var(--turquoise);
-    color: var(--blueberry);
-}
-input[type="checkbox"].toggle:hover + label::after, input[type="checkbox"].toggle:checked:hover + label::after {
-    background-color: var(--call-to-action);
-    border-color: var(--call-to-action);
-    color: var(--blueberry);
-}
-input[type="checkbox"].toggle:focus + label::before {
-    background-color: var(--call-to-action);
-    border-color: var(--call-to-action);
-}
+	.scroll-label {
+		position: absolute;
+		top: 0;
+		right: 1rem;
+		background: var(--call-to-action);
+	}
 
+	input[type='checkbox'].toggle {
+		opacity: 0;
+		position: absolute;
+		left: -9000px;
+		top: -9000px;
+	}
+	input[type='checkbox'].toggle + label {
+		top: 2rem;
+		right: 0;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		color: white;
+		font-family: helvetica;
+		font-size: 1em;
+		margin-left: 1.5rem;
+	}
+	input[type='checkbox'].toggle + label::before {
+		content: '';
+		width: 3rem;
+		height: 1.325rem;
+		border: solid 1px var(--turquoise);
+		border-radius: var(--pilled);
+		transition: background-color 200ms ease-in-out;
+	}
+	input[type='checkbox'].toggle + label::after {
+		content: ''; /* \2715 x */
+		position: absolute;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-color: var(--blueberry);
+		color: var(--turquoise);
+		border: solid 1px var(--turquoise);
+		border-radius: var(--pilled);
+		font-weight: normal;
+		font-size: 0.9em;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+	}
+	input[type='checkbox'].toggle:checked + label::after {
+		content: ''; /* \2713 v */
+		transform: translateX(1.5em);
+		background-color: var(--turquoise);
+		color: var(--blueberry);
+	}
+	input[type='checkbox'].toggle:hover + label::after,
+	input[type='checkbox'].toggle:focus + label::after,
+	input[type='checkbox'].toggle:checked:hover + label::after {
+		background-color: var(--turquoise);
+		/* border-color: var(--call-to-action); */
+		color: var(--blueberry);
+	}
+	input[type='checkbox'].toggle:checked + label::before {
+		background-color: var(--turquoise);
+		opacity: 0.5;
+		border-color: var(--turquoise);
+	}
+
+	label span {
+		color: var(--turquoise);
+		margin-left: 0.5em;
+		font-size: 0.7em;
+	}
 </style>

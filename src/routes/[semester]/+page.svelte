@@ -11,10 +11,8 @@
 <div>
     <section>
         <Heading title="Semester" subtitle={semester.title} />
-
         <div>
             <Content {semester} />
-            
             <section class="green-on-blue pilled">
                 <h3>Sprints</h3>
                 <ol>
@@ -48,14 +46,8 @@
         margin:0;
     }
 
-    @media (min-width:45em) {
-        section > div {
-            display:grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap:2rem;
-            max-width: 70rem;
-            align-items: start;
-        }
+    div {
+        max-width: 40em;
     }
 </style>
   
