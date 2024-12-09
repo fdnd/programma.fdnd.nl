@@ -4,6 +4,7 @@ export default function getQuerySprintNavigation(sprintNumber) {
     sprint(where: {sprintNumber: ${sprintNumber}}) {
       title
       slug
+      sprintNumber
       semester {
         slug
       }
