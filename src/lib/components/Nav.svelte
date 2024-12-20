@@ -6,12 +6,12 @@
 			title: 'Programma 2425'
 		},
 		{
-			href: '/static-web/fix-the-flow',
-			title: 'Sprint 5'
+			href: '/static-web/the-startup',
+			title: 'Sprint 6'
 		},
 		{
-			href: '/workflow-tooling-frameworks/user-needs',
-			title: 'Sprint 17'
+			href: '/workflow-tooling-frameworks/release-candidate',
+			title: 'Sprint 18'
 		},
 	]
 
