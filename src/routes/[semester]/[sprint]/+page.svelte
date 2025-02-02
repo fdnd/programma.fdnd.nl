@@ -27,7 +27,7 @@
         </a>
     {/if}
 
-    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}" class="api-endpoint">JSON endpoint voor {title}</a>
+    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}" class="api-endpoint">JSON<span>endpoint voor {title}</span></a>
     
     {#if nextSprint}
         <a data-sveltekit-reload href="/{nextSprint.semester.slug}/{nextSprint.slug}">
@@ -94,24 +94,38 @@
         color: var(--blueberry);
     }
 
+    /* API link */
     nav a.api-endpoint {
-        border: 1px solid transparent;
-        font-size: .75rem;
-        text-decoration:underline;
+        border: 1px solid var(--turquoise);
+        font-size: .8rem;
+        /* text-decoration:underline; */
         padding-bottom: 0;
+        border-radius: 0;
+        position: absolute;
+        top: 3.2rem;
+        right: 1.8rem;
     }
-
+    nav a.api-endpoint span{
+        display: none;
+    }
+    nav a.api-endpoint:after{
+        display: none;
+    }
     nav a.api-endpoint:hover, 
     nav a.api-endpoint:focus {
-        background-color: transparent;
+        background-color: var(--turquoise);
         text-decoration: none;
-        color: var(--turquoise);
+        color: var(--blueberry);
     }
 
     @media (min-width:47rem) {
         nav a > span {
             display: inline;
-        } 
+        }
+        nav a.api-endpoint {
+            top: 4rem;
+            right: 2rem;
+        }
     }
 </style>
 
