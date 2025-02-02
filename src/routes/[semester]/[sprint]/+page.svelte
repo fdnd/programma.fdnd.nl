@@ -5,7 +5,9 @@
     import Schedule from '$lib/components/program/sprint/Schedule.svelte';
   
     export let data 
-    const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks, prevSprint, nextSprint } = data
+    const { title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks, prevSprint, nextSprint, slug, semester } = data
+
+    
 </script>
 
 <div>
@@ -24,6 +26,8 @@
             Vorige sprint<span>: {prevSprint.title}</span>
         </a>
     {/if}
+
+    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}" class="api-endpoint">JSON endpoint voor {title}</a>
     
     {#if nextSprint}
         <a data-sveltekit-reload href="/{nextSprint.semester.slug}/{nextSprint.slug}">
@@ -71,6 +75,7 @@
         font-weight: 600;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 4rem;
     }
     nav a {
@@ -88,6 +93,21 @@
         background-color: var(--turquoise);
         color: var(--blueberry);
     }
+
+    nav a.api-endpoint {
+        border: 1px solid transparent;
+        font-size: .75rem;
+        text-decoration:underline;
+        padding-bottom: 0;
+    }
+
+    nav a.api-endpoint:hover, 
+    nav a.api-endpoint:focus {
+        background-color: transparent;
+        text-decoration: none;
+        color: var(--turquoise);
+    }
+
     @media (min-width:47rem) {
         nav a > span {
             display: inline;
@@ -99,7 +119,7 @@
 {#if sprintNumber < 20}
 <style>
     nav a:last-of-type {
-        margin-left:auto;
+        /margin-left:auto;
     }
 </style>
 {/if}

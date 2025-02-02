@@ -1,7 +1,7 @@
 import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import getQuerySprintNavigation from '$lib/queries/sprintNavigation'
-import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
+import { headersGitHub, getQueryTasks }  from '$lib/queries/tasks'
 
 let prefix
 

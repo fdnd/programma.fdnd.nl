@@ -12,6 +12,10 @@ export default function getQuerySprint(slug) {
           criteria {
             html
           }
+          semester {
+            slug
+            title
+          }
           weekPlans(first:100) {
             weekNumber
             mondayDate
