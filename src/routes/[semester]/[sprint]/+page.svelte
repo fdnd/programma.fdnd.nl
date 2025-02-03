@@ -26,8 +26,6 @@
             Vorige sprint<span>: {prevSprint.title}</span>
         </a>
     {/if}
-
-    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}" class="api-endpoint">JSON<span>endpoint voor {title}</span></a>
     
     {#if nextSprint}
         <a data-sveltekit-reload href="/{nextSprint.semester.slug}/{nextSprint.slug}">
@@ -35,6 +33,10 @@
         </a>
     {/if}
 </nav>
+
+<div class="api-endpoint">
+    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}">JSON <span>endpoint voor {title}</span></a>
+</div>
 
 <style> 
 	div {
@@ -95,27 +97,31 @@
     }
 
     /* API link */
-    nav a.api-endpoint {
-        border: 1px solid var(--turquoise);
-        font-size: .8rem;
-        /* text-decoration:underline; */
-        padding-bottom: 0;
-        border-radius: 0;
-        position: absolute;
-        top: 3.2rem;
-        right: 1.8rem;
+    div.api-endpoint{
+        width: calc(100vw - 2*3rem);
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
     }
-    nav a.api-endpoint span{
-        display: none;
-    }
-    nav a.api-endpoint:after{
-        display: none;
-    }
-    nav a.api-endpoint:hover, 
-    nav a.api-endpoint:focus {
-        background-color: var(--turquoise);
-        text-decoration: none;
+    div.api-endpoint a {
+        border: 2px solid var(--turquoise);
+        font-size: .8em;
         color: var(--blueberry);
+        background-color: var(--turquoise);
+        text-decoration:none;
+        border-radius: 0;
+        /* margin: 2rem auto; */
+        padding: 0.2em 1em;
+    }
+    div.api-endpoint a span, 
+    div.api-endpoint a:after{
+        display: none;
+    }
+    div.api-endpoint a:hover, 
+    div.api-endpoint a:focus {
+        background-color: var(--blueberry);
+        text-decoration: none;
+        color: var(--turquoise);
     }
 
     @media (min-width:47rem) {
