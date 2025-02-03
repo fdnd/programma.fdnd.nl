@@ -101,6 +101,7 @@
         width: calc(100vw - 2*3rem);
         padding: 2rem;
         display: flex;
+        flex-direction: row;
         justify-content: center;
     }
     div.api-endpoint a {
