@@ -35,7 +35,7 @@
 </nav>
 
 <div class="api-endpoint">
-    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}">JSON <span>endpoint voor {title}</span></a>
+    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}">JSON <span>endpoint: {title}</span></a>
 </div>
 
 <style> 
@@ -98,23 +98,29 @@
 
     /* API link */
     div.api-endpoint{
-        width: calc(100vw - 2*3rem);
-        padding: 2rem;
+        margin-bottom: 4rem;
+        padding: 0 1rem;
         display: flex;
         flex-direction: row;
-        justify-content: center;
     }
     div.api-endpoint a {
         border: 2px solid var(--turquoise);
-        font-size: .8em;
-        color: var(--blueberry);
         background-color: var(--turquoise);
-        text-decoration:none;
-        border-radius: 0;
-        /* margin: 2rem auto; */
+        border-radius: .4rem;
+        margin: 0 auto;
         padding: 0.2em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        font-size: .8em;
+        font-weight: bold;
+        text-decoration:none;
+        color: var(--blueberry);
     }
-    div.api-endpoint a span, 
+    div.api-endpoint a span {
+
+    }
     div.api-endpoint a:after{
         display: none;
     }
@@ -128,10 +134,6 @@
     @media (min-width:47rem) {
         nav a > span {
             display: inline;
-        }
-        nav a.api-endpoint {
-            top: 4rem;
-            right: 2rem;
         }
     }
 </style>
