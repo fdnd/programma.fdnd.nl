@@ -38,6 +38,10 @@ export default function getQuerySprint(slug) {
           topics {
             name
           }
+          indicators {
+            index
+            definition
+          }
         }
     }`
 }

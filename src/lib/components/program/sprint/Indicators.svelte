@@ -1,0 +1,33 @@
+<script>
+	import Heading from '$lib/components/Heading.svelte'
+
+	export let indicators
+</script>
+
+{#if indicators && indicators.length > 0}
+	<section class="purple-on-blue rounded col-span-1 indicators">
+		<Heading title="Indicatoren" />
+
+		<ul>
+
+		</ul>
+
+		<ul>
+			{#each indicators as indicator}
+				<li>
+					<span>{indicator.index}</span>
+					<em>{indicator.definition}</em>
+				</li>
+				
+			{/each}
+			</ul>
+		
+	</section>
+{/if}
+
+<style>
+	li {
+		display:flex;
+		gap:.5rem
+	}
+</style>
