@@ -6,7 +6,7 @@
 
 {#if indicators && indicators.length > 0}
 	<section class="purple-on-blue rounded col-span-1 indicators">
-		<Heading title="Indicatoren" />
+		<Heading title="Criteria" />
 
 		<ul>
 
@@ -26,6 +26,9 @@
 {/if}
 
 <style>
+	section {
+		display:none;
+	}
 	li {
 		display:flex;
 		gap:.5rem

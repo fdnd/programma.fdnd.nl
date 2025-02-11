@@ -9,9 +9,6 @@ export default function getQuerySprint(slug) {
           content {
             html
           }
-          criteria {
-            html
-          }
           semester {
             slug
             title
