@@ -9,15 +9,3 @@ const config = {
 };
 
 export default config;
-
-// /** @type {import('@sveltejs/kit').Config} */
-
-// import staticAdapter from '@sveltejs/adapter-static'
-
-// const config = {
-// 	kit: {
-// 		adapter: staticAdapter({strict: false})
-// 	}
-// };
-
-// export default config;
