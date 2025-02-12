@@ -10,7 +10,7 @@
 	<Topics {startdate} {topics} />
 
 	<div>
-		{#if content}
+		{#if content.html}
 			{@html content.html}
 		{/if}
 	</div>
