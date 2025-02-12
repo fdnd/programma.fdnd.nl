@@ -36,7 +36,7 @@
 </nav>
 
 <div class="api-endpoint">
-    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}">JSON <span>endpoint: {title}</span></a>
+    <a href="/api/{semester.slug}/{slug}">JSON <span>endpoint: {title}</span></a>
 </div>
 
 <style> 

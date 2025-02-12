@@ -38,6 +38,9 @@ export default function getQuerySprint(slug) {
           indicators {
             index
             definition
+            criterium {
+              title
+            }
           }
         }
     }`
