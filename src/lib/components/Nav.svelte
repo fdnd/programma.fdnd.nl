@@ -6,8 +6,8 @@
 			title: 'Programma 2425'
 		},
 		{
-			href: '/data-driven-web/connect-your-tribe',
-			title: 'Sprint 7'
+			href: '/data-driven-web/server-side-rendering',
+			title: 'Sprint 8'
 		},
 		{
 			href: '/meesterproef/free-space',
