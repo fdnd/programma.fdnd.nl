@@ -44,7 +44,7 @@
 		margin: 0 auto;
 		@media (max-width: 750px) {
 			overflow: visible;
-			padding: var(--radius);
+			padding: var(--radius) 0 var(--radius) var(--radius);
 		}
 	}
 	.nav {
