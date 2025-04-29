@@ -2,14 +2,14 @@
 	export let semester;
 </script>
 
-<div class="content-block p">
+<div class="content-block">
 	<h3 class="small-heading">Leerresultaat</h3>
 	<div class="p small-body">
 		{@html semester.goal.html}
 	</div>
 </div>
 
-<div class="content-block p">
+<div class="content-block">
 	<h3 class="small-heading">Inhoud</h3>
 	<div class="p small-body">
 		{@html semester.content.html}

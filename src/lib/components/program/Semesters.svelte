@@ -29,14 +29,13 @@
 		margin: 0 auto;
 		.scroll-container {
 			padding: 1rem;
-			margin-left: -1rem;
 			display: flex;
 			padding: var(--padding-top) var(--padding-side) 1rem;
 			gap: var(--padding-top);
 			flex-wrap: nowrap;
 			overflow-y: visible;
 			overflow-x: auto;
-			scroll-snap-type: x proximity;
+			scroll-snap-type: x mandatory;
 		}
 	}
 </style>

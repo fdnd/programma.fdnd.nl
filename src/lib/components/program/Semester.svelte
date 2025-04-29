@@ -40,7 +40,10 @@
 		}
 		@media (max-width: 750px) {
 			width: 100%;
-			max-width: calc(100vw - 4rem);
+			max-width: calc(100vw - 3rem);
+		}
+		@media (max-width: 500px) {
+			min-width: calc(100vw - 4rem);
 		}
 		:global(h2) {
 			font-size: 1.25rem;
@@ -66,6 +69,9 @@
 			padding: 0;
 			margin-top: 1rem;
 			min-width: 21rem;
+			@media (max-width: 500px) {
+				min-width: 0;
+			}
 		}
 	}
 </style>

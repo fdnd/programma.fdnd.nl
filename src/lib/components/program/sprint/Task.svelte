@@ -25,9 +25,9 @@
 		align-items: first baseline;
 		gap: 0.25rem;
 		border-radius: 0.25rem;
-		border: 1px solid var(--accent-color-1);
-		transition: 0.1s ease-out background;
+		transition: 0.4s ease-out background;
 		padding: 0.2em 0.4em;
+		background-color: color-mix(in oklch, var(--accent-color-1) 50%, transparent);
 		&:has(a):hover,
 		&:focus-within {
 			background-color: var(--accent-color-1);

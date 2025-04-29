@@ -41,7 +41,7 @@
 	.task-container {
 		width: 30%;
 		flex-grow: 1;
-		max-width: 100%;
+		max-width: 500px;
 		padding: 2rem 1rem 1rem;
 
 		border: 1px solid currentColor;
