@@ -12,16 +12,17 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "1.25.0",
-		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-auto": "^1.0.0-next.91",
 		"@sveltejs/adapter-static": "^1.0.0-next.48",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.0.0-next.589",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
+		"sass": "^1.87.0",
 		"svelte": "^3.44.0",
-		"vite": "^3.1.0"
+		"vite": "^4.5.13"
 	},
 	"type": "module"
 }
