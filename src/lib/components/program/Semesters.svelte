@@ -4,7 +4,6 @@
 
 	export let semesters;
 	export let subtitle;
-	console.log(semesters);
 </script>
 
 <section class="semesters-sprints">
