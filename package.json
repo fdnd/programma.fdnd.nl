@@ -13,6 +13,7 @@
 	"devDependencies": {
 		"@playwright/test": "1.25.0",
 		"@sveltejs/adapter-auto": "^1.0.0-next.91",
+		"@sveltejs/adapter-netlify": "^5.0.0",
 		"@sveltejs/adapter-static": "^1.0.0-next.48",
 		"@sveltejs/kit": "^1.0.0-next.589",
 		"eslint": "^8.16.0",
