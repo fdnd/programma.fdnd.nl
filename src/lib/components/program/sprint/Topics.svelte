@@ -9,20 +9,20 @@
 <aside>
     <h3>Topics</h3>
     <ul>
-        <li class="blue-on-green rounded">
+        <li class="background-color-1">
         {#if startdate}
             <IconCal date={longDate(startdate)} />
         {/if}
         </li>
         {#each topics as topic}
-        <li class="blue-on-green rounded">
+        <li class="background-color-2">
             <IconTopic {topic} />
         </li>
         {/each}
     </ul>
 </aside>
 
-<style>
+<style lang="scss">
     aside {
         margin-top: 0.2em;
     }
@@ -35,6 +35,7 @@
         flex-wrap: wrap;
         column-gap: 0.5rem;
         row-gap: 0.1rem;
+        padding: 0;
     }
     aside ul li {
         list-style: none;
