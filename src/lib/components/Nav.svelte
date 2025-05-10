@@ -6,8 +6,8 @@
 			title: 'Programma 2425'
 		},
 		{
-			href: '/data-driven-web/user-experience',
-			title: 'Sprint 10'
+			href: '/data-driven-web/pleasurable-ui',
+			title: 'Sprint 11'
 		},
 		{
 			href: '/meesterproef/final-sprint',
