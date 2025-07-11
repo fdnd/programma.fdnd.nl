@@ -3,7 +3,7 @@
 	$: navItems = [
 		{
 			href: '/',
-			title: 'Programma 2425'
+			title: 'Programma 2526'
 		},
 		{
 			href: '/data-driven-web/proof-of-concept',
