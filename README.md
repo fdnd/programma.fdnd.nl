@@ -1,7 +1,7 @@
 # FDND Programma
 It's our program website showing an overview of our curriculum divided in semesters and sprints.
 
-## Archiveren programma.fdnd.nl
+## Archive programma.fdnd.nl
 
 - [ ] branch aanmaken: _archive-program-2526_  
 - [ ] Modify app.html `<html class=“archive”>`  
