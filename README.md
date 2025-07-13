@@ -3,7 +3,7 @@ It's our program website showing an overview of our curriculum divided in semest
 
 ## Archive programma.fdnd.nl
 
-- [ ] branch aanmaken: _archive-program-2526_  
+- [ ] Derive new branch from `main`: _archive-program-2526_  
 - [ ] Modify app.html `<html class=“archive”>`  
 - [ ] Modify svelte.config.js
 
