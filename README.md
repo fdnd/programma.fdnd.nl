@@ -14,7 +14,7 @@ adapter-staticconst config = { 	kit: {
 };
 ```
 
-- [ ] `npm run build`  
+- [ ] Build static site: `npm run build`  
 - [ ] place files from `build` folder into the root folder, delete all other files
 - [ ] Add Netlify url pointing at the GitHub branch: _2526-programma-fdnd_
 - [ ] Add DNS pointer from Netlify url to _2526.programma.fdnd.nl_
