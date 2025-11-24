@@ -1,21 +1,27 @@
 <script>
-	import Heading from '$lib/components/Heading.svelte';
-	import SprintLink from '$lib/components/program/SprintLink.svelte';
+	import Heading from '$lib/components/Heading.svelte'
+	import SprintLink from '$lib/components/program/SprintLink.svelte'
 
-	export let semester, i;
+	let { semester, i = 0 } = $props()
+	const displayIndex = i + 1; // don't mutate i
 </script>
 
 <section class="semester green-on-blue">
 	<a href="/{semester.slug}">
-		<Heading title="Semester {++i}:" subtitle={semester.title} />
+		<Heading title={`Semester ${displayIndex}:`} subtitle={semester.title} />
 	</a>
 
 	<ol>
 		{#each semester.sprints as sprint, index}
-			<SprintLink {semester} {sprint} nextSprint={index !== semester.sprints.length ? semester.sprints[index + 1] : false} />
+			<SprintLink
+				{semester}
+				{sprint}
+				nextSprint={index !== semester.sprints.length - 1 ? semester.sprints[index + 1] : false}
+			/>
 		{/each}
 	</ol>
 </section>
+
 
 <style>
 	section.semester {
@@ -32,22 +38,6 @@
 			max-width: calc(100vw - 4rem);
 		}
 	}
-	:global(section.semester h2) {
-		font-size: 1.25rem;
-		line-height: 1.1;
-		margin-left: 1.25rem !important;
-	}
-    @media (max-width: 750px) {
-        :global(section.semester h2) {
-		font-size: 1.25rem;
-	}
-    }
-	:global(section.semester h2 > span) {
-		font-size: 0.6em;
-		letter-spacing: 0;
-		text-transform: uppercase;
-	}
-
 	section.semester > a {
 		text-decoration: none;
 		display: inline-block;

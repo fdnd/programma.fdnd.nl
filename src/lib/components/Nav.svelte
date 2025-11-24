@@ -1,6 +1,7 @@
 <script>
-	import { page } from '$app/stores';
-	$: navItems = [
+	import { page } from '$app/stores'
+
+	let navItems = [
 		{
 			href: '/',
 			title: 'Programma 2526'
@@ -14,6 +15,8 @@
 			title: 'Sprint 16'
 		},
 	]
+
+
 
 </script>
 

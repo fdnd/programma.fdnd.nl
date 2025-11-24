@@ -1,7 +1,7 @@
 <script>
     import Heading from '$lib/components/Heading.svelte'
 
-    export let forks
+    let { forks } = $props();
 </script>
 
 {#if forks}

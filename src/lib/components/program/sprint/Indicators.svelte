@@ -1,7 +1,7 @@
 <script>
 	import Heading from '$lib/components/Heading.svelte'
 
-	export let indicators
+	let { indicators } = $props();
 </script>
 
 {#if indicators && indicators.length > 0}
