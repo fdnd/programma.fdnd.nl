@@ -77,6 +77,18 @@ body {
     overflow-x:hidden;
 }
 
+body::before {
+    width: 160px;
+}
+body::after {
+    width: 160px;
+}
+@media (min-width:40em) {
+    body::before {
+        width: 350px !important;
+    }
+}
+
 h2 {
     margin-left:1.5rem
 }
@@ -93,6 +105,41 @@ footer nav h2 {
 
 ::marker {
     color: currentColor;
+}
+
+section {
+    padding: 1rem;
+}
+
+section.semester h2 {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    margin-left: 1.25rem !important;
+}
+@media (max-width: 750px) {
+    section.semester h2 {
+        font-size: 1.25rem;
+    }
+}
+section.semester h2 > span {
+    font-size: 0.6em;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+section h3 {
+    font-size: 1.2em;
+    margin-top: 3rem;
+    font-weight: normal;
+}
+
+section ul {
+    margin:0;
+    list-style:none !important;
+}
+
+section ul li {
+    list-style:none !important;
 }
 
 section a {

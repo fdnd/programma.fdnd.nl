@@ -1,5 +1,5 @@
 <script>
- export let date
+    let { date } = $props();
 </script>
 
 <svg

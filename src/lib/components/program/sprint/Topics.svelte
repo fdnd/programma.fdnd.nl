@@ -3,7 +3,7 @@
     import IconCal from '$lib/components/icons/Calendar.svelte'
     import IconTopic from '$lib/components/icons/Topic.svelte'
     
-    export let startdate, topics
+    let { startdate, topics } = $props();
 </script>
 
 <aside>

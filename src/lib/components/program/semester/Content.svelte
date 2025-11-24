@@ -1,5 +1,5 @@
 <script>
-    export let semester
+    let { semester } = $props();
 </script>
 
 <section class="blue-on-green pilled">

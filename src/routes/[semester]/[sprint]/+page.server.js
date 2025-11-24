@@ -47,7 +47,6 @@ async function getSprintNavigation (sprintNumber) {
 }
 
 function formatTasks({search: {repos}}){
-
     return repos.filter(repo => repo != null).map(({repo}) => {
         
         const topics = repo.repositoryTopics.edges
