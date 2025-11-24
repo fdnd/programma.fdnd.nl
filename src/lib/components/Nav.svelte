@@ -1,19 +1,22 @@
 <script>
-	import { page } from '$app/stores';
-	$: navItems = [
+	import { page } from '$app/stores'
+
+	let navItems = [
 		{
 			href: '/',
-			title: 'Programma 2425'
+			title: 'Programma 2526'
 		},
 		{
-			href: '/data-driven-web/connect-your-tribe',
-			title: 'Sprint 7'
+			href: '/static-web/look-and-feel',
+			title: 'Sprint 4'
 		},
 		{
-			href: '/meesterproef/free-space',
-			title: 'Sprint 19'
+			href: '/workflow-tooling-frameworks/dont-repeat-yourself',
+			title: 'Sprint 16'
 		},
 	]
+
+
 
 </script>
 
@@ -85,7 +88,7 @@
 	@media (max-width: 750px) {
 		:global(nav a.active) {
 			background-color: var(--turquoise);
-			color: var(--blueberry) !important;;
+			color: var(--blueberry) !important;
 		}
 	}
 

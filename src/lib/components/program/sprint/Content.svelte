@@ -2,7 +2,13 @@
 	import Heading from '$lib/components/Heading.svelte';
 	import Topics from './Topics.svelte';
 
-	export let title, sprintNumber, content, startdate, topics;
+	let {
+		title,
+		sprintNumber,
+		content,
+		startdate,
+		topics
+	} = $props();
 </script>
 
 <section class="rounded">
@@ -10,7 +16,7 @@
 	<Topics {startdate} {topics} />
 
 	<div>
-		{#if content}
+		{#if content.html}
 			{@html content.html}
 		{/if}
 	</div>

@@ -2,15 +2,15 @@
 	import Heading from '$lib/components/Heading.svelte';
 	import { prettyDate } from '$lib/utils/date';
 
-	export let semester, sprint, nextSprint;
+	let { semester, sprint, nextSprint } = $props();
 	const today = new Date();
 	const sprintDate = new Date(sprint.startdate);
 	let nextSprintDate = false;
 	if (nextSprint) {
 		nextSprintDate = new Date(nextSprint.startdate);
 	}
-	let active = today >= sprintDate;
-	let past = false;
+	let active = $state(today >= sprintDate);
+	let past = $state(false);
 	if (nextSprintDate && active) {
 		active = today < nextSprintDate;
 		past = today > nextSprintDate;

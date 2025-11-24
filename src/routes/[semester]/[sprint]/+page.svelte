@@ -5,10 +5,9 @@
     import Schedule from '$lib/components/program/sprint/Schedule.svelte';
     import SubNav from '$lib/components/program/sprint/SubNav.svelte';
   
-    export let data 
-    const { title, sprintNumber, startdate, content, weekPlans, topics, tasks, prevSprint, nextSprint, slug, semester, indicators } = data
+    let { data } = $props();
+    let { title, sprintNumber, startdate, content, weekPlans, topics, tasks, prevSprint, nextSprint, slug, semester, indicators } = data
 
-    
 </script>
 
 <div>
@@ -36,7 +35,7 @@
 </nav>
 
 <div class="api-endpoint">
-    <a href="https://programma.fdnd.nl/api/{semester.slug}/{slug}">JSON <span>endpoint: {title}</span></a>
+    <a href="/api/{semester.slug}/{slug}">JSON <span>endpoint: {title}</span></a>
 </div>
 
 <style> 
@@ -46,23 +45,6 @@
         gap: 1.5rem;
         margin-top: 1.5rem;
 	}
-    :global(section) {
-        padding: 1rem;
-    }
-
-    :global(section h3){
-        font-size: 1.2em;
-        margin-top: 3rem;
-        font-weight: normal;
-    }
-
-    :global(section ul) {
-        margin:0;
-        list-style:none !important;
-    }
-    :global(section ul li) {
-        list-style:none !important;
-    }
 
     @media (min-width:40em) {
         div {
@@ -119,9 +101,7 @@
         text-decoration:none;
         color: var(--blueberry);
     }
-    div.api-endpoint a span {
 
-    }
     div.api-endpoint a:after{
         display: none;
     }
