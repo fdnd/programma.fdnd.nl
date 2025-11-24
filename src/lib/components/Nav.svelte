@@ -85,7 +85,7 @@
 	@media (max-width: 750px) {
 		:global(nav a.active) {
 			background-color: var(--turquoise);
-			color: var(--blueberry) !important;;
+			color: var(--blueberry) !important;
 		}
 	}
 
