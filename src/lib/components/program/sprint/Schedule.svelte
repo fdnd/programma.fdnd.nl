@@ -2,7 +2,7 @@
 	import Heading from '$lib/components/Heading.svelte';
 	import { prettyDate, longDate } from '$lib/utils/date.js';
 
-	export let weekPlans;
+	let { weekPlans } = $props();
 
 	const checkKeywords = (content) => {
 		const strings = [

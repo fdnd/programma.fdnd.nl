@@ -1,7 +1,7 @@
 <script>
 	import Heading from '$lib/components/Heading.svelte';
 
-	export let criteria;
+	let { criteria } = $props();
 </script>
 
 {#if criteria}

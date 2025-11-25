@@ -9,8 +9,9 @@ export default function getQuerySprint(slug) {
           content {
             html
           }
-          criteria {
-            html
+          semester {
+            slug
+            title
           }
           weekPlans(first:100) {
             weekNumber
@@ -33,6 +34,13 @@ export default function getQuerySprint(slug) {
           }
           topics {
             name
+          }
+          indicators {
+            index
+            definition
+            criterium {
+              title
+            }
           }
         }
     }`

@@ -4,7 +4,7 @@
     import Tasks from '$lib/components/program/sprint/Tasks.svelte'
     import Schedule from '$lib/components/program/sprint/Schedule.svelte';
   
-    export let data 
+  let { data } = $props();
 
     const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks } = data
 </script>

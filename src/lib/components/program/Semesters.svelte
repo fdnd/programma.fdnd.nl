@@ -2,10 +2,9 @@
 	import Semester from '$lib/components/program/Semester.svelte';
 	import { onMount } from 'svelte';
 
-	export let semesters;
-	export let subtitle;
+	let { semesters, subtitle } = $props();
 
-	let jsEnabled = false;
+	let jsEnabled = $state(false);
 
 	function toggleDates({ target }) {
 		if (target.nodeName == 'INPUT') {
@@ -26,7 +25,7 @@
 				<h2 class="large-heading">{subtitle}</h2>
 
 				{#if jsEnabled}
-					<input type="checkbox" id="show-hide-dates" class="toggle" on:change={toggleDates} />
+					<input type="checkbox" id="show-hide-dates" class="toggle" onchange={toggleDates} />
 					<label for="show-hide-dates">
 						<span> Show/hide dates </span>
 					</label>

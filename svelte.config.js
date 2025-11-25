@@ -1,23 +1,16 @@
-/** @type {import('@sveltejs/kit').Config} */
-
-import adapter from '@sveltejs/adapter-auto'
+import adapter from '@sveltejs/adapter-auto';
 
 const config = {
-	kit: {
-		adapter: adapter()
-	}
+  kit: {
+    adapter: adapter(),
+    prerender: {
+      handleHttpError: ({ status, path, referrer, error }) => {
+        console.warn(`Prerender error on ${path}:`, error);
+        // return true to ignore the error and continue prerendering
+        return true;
+      }
+    }
+  }
 };
 
 export default config;
-
-// /** @type {import('@sveltejs/kit').Config} */
-
-// import staticAdapter from '@sveltejs/adapter-static'
-
-// const config = {
-// 	kit: {
-// 		adapter: staticAdapter()
-// 	}
-// };
-
-// export default config;

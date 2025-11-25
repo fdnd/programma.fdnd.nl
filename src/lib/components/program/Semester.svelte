@@ -1,8 +1,7 @@
 <script>
-	import Heading from '$lib/components/Heading.svelte';
 	import SprintLink from '$lib/components/program/SprintLink.svelte';
 
-	export let semester, i;
+	let { semester, i } = $props();
 </script>
 
 

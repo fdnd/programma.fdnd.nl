@@ -1,17 +1,18 @@
 <script>
-	import { page } from '$app/stores';
-	$: navItems = [
+	import { page } from '$app/stores'
+	
+	let navItems = [
 		{
 			href: '/',
-			title: 'Programma 2324'
+			title: 'Programma 2526'
 		},
 		{
-			href: '/data-driven-web/pleasurable-ui',
-			title: 'Sprint 11'
+			href: '/static-web/look-and-feel',
+			title: 'Sprint 4'
 		},
 		{
-			href: '/meesterproef/final-sprint',
-			title: 'Sprint 20'
+			href: '/workflow-tooling-frameworks/dont-repeat-yourself',
+			title: 'Sprint 16'
 		},
 	]
 </script>

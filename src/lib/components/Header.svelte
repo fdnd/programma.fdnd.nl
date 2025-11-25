@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte"
 
-    let isActive = false
+    let isActive = $state(false)
 
     onMount(() => {
         const menuTrigger = document.querySelector('.menu button')

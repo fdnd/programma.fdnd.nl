@@ -13,9 +13,14 @@ export const load = async ({params: {sprint}}) => {
     const dataSprint = await client({ query: querySprint, variables: { slug: sprint }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
     const dataTasks  = await client({ query: queryTasks, variables: { slug: sprint }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
     
-    if (dataTasks) {
+    console.log('SPRINT', dataSprint)
+    console.log('TASKS', dataTasks)
+    
+
+    if (dataTasks) {       
         const filteredTasks = dataTasks.search.repos.filter(task => task)
         const tasks = formatTasks(filteredTasks)
+
         return { ...dataSprint.sprint, tasks:tasks }
     }
     
