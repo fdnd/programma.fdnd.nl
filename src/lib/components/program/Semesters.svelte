@@ -1,9 +1,7 @@
 <script>
 	import Semester from '$lib/components/program/Semester.svelte';
-	import { onMount } from 'svelte';
 
-	export let semesters;
-	export let subtitle;
+	let { semesters, subtitle } = $props();
 </script>
 
 <section class="semesters-sprints">

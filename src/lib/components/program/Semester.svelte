@@ -2,7 +2,7 @@
 	import Heading from '$lib/components/Heading.svelte';
 	import SprintLink from '$lib/components/program/SprintLink.svelte';
 
-	export let semester, i, nextSemester;
+	let { semester, i, nextSemester } = $props();
 </script>
 
 <div class="semester">
@@ -32,10 +32,10 @@
 		--box-shadow-color: color-mix(in oklch, var(--accent-color-1) 30%, transparent);
 		box-shadow: -0.25rem 0.25rem 0 0 var(--box-shadow-color);
 		transition: box-shadow 0.2s ease-out;
-		&:has(ol li.active) {
+		&:has(:global(ol li.active)) {
 			--box-shadow-color: var(--accent-color-1);
 		}
-		&:has(.semester-link:hover) {
+		&:has(:global(.semester-link:hover)) {
 			box-shadow: -0.5rem 0.5rem 0 0 var(--box-shadow-color);
 		}
 		@media (max-width: 750px) {

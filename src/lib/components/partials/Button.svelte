@@ -1,15 +1,18 @@
 <script>
-	export let color = 'accent-1';
-	export let type = 'full-color';
-	export let href = '#';
-	export let label = 'Button';
-	export let target = null;
-	export let rel = null;
+	let {
+		color = 'accent-1',
+		type = 'full-color',
+		href = '#',
+		label = 'Button',
+		target = null,
+		rel = null,
+		children
+	} = $props();
 </script>
 
 <a class="button is-{color} is-{type}" {href} {target}>
 	<span>
-		<slot />
+		{@render children?.()}
 	</span>
 </a>
 

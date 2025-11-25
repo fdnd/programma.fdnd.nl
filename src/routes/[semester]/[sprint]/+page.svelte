@@ -5,7 +5,7 @@
 	import Schedule from '$lib/components/program/sprint/Schedule.svelte';
 	import Button from '$lib/components/partials/Button.svelte';
 	import StudentWorks from '$lib/components/program/sprint/StudentWorks.svelte';
-	export let data;
+	let { data } = $props();
 	const {
 		title,
 		sprintNumber,
@@ -31,7 +31,6 @@
 
 <Schedule {weekPlans} />
 
-<!-- Subnavigatie: Navigeer naar de vorige of volgende sprint  -->
 <div class="button-row nav">
 	{#if prevSprint}
 		<Button href="/{prevSprint.semester.slug}/{prevSprint.slug}">

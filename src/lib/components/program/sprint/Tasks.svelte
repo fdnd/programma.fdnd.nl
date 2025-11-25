@@ -3,8 +3,8 @@
 	import Heading from '$lib/components/Heading.svelte';
 	import IconStar from '$lib/components/icons/Star.svelte';
 	import Task from './Task.svelte';
-	export let tasks;
-	export let stargazer = false;
+	
+	let { tasks, stargazer = false } = $props();
 	if (tasks) {
 		tasks.forEach((task) => {
 			if (!stargazer && task && task.forks.length > 0) {

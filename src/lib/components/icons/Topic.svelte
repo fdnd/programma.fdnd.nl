@@ -1,5 +1,5 @@
 <script>
-    export let topic
+    let { topic } = $props();
 </script>
 
 <svg

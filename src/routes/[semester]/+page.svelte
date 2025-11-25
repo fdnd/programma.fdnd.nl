@@ -1,9 +1,8 @@
 <script>
-	import Heading from '$lib/components/Heading.svelte';
-	import Content from '$lib/components/program/semester/Content.svelte';
-	import Semester from '$lib/components/program/Semester.svelte';
-	import Button from '$lib/components/partials/Button.svelte';
-	export let data;
+	import Content from '$lib/components/program/semester/Content.svelte'
+	import Semester from '$lib/components/program/Semester.svelte'
+	import Button from '$lib/components/partials/Button.svelte'
+    let { data } = $props();
 
 	const semester = data;
 </script>

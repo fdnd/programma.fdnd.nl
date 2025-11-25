@@ -1,5 +1,5 @@
 <script>
-	export let task;
+	let { task } = $props();
 </script>
 
 <div class="task">
@@ -28,7 +28,7 @@
 		transition: 0.4s ease-out background;
 		padding: 0.2em 0.4em;
 		background-color: color-mix(in oklch, var(--accent-color-1) 50%, transparent);
-		&:has(a):hover,
+		&:has(:global(a)):hover,
 		&:focus-within {
 			background-color: var(--accent-color-1);
 			small {

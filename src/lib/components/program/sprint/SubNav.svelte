@@ -1,5 +1,5 @@
 <script>
- export let prevSprint, nextSprint
+  let { prevSprint, nextSprint } = $props();
 </script>
 
 <!-- Subnavigatie: Navigeer naar de vorige of volgende sprint  -->

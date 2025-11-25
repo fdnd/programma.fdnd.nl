@@ -1,5 +1,5 @@
 <script>
-	export let semester;
+	let { semester } = $props();
 </script>
 
 <div class="content-block">
