@@ -3,11 +3,12 @@
 	import SprintLink from '$lib/components/program/SprintLink.svelte';
 
 	let { semester, i, nextSemester } = $props();
+	const displayIndex = i + 1; // don't mutate i
 </script>
 
 <div class="semester">
 	<a class="semester-link" href="/{semester.slug}">
-		<Heading title="Semester {++i}:" subtitle={semester.title} />
+		<Heading title="Semester ${displayIndex}:" subtitle={semester.title} />
 	</a>
 
 	<ol>
