@@ -76,7 +76,6 @@
 	
 	@media (max-width: 870px) {
 		.nav-list {
-			flex-grow: 1;
 			padding-right: 1.25rem;
 		}
 		.nav-list::after {

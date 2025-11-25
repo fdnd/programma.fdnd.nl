@@ -12,13 +12,6 @@
 			een ander specifiek doel.
 		</p>
 
-		<ul>
-			<!-- <li><a href="https://2122.programma.fdnd.nl">Programma 2122</a></li> -->
-			<li><a href="https://2223.programma.fdnd.nl">Programma 2022-2023</a></li>
-			<li><a href="https://2324.programma.fdnd.nl">Programma 2023-2024</a></li>
-			<li><a href="https://2425.programma.fdnd.nl">Programma 2024-2025</a></li>
-		</ul>
-		
 		<div class="button-row">
 			<Button href="https://fdnd.nl" color="dark">
 				<span>
@@ -52,6 +45,35 @@
 			</Button>
 		</div>
 	</div>
+
+	<h2 class="small-heading">FDND programma archief</h2>
+	<p>Het programma van FDND in voorgaande jaren.</p>
+
+	<div class="button-row">
+		<Button href="https://2223.programma.fdnd.nl" color="dark"	>
+			<span>
+				Programma 2022-2023
+			</span>
+		</Button>
+		<Button href="https://2324.programma.fdnd.nl" color="dark"	>
+			<span>
+				Programma 2023-2024
+			</span>
+		</Button>
+		<Button href="https://2425.programma.fdnd.nl" color="dark"	>
+			<span>
+				Programma 2024-2025
+			</span>
+		</Button>
+
+		<!-- <ul>
+				<li><a href="https://2223.programma.fdnd.nl">Programma 2022-2023</a></li>
+				<li><a href="https://2324.programma.fdnd.nl">Programma 2023-2024</a></li>
+				<li><a href="https://2425.programma.fdnd.nl">Programma 2024-2025</a></li>
+		</ul> -->
+	</div>
+	
+
 	<div class="footer-bottom">
 		<CreatingTomorrow />
 		<a class="insta" href="https://www.instagram.com/fdnd.nl/">
@@ -107,5 +129,23 @@ footer :global(.button)	 {
 .acknowledgements {
   list-style: none;
   font-size: .7rem;
+}
+
+.archive {
+	margin: var(--padding-top) 0;
+}
+div {
+	display:flex;
+	flex-direction: column;
+}
+
+div.button-row {
+	display:flex;
+	flex-direction: row;
+	margin-bottom: var(--padding-top);
+}
+
+p {
+	max-width:55ch;
 }
 </style>
