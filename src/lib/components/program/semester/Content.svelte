@@ -1,24 +1,31 @@
 <script>
-    let { semester } = $props();
+	let { semester } = $props();
 </script>
 
-<section class="blue-on-green pilled">
-    <h3>Leerresultaat</h3>
-    {@html semester.goal.html}
-</section>
+<div class="content-block">
+	<h3 class="small-heading">Leerresultaat</h3>
+	<div class="p small-body">
+		{@html semester.goal.html}
+	</div>
+</div>
 
-<section class="blue-on-purple pilled">
-    <h3>Inhoud</h3>
-    {@html semester.content.html}
-</section>
+<div class="content-block">
+	<h3 class="small-heading">Inhoud</h3>
+	<div class="p small-body">
+		{@html semester.content.html}
+	</div>
+</div>
 
-<style>
-    section {
-        margin-bottom: 2rem;
-        padding:1rem;
-    }
-    h3 {
-        margin:0 0 .5rem
-    }
+<style lang="scss">
+	.content-block {
+		--accent-color: var(--accent-color-1);
+		padding: 2rem;
+		border-radius: var(--radius);
+		background-color: var(--background);
+		border: 1px solid var(--color);
+		box-shadow: -0.25rem 0.25rem 0 0 var(--accent-color);
+		@media (max-width: 750px) {
+			padding: 1.5rem 1rem;
+		}
+	}
 </style>
-

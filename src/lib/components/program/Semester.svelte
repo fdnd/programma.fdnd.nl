@@ -2,13 +2,13 @@
 	import Heading from '$lib/components/Heading.svelte'
 	import SprintLink from '$lib/components/program/SprintLink.svelte'
 
-	let { semester, i = 0 } = $props()
+	let { semester, i, nextSemester } = $props();
 	const displayIndex = i + 1; // don't mutate i
 </script>
 
-<section class="semester green-on-blue">
-	<a href="/{semester.slug}">
-		<Heading title={`Semester ${displayIndex}:`} subtitle={semester.title} />
+<div class="semester">
+	<a class="semester-link" href="/{semester.slug}">
+		<Heading title="Semester ${displayIndex}:" subtitle={semester.title} />
 	</a>
 
 	<ol>
@@ -16,53 +16,63 @@
 			<SprintLink
 				{semester}
 				{sprint}
-				nextSprint={index !== semester.sprints.length - 1 ? semester.sprints[index + 1] : false}
+				{nextSemester}
+				nextSprint={index !== semester.sprints.length ? semester.sprints[index + 1] : false}
 			/>
 		{/each}
 	</ol>
-</section>
+</div>
 
-
-<style>
-	section.semester {
-		margin: 0 1.5rem 0 0;
+<style lang="scss">
+	.semester {
 		scroll-snap-align: start;
-		padding: 0;
-		border: none;
-		scroll-margin: 1rem;
-	}
-
-	@media (max-width: 750px) {
-		section.semester {
-			width: 100%;
-			max-width: calc(100vw - 4rem);
-		}
-	}
-	section.semester > a {
-		text-decoration: none;
-		display: inline-block;
-		margin: 0 0 0.5rem;
-	}
-	
-	section.semester > a:focus {
-		color: var(--blueberry);
-	}
-	ol {
-		border: 1px var(--turquoise) solid;
-		border-radius: var(--rounded);
-		list-style: none;
-		margin: 1rem .25rem 0;
+		scroll-margin: calc(var(--padding-side) + 1rem);
 		padding: 1rem;
-		width: 100%;
-	}
-	@media (min-width: 50rem) {
-		section.semester {
-			scroll-margin: 2rem;
+		border: 1px solid currentColor;
+		border-radius: var(--radius);
+		--box-shadow-color: color-mix(in oklch, var(--accent-color-1) 30%, transparent);
+		box-shadow: -0.25rem 0.25rem 0 0 var(--box-shadow-color);
+		transition: box-shadow 0.2s ease-out;
+		&:has(:global(ol li.active)) {
+			--box-shadow-color: var(--accent-color-1);
 		}
-	}
-	@media (min-width: 25em) {
+		&:has(:global(.semester-link:hover)) {
+			box-shadow: -0.5rem 0.5rem 0 0 var(--box-shadow-color);
+		}
+		@media (max-width: 750px) {
+			width: 100%;
+			max-width: calc(100vw - 3rem);
+		}
+		@media (max-width: 500px) {
+			min-width: calc(100vw - 4rem);
+		}
+		:global(h2) {
+			font-size: 1.25rem;
+			line-height: 1.1;
+			@media (max-width: 750px) {
+				font-size: 1.25rem;
+			}
+		}
+		:global(h2 > span) {
+			font-size: 0.6em;
+			letter-spacing: 0;
+			text-transform: uppercase;
+		}
+		a {
+			text-decoration: none;
+			display: inline-block;
+		}
 		ol {
-			width: 21rem;
+			display: flex;
+			flex-direction: column;
+			list-style-type: '';
+			gap: 0.3rem;
+			padding: 0;
+			margin-top: 1rem;
+			min-width: 21rem;
+			@media (max-width: 500px) {
+				min-width: 0;
+			}
 		}
 	}
 </style>

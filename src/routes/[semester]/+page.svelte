@@ -1,53 +1,76 @@
 <script>
-    import Heading from '$lib/components/Heading.svelte'
-    import Content from '$lib/components/program/semester/Content.svelte'
-    import SprintLink from '$lib/components/program/SprintLink.svelte'
+	import Content from '$lib/components/program/semester/Content.svelte'
+	import Semester from '$lib/components/program/Semester.svelte'
+	import Button from '$lib/components/partials/Button.svelte'
+  let { data } = $props();
 
-    let { data } = $props()
-
-    let semester = data
+	const semester = data;
 </script>
 
 <div>
-    <section>
-        <Heading title="Semester" subtitle={semester.title} />
-        <div>
-            <Content {semester} />
-            <section class="green-on-blue pilled">
-                <h3>Sprints</h3>
-                <ol>
-                {#each semester.sprints as sprint}
-                    <SprintLink {semester} {sprint} />
-                {/each}
-                </ol>
-            </section>
-        </div>
-    </section>
+	<section class="semester-detail">
+    <div class="top">
+      <h1 class="medium-heading">Semester {semester.title}</h1>
+      <Button href="/">Terug naar programma</Button>  
+    </div>
+		<div>
+      <div class="content">
+        <Content {semester} />
+      </div>
+      <div class="sprint-info">
+        <h3 class="medium-heading">
+          Sprints
+        </h3>
+        <Semester {semester} i="0" nextSemester={ false } />
+      </div>
+		</div>
+	</section>
 </div>
 
-<style> 
-    ol {
-        margin:0;
+<style lang="scss">
+	.semester-detail {
+		padding: var(--padding-top) var(--padding-side);
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--gap);
+      
+      @media (max-width: 750px) { 
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
-    section {
-        margin-top: 2rem;
-        padding:1rem;
+    .content {
+      margin-top: var(--padding-top);
+      display: flex;
+      gap: var(--gap);
+      
+      @media (max-width: 750px) {
+        flex-direction: column;
+      }
     }
 
-    section h3 {
-        margin:0 0 1rem 
-    }
+    .sprint-info {
+      margin-top: var(--padding-top);
+      max-width: 800px;
 
-    section > div {
-        margin:2rem -1rem;
-    }
-    section > div section {
-        margin:0;
-    }
+      h3 {
+        margin-bottom: var(--padding-top);
+      }
 
-    div {
-        max-width: 40em;
+      :global(ol li) {
+        opacity: 1 !important;
+      }
+
+      :global(ol li time) {
+        text-decoration: none !important;
+      }
     }
+	}
 </style>
-  

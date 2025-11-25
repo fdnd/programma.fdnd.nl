@@ -1,12 +1,6 @@
 <script>
   import IconLink from '$lib/components/icons/Link.svelte'
-  /**
-   * @typedef {Object} Props
-   * @property {any} title
-   * @property {string} [subtitle]
-   */
-
-  /** @type {Props} */
+  
   let { title, subtitle = '' } = $props();
   let id = title
     .replace(/[^\w\s]/gi, '')

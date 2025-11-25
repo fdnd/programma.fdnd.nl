@@ -75,37 +75,73 @@
 </script>
 
 {#if weekPlans && weekPlans.length > 0}
-	<section>
-		<Heading title="Sprint planning" />
-		{#each plans as week, i}
-			<div class="week-container">
-				<h3>Week {i + 1}</h3>
-				<div class="week">
-					{#each week as day, i}
-						<div class="day day--{day.weekDay}">
-							<h4 class="weekday">
-								{day.weekDay} <span>{prettyDate(day.date)}</span>
-							</h4>
-							<div data-label="{day.weekDay} {prettyDate(day.date)}">{@html day.content}</div>
-						</div>
-					{/each}
+	<section class="schedule">
+		<h2 class="medium-heading">Sprint planning</h2>
+		<div class="weeks">
+			{#each plans as week, i}
+				<h3 class="large-body">Week {i + 1}</h3>
+				<div class="week-container">
+					<div class="week">
+						{#each week as day, i}
+							<div class="day day--{day.weekDay}">
+								<h4 class="weekday xsmall-body caps">
+									{day.weekDay} <span>{prettyDate(day.date)}</span>
+								</h4>
+								<div data-label="{day.weekDay} {prettyDate(day.date)}" class="p small-body">
+									{@html day.content}
+								</div>
+							</div>
+						{/each}
+					</div>
 				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</section>
 {/if}
 
-<style>
-	section {
-		padding: 0;
-		margin: 1rem 0 0;
+<style lang="scss">
+	.schedule {
+		overflow-x: auto;
+		max-width: 100vw;
+		@media (max-width: 750px) {
+			overflow: visible;
+		}
+		h2 {
+			position: sticky;
+			left: 0;
+			padding: var(--padding-top) var(--padding-side) 0;
+			max-width: var(--max-width);
+			margin: 0 auto;
+		}
 	}
 
-	section > :global(h2) {
-		padding-left: 1rem;
+	.weeks {
+		padding: 2rem var(--padding-side) 1rem;
+		min-width: max-content;
+		margin: 0 auto;
+		@media (max-width: 750px) {
+			width: 100%;
+			min-width: unset;
+		}
 	}
+
 	.week-container {
-		padding: 0 1rem 2rem;
+		padding: 0 0 2rem;
+	}
+
+	.week {
+		container-name: week;
+		display: flex;
+		width: max-content;
+		gap: 1rem;
+		@media (max-width: 750px) {
+			border: 1px solid currentColor;
+			box-shadow: -0.25rem 0.25rem 0 var(--accent-color-1);
+			padding: 1rem;
+			border-radius: var(--radius);
+			flex-direction: column;
+			width: 100%;
+		}
 	}
 
 	.week + .week {
@@ -120,129 +156,79 @@
 	}
 
 	.weekday {
-		position: sticky;
-		top: 0;
-		z-index: 1;
-		font-size: 1.125rem;
-		width: 100%;
-		text-transform: uppercase;
-		margin: 0;
-		padding: 0.5rem 0;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-		background: var(--blueberry);
-	}
-	.day div {
-		margin-left: -1rem;
-		/* word-wrap: break-word; */
-  		/* overflow-wrap: break-word; */
-		hyphens: auto;
-		hyphenate-limit-chars: 6 3 3;
-		hyphenate-limit-lines: 2;   
-		hyphenate-limit-last: always;
-		hyphenate-limit-zone: 6%;
-		text-wrap: balance;
-		text-wrap: pretty;
+		text-align: right;
+		@media (max-width: 750px) {
+			text-align: left;
+		}
 	}
 
-	.day + .day {
-		margin-top: 1rem;
-	}
-	.day :global(p) {
-		--border: var(--white);
-		position: relative;
-		font-size: 1rem;
-		padding-left: 1rem;
-	}
-	.day :global(p::before) {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		border-radius: 1rem;
-		width: 4px;
-		height: 100%;
-		background-color: var(--border);
-		opacity: 1;
-	}
-
-	.day :global(.sprintplanning) {
-		--border: var(--lavender);
-	}
-	.day :global(.workshop) {
-		--border: var(--turquoise);
-	}
-	.day :global(.opdrachtgever),
-	.day :global(.code-review),
-	.day :global(.review),
-	.day :global(.retrospect),
-	.day :global(.kickoff),
-	.day :global(.wrap-up) {
-		--border: var(--call-to-action);
-	}
-
-	@media (min-width: 40rem) {
-		section > :global(h2) {
+	.day {
+		aspect-ratio: 1;
+		border-radius: 0.5rem;
+		border: 1px solid currentColor;
+		width: max(270px, 14.5cqw);
+		padding: 1rem;
+		box-shadow: -0.25rem 0.25rem 0 var(--accent-color-1);
+		@media (max-width: 750px) {
+			width: 100%;
+			height: auto;
+			aspect-ratio: unset;
+			border: 0;
+			box-shadow: none;
+			padding: 0;
+		}
+		div {
+			hyphens: auto;
+			text-wrap: balance;
+			text-wrap: pretty;
+		}
+		@media (max-width: 750px) {
+			& + .day {
+				margin-top: 1rem;
+			}
+		}
+		:global(p) {
+			position: relative;
+			--border: var(--color);
 			padding-left: 1rem;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 4px;
+				height: 100%;
+				border-radius: 2px;
+				background-color: var(--border);
+			}
 		}
-		.day div {
-			margin-left: 0;
+		:global(p + p) {
+			margin-top: 0.5rem;
 		}
-	}
-	@media (min-width: 50rem) {
-		section > :global(h2) {
-			padding-left: 2rem;
+		:global(p::before) {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 1rem;
+			width: 4px;
+			height: 100%;
+			opacity: 1;
 		}
-		section {
-			margin: 1rem -1rem;
+		:global(.sprintplanning) {
+			--border: var(--accent-color-1);
 		}
-	}
-	@media (min-width: 47rem) {
-		.week-container {
-			overflow-x: auto;
-			padding: 2rem 1rem 2rem;
+		:global(.workshop) {
+			--border: var(--accent-color-2);
 		}
-		.week {
-			display: flex;
-			width: max-content;
-			gap: 1rem;
-		}
-		h3 {
-			margin-left: 1rem;
-		}
-		.day {
-			aspect-ratio: 1;
-			border-radius: 0.5rem;
-			border: 1px solid var(--turquoise);
-			width: max(270px, calc(100vw / 24 * 4));
-			padding: 1rem;
-			box-shadow: -4px 4px var(--turquoise);
-		}
-		.day + .day {
-			margin-top: 0;
-		}
-		.weekday {
-			text-align: right;
-			margin: 0 0 1rem;
-			border: none;
+		:global(.opdrachtgever),
+		:global(.code-review),
+		:global(.review),
+		:global(.retrospect),
+		:global(.kickoff),
+		:global(.wrap-up) {
+			--border: var(--accent-color-3);
 		}
 	}
-	@media (min-width: 90rem) {
-		/* 1440px */
-		section > :global(h2) {
-			padding-left: 1rem;
-		}
-		section {
-			margin: 2rem 0;
-		}
-		.week-container {
-			overflow: visible;
-			padding: 1rem 0 0;
-		}
-		.week-container + .week-container {
-			padding: 2rem 0 0;
-		}
-		.day {
-			width: calc((var(--max-width) - 4rem) / 5);
-		}
-	}
+
 </style>
