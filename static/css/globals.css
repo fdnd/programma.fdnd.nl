@@ -26,7 +26,11 @@
     --radius: 0.5rem;
 
     --calc-side: calc((100vw - var(--max-width)) / 2);
+}
 
+html.archive {
+    --purple:#ccc;
+    --green:#ddd;
 }
 
 @media (max-width: 750px) {

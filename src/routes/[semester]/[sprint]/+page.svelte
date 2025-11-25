@@ -5,6 +5,7 @@
     import Schedule from '$lib/components/program/sprint/Schedule.svelte';
   
     export let data 
+
     const {title, sprintNumber, startdate, content, criteria, weekPlans, topics, tasks } = data
 </script>
 

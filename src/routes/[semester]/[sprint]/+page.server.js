@@ -1,11 +1,3 @@
-// destructuring
-// spread operator
-// short circuit && ||
-// single responsibility principle:functions
-// if / else (nested) , ofwel gebruik een guard clause?!
-// custom props
-
-
 import { client }     from '$lib/utils/client'
 import getQuerySprint from '$lib/queries/sprint'
 import {headersGitHub, getQueryTasks}  from '$lib/queries/tasks'
@@ -22,41 +14,45 @@ export const load = async ({params: {sprint}}) => {
     const dataTasks  = await client({ query: queryTasks, variables: { slug: sprint }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
     
     if (dataTasks) {
-        const tasks = formatTasks(dataTasks, sprint)
+        const filteredTasks = dataTasks.search.repos.filter(task => task)
+        const tasks = formatTasks(filteredTasks)
         return { ...dataSprint.sprint, tasks:tasks }
     }
     
     return { ...dataSprint.sprint }
 }
 
-function formatTasks({search: {repos}}){
-    return repos.map(({repo}) => {
-      const topics = repo.repositoryTopics.edges
-                        .map(topic => topic.node.topic.name)
-                        .filter(topic => topic == 'task' || topic == 'subtask')
-      
-      return {
-        name: formatName(repo.name),
-        description: repo.description,
-        url: repo.url,
-        forkCount: repo.forkCount,
-        forks: formatForks(repo),
-        topic: topics[0]
-      }
+function formatTasks(repos){
+    return repos.map((repo) => {
+        const topics = repo.repo.repositoryTopics.edges
+        .map(topic => topic.node.topic.name)
+        .filter(topic => topic == 'task' || topic == 'subtask')
+    
+        return {
+            name: formatName(repo.name),
+            description: repo.description,
+            url: repo.url,
+            forkCount: repo.forkCount,
+            forks: repo.forks && formatForks(repo),
+            topic: topics[0]
+        }
     })
 }
 
 function formatName (name) {
+    if(!name) return undefined
     if(!prefix) return name.split(`${prefix}-`).pop().replace(/-/g, " ")
     
     return name.replace(/-/g, " ")
 }
 
-function formatForks({forks}) {
+function formatForks(repo) {
+    if(!repo && !repo.forks && !repo.forks.nodes) return undefined
+
     const ghBaseUrl = 'https://github.com'
     const ghPagesBaseURL = 'github.io'
     
-    return forks.nodes.filter(node => {
+    return repo.forks.nodes.filter(node => {
         return node.stargazerCount > 0
     }).map(fork => {
         const pagesUrl = `https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`

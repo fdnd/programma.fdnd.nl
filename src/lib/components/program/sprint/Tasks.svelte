@@ -7,7 +7,7 @@
 	export let stargazer = false;
 	if (tasks) {
 		tasks.forEach((task) => {
-			if (!stargazer && task && task.forks.length > 0) {
+			if (!stargazer && task.forks && task.forks.length > 0) {
 				stargazer = true;
 			}
 		});
@@ -69,7 +69,6 @@
 						{#if task.forks && task.forks.length > 0}
 							{#each task.forks as fork}
 								<div class="cta  {stargazer ? 'stargazer' : ''}">
-						
 									<div class="repo">
 										<span class="repo-title">{fork.title}</span>
 										<IconStar stargazerCount={fork.stargazerCount} />

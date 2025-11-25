@@ -66,8 +66,8 @@
 
         <ul style="--total: 4;">
             <li style="--i: 1;"><a href="/">Programma 2324</a></li>
-            <li style="--i: 2;"><a href="/design-challenge">Sprint 11</a></li>
-            <li style="--i: 3;"><a href="/stage">Sprint 20</a></li>
+            <li style="--i: 2;"><a href="/">Sprint 11</a></li>
+            <li style="--i: 3;"><a href="/">Sprint 20</a></li>
         </ul>
     </nav>
 </header>
