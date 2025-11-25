@@ -142,7 +142,7 @@ div {
 div.button-row {
 	display:flex;
 	flex-direction: row;
-	margin-bottom: var(--padding-top);
+	margin-bottom: calc(2 * var(--padding-top));
 }
 
 p {
