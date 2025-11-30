@@ -28,11 +28,11 @@
 {#if sprint.sprintNumber}
 	<li class:active class:past>
 		<a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
-			<span class="sprint-nr xsmall-body caps">Sprint {sprint.sprintNumber}:</span>
-			<strong class="small-body">{sprint.title}</strong>
+			<span class="sprint-nr caps">Sprint {sprint.sprintNumber}:</span>
+			<strong>{sprint.title}</strong>
 		</a>
 
-		<time class="background-color-1 small-tag">
+		<time class="small-tag">
 			{#if sprint.startdate}
 				{prettyDate(sprint.startdate)}
 			{/if}
@@ -40,8 +40,8 @@
 	</li>
 {:else}
 	<li class="extra" class:active class:past>
-		<span class="xsmall-body caps">{sprint.title}</span>
-		<time class="background-color-1 small-tag">
+		<span class="caps">{sprint.title}</span>
+		<time class="small-tag">
 			{#if sprint.startdate}
 				{prettyDate(sprint.startdate)}
 			{/if}
@@ -57,21 +57,18 @@
 		align-items: first baseline;
 		gap: 0.25rem;
 		border-radius: 0.25rem;
-		border: 1px solid var(--accent-color-1);
 		transition: 0.1s ease-out background;
-		padding: 0.2em 0.4em;
+		padding: 0.2em 0;
 		&:has(:global(a)):hover,
 		&:focus-within {
 			background-color: var(--accent-color-1);
-			time {
-				background-color: var(--background);
-			}
+			padding: 0.2em 0.4em;
+			margin: 0 -0.4em;
 		}
 		&.active {
 			background-color: var(--accent-color-1);
-			time {
-				background-color: var(--background);
-			}
+			padding: 0.2em 0.4em;
+			margin: 0 -0.4em;
 		}
 		a {
 			text-decoration: none;
@@ -95,13 +92,5 @@
 	}
 	.sprint-nr {
 		display: block;
-	}
-
-	.extra {
-		background-color: var(--accent-color-1);
-		@supports (color: color-mix(in oklch, var(--accent-color-1) 10%, transparent)) {
-			background-color: color-mix(in oklch, var(--accent-color-1) 30%, transparent);
-			border-color: transparent;
-		}
 	}
 </style>

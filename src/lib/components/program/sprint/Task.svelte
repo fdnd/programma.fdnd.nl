@@ -8,7 +8,7 @@
 			{task.name}
 		</strong>
 	</a>
-	<small class="background-color-1 small-tag">
+	<small class="small-tag">
 		{task.forkCount} forks
 	</small>
 	<p class="xsmall-body">
@@ -25,15 +25,13 @@
 		align-items: first baseline;
 		gap: 0.25rem;
 		border-radius: 0.25rem;
-		transition: 0.4s ease-out background;
-		padding: 0.2em 0.4em;
-		background-color: color-mix(in oklch, var(--accent-color-1) 50%, transparent);
+
+		padding: 0.2em 0;
 		&:has(:global(a)):hover,
 		&:focus-within {
+			padding: 0.2em 0.4em;
+			margin:0 -0.4em;
 			background-color: var(--accent-color-1);
-			small {
-				background-color: var(--background);
-			}
 		}
 
     strong {

@@ -8,7 +8,7 @@
 
 <div class="semester">
 	<a class="semester-link" href="/{semester.slug}">
-		<Heading title="Semester ${displayIndex}:" subtitle={semester.title} />
+		<Heading title="Semester {displayIndex}" subtitle={semester.title} />
 	</a>
 
 	<ol>
@@ -31,7 +31,6 @@
 		border: 1px solid currentColor;
 		border-radius: var(--radius);
 		--box-shadow-color: color-mix(in oklch, var(--accent-color-1) 30%, transparent);
-		box-shadow: -0.25rem 0.25rem 0 0 var(--box-shadow-color);
 		transition: box-shadow 0.2s ease-out;
 		&:has(:global(ol li.active)) {
 			--box-shadow-color: var(--accent-color-1);

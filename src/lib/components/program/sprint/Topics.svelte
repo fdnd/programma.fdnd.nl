@@ -9,13 +9,13 @@
 <aside>
     <h3>Topics</h3>
     <ul>
-        <li class="background-color-1">
+        <li>
         {#if startdate}
             <IconCal date={longDate(startdate)} />
         {/if}
         </li>
         {#each topics as topic}
-        <li class="background-color-2">
+        <li class="topic">
             <IconTopic {topic} />
         </li>
         {/each}
@@ -45,5 +45,8 @@
         border-radius:.5rem;
         line-height:1.5;
         display:flex;
+    }
+    .topic {
+        background-color: color-mix(in oklch, var(--accent-color-1) 50%, transparent);
     }
 </style>

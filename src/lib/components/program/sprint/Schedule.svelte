@@ -132,14 +132,15 @@
 	.week {
 		container-name: week;
 		display: flex;
+		flex-direction: column;
 		width: max-content;
 		gap: 1rem;
-		@media (max-width: 750px) {
+		@media (min-width: 750px) {
 			border: 1px solid currentColor;
-			box-shadow: -0.25rem 0.25rem 0 var(--accent-color-1);
+			// box-shadow: -0.25rem 0.25rem 0 var(--accent-color-1);
 			padding: 1rem;
 			border-radius: var(--radius);
-			flex-direction: column;
+			flex-direction: row;
 			width: 100%;
 		}
 	}
