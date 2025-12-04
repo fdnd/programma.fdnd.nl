@@ -1,14 +1,7 @@
 <script>
 	import Task from './Task.svelte';
 	
-	let { tasks, stargazer = false } = $props();
-	if (tasks) {
-		tasks.forEach((task) => {
-			if (!stargazer && task && task.forks.length > 0) {
-				stargazer = true;
-			}
-		});
-	}
+	let { tasks } = $props();
 </script>
 
 {#if tasks && tasks.length > 0}

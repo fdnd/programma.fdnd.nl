@@ -15,19 +15,6 @@ export function getQueryTasks(slug) {
               description
               url
               forkCount
-              forks(orderBy: {field: STARGAZERS, direction: DESC}, first: 100) {
-                nodes {
-                  stargazerCount
-                  name
-                  owner {
-                    id
-                    login
-                    url
-                    avatarUrl
-                  }
-                  homepageUrl
-                }
-              }
               repositoryTopics(first: 100) {
                 edges {
                   node {

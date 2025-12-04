@@ -8,7 +8,7 @@
 
 <div class="semester">
 	<a class="semester-link" href="/{semester.slug}">
-		<Heading title="Semester ${displayIndex}:" subtitle={semester.title} />
+		<Heading title="Semester {displayIndex}:" subtitle={semester.title} />
 	</a>
 
 	<ol>

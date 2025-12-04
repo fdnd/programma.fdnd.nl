@@ -4,7 +4,7 @@
 	import Tasks from '$lib/components/program/sprint/Tasks.svelte';
 	import Schedule from '$lib/components/program/sprint/Schedule.svelte';
 	import Button from '$lib/components/partials/Button.svelte';
-	import StudentWorks from '$lib/components/program/sprint/StudentWorks.svelte';
+	
 	let { data } = $props();
 	const {
 		title,
@@ -27,7 +27,6 @@
 	<Indicators {indicators} />
 	<Tasks {tasks} />
 </div>
-<StudentWorks {tasks} />
 
 <Schedule {weekPlans} />
 
