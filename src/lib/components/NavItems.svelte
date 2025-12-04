@@ -6,13 +6,13 @@
 			title: 'Programma 2526'
 		},
 		{
-			href: '/static-web/look-and-feel',
-			title: 'Sprint 4'
+			href: '/static-web/fix-the-flow',
+			title: 'Sprint 5'
 		},
 		{
-			href: '/workflow-tooling-frameworks/dont-repeat-yourself',
-			title: 'Sprint 16'
-		}
+			href: '/workflow-tooling-frameworks/user-needs',
+			title: 'Sprint 17'
+		},
 	]
 </script>
 
