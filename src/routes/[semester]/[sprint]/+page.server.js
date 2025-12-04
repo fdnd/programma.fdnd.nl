@@ -58,7 +58,6 @@ function formatTasks({search: {repos}}){
             description: repo.description,
             url: repo.url,
             forkCount: repo.forkCount,
-            forks: formatForks(repo),
             topic: topics[0]
         }
     })
@@ -73,33 +72,6 @@ function formatName (name) {
     }
 }
 
-function formatForks({forks}) {
-    const ghBaseUrl = 'https://github.com'
-    const ghPagesBaseURL = 'github.io'
-    
-    return forks.nodes.filter(node => {
-        return node.stargazerCount > 0
-    }).map(fork => {
-        const pagesUrl = `https://${fork.owner.login}.${ghPagesBaseURL}/${fork.name}`
 
-        return {
-            title: formatName(fork.name),
-            name: fork.name,
-            stargazerCount:fork.stargazerCount,
-            owner:fork.owner.login,
-            ownerUrl:fork.owner.url,
-            avatarUrl:fork.owner.avatarUrl,
-            url:`${ghBaseUrl}/${fork.owner.login}/${fork.name}`,
-            pagesUrl: pagesUrl,
-            homepageUrl: formatHomepageUrl(fork.homepageUrl),
-        }        
-    }) 
-
-    function formatHomepageUrl(url) {
-        if(!url || url.length === 0) return undefined
-
-        return url.includes('https://') || url.includes('http://') ? url.trim() : `https://${url}`.trim()
-    }
-}
 
 

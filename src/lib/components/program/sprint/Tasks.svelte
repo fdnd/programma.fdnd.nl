@@ -1,18 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import Heading from '$lib/components/Heading.svelte';
-	import IconStar from '$lib/components/icons/Star.svelte';
 
-
-	let { tasks, stargazer = false } = $props();
-
-	if (tasks) {
-		tasks.forEach((task) => {
-			if (!stargazer && task && task.forks.length > 0) {
-				stargazer = true;
-			}
-		});
-	}
+	let { tasks } = $props();
 
 	onMount(() => {
 		/* Firefox hack, :has() selector not supported */
@@ -57,33 +47,6 @@
 				</p>
 			{/if}
 		{/each}
-	</section>
-	<section class="showcase {stargazer ? 'stargazer' : ''}">
-		<Heading title="Studentenwerk" />
-		<ul>
-			{#each tasks as task}
-				{#if task.forks && task.forks.length > 0}
-					{#each task.forks as fork}
-						<li class="purple-on-blue shadow">
-							<div class="repo">
-								<span class="repo-title">{fork.title}</span>
-								<IconStar stargazerCount={fork.stargazerCount} />
-								<div class="links">
-									<a href={fork.url} target="_blank" rel="noreferrer">Code</a>
-									{#if fork.homepageUrl}
-										<a href={fork.homepageUrl} target="_blank" rel="noreferrer">Website</a>
-									{/if}
-								</div>
-							</div>
-							<strong class="profile">
-								<img src={fork.avatarUrl} alt="" class="avatar" />
-								<a href={fork.ownerUrl} target="_blank" rel="noreferrer">@{fork.owner}</a>
-							</strong>
-						</li>
-					{/each}
-				{/if}
-			{/each}
-		</ul>
 	</section>
 </div>
 {/if}
