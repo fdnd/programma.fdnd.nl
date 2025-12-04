@@ -27,7 +27,6 @@
 	<Indicators {indicators} />
 	<Tasks {tasks} />
 </div>
-<!-- <StudentWorks {tasks} /> -->
 
 <Schedule {weekPlans} />
 
