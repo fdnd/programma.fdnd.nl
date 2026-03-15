@@ -77,9 +77,9 @@
 	:global(li.active) {
 		background-color: rgba(102, 229, 191, 0.4);
 	}
-	:global(li.past) {
-		/opacity: 0.75;
-	}
+	/* :global(li.past) {
+		opacity: 0.75;
+	} */
 	:global(li.past strong) {
 		font-weight: 200;
 	}
