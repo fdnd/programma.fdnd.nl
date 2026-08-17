@@ -4,7 +4,7 @@
 	let navItems = [
 		{
 			href: '/',
-			title: 'Programma 2526'
+			title: 'Programma 2627'
 		},
 		{
 			href: '/static-web/your-tribe',
