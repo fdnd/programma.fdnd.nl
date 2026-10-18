@@ -7,12 +7,12 @@
 			title: 'Programma 2627'
 		},
 		{
-			href: '/static-web/the-client',
-			title: 'Sprint 2'
+			href: '/static-web/all-human',
+			title: 'Sprint 3'
 		},
 		{
-			href: '/workflow-tooling-frameworks/lose-your-head',
-			title: 'Sprint 14'
+			href: '/workflow-tooling-frameworks/dont-repeat-yourself',
+			title: 'Sprint 15'
 		},
 	]
 
